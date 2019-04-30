@@ -1,0 +1,11 @@
+*.iml
+.bundle
+.DS_STORE
+.idea
+.eslintcache
+.nyc_output
+npm-debug.log
+node_modules
+output
+*.swp
+coverage

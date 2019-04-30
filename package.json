@@ -1,0 +1,35 @@
+{
+  "name": "pug-scss-autoprefixer",
+  "version": "1.0.0",
+  "description": "Starter for html output with inline script tag, useful for code snippet generation. SCSS will render into CSS and then have vender prefixes added if needed.",
+  "main": "index.js",
+  "scripts": {
+    "start": "live-server --open=index.html --wait=50"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/infinityspiral/pug-scss-autoprefixer.git"
+  },
+  "keywords": [
+    "pug",
+    "sass",
+    "scss",
+    "autoprefixer",
+    "html"
+  ],
+  "author": "Chris Norton",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/infinityspiral/pug-scss-autoprefixer/issues"
+  },
+  "homepage": "https://github.com/infinityspiral/pug-scss-autoprefixer#readme",
+  "devDependencies": {
+    "@babel/cli": "^7.2.3",
+    "@babel/core": "^7.2.2",
+    "@babel/preset-env": "^7.2.3",
+    "babel-preset-minify": "^0.5.0"
+  },
+  "dependencies": {
+    "@babel/polyfill": "^7.2.5"
+  }
+}
