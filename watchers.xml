@@ -1,13 +1,13 @@
 <TaskOptions>
   <TaskOptions>
-    <option name="arguments" value="$FileName$ --out $ProjectFileDir$/dist" />
+    <option name="arguments" value="$FileName$ --out $ProjectFileDir$/" />
     <option name="checkSyntaxErrors" value="true" />
     <option name="description" />
     <option name="exitCodeBehavior" value="ERROR" />
     <option name="fileExtension" value="jade" />
     <option name="immediateSync" value="true" />
     <option name="name" value="Pug/Jade" />
-    <option name="output" value="$ProjectFileDir$/dist/$FileNameWithoutExtension$.html" />
+    <option name="output" value="$ProjectFileDir$/$FileNameWithoutExtension$.html" />
     <option name="outputFilters">
       <array />
     </option>
@@ -40,14 +40,14 @@
     <envs />
   </TaskOptions>
   <TaskOptions>
-    <option name="arguments" value="$FilePath$ --use autoprefixer -d $ProjectFileDir$/dist/$FileDirName$" />
+    <option name="arguments" value="$FilePath$ --use autoprefixer -d $ProjectFileDir$/$FileDirName$" />
     <option name="checkSyntaxErrors" value="true" />
     <option name="description" />
     <option name="exitCodeBehavior" value="ERROR" />
     <option name="fileExtension" value="css" />
     <option name="immediateSync" value="true" />
     <option name="name" value="Autoprefixer" />
-    <option name="output" value="$ProjectFileDir$/dist/$FileDirName$/$FileNameWithoutExtension$.css" />
+    <option name="output" value="$ProjectFileDir$/$FileDirName$/$FileNameWithoutExtension$.css" />
     <option name="outputFilters">
       <array />
     </option>
@@ -60,14 +60,14 @@
     <envs />
   </TaskOptions>
   <TaskOptions>
-    <option name="arguments" value="$FilePathRelativeToProjectRoot$ --out-dir dist\$FileDirName$ --source-maps --presets @babel/env" />
+    <option name="arguments" value="$FilePathRelativeToProjectRoot$ --out-dir $FileDirName$ --source-maps --presets @babel/env" />
     <option name="checkSyntaxErrors" value="true" />
     <option name="description" />
     <option name="exitCodeBehavior" value="ERROR" />
     <option name="fileExtension" value="js" />
     <option name="immediateSync" value="true" />
     <option name="name" value="Babel" />
-    <option name="output" value="dist\$FileDirName$\$FileNameWithoutExtension$.js:dist\$FileDirName$\$FileNameWithoutExtension$.js.map" />
+    <option name="output" value="$FileDirName$\$FileNameWithoutExtension$.js:$FileDirName$\$FileNameWithoutExtension$.js.map" />
     <option name="outputFilters">
       <array />
     </option>
