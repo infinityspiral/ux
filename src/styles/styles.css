@@ -43,8 +43,7 @@ h3 {
 
 h4 {
   font-size: 1.9rem;
-  font-weight: 300;
-  margin-top: 0; }
+  font-weight: 300; }
 
 h5 {
   font-size: 1.9rem;
@@ -128,8 +127,11 @@ img {
 
 .section {
   max-width: 1200px;
-  margin: 100px auto 0 auto; }
+  margin: 50px auto 0 auto; }
 
+.flex-row div:nth-child(2) {
+  width: 66.6%;
+  margin: 0 auto; }
 @media (min-width: 767px) {
   .flex-row {
     display: flex;
@@ -146,22 +148,26 @@ img {
     border-radius: 10px; }
 
 .flex-row-icon {
-  align-items: flex-start; }
+  align-items: flex-start;
+  width: 66.6%;
+  margin: 0 auto; }
   @media (min-width: 767px) {
     .flex-row-icon {
       display: flex; } }
   .flex-row-icon .icon-ux {
+    display: block;
+    margin: 0 auto;
     flex-shrink: 0;
     background-repeat: no-repeat;
-    height: 300px;
-    width: 300px;
+    height: 250px;
+    width: 250px;
     position: relative;
     top: -20px; }
 
 .project {
   margin-top: 100px; }
   .project:first-child {
-    margin-top: 0; }
+    margin-top: 20px; }
 
 .project-tag {
   counter-increment: project;
@@ -170,25 +176,46 @@ img {
   color: white;
   position: relative;
   left: -10px;
-  padding: 0 15px 0 10px;
-  border-top-right-radius: 5px;
-  border-bottom-right-radius: 20px;
+  padding: 0 12px 0 10px;
+  border-top-right-radius: 3px;
+  border-bottom-right-radius: 12px;
   margin-bottom: 20px; }
-  .project-tag:after {
-    content: counter(project) ".";
-    display: inline-block;
+  .project-tag:before {
+    content: "Project";
+    display: block;
     font-family: "Raleway", sans-serif;
-    font-size: 6.8rem;
+    font-size: 1.2rem;
+    font-weight: 600;
+    line-height: 1;
+    margin-top: 8px;
+    margin-bottom: 4px; }
+  .project-tag:after {
+    content: "0" counter(project);
+    display: inline-block;
+    font-family: "Open Sans", sans-serif;
+    font-size: 3.8rem;
     font-weight: 600;
     line-height: 1;
     position: relative;
-    top: -5px; }
+    top: -5px;
+    margin-bottom: 4px; }
 
 .project-label {
   font-size: 1.4rem; }
 
+.users {
+  margin-top: 30px; }
+
 .user {
   display: flex;
-  align-items: flex-start; }
+  margin: 0 10px; }
+  .user h4 {
+    margin: 0px 0 0 0; }
+  .user p {
+    max-width: 350px; }
+  .user .icon-ux {
+    width: 100px;
+    height: 100px;
+    margin-right: 10px; }
 
 /*# sourceMappingURL=styles.css.map */

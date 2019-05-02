@@ -50,7 +50,6 @@ h3 {
 h4 {
     font-size: 1.9rem;
     font-weight: 300;
-    margin-top: 0;
 }
 h5{
     font-size: 1.9rem;
@@ -143,10 +142,14 @@ img {
 }
 .section {
     max-width: 1200px;
-    margin: 100px auto 0 auto;
+    margin: 50px auto 0 auto;
 
 }
 .flex-row {
+    div:nth-child(2){
+        width: 66.6%;
+        margin: 0 auto;
+    }
 
     @media (min-width: 767px){
         display: flex;
@@ -170,16 +173,21 @@ img {
 
 .flex-row-icon {
     align-items: flex-start;
+    width: 66.6%;
+    margin: 0 auto;
 
     @media (min-width: 767px){
         display: flex;
     }
 
     .icon-ux {
+        display: block;
+        margin: 0 auto;
+        $flex-row-icon-size: 250px;
         flex-shrink: 0;
         background-repeat: no-repeat;
-        height: 300px;
-        width: 300px;
+        height: $flex-row-icon-size;
+        width: $flex-row-icon-size;
         position: relative;
         top: -20px;
     }
@@ -189,7 +197,7 @@ img {
     margin-top: 100px;
 
     &:first-child {
-        margin-top: 0;
+        margin-top: 20px;
     }
 }
 .project-tag {
@@ -199,26 +207,53 @@ img {
     color: white;
     position: relative;
     left: -10px;
-    padding: 0 15px 0 10px;
-    border-top-right-radius: 5px;
-    border-bottom-right-radius: 20px;
+    padding: 0 12px 0 10px;
+    border-top-right-radius: 3px;
+    border-bottom-right-radius: 12px;
     margin-bottom: 20px;
 
-    &:after {
-        content: counter(project) ".";
-        display: inline-block;
+    &:before {
+        content: "Project";
+        display: block;
         font-family: $fontHeading;
-        font-size: 6.8rem;
+        font-size: 1.2rem;
+        font-weight: 600;
+        line-height: 1;
+        margin-top: 8px;
+        margin-bottom: 4px;
+    }
+    &:after {
+        content: "0"counter(project);
+        display: inline-block;
+        font-family: $fontBody;
+        font-size: 3.8rem;
         font-weight: 600;
         line-height: 1;
         position: relative;
         top: -5px;
+        margin-bottom: 4px;
     }
 }
 .project-label {
     font-size: 1.4rem;
 }
+.users {
+    margin-top: 30px;
+}
 .user {
     display: flex;
-    align-items: flex-start;
+    margin: 0 $spaceUnit;
+
+    h4 {
+        margin: 0px 0 0 0;
+    }
+    p {
+        max-width: 350px;
+    }
+
+    .icon-ux {
+        width: 100px;
+        height: 100px;
+        margin-right: 10px;
+    }
 }
