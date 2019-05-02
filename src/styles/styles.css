@@ -1,49 +1,66 @@
 html {
+  margin: 0;
+  padding: 0;
   height: 100%;
   font-size: 62.5%; }
 
 body {
+  margin: 0;
+  padding: 0;
   font-family: "Open Sans", sans-serif;
   font-size: 1.3rem;
   line-height: 1.35;
   color: #494949; }
 
-h1, h2, h3, h4, h5 {
-  font-family: "Roboto Condensed", sans-serif;
+h1, h2, h3 {
+  font-family: "Raleway", sans-serif;
   font-weight: 300;
-  margin: 3rem 0 0 0;
-  padding: 0; }
+  margin: 3rem 0 .1rem 0;
+  padding: 0;
+  max-width: 500px; }
+
+h4, h5 {
+  font-family: "Raleway", sans-serif;
+  color: #282828;
+  font-weight: 600;
+  margin: 2.8rem 0 .1rem 0;
+  padding: 0;
+  max-width: 500px; }
 
 h1 {
-  font-size: 3.4rem;
-  font-weight: 700;
-  color: #a2a2a2;
-  text-transform: uppercase;
-  border-top: 100px solid #494949; }
+  font-size: 3.4rem; }
 
 h2 {
-  font-size: 3.4rem;
-  font-weight: 700; }
+  font-size: 2.6rem;
+  font-weight: 600;
+  font-family: "Open Sans", sans-serif;
+  margin-top: 0;
+  line-height: 1; }
 
 h3 {
-  font-size: 2.7rem; }
-
-h2 + h3 {
-  margin-top: .75rem; }
+  font-size: 1.9rem;
+  font-weight: 600; }
 
 h4 {
-  font-size: 1.4rem;
-  font-weight: 700; }
+  font-size: 1.9rem;
+  font-weight: 300;
+  margin-top: 0; }
 
 h5 {
-  font-size: 1.9rem; }
+  font-size: 1.9rem;
+  font-weight: 300; }
 
 h6 {
   font-size: 1.8rem; }
 
+h2 + h3,
+h4 + h5 {
+  margin-top: .75rem; }
+
 p {
   margin: 0 0 1rem 0;
-  padding: 0; }
+  padding: 0;
+  max-width: 500px; }
 
 ol {
   counter-reset: inst;
@@ -73,6 +90,11 @@ ol {
       padding: 0;
       margin: 0 12px 0 0; }
 
+img {
+  max-width: 100%;
+  margin: 0 auto;
+  display: block; }
+
 .icon-ux {
   display: inline-block;
   width: 120px;
@@ -92,5 +114,81 @@ ol {
 
 .icon-architecture {
   background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNDQuMDMgMjQ0LjAzIj48ZGVmcz48c3R5bGU+LmEsLmJ7ZmlsbDpub25lO3N0cm9rZTojMDAwO3N0cm9rZS1saW5lY2FwOnJvdW5kO3N0cm9rZS1saW5lam9pbjpyb3VuZDt9LmF7c3Ryb2tlLXdpZHRoOjQuMnB4O30uYntzdHJva2Utd2lkdGg6My43OHB4O308L3N0eWxlPjwvZGVmcz48dGl0bGU+aWNvbi1hcmNoaXRlY3R1cmU8L3RpdGxlPjxyZWN0IGNsYXNzPSJhIiB4PSI4Mi41NCIgeT0iNjQuNDQiIHdpZHRoPSI3OC45NSIgaGVpZ2h0PSIyNC42MiIvPjxsaW5lIGNsYXNzPSJiIiB4MT0iMTIyLjAyIiB5MT0iODkuMDYiIHgyPSIxMjIuMDIiIHkyPSIxMjEuNjUiLz48cmVjdCBjbGFzcz0iYSIgeD0iMzQuNzQiIHk9IjE1NC45NyIgd2lkdGg9Ijc4Ljk1IiBoZWlnaHQ9IjI0LjYyIi8+PGxpbmUgY2xhc3M9ImIiIHgxPSI3NC4yMiIgeTE9IjEyMi4zOCIgeDI9Ijc0LjIyIiB5Mj0iMTU0Ljk3Ii8+PHJlY3QgY2xhc3M9ImEiIHg9IjEzMC4zNCIgeT0iMTU0Ljk3IiB3aWR0aD0iNzguOTUiIGhlaWdodD0iMjQuNjIiLz48bGluZSBjbGFzcz0iYiIgeDE9IjE2OS44MSIgeTE9IjEyMi4zOCIgeDI9IjE2OS44MSIgeTI9IjE1NC45NyIvPjxsaW5lIGNsYXNzPSJiIiB4MT0iNzQuMjIiIHkxPSIxMjIuMzgiIHgyPSIxNjkuODEiIHkyPSIxMjIuMzgiLz48L3N2Zz4=); }
+
+.header {
+  background: #282828;
+  color: white;
+  padding: 10px; }
+  .header h1 {
+    margin: 0; }
+
+.main-content {
+  padding: 10px;
+  counter-reset: project; }
+
+.section {
+  max-width: 1200px;
+  margin: 100px auto 0 auto; }
+
+@media (min-width: 767px) {
+  .flex-row {
+    display: flex;
+    justify-content: flex-start; } }
+.flex-row .img-container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex: 0 0 66.6%;
+  margin-right: 10px; }
+  .flex-row .img-container img {
+    max-width: 100%;
+    border: 5px solid #e7e7e7;
+    border-radius: 10px; }
+
+.flex-row-icon {
+  align-items: flex-start; }
+  @media (min-width: 767px) {
+    .flex-row-icon {
+      display: flex; } }
+  .flex-row-icon .icon-ux {
+    flex-shrink: 0;
+    background-repeat: no-repeat;
+    height: 300px;
+    width: 300px;
+    position: relative;
+    top: -20px; }
+
+.project {
+  margin-top: 100px; }
+  .project:first-child {
+    margin-top: 0; }
+
+.project-tag {
+  counter-increment: project;
+  background: #282828;
+  display: inline-block;
+  color: white;
+  position: relative;
+  left: -10px;
+  padding: 0 15px 0 10px;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 20px;
+  margin-bottom: 20px; }
+  .project-tag:after {
+    content: counter(project) ".";
+    display: inline-block;
+    font-family: "Raleway", sans-serif;
+    font-size: 6.8rem;
+    font-weight: 600;
+    line-height: 1;
+    position: relative;
+    top: -5px; }
+
+.project-label {
+  font-size: 1.4rem; }
+
+.user {
+  display: flex;
+  align-items: flex-start; }
 
 /*# sourceMappingURL=styles.css.map */

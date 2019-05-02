@@ -2,69 +2,97 @@
 html(lang="en")
     head
         meta
-        title Basic Example
-        link(href='https://fonts.googleapis.com/css?family=Open+Sans|Roboto+Condensed:300,700',rel='stylesheet')
+        title Chris Norton: UX Portfolio
+        link(href='https://fonts.googleapis.com/css?family=Open+Sans:300,400,600|Raleway:300,600',rel='stylesheet')
         link(rel='stylesheet', href='styles/styles.css')
         script(src='js/polyfill.min.js')
 
 body
-    .mainContent
-        .icon-ux.icon-user
-        .icon-ux.icon-architecture
-        .icon-ux.icon-journey
-        .icon-ux.icon-persona
-        .icon-ux.icon-tree
-        h1 Service Agreements
-        h2 Client
-        p John Deere
-        h2 My roles
-        p UX Design
-        h2 Overview
-        p I led UX on John Deere&rsquo;s new Service Agreements Portal
-        h2 Problem statement
-        p John Deere was looking to reduce the cost of maintenance by bringing duplicate multiple silo apps under a singular technology solution and dev team. &nbsp;A unified application would allow better consistency and visibility between departments and quicker response throughout the overall workflow.
+    .header
+        h1 Chris Norton: UX Portfolio
+    .main-content
+        .project
+            .project-tag
+            img(src='images/svap/svap-header.jpg')
+            .section
+                .flex-row
+                    .img-container
+                        img(src='images/svap/svap-00.jpg')
+                    .credits
+                        h5.project-label Project
+                        h2 Service Agreements Portal
 
-        h2 Project goals
-        ol
-            li Combine various single-use applications under one central app.
-            li Maintain current level of functionality
-            li Provide a more intuitive user experience to multiple user roles
-            li Catered experience to business owners, dealers, sales representatives, and service technicians
-            li Make digital assets more re-usable and discoverable between departments
-        h2 Research methods
-        h3 Leveraging existing architecture
-        p Because there was a pre-existing internal website being used to view agreements already, the team decided to minimize usability issues and base the new site largely around what was already familiar and adopted by existing users. New features would include a speed boost by converting the experience to a single page app with and in building connections between assets that were previously isolated into the overall work-flow.
+                        h5 Client
+                        p John Deere
 
-        h2 Working with users
-        p Using the project requirements document, email interviews, and phone calls we built out personas. &nbsp;Having personas allowed us to walk each user type through prioritizing and finding their most needed tasks.
+                        h5 My roles
+                        p UX Design
 
-        h3 Business owners and dealers
-        p Needed to be able to monitor overall profitability and admin
-        h3 Sales representatives
-        p Needed the ability to quickly pull from existing template agreements, view existing agreements and work within bundled groups of agreements for customers.
+                        h3 Overview
+                        p I led UX on John Deere&rsquo;s new Service Agreements Portal
 
-        h3 Technicians
-        p Needed to be able to update the status of their job tickets on customer machines as services were performed. &nbsp;They also needed to be alerted to upcoming and past due tasks to be able to predict upcoming needs for staff workloads and ordering inventory.
+                        h3 Problem statement
+                        p John Deere was looking to reduce the cost of maintenance by bringing duplicate silo apps under a singular technology solution and dev team. &nbsp;A unified application would allow better consistency and visibility between departments and quicker response throughout the overall workflow.
+            .section
+                .flex-row
+                    .img-container
+                        img(src='images/svap/svap-02.jpg')
+                    div
+                        h3 Project goals
+                        ol
+                            li Combine various single-use applications under one central app.
+                            li Maintain current level of functionality
+                            li Provide a more intuitive user experience to multiple user roles
+                            li Catered experience to business owners, dealers, sales representatives, and service technicians
+                            li Make digital assets more re-usable and discoverable between departments
 
-        h2 UX methods used
-        p In-person workshop sessions were used to ensure updated tasks were available and intuitive for each user type to build a general consensus. &nbsp;In some cases, we found that users were using multiple tabs as a gap fix to not having the context of the data in front of them for either global or minute actions even in the existing apps. &nbsp;These areas offered us the chance to make the experience better by showcasing the missing data alongside the task. &nbsp;
+            .section
+                img(src='images/svap/svap-invision.jpg')
 
-        h3 Card sorting
-        p To pin down navigation, users were asked to place task cards into groups that made the most sense to them. &nbsp;Consideration was also given to how frequently the user would need to access the task.
+            .section
+                .flex-row-icon
+                    .icon-ux.icon-architecture
+                    div
+                        h3 Leveraging existing architecture
+                        p Because there were a pre-existing internal websites being used to view agreements in various states already, the team decided to minimize usability issues and base the new site largely around what was already familiar and adopted by existing users. New features would include a speed boost by converting the experience to a single page app with and in building connections between assets that were previously isolated into the overall work-flow.
+            .section
+                .flex-row-icon
+                    .icon-ux.icon-persona
+                    div
+                        h3 Engaging users
+                        p Using the project requirements document, email interviews, and phone calls we built out personas. &nbsp;Having personas allowed us to walk each user type through prioritizing and finding their most needed tasks.
 
-        h3 Tree/Chalk-mark testing
-        p Users were presented with menu structures and asked where they would click to find areas of the site or next steps in the work-flow.
+                        h4 Business owners and dealers
+                        p Needed to be able to monitor overall profitability and admin
 
-        h3 Whiteboard/wireframe prototypes
-        p In some cases, multiple levels of user access complicated the approval structure of assets to the point where workflows had to be redefined. Low-fidelity prototypes allowed us to check in with users and make sure the task could still be completed. Complicated component work-flows were whiteboarded and moved into iterative digital wireframes prototypes. &nbsp;Having a digital wireframe allowed us to get more buy-in from users as well as start to check for usability issues.
+                        h4 Sales representatives
+                        p Needed the ability to quickly pull from existing template agreements, view existing agreements and work within bundled groups of agreements for customers.
 
-        h2 Lessons learned
-        p One of the biggest challenges was introducing UX into an already established Agile-like development process. While we tried to map out major connections between sections ahead of development we ran into cases where the workflow dead-ended with the actual backend data available. Not an uncommon pain point, but some additional concept proofs for specific sections may have been helpful in preventing some of the data availability mismatches. &nbsp;Budgeting more time for iterations would have been more realistic. &nbsp;Overall though, allowing the users to have feedback early did make adoption very smooth as users were already familiar with how the new system would act.
+                        h4 Technicians
+                        p Needed to be able to update the status of their job tickets on customer machines as services were performed. &nbsp;They also needed to be alerted to upcoming and past due tasks to be able to predict upcoming needs for staff workloads and ordering inventory.
 
+            .section
+                .flex-row-icon
+                    .icon-ux.icon-tree
+                    div
+                        h3 UX research methods
+                        p In-person workshop sessions were used to ensure updated tasks were available and intuitive for each user type to build a general consensus. &nbsp;In some cases, we found that users were using multiple tabs as a gap fix to not having the context of the data in front of them for either global or minute actions even in the existing apps. &nbsp;These areas offered us the chance to make the experience better by showcasing the missing data alongside the task. &nbsp;
 
+                        h4 Card sorting
+                        p To pin down navigation, users were asked to place task cards into groups that made the most sense to them. &nbsp;Consideration was also given to how frequently the user would need to access the task.
 
+                        h4 Tree/Chalk-mark testing
+                        p Users were presented with menu structures and asked where they would click to find areas of the site or next steps in the work-flow.
 
+                        h4 Whiteboard/wireframe prototypes
+                        p In some cases, multiple levels of user access complicated the approval structure of assets to the point where workflows had to be redefined. Low-fidelity prototypes allowed us to check in with users and make sure the task could still be completed. Complicated component work-flows were whiteboarded and moved into iterative digital wireframes prototypes. &nbsp;Having a digital wireframe allowed us to get more buy-in from users as well as start to check for usability issues.
 
+            .section
+                .flex-row-icon
+                    .icon-ux.icon-journey
+                    div
+                        h3 Lessons learned
+                        p One of the biggest challenges was introducing UX into an already established Agile-like development process. While we tried to map out major connections between sections ahead of development we ran into cases where the workflow dead-ended with the actual backend data available. Not an uncommon pain point, but some additional concept proofs for specific sections may have been helpful in preventing some of the data availability mismatches. &nbsp;Budgeting more time for iterations would have been more realistic. &nbsp;Overall though, allowing the users to have feedback early did make adoption very smooth as users were already familiar with how the new system would act.
 
 script(src='js/app.js')
 script(src='js/app.js')
