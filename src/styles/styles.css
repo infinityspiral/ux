@@ -38,8 +38,9 @@ h2 {
   line-height: 1; }
 
 h3 {
-  font-size: 1.9rem;
-  font-weight: 600; }
+  font-family: "Open Sans", sans-serif;
+  font-size: 5.6rem;
+  font-weight: 700; }
 
 h4 {
   font-size: 1.9rem;
@@ -122,11 +123,26 @@ img {
   color: white;
   padding: 10px; }
   .header h1 {
-    margin: 0; }
+    margin: 0;
+    padding: 75px;
+    text-align: center;
+    max-width: initial; }
+    .header h1 span {
+      display: block;
+      line-height: 1; }
+      .header h1 span:nth-child(1) {
+        font-size: 4.8rem;
+        font-weight: 300;
+        margin-bottom: -10px;
+        text-indent: 20px; }
+      .header h1 span:nth-child(2) {
+        font-size: 30rem;
+        font-weight: 600; }
 
 .main-content {
-  padding: 10px;
-  counter-reset: project; }
+  padding: 0 10px 10px 10px;
+  counter-reset: project;
+  background: #fafafa; }
 
 .section {
   max-width: 1200px;
@@ -175,33 +191,51 @@ img {
 .project-tag {
   counter-increment: project;
   background: #282828;
-  display: inline-block;
+  display: inline-flex;
   color: white;
   position: relative;
   left: -10px;
   padding: 0 12px 0 10px;
-  border-top-right-radius: 3px;
-  border-bottom-right-radius: 12px;
-  margin-bottom: 30px; }
-  .project-tag:before {
-    content: "Project";
-    display: block;
-    font-family: "Raleway", sans-serif;
-    font-size: 1.2rem;
-    font-weight: 600;
-    line-height: 1;
-    margin-top: 8px;
-    margin-bottom: 4px; }
-  .project-tag:after {
-    content: "0" counter(project);
+  border-top-right-radius: 12px;
+  border-bottom-right-radius: 3px; }
+  .project-tag .title {
     display: inline-block;
-    font-family: "Open Sans", sans-serif;
-    font-size: 3.8rem;
+    font-size: 20px;
+    width: 180px;
     font-weight: 600;
-    line-height: 1;
-    position: relative;
-    top: -5px;
-    margin-bottom: 4px; }
+    line-height: 1.15;
+    padding-left: 15px;
+    padding-top: 10px;
+    position: relative; }
+    .project-tag .title:before {
+      content: '';
+      display: inline-block;
+      border-left: 1px solid rgba(255, 255, 255, 0.08);
+      height: calc(100% - 20px);
+      position: absolute;
+      top: 10px;
+      left: 0; }
+  .project-tag .counter {
+    padding: 0 9px 0 0; }
+    .project-tag .counter:before {
+      content: "Project";
+      display: block;
+      font-family: "Raleway", sans-serif;
+      font-size: 1.2rem;
+      font-weight: 600;
+      line-height: 1;
+      margin-top: 8px;
+      margin-bottom: 4px; }
+    .project-tag .counter:after {
+      content: "0" counter(project);
+      display: inline-block;
+      font-family: "Open Sans", sans-serif;
+      font-size: 3.8rem;
+      font-weight: 600;
+      line-height: 1;
+      position: relative;
+      top: -5px;
+      margin-bottom: 4px; }
 
 .project-label {
   font-size: 1.4rem; }
