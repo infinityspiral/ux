@@ -257,4 +257,13 @@ img {
   box-shadow: #b0b0b0 0px -10px 80px -30px;
   margin-bottom: 90px; }
 
+@media (min-width: 767px) {
+  .video-container img {
+    display: none; } }
+.video-container video {
+  display: none; }
+  @media (min-width: 767px) {
+    .video-container video {
+      display: initial; } }
+
 /*# sourceMappingURL=styles.css.map */
