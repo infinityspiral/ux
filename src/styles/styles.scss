@@ -3,14 +3,18 @@ $colorSecondary: #282828;
 $spaceUnit: 10px;
 $fontHeading: 'Raleway', sans-serif;
 $fontBody: 'Open Sans', sans-serif;
-
+*{
+    box-sizing: border-box;
+}
 html {
+    width: 100%;
     margin: 0;
     padding: 0;
     height:100%;
     font-size: 62.5%;
 }
 body{
+    width: 100%;
     margin: 0;
     padding: 0;
     font-family: $fontBody;
@@ -45,8 +49,14 @@ h2 {
 }
 h3 {
     font-family: $fontBody;
-    font-size: 5.6rem;
+    font-size: 4.6rem;
     font-weight: 700;
+    line-height: 1;
+    margin-bottom: 2rem;
+
+    @media(min-width:767px) {
+        line-height: 1.15;
+    }
 }
 h4 {
     font-size: 1.9rem;
@@ -106,6 +116,11 @@ img {
     max-width: 100%;
     margin: 0 auto;
     display: block;
+}
+video {
+    &:focus {
+        outline: none;
+    }
 }
 
 .icon-ux {
@@ -287,8 +302,12 @@ img {
     margin-top: 30px;
 }
 .user {
-    display: flex;
-    margin: 0 $spaceUnit;
+    margin: 0 auto;
+
+    @media (min-width:767px){
+        display: flex;
+        margin: 0 $spaceUnit;
+    }
 
     h4 {
         margin: 0px 0 0 0;
@@ -298,9 +317,15 @@ img {
     }
 
     .icon-ux {
-        width: 100px;
-        height: 100px;
-        margin-right: 10px;
+        top: 30px;
+
+        @media (min-width:767px){
+            width: 100px;
+            height: 100px;
+            margin-right: 10px;
+            top: -20px;
+        }
+
     }
 }
 .svap-header {

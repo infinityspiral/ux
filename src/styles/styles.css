@@ -1,10 +1,15 @@
+* {
+  box-sizing: border-box; }
+
 html {
+  width: 100%;
   margin: 0;
   padding: 0;
   height: 100%;
   font-size: 62.5%; }
 
 body {
+  width: 100%;
   margin: 0;
   padding: 0;
   font-family: "Open Sans", sans-serif;
@@ -39,8 +44,13 @@ h2 {
 
 h3 {
   font-family: "Open Sans", sans-serif;
-  font-size: 5.6rem;
-  font-weight: 700; }
+  font-size: 4.6rem;
+  font-weight: 700;
+  line-height: 1;
+  margin-bottom: 2rem; }
+  @media (min-width: 767px) {
+    h3 {
+      line-height: 1.15; } }
 
 h4 {
   font-size: 1.9rem;
@@ -94,6 +104,9 @@ img {
   max-width: 100%;
   margin: 0 auto;
   display: block; }
+
+video:focus {
+  outline: none; }
 
 .icon-ux {
   display: inline-block;
@@ -242,16 +255,23 @@ img {
   margin-top: 30px; }
 
 .user {
-  display: flex;
-  margin: 0 10px; }
+  margin: 0 auto; }
+  @media (min-width: 767px) {
+    .user {
+      display: flex;
+      margin: 0 10px; } }
   .user h4 {
     margin: 0px 0 0 0; }
   .user p {
     max-width: 350px; }
   .user .icon-ux {
-    width: 100px;
-    height: 100px;
-    margin-right: 10px; }
+    top: 30px; }
+    @media (min-width: 767px) {
+      .user .icon-ux {
+        width: 100px;
+        height: 100px;
+        margin-right: 10px;
+        top: -20px; } }
 
 .svap-header {
   box-shadow: #b0b0b0 0px -10px 80px -30px;
