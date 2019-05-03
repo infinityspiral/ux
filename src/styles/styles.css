@@ -196,8 +196,9 @@ img {
   position: relative;
   left: -10px;
   padding: 0 12px 0 10px;
-  border-top-right-radius: 12px;
-  border-bottom-right-radius: 3px; }
+  margin-bottom: 30px;
+  border-top-right-radius: 6px;
+  border-bottom-right-radius: 6px; }
   .project-tag .title {
     display: inline-block;
     font-size: 20px;
@@ -236,9 +237,6 @@ img {
       position: relative;
       top: -5px;
       margin-bottom: 4px; }
-
-.project-label {
-  font-size: 1.4rem; }
 
 .users {
   margin-top: 30px; }
