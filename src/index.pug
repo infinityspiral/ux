@@ -2,14 +2,13 @@
 html(lang="en")
     head
         <meta charset="UTF-8"/>
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
 
         title Chris Norton: UX Portfolio
         link(href='https://fonts.googleapis.com/css?family=Open+Sans:300,600|Raleway:300,600',rel='stylesheet')
         link(rel='stylesheet', href='styles/styles.css')
         script(src='js/polyfill.min.js')
-
 body
     .header
         h1
@@ -25,14 +24,14 @@ body
                 .flex-row
                     .img-container
                         .video-container
-                            img(src='video/aquent/aquent-home.jpg')
-                            <video id="aquent-home" width="223" height="470" poster="video/aquent-home.jpg">
+                            img(src='video/aquent-home.jpg')
+                            <video id="aquent-home" width="223" height="470" poster="/video/aquent-contact.jpg">
                               <source src="video/aquent-home.mp4" type="video/mp4">
                             </video>
 
                         .video-container
-                            img(src='video/aquent/aquent-contact.jpg')
-                            <video id="aquent-contact" width="223" height="470" poster="video/aquent-contact.jpg">
+                            img(src='video/aquent-contact.jpg')
+                            <video id="aquent-contact" width="223" height="470" poster="/video/aquent-contact.jpg">
                               <source src="video/aquent-contact.mp4" type="video/mp4">
                             </video>
 
@@ -130,7 +129,6 @@ body
                     div
                         h3 Lessons learned
                         p One of the biggest challenges was introducing UX into an already established Agile-like development process. While we tried to map out major connections between sections ahead of development we ran into cases where the workflow dead-ended with the actual backend data available. Not an uncommon pain point, but some additional concept proofs for specific sections may have been helpful in preventing some of the data availability mismatches. &nbsp;Budgeting more time for iterations would have been more realistic. &nbsp;Overall though, allowing the users to have feedback early did make adoption very smooth as users were already familiar with how the new system would act.
-
 script(src='js/app.js')
 
 
