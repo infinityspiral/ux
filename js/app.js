@@ -1,2 +1,2 @@
-"use strict";window.onload=function(){var a=document.querySelectorAll("video");a.forEach(function(a){a.defaultMuted=!0,a.loop=!0,a.autoplay=!0,a.addEventListener("click",function(a){a.currentTarget.play()}),a.click()})};
+"use strict";window.onload=function(){var a=document.querySelectorAll("video");a.forEach(function(a){a.defaultMuted=!0,a.loop=!0,a.autoplay=!0,a.addEventListener("click",function(b){console.log(a.paused),b.currentTarget.play()}),a.click()})};
 //# sourceMappingURL=app.js.map

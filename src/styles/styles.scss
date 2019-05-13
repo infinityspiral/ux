@@ -53,13 +53,15 @@ h2 {
 }
 h3 {
     font-family: $fontBody;
-    font-size: 4.6rem;
+    font-size: 1.6rem;
     font-weight: 700;
     line-height: 1;
-    margin-bottom: 2rem;
+    margin-bottom: 1rem;
 
     @media(min-width:$breakPhone) {
+        font-size: 3.2rem;
         line-height: 1.15;
+        margin-bottom: 2rem;
     }
 }
 h4 {
@@ -90,7 +92,7 @@ ol {
 
     li {
         display: flex;
-        align-items: center;
+        align-items: flex-start;
         counter-increment: inst;
         margin: 20px 0 0 0;
         padding: 0;
@@ -189,16 +191,37 @@ video {
     background: #fafafa;
 }
 .section {
-    max-width: 1200px;
-    margin: 50px auto 0 auto;
+    margin: 0 auto;
+    padding: 20px;
 
+    @media (min-width: $breakPhone){
+        max-width: 1200px;
+        margin-top: 50px;
+    }
+}
+.vertical-center {
+    align-items: center;
 }
 .flex-row {
     max-width: 100%;
+    & > div {
+        margin: 0 100px;
+    }
+    @media (min-width: $breakPhone){
+        display: flex;
+        justify-content: flex-start;
+    }
+}
+.flex-row-left {
+    max-width: 100%;
 
     div:nth-child(2){
-        width: 66.6%;
-        margin: 0 auto;
+
+        @media (min-width: $breakPhone){
+            width: 66.6%;
+            margin: 0 auto;
+
+        }
     }
 
     @media (min-width: $breakPhone){
@@ -235,12 +258,12 @@ video {
     }
 }
 .flex-row-icon {
-    align-items: flex-start;
-    width: 66.6%;
     margin: 0 auto;
 
     @media (min-width: $breakPhone){
         display: flex;
+        align-items: flex-start;
+        width: 66.6%;
     }
 
     .icon-ux {
@@ -277,13 +300,18 @@ video {
 
     .title {
         display: inline-block;
-        font-size: 20px;
+        font-size: 1.8rem;
         width: 180px;
         font-weight: 600;
         line-height: 1.15;
         padding-left: 15px;
         padding-top: $spaceUnit;
         position: relative;
+
+        @media(min-width:$breakPhone) {
+            font-size: 2rem;
+            line-height: 1.2;
+        }
 
         &:before {
             content: '';
@@ -340,7 +368,6 @@ video {
     }
 
     .icon-ux {
-        top: 30px;
 
         @media (min-width:$breakPhone){
             width: 100px;
@@ -351,7 +378,7 @@ video {
 
     }
 }
-.svap-header {
+.project-header {
     box-shadow: #b0b0b0 0px -10px 80px -30px;
     margin-bottom: 90px;
 }
@@ -368,6 +395,29 @@ video {
 
         @media (min-width:$breakPhone) {
             display: initial;
+        }
+    }
+}
+.spacer {
+    width: 250px;
+}
+.drone {
+    border: none !important;
+    border-radius: 0 !important;
+
+    &.low {
+        display: block;
+
+        @media (min-width: $breakPhone) {
+            display: none;
+        }
+    }
+
+    &.high {
+        display: none;
+
+        @media (min-width: $breakPhone) {
+            display: block;
         }
     }
 }

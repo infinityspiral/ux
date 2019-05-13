@@ -8,6 +8,7 @@ window.onload = () => {
         item.loop = true;
         item.autoplay = true;
         item.addEventListener('click', e =>{
+            console.log(item.paused)
             e.currentTarget.play();
         });
         item.click();
