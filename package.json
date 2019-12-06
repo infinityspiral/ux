@@ -24,13 +24,13 @@
   },
   "homepage": "https://github.com/infinityspiral/pug-scss-autoprefixer#readme",
   "devDependencies": {
-    "@babel/cli": "^7.6.4",
-    "@babel/core": "^7.6.4",
-    "@babel/preset-env": "^7.6.3",
+    "@babel/cli": "^7.7.5",
+    "@babel/core": "^7.7.5",
+    "@babel/preset-env": "^7.7.5",
     "babel-preset-minify": "^0.5.1",
     "normalize.css": "^8.0.1"
   },
   "dependencies": {
-    "@babel/polyfill": "^7.6.0"
+    "@babel/polyfill": "^7.7.0"
   }
 }
