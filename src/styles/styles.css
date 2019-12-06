@@ -354,34 +354,34 @@ body {
   margin: 0;
   padding: 0;
   font-family: "Open Sans", sans-serif;
-  font-size: 1.3rem;
-  line-height: 1.35;
-  color: #494949;
+  font-size: 2rem;
+  line-height: 2.8rem;
+  color: #282828;
+  vertical-align: baseline;
 }
 
 h1, h2, h3 {
   font-family: "Raleway", sans-serif;
   font-weight: 300;
-  margin: 3rem 0 0.1rem 0;
+  margin: 3.2rem 0 0.4rem 0;
   padding: 0;
-  max-width: 500px;
 }
 
 h4, h5 {
   font-family: "Raleway", sans-serif;
-  color: #282828;
+  color: #9b9b9b;
   font-weight: 600;
-  margin: 2.8rem 0 0.1rem 0;
+  margin: 16px 0 0 0;
   padding: 0;
-  max-width: 500px;
+  text-transform: uppercase;
 }
 
 h1 {
-  font-size: 3.4rem;
+  font-size: 3.2rem;
 }
 
 h2 {
-  font-size: 2.6rem;
+  font-size: 2.4rem;
   font-weight: 600;
   font-family: "Open Sans", sans-serif;
   margin-top: 0;
@@ -393,39 +393,37 @@ h3 {
   font-size: 1.6rem;
   font-weight: 700;
   line-height: 1;
-  margin-bottom: 1rem;
+  margin-bottom: 0.8rem;
 }
 @media (min-width: 767px) {
   h3 {
     font-size: 3.2rem;
-    line-height: 1.15;
-    margin-bottom: 2rem;
+    line-height: 1.2;
   }
 }
 
 h4 {
-  font-size: 1.9rem;
+  font-size: 2rem;
   font-weight: 300;
 }
 
 h5 {
-  font-size: 1.9rem;
+  font-size: 1.6rem;
   font-weight: 300;
 }
 
 h6 {
-  font-size: 1.8rem;
+  font-size: 2rem;
 }
 
 h2 + h3,
 h4 + h5 {
-  margin-top: 0.75rem;
+  margin-top: 0.8rem;
 }
 
 p {
-  margin: 0 0 1rem 0;
+  margin: 0 0 1.2rem 0;
   padding: 0;
-  max-width: 500px;
 }
 
 ol {
@@ -437,24 +435,24 @@ ol li {
   display: flex;
   align-items: flex-start;
   counter-increment: inst;
-  margin: 20px 0 0 0;
+  margin: 12px 0 0 0;
   padding: 0;
   position: relative;
   list-style: none;
 }
 ol li:before {
-  height: 30px;
-  width: 30px;
-  flex: 0 0 30px;
-  border: 1px solid #c9c9c9;
+  height: 32px;
+  width: 32px;
+  flex: 0 0 32px;
+  border: 1px solid #a8a8a8;
   border-radius: 50%;
   text-align: center;
   content: counter(inst);
   display: inline-block;
   font-family: "Open Sans", sans-serif;
-  font-size: 1.1rem;
+  font-size: 1.2rem;
   font-weight: 700;
-  line-height: 30px;
+  line-height: 32px;
   padding: 0;
   margin: 0 12px 0 0;
 }
@@ -504,14 +502,13 @@ video:focus {
   overflow: hidden;
   background: #282828;
   color: white;
-  padding: 10px;
+  padding: 8px;
   overflow: hidden;
 }
 .header h1 {
   margin: 0;
-  padding: 75px;
+  padding: 76px;
   text-align: center;
-  max-width: initial;
 }
 .header h1 span {
   display: block;
@@ -520,8 +517,8 @@ video:focus {
 .header h1 span:nth-child(1) {
   font-size: 2.4rem;
   font-weight: 300;
-  margin-bottom: -5px;
-  text-indent: 7px;
+  margin-bottom: -4px;
+  text-indent: 8px;
 }
 .header h1 span:nth-child(2) {
   font-size: 10rem;
@@ -529,93 +526,24 @@ video:focus {
 }
 
 .main-content {
-  padding: 0 10px 10px 10px;
+  padding: 0 8px 8px 8px;
   counter-reset: project;
   background: #fafafa;
 }
 
 .section {
+  max-width: 950px;
   margin: 0 auto;
   padding: 20px;
 }
 @media (min-width: 767px) {
   .section {
-    max-width: 1200px;
-    margin-top: 50px;
+    margin-top: 48px;
   }
 }
 
-.vertical-center {
-  align-items: center;
-}
-
-.flex-row {
-  max-width: 100%;
-}
-.flex-row > div {
-  margin: 0 100px;
-}
-@media (min-width: 767px) {
-  .flex-row {
-    display: flex;
-    justify-content: flex-start;
-  }
-}
-
-.flex-row-left {
-  max-width: 100%;
-}
-@media (min-width: 767px) {
-  .flex-row-left div:nth-child(2) {
-    width: 66.6%;
-    margin: 0 auto;
-  }
-}
-@media (min-width: 767px) {
-  .flex-row-left {
-    display: flex;
-    justify-content: flex-start;
-  }
-}
-@media (min-width: 767px) {
-  .flex-row-left .img-container {
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
-    flex: 0 0 66.6%;
-    margin-right: 10px;
-  }
-}
-.flex-row-left .img-container img {
-  max-width: 100%;
-  border: 5px solid #e7e7e7;
-  border-radius: 10px;
-}
-.flex-row-left .img-container .video-container img {
-  max-width: 100%;
-  border: none;
-  border-radius: initial;
-}
-
-.flex-row-icon {
-  margin: 0 auto;
-}
-@media (min-width: 767px) {
-  .flex-row-icon {
-    display: flex;
-    align-items: flex-start;
-    width: 66.6%;
-  }
-}
-.flex-row-icon .icon-ux {
-  display: block;
-  margin: 0 auto;
-  flex-shrink: 0;
-  background-repeat: no-repeat;
-  height: 250px;
-  width: 250px;
-  position: relative;
-  top: -20px;
+img + .credits {
+  margin-left: 40px;
 }
 
 .project {
@@ -631,21 +559,43 @@ video:focus {
   display: inline-flex;
   color: white;
   position: relative;
-  left: -10px;
-  padding: 0 12px 0 10px;
-  margin-bottom: 30px;
+  left: -8px;
+  padding: 0 12px 0 8px;
+  margin-bottom: 28px;
   border-top-right-radius: 6px;
   border-bottom-right-radius: 6px;
 }
+.project-tag .project-label {
+  border-left: 1px solid rgba(255, 255, 255, 0.4);
+  padding-left: 12px;
+}
+.project-tag .project-company {
+  display: block;
+  font-family: "Raleway", sans-serif;
+  font-size: 1.2rem;
+  font-weight: 600;
+  line-height: 1;
+  margin-top: 8px;
+  margin-bottom: 4px;
+}
+.project-tag .project-title {
+  font-family: "Open Sans", sans-serif;
+  font-size: 3.6rem;
+  font-weight: 600;
+  line-height: 1;
+  position: relative;
+  top: -4px;
+  margin-bottom: 4px;
+}
 .project-tag .title {
   display: inline-block;
-  font-size: 1.8rem;
-  width: 180px;
+  font-size: 1.6rem;
   font-weight: 600;
-  line-height: 1.15;
-  padding-left: 15px;
-  padding-top: 10px;
+  line-height: 2.4rem;
+  padding-left: 20px;
+  padding-top: 32px;
   position: relative;
+  text-transform: uppercase;
 }
 @media (min-width: 767px) {
   .project-tag .title {
@@ -679,16 +629,16 @@ video:focus {
   content: "0" counter(project);
   display: inline-block;
   font-family: "Open Sans", sans-serif;
-  font-size: 3.8rem;
+  font-size: 3.6rem;
   font-weight: 600;
   line-height: 1;
   position: relative;
-  top: -5px;
+  top: -4px;
   margin-bottom: 4px;
 }
 
 .users {
-  margin-top: 30px;
+  margin-top: 28px;
 }
 
 .user {
@@ -697,14 +647,11 @@ video:focus {
 @media (min-width: 767px) {
   .user {
     display: flex;
-    margin: 0 10px;
+    margin: 0 8px;
   }
 }
 .user h4 {
   margin: 0px 0 0 0;
-}
-.user p {
-  max-width: 350px;
 }
 @media (min-width: 767px) {
   .user .icon-ux {
@@ -716,7 +663,7 @@ video:focus {
 }
 
 .project-header {
-  box-shadow: #b0b0b0 0px -10px 80px -30px;
+  box-shadow: #b0b0b0 0px -8px 80px -28px;
   margin-bottom: 90px;
 }
 
