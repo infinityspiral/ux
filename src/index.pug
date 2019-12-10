@@ -155,6 +155,10 @@ body
 
         .project#service-admin-portal
             h3.project-title John Deere Service Admin Portal 
+
+            p
+                img(src='images/svap/svap-header.jpg')
+
             .section
                 .flex-row
                     div
@@ -183,7 +187,7 @@ body
                         .key-value-pair
                             .key-h HTML/Sass/CSS
                             .val-h Chris Norton
-                .section
+            .section
                 h3 Project goals
                 ol
                     li Combine various single-use business applications under one central app.
@@ -191,8 +195,13 @@ body
                     li Make digital assets more re-usable and discoverable between departments
 
             .section
-                h3 Overview
-                p John Deere was looking to reduce the cost of equipment maintenance by bringing duplicate silo apps under a singular technology solution and dev team.  The hope being that a unified application would allow for a more a more consistent experience and better visibility between departments and throughout the full workflow.
+                .flex-row
+                    div
+                        h3 Overview
+                        p John Deere was looking to reduce the cost of equipment maintenance by bringing duplicate silo apps under a singular technology solution and dev team.  The hope being that a unified application would allow for a more a more consistent experience and better visibility between departments and throughout the full workflow.
+                    p(style='flex:0 0 400px;')
+                        img(src='images/svap/svap-03.jpg')
+
                 p The team decided initially decided to minimize usability and adoption issues by basing large portions of the creation and editing workflow around existing websites already in use by various teams. Where possible the flow for editing and creating assets would remain similar.  Much of the new flow came from connecting assets that were previously isolated and could now talk to each other.   Budget was also a consideration so starting from scratch was going to be out of scope.
 
             .section
@@ -206,18 +215,30 @@ body
                 p Needed to be able to update the status of their job tickets on customer machines as services were performed.  They also needed to be alerted to upcoming and past due tasks to be able to predict upcoming needs for staff workloads and ordering inventory.
 
             .section
+                p
+                    img(src='images/svap/svap-invision.jpg')
+
                 h3 User Testing and Findings
                 p In-person workshop sessions were used to ensure user tasks were available and intuitive for each user type.  In some cases, we found that users were using multiple tabs as a gap fix to not having the context of the data in front of them for either global or minute actions even in the existing apps.  These areas offered us the chance to make the experience better by showcasing the missing data alongside the task.
+
                 h4 Findings
                 p One of the biggest challenges was introducing UX into an already established Agile-like development process. While we tried to map out major connections between sections ahead of development we ran into cases where the workflow dead-ended with the actual backend data available. Some additional concept proofs for specific sections may have been helpful in preventing some of the data availability mismatches as well as budgeting more time for iteration as the team adjusted to including UX into their process would have given more wiggle room.  Overall, allowing the users to have feedback early and often did make adoption smoother and users were less surprised with the final product.
                 h4 Card Sorting for Better Navigation
                 p To pin down navigation, users were asked to place task cards into groups that made the most sense to them.  Consideration was also given to how frequently the user would need to access the task.
                 h4 Tree/Chalk-mark for Menus and Options
                 p Users were presented with menu structures and asked where they would click to find areas of the site or next steps in the work-flow.
-                h4 Whiteboard/Wireframe Prototypes
-                p In some cases, multiple levels of user access complicated the approval structure of assets to the point where workflows had to be completely redefined. Low-fidelity prototype drawings allowed us to check in with users frequently and make sure the task could still be completed before being moved into high-fidelity interactive prototypes.
+
+                .flex-row
+                    div
+                        h4 Whiteboard/Wireframe Prototypes
+                        p In some cases, multiple levels of user access complicated the approval structure of assets to the point where workflows had to be completely redefined. Low-fidelity prototype drawings allowed us to check in with users frequently and make sure the task could still be completed before being moved into high-fidelity interactive prototypes.
+                    p(style='flex:0 0 300px;')
+                        img(src='images/svap/svap-00.jpg')
+
                 h4 Consolidating multiple UI Specifications
                 p To build interactive, high-fidelity mockups we were able to pull from a living style guide being developed in parallel by a different team for many components.  When components were missing completely we took cues on fonts, colors, spacing and icons from what was already being developed and matched them as close as possible.  Part of my role included policing the style guide and returning it to developers if the final product mismatched these brand standards.
+                p
+                    img(src='images/svap/icons.jpg')
 script(src='js/app.js')
 
 
