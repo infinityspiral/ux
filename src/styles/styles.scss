@@ -80,7 +80,7 @@ p {
 
 ol {
     counter-reset: inst;
-    margin: 0;
+    margin: 20px 0 0 0;
     padding: 0;
 
     li {
@@ -200,6 +200,7 @@ margin-bottom: 20px;
     background: #ebebeb;
     border-radius: 4px;
     box-shadow: 0px 4px 8px lighten(black, 70%);
+    margin: 0;
     padding: 8px 16px 0 16px;
     position: fixed;
     top: 76px;
