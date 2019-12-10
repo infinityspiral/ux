@@ -18,6 +18,7 @@ html {
 }
 
 body {
+    background: #dedede;
     width: 100%;
     margin: 0;
     padding: 0;
@@ -30,14 +31,14 @@ body {
 h1,h2,h3 {
     font-family: $fontHeading;
     font-weight: 300;
-    margin: 3.2rem 0 .4rem 0;
+    margin: 0 0 8px 0;
     padding: 0;
 }
 h4, h5 {
     font-family: $fontHeading;
     color: $colorSecondary;
     font-weight: 600;
-    margin: 16px 0 0 0;
+    margin: 0 0 12px 0;
     padding: 0;
     text-transform: uppercase;
 }
@@ -48,7 +49,6 @@ h2 {
     font-size: 2.4rem;
     font-weight: 600;
     font-family: $fontBody;
-    margin-top: 0;
     line-height: 1;
 }
 h3 {
@@ -56,12 +56,11 @@ h3 {
     font-size: 1.6rem;
     font-weight: 700;
     line-height: 1;
-    margin-bottom: .8rem;
 
     @media(min-width:$breakPhone) {
         font-size: 3.2rem;
         line-height: 1.2;
-        }
+    }
 }
 h4 {
     font-size: 2rem;
@@ -74,12 +73,8 @@ h5{
 h6{
     font-size: 2rem;
 }
-h2 + h3,
-h4 + h5 {
-    margin-top: .8rem;
-}
 p {
-    margin: 0 0 1.2rem 0;
+    margin: 0 0 24px 0;
     padding: 0;
 }
 
@@ -92,7 +87,7 @@ ol {
         display: flex;
         align-items: flex-start;
         counter-increment: inst;
-        margin: 12px 0 0 0;
+        margin: 0 0 12px 0;
         padding: 0;
         position: relative;
         list-style: none;
@@ -111,7 +106,9 @@ ol {
             font-weight: 700;
             line-height: 32px;
             padding: 0;
-            margin: 0 12px 0 0;
+            margin: 0 12px 12px 0;
+            position: relative;
+            bottom: 2px;
         }
     }
 }
@@ -124,6 +121,22 @@ img {
 video {
     &:focus {
         outline: none;
+    }
+}
+.video-container {
+    img {
+
+        @media (min-width:$breakPhone) {
+            display: none;
+        }
+    }
+
+    video {
+        display: none;
+
+        @media (min-width:$breakPhone) {
+            display: initial;
+        }
     }
 }
 
@@ -153,215 +166,129 @@ video {
 }
 .header {
     width: 100%;
-    overflow: hidden;
     background: $colorPrimary;
-    color: white;
-    padding: $spaceUnit;
+    padding: $spaceUnit 0px;
     overflow: hidden;
 
     h1 {
         margin: 0;
-        padding: 76px;
-        text-align: center;
+        padding: $spaceUnit;
+        color: darken(white,35%);
+        font-size: 2.4rem;
 
-        span {
-            display: block;
-            line-height: 1;
+        @media (min-width:$breakPhone) {
+            margin: 0 0 0 8px;
+        }
 
-            &:nth-child(1){
-                font-size: 2.4rem;
-                font-weight: 300;
-                margin-bottom: -4px;
-                text-indent: 8px;
-            }
 
-            &:nth-child(2){
-                font-size: 10rem;
-                font-weight: 600;
+        &:before {
+            content: 'UX';
+            color: darken(white,30%);
+            background: darken(white,70%);
+            padding: 2px 8px;
+            border-radius: 4px;
+            font-weight: 600;
+            margin-right: $spaceUnit;
+        }
+    }
+}
+.quick-nav {
+    background: #ebebeb;
+    border-radius: 4px;
+    box-shadow: 0px 4px 8px lighten(black, 70%);
+    padding: 8px 16px 0 16px;
+    position: fixed;
+    top: 76px;
+    left: 16px;
+    width: 184px;
+
+    h5 {
+        border-top-left-radius: 4px;
+        border-top-right-radius: 4px;
+        font-size: 1.2rem;
+        color: #8c8c8c;
+        border-bottom: 1px solid #dadada;
+        margin-bottom: 16px;
+        padding-bottom: 4px;
+    }
+
+    li {
+        display: list-item;
+        list-style: decimal;
+        font-size: 1.2rem;
+        margin: 0 0 $spaceUnit*2 $spaceUnit*2;
+        line-height: 1.3;
+        color: lighten($colorPrimary,40%);
+
+        &:before {
+            display: none;
+        }
+
+        a {
+            text-decoration: none;
+            color: lighten($colorPrimary,40%);
+
+            &:hover {
+                text-decoration: underline;
             }
         }
+
+        .company {
+            display: block;
+            color: lighten($colorPrimary,30%);
+        }
+
+        .project {
+            display: block;
+            text-transform: uppercase;
+            color: $colorPrimary;
+            font-size: 1.2rem;
+            font-weight: 600;
+        }
+    }
+
+    @media (max-width:$breakPhone) {
+        display: none;
+    }
+
+    .footer {
+        list-style: none;
+        border-top: 1px solid #dadada;
+        margin-top: 12px;
+
+        a {
+            font-size: 1.2rem;
+            color: #8c8c8c;
+            display: block;
+            text-transform: uppercase;
+        }
+
+        .contact-info {
+            margin: 20px 0 16px 0;
+            color: lighten($colorPrimary,0%);
+            font-size: 1.2rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            line-height: 1.5;
+
+            a, span {
+                font-size: 1.1rem;
+                text-transform: initial;
+                color: #8c8c8c;
+            }
+        }
+
     }
 }
 .main-content {
-    padding: 0 $spaceUnit $spaceUnit $spaceUnit;
-    counter-reset: project;
-    background: #fafafa;
-}
-.section {
     max-width: 950px;
-    margin: 0 auto;
-    padding: 20px;
+    padding: 36px;
+    margin: 16px 0 0 220px;
+    counter-reset: project;
+    background: white;
 
-    @media (min-width: $breakPhone){
-        margin-top: 48px;
-    }
-}
-
-img + .credits {
-    margin-left: 40px;
-}
-.project {
-    margin-top: 100px;
-
-    &:first-child {
-        margin-top: 20px;
-    }
-}
-.project-tag {
-    counter-increment: project;
-    background: #282828;
-    display: inline-flex;
-    color: white;
-    position: relative;
-    left: -8px;
-    padding: 0 12px 0 8px;
-    margin-bottom: 28px;
-    border-top-right-radius: 6px;
-    border-bottom-right-radius: 6px;
-
-    .project-label {
-        border-left: 1px solid rgba(255, 255, 255, 0.4);
-        padding-left: 12px;
-    }
-
-    .project-company {
-        display: block;
-        font-family: "Raleway", sans-serif;
-        font-size: 1.2rem;
-        font-weight: 600;
-        line-height: 1;
-        margin-top: 8px;
-        margin-bottom: 4px;
-    }
-
-    .project-title {
-        font-family: "Open Sans", sans-serif;
-        font-size: 3.6rem;
-        font-weight: 600;
-        line-height: 1;
-        position: relative;
-        top: -4px;
-        margin-bottom: 4px;
-    }
-
-
-    .title {
-        display: inline-block;
-        font-size: 1.6rem;
-        font-weight: 600;
-        line-height: 2.4rem;
-        padding-left: 20px;
-        padding-top: 32px;
-        position: relative;
-        text-transform: uppercase;
-
-        @media(min-width:$breakPhone) {
-            font-size: 2rem;
-            line-height: 1.2;
-        }
-
-        &:before {
-            content: '';
-            display: inline-block;
-            border-left: 1px solid rgba(255, 255, 255, 0.08);
-            height: calc(100% - 20px);
-            position: absolute;
-            top: 10px;
-            left: 0;
-        }
-    }
-    .counter{
-        padding: 0 9px 0 0;
-
-        &:before {
-            content: "Project";
-            display: block;
-            font-family: $fontHeading;
-            font-size: 1.2rem;
-            font-weight: 600;
-            line-height: 1;
-            margin-top: 8px;
-            margin-bottom: 4px;
-        }
-        &:after {
-            content: "0"counter(project);
-            display: inline-block;
-            font-family: $fontBody;
-            font-size: 3.6rem;
-            font-weight: 600;
-            line-height: 1;
-            position: relative;
-            top: -4px;
-            margin-bottom: 4px;
-        }
-    }
-}
-.users {
-    margin-top: 28px;
-}
-.user {
-    margin: 0 auto;
-
-    @media (min-width:$breakPhone){
-        display: flex;
-        margin: 0 $spaceUnit;
-    }
-
-    h4 {
-        margin: 0px 0 0 0;
-    }
-
-    .icon-ux {
-
-        @media (min-width:$breakPhone){
-            width: 100px;
-            height: 100px;
-            margin-right: 10px;
-            top: -20px;
-        }
-
-    }
-}
-.project-header {
-    box-shadow: #b0b0b0 0px -8px 80px -28px;
-    margin-bottom: 90px;
-}
-.video-container {
-    img {
-
-        @media (min-width:$breakPhone) {
-            display: none;
-        }
-    }
-
-    video {
-        display: none;
-
-        @media (min-width:$breakPhone) {
-            display: initial;
-        }
-    }
-}
-.spacer {
-    width: 250px;
-}
-.drone {
-    border: none !important;
-    border-radius: 0 !important;
-
-    &.low {
-        display: block;
-
-        @media (min-width: $breakPhone) {
-            display: none;
-        }
-    }
-
-    &.high {
-        display: none;
-
-        @media (min-width: $breakPhone) {
-            display: block;
-        }
+    @media (max-width: $breakPhone){
+        padding: $spaceUnit;
+        margin: 0;
     }
 }

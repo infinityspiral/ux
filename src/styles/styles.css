@@ -350,6 +350,7 @@ html {
 }
 
 body {
+  background: #dedede;
   width: 100%;
   margin: 0;
   padding: 0;
@@ -363,7 +364,7 @@ body {
 h1, h2, h3 {
   font-family: "Raleway", sans-serif;
   font-weight: 300;
-  margin: 3.2rem 0 0.4rem 0;
+  margin: 0 0 8px 0;
   padding: 0;
 }
 
@@ -371,7 +372,7 @@ h4, h5 {
   font-family: "Raleway", sans-serif;
   color: #9b9b9b;
   font-weight: 600;
-  margin: 16px 0 0 0;
+  margin: 0 0 12px 0;
   padding: 0;
   text-transform: uppercase;
 }
@@ -384,7 +385,6 @@ h2 {
   font-size: 2.4rem;
   font-weight: 600;
   font-family: "Open Sans", sans-serif;
-  margin-top: 0;
   line-height: 1;
 }
 
@@ -393,7 +393,6 @@ h3 {
   font-size: 1.6rem;
   font-weight: 700;
   line-height: 1;
-  margin-bottom: 0.8rem;
 }
 @media (min-width: 767px) {
   h3 {
@@ -416,13 +415,8 @@ h6 {
   font-size: 2rem;
 }
 
-h2 + h3,
-h4 + h5 {
-  margin-top: 0.8rem;
-}
-
 p {
-  margin: 0 0 1.2rem 0;
+  margin: 0 0 24px 0;
   padding: 0;
 }
 
@@ -435,7 +429,7 @@ ol li {
   display: flex;
   align-items: flex-start;
   counter-increment: inst;
-  margin: 12px 0 0 0;
+  margin: 0 0 12px 0;
   padding: 0;
   position: relative;
   list-style: none;
@@ -454,7 +448,9 @@ ol li:before {
   font-weight: 700;
   line-height: 32px;
   padding: 0;
-  margin: 0 12px 0 0;
+  margin: 0 12px 12px 0;
+  position: relative;
+  bottom: 2px;
 }
 
 img {
@@ -465,6 +461,20 @@ img {
 
 video:focus {
   outline: none;
+}
+
+@media (min-width: 767px) {
+  .video-container img {
+    display: none;
+  }
+}
+.video-container video {
+  display: none;
+}
+@media (min-width: 767px) {
+  .video-container video {
+    display: initial;
+  }
 }
 
 .icon-ux {
@@ -499,210 +509,120 @@ video:focus {
 
 .header {
   width: 100%;
-  overflow: hidden;
   background: #282828;
-  color: white;
-  padding: 8px;
+  padding: 8px 0px;
   overflow: hidden;
 }
 .header h1 {
   margin: 0;
-  padding: 76px;
-  text-align: center;
-}
-.header h1 span {
-  display: block;
-  line-height: 1;
-}
-.header h1 span:nth-child(1) {
+  padding: 8px;
+  color: #a6a6a6;
   font-size: 2.4rem;
-  font-weight: 300;
-  margin-bottom: -4px;
-  text-indent: 8px;
 }
-.header h1 span:nth-child(2) {
-  font-size: 10rem;
+@media (min-width: 767px) {
+  .header h1 {
+    margin: 0 0 0 8px;
+  }
+}
+.header h1:before {
+  content: "UX";
+  color: #b3b3b3;
+  background: #4d4d4d;
+  padding: 2px 8px;
+  border-radius: 4px;
   font-weight: 600;
+  margin-right: 8px;
+}
+
+.quick-nav {
+  background: #ebebeb;
+  border-radius: 4px;
+  box-shadow: 0px 4px 8px #b3b3b3;
+  padding: 8px 16px 0 16px;
+  position: fixed;
+  top: 76px;
+  left: 16px;
+  width: 184px;
+}
+.quick-nav h5 {
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
+  font-size: 1.2rem;
+  color: #8c8c8c;
+  border-bottom: 1px solid #dadada;
+  margin-bottom: 16px;
+  padding-bottom: 4px;
+}
+.quick-nav li {
+  display: list-item;
+  list-style: decimal;
+  font-size: 1.2rem;
+  margin: 0 0 16px 16px;
+  line-height: 1.3;
+  color: #8e8e8e;
+}
+.quick-nav li:before {
+  display: none;
+}
+.quick-nav li a {
+  text-decoration: none;
+  color: #8e8e8e;
+}
+.quick-nav li a:hover {
+  text-decoration: underline;
+}
+.quick-nav li .company {
+  display: block;
+  color: #757575;
+}
+.quick-nav li .project {
+  display: block;
+  text-transform: uppercase;
+  color: #282828;
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+@media (max-width: 767px) {
+  .quick-nav {
+    display: none;
+  }
+}
+.quick-nav .footer {
+  list-style: none;
+  border-top: 1px solid #dadada;
+  margin-top: 12px;
+}
+.quick-nav .footer a {
+  font-size: 1.2rem;
+  color: #8c8c8c;
+  display: block;
+  text-transform: uppercase;
+}
+.quick-nav .footer .contact-info {
+  margin: 20px 0 16px 0;
+  color: #282828;
+  font-size: 1.2rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  line-height: 1.5;
+}
+.quick-nav .footer .contact-info a, .quick-nav .footer .contact-info span {
+  font-size: 1.1rem;
+  text-transform: initial;
+  color: #8c8c8c;
 }
 
 .main-content {
-  padding: 0 8px 8px 8px;
-  counter-reset: project;
-  background: #fafafa;
-}
-
-.section {
   max-width: 950px;
-  margin: 0 auto;
-  padding: 20px;
+  padding: 36px;
+  margin: 16px 0 0 220px;
+  counter-reset: project;
+  background: white;
 }
-@media (min-width: 767px) {
-  .section {
-    margin-top: 48px;
-  }
-}
-
-img + .credits {
-  margin-left: 40px;
-}
-
-.project {
-  margin-top: 100px;
-}
-.project:first-child {
-  margin-top: 20px;
-}
-
-.project-tag {
-  counter-increment: project;
-  background: #282828;
-  display: inline-flex;
-  color: white;
-  position: relative;
-  left: -8px;
-  padding: 0 12px 0 8px;
-  margin-bottom: 28px;
-  border-top-right-radius: 6px;
-  border-bottom-right-radius: 6px;
-}
-.project-tag .project-label {
-  border-left: 1px solid rgba(255, 255, 255, 0.4);
-  padding-left: 12px;
-}
-.project-tag .project-company {
-  display: block;
-  font-family: "Raleway", sans-serif;
-  font-size: 1.2rem;
-  font-weight: 600;
-  line-height: 1;
-  margin-top: 8px;
-  margin-bottom: 4px;
-}
-.project-tag .project-title {
-  font-family: "Open Sans", sans-serif;
-  font-size: 3.6rem;
-  font-weight: 600;
-  line-height: 1;
-  position: relative;
-  top: -4px;
-  margin-bottom: 4px;
-}
-.project-tag .title {
-  display: inline-block;
-  font-size: 1.6rem;
-  font-weight: 600;
-  line-height: 2.4rem;
-  padding-left: 20px;
-  padding-top: 32px;
-  position: relative;
-  text-transform: uppercase;
-}
-@media (min-width: 767px) {
-  .project-tag .title {
-    font-size: 2rem;
-    line-height: 1.2;
-  }
-}
-.project-tag .title:before {
-  content: "";
-  display: inline-block;
-  border-left: 1px solid rgba(255, 255, 255, 0.08);
-  height: calc(100% - 20px);
-  position: absolute;
-  top: 10px;
-  left: 0;
-}
-.project-tag .counter {
-  padding: 0 9px 0 0;
-}
-.project-tag .counter:before {
-  content: "Project";
-  display: block;
-  font-family: "Raleway", sans-serif;
-  font-size: 1.2rem;
-  font-weight: 600;
-  line-height: 1;
-  margin-top: 8px;
-  margin-bottom: 4px;
-}
-.project-tag .counter:after {
-  content: "0" counter(project);
-  display: inline-block;
-  font-family: "Open Sans", sans-serif;
-  font-size: 3.6rem;
-  font-weight: 600;
-  line-height: 1;
-  position: relative;
-  top: -4px;
-  margin-bottom: 4px;
-}
-
-.users {
-  margin-top: 28px;
-}
-
-.user {
-  margin: 0 auto;
-}
-@media (min-width: 767px) {
-  .user {
-    display: flex;
-    margin: 0 8px;
-  }
-}
-.user h4 {
-  margin: 0px 0 0 0;
-}
-@media (min-width: 767px) {
-  .user .icon-ux {
-    width: 100px;
-    height: 100px;
-    margin-right: 10px;
-    top: -20px;
-  }
-}
-
-.project-header {
-  box-shadow: #b0b0b0 0px -8px 80px -28px;
-  margin-bottom: 90px;
-}
-
-@media (min-width: 767px) {
-  .video-container img {
-    display: none;
-  }
-}
-.video-container video {
-  display: none;
-}
-@media (min-width: 767px) {
-  .video-container video {
-    display: initial;
-  }
-}
-
-.spacer {
-  width: 250px;
-}
-
-.drone {
-  border: none !important;
-  border-radius: 0 !important;
-}
-.drone.low {
-  display: block;
-}
-@media (min-width: 767px) {
-  .drone.low {
-    display: none;
-  }
-}
-.drone.high {
-  display: none;
-}
-@media (min-width: 767px) {
-  .drone.high {
-    display: block;
+@media (max-width: 767px) {
+  .main-content {
+    padding: 8px;
+    margin: 0;
   }
 }
 
