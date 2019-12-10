@@ -13,16 +13,14 @@ html(lang="en")
 body
     .header
         h1#header Chris Norton
-
-
     ol.quick-nav
         h5 Quick Menu
         li
-            a('href'='#project1')
+            a('href'='#aquent-it-solutions-recruiting-website')
                 span.project Recruiting Website
                 span.company Aquent IT Solutions
         li
-            a('href'='#project2')
+            a('href'='#service-admin-portal')
                 span.project Service Admin Portal
                 span.company John Deere
         li.footer
@@ -32,174 +30,180 @@ body
 
 
     .main-content
-        .project#project1
-            .video-container
-                img(src='video/aquent-home-static.jpg')
-                <video id="aquent-home" width="223" height="470" poster="video/aquent-home.jpg">
-                <source src="video/aquent-home.mp4" type="video/mp4">
-                </video>
-
-            h5 Project
-            span Recruiting Website
-
-            h5 Client
-            span Aquent IT Solutions
-
-            h5 My roles
-            span UX/UI
-
-            h5 Platforms
-            span Desktop, Tablet, Mobile
-
-            h3 Overview
-            p I lead the UX/UI/Front-end development efforts for Aquent IT solutions website which turned into a deep dive of the core business model and an overhaul of the content and marketing strategy within the company.
-
-            h3 Problem statement
-            p Aquent IT Solutions was looking to give their main website a refresh to give it a more modern feel.
-
-            h3 Project Goals
-            p - Make the website look more modern
-
-            h3 Crowd control
-            p This project is a great example of how UX can help unify a wide variety of opinions under a single banner. When I was brought into the team the website was operating under the premise that, "of course we need a website because a business needs a website to look like a real business." Businesses build websites like this all the time just to get something out there, but run into trouble when it comes time to update. Everyone always has a different idea of what they think users want or need. The solution is pretty easy though - just ask the users.
-
-            h3 Good design is only obvious when you see it
-            p Of course asking users seems obvious now, but people wrestle with sites like these for years until someone comes in and actually identifies what's wrong. Goals and users need to be clearly defined. Page tracking was in place so they knew some pages were more popular than others, but with who? And did those pages lead to conversions? What even were the desired conversions for this site?
-            p It may come as no surprise that previously there was a lot of speculation on what users wanted next and what the site was missing most. A lot of conversations revolved around what graphics looked old or what the best font sizes were. No real conversations about users being able to find necessary information or even who the users were.
-            p Prioritizing site goals and identifying users made it a lot easier to direct the team away from cosmetic changes and get them to focus on missing information and usablility gaps by asking measurable questions like "Are we getting less job candidates calling in about H1B visas since adding the new section with visa information?" Less people calling in? Yes okay success then. Next thing.
-
-            h3 User testing
-            p One nice thing about the main user being a job candidate at a company that hires new candidates frequently is a fairly fresh user base for ux testing.  Through a mix of ongoing surveys and live-recorded usability sessions I was able to find what conversations users were hoping to have with the site and where the communication broke down.  For one we found that our menus were trying too hard.  No need to be cute or unique with labels.  Straightforward, boring menus worked better.  Users hated contact forms and filling out job history.  So we took out the contact form and replaced it with an email where they could send it in to a real person. After each testing session we made the smallest effective change and then retested.  Over and over.
-
-            h3 Prioritizing users
-            p To set goals for the site I identified two types of users that could most impact the business: clients and job candidates.
-
-            h3 Clients
-            p Previously the website was hoping to appeal to both businesses and job candidates. In tracing project origins, we uncovered that very few business leads mentioned the website as a deciding factor. Most new business was attained through existing partners or through vendor networks with almost zero calls coming in from the site. At most a business client mentioned visiting the site just to make sure we looked bigger than a mom and pop shop.
-
-            h3 Job candidates: Target user found!
-            p However, we found that all job candidates did touch the website at some point and job seekers did have a signifigant impact on the business. Aquent generates a signifigant portion of revenue by finding developers and placing them on site with client teams. By interviewing recruiters who in-turn interviewed candidates we were able to find that the website did influence a candidate's decision-making during the interview process. So our main user was a job candidate and our goal was getting more of them to fill out the contact form or email/call in about posted jobs.
-
-            h3 But wait there's more (usability issues)
-            p By asking job candidates about the website we got more insight into user frustrations throughout the recruitment process that ran a lot deeper than just making a website look more modern.
-
-            h4 Immediate Problems
-            ol
-                li In some cases we found the hiring process was taking upwards of two months!
-                li Users had a hard time understanding what the company actually did.
-                li Candidates didn't know whether they were talking to Aquent the parent company or Aquent IT Solutions which caused them to bail.
-                li Each social media channel looked like a different company adding to confusion.
-                li Candidates that did engage didn't feel informed about the overall process or were left wondering about next steps causing them to leave the process.
-
-            h3 Finding solutions
-            p The biggest problem was time. Two months was way too long between contacting a candidate and placing them on site with a client. We were losing the ability to place new candidates competitively.
-            p By mapping out the candidate journey that had been in place for decades I was able to get an overview of the connections and pain points between each touch point and the problem became very clear.  We had too many interviews and they were spaced too far apart.
-            h4 Previous interview process where each stage can take up to 2 weeks:
-
-            ol
-                li
+        .project#aquent-it-solutions-recruiting-website
+            h3.project-title Aquent Recruiting Website
+            .section
+                .flex-row
+                    .video-container
+                        img(src='video/aquent-home-static.jpg')
+                        <video id="aquent-home" width="223" height="470" poster="video/aquent-home.jpg">
+                            <source src="video/aquent-home.mp4" type="video/mp4">
+                        </video>
                     div
-                        strong WEEK 1-2
-                        p Recruiter reaches out for a short phone conversation to gauge interest and talk about opportunities
-                li
+                        h4 Details
+                        .key-value-pair
+                            .key-v Project
+                            .val-v Recruiting Website
+                        .key-value-pair
+                            .key-v Client
+                            .val-v Aquent IT Solutions
+
+                        .key-value-pair
+                            .key-v Platform
+                            .val-v Desktop, Tablet, Mobile
                     div
-                        strong WEEK 3-4
-                        p HR - Screens for temperment and general fit into the project team environment, pre-screens for technical interviewer. In at least one case a user ended the process at the confusion of being given a tech interview by a non-tech person.
-                li
+                        h4 Team
+                        .key-value-pair
+                            .key-h Project Manager
+                            .val-h Matt Kruse
+                        .key-value-pair
+                            .key-h UX Design
+                            .val-h Chris Norton
+                        .key-value-pair
+                            .key-h UX Research/Testing
+                            .val-h Chris Norton<br>Pooja Arshanapally<br>Mark Hein
+                        .key-value-pair
+                            .key-h UI
+                            .val-h Chris Norton
+                        .key-value-pair
+                            .key-h Front-end Developer
+                            .val-h Chris Norton
+
+            .section
+                h3 Project Goal
+                p Aquent IT Solutions was looking attract more recruits by updating the current website with a more modern look
+
+            .section
+                h3 Overview
+                p I lead the UX/UI/Front-end development efforts for the project which included a deep dive into the core business model and journey map of hiring on a new employee. By understanding the surrounding steps we were able to define better what role the website was actually playing in the overall process.
+            .section
+                h3 Defining Project Goals
+                p This project is a great example of how UX can help unify a wide variety of opinions under a single banner. When I was brought into the team the website was operating under the premise that, "of course we need a website because a business needs a website to look like a real business." Businesses build websites like this all the time just to get something out there, but run into trouble when it comes time to update and prioritize content. Everyone always has a different idea of what they think users want or need. The solution is pretty easy though - just ask the users.
+                p Of course asking users seems obvious now, but companies wrestle with sites like these for years until someone comes in and actually identifies the problem. A lot of the time the problem is that they really just don’t have a clear idea of what their users are trying to get from the site. Page tracking was in place so they knew some pages were more popular than others, but with who? And did those pages lead to conversions?
+                p A lot of conversations at the start revolved around what graphics looked old or what the best font sizes were. No real conversations about users being able to find necessary information or even who the users were. Was the purpose to attract new business, or was it to attract new recruits?  It wasn’t going to get us very far talking about what color a door should be if we didn’t first talk about if that door needed to be attached to a car or a house.
+                p Prioritizing site goals and identifying users made it a lot easier to direct the team away from cosmetic changes and get them to focus on usability gaps by asking measurable questions like "Are we getting less job candidates calling in about H1B visas since adding the new section with visa information?" Less people calling in about visas? Yes? Okay success then. Next feature!
+            .section
+                h3 Defining Users to Create Better Project Deliverables
+                h4 User 1: New business
+                p Previously the website was hoping to appeal to both new business and employee candidates. Looking into past projects, we uncovered that very few business leads mentioned the website as a deciding factor. Most new business was attained through existing partner relationships with almost zero contact coming in from the site. It just wasn’t factor.
+                h4 User 2: Employee Recruits
+                p Aquent generates a significant portion of revenue by finding developers and placing them on site with client teams. By talking with recruiters we found that all of these job candidates touched the website at some point and it did have a significant impact on their decision to pursue an interview. So our biggest impact would be in catering to job candidates with the goal of getting more of them to reach out via the site to begin the interview process.
+            .section
+                h3 User Testing and Gathering Users
+                p We were able to get a fresh supply of user testing by adding new hires as site testers. Through a mix of ongoing surveys and live-recorded usability sessions we were able to uncover what conversations users were hoping to have with the site and where that communication broke down. Also by asking job candidates about the website we got more insight into user frustrations throughout the recruitment process that ran a lot deeper than just making a website look more modern.
+            .section
+                h3 Test Findings
+                h4 Menus
+                p During testing we found that our menus were unclear. Some menu items were trying to be too cute. Straightforward, boring menus worked better.
+                h4 Users hate filling out job forms
+                p Users also hated contact forms and filling out job history. Except for one user, the vast majority preferred the option of just sending an email with a resume versus filling out a lengthy form with job history. We took out the contact form and replaced it with an email where they could send it in to a real person. After each testing session we made the smallest effective change to fix the problem and then retested. Over and over until we stopped having the problem.
+
+                h4 Other big problems
+                ol
+                    li Candidates  didn't feel informed about the overall process or were left wondering about next steps causing them to leave the process.
+                    li Users had a hard time understanding what the company actually did.
+                    li Candidates didn't know whether they were talking to Aquent the parent company or Aquent IT Solutions the technology division which caused users to bail.
+                    li Each social media channel looked like it was run by a different team.
+
+                h3 Solving the biggest problem of all: TIME
+                p In some cases we found the hiring process was taking upwards of two months!  That was way too long between contacting a candidate and placing them on site with a client. This was easily our biggest hurdle in being able to place new candidates quickly and competitively.
+                p Overlaying our decades-old process flow on top of our newly-created journey map allowed me to uncover our own roadblocks. We had too many interviews and they were spaced too far apart. Also approvals during the process, originally meant to save people time were causing scheduling conflicts and pushing back timelines.
+
+                h4 PREVIOUS INTERVIEW PROCESS (2 WEEKS BETWEEN STEPS!)
+                ol
+                    li
+                        p <strong> WEEK 1-2</strong><br>Recruiter reaches out for a short phone conversation to gauge interest and talk about opportunities
+                    li
+                        p <strong> WEEK 3-4</strong><br>HR - Screens for temperament and general fit into the project team environment, pre-screens for technical interviewer so a part one tech interview. In at least one case a user ended the process at the confusion of being given a tech interview by a non-tech person.
+                    li
+                        p <strong> WEEK 5-6</strong><br>Technical - Screens for advanced technical knowledge, tech interview part 2
+                    li
+                        p <strong>WEEK 7-8</strong><br>Hiring company/Client - Screens for their own individual team so tech interview part 3
+
+                h4 REVISED PROCESS (2 Months down to 7 days or less)
+                ol
+                    li
+                        p <strong>DAY 1 - Gauge interest conversation and screen for behavior</strong><br>Recruiter finds a potential candidate and reaches out for a short conversation to gauge interest in setting up an interview. The recruiter pre-screens for behavioral and to answer HR related questions instead of setting up a whole other interview before a tech interview.
+                    li
+                        p <strong>Day 2 - Tech interview via Skype or in Person</strong><br>For candidates that have reached out, resumes have been screened already by a senior developer. This was one of the biggest blockers. Having the tech take five minutes to pre-screen a resume after a candidate expressed interest far outweighed the 1-3 weeks lost in waiting for someone with senior experience to free up time to pre-screen after that first interview had taken place.  Also it worked towards solving the problem of experienced candidates being technically interview by inexperienced staff.
+                    li
+                        p <strong>Day 3</strong><br>Candidate interviews with client team where they will potentially be placed.  Unfortunately this still means a multi-day interview process but it does take the number of days the candidate down to two surgical time slots versus 4 days spaced out over months.
+            .section
+                h3 Content strategy
+                p Having users not understand what the company did was a big deal. Asking around, even internal employees struggled with any sort of elevator pitch. It made sense, the main source of marketing for decades had been the website and the website changed direction every few years. So really the content strategy needed to include internal effort as well to help our own people understand what they were working together to achieve. I created guidelines for content and tone for social media, internal communication and external marketing.
+
+                h4 Social media
+                p We found candidates really only found us through a select few social media sites. As a conservation of effort we brought the branding in line with those particular sites and closed the remainder. We also committed to a content strategy to prevent these areas from looking abandoned in the future.
+                h4 Imagery
+                p I defined example imagery to be used in the marketing materials, picking overhead drone photos to create the feeling of seeing the big picture through future tech which is exactly what we provide in our solutions to clients: technology-based solutions that work with large amounts of data at a digestible scale.
+
+
+
+        .project#service-admin-portal
+            h3.project-title John Deere Service Admin Portal 
+            .section
+                .flex-row
                     div
-                        strong WEEK 5-6
-                        p Technical - Screens for advanced technical knowledge
-                li
+                        h4 Details
+                        .key-value-pair
+                            .key-v Project
+                            .val-v Service Admin Portal
+                        .key-value-pair
+                            .key-v Client
+                            .val-v John Deere
+
+                        .key-value-pair
+                            .key-v Platform
+                            .val-v Desktop, Tablet
                     div
-                        strong WEEK 7-8
-                        p Hiring company/Client - Screens for their own individual team
+                        h4 Team
+                        .key-value-pair
+                            .key-h Project Manager
+                            .val-h Nancy Early
+                        .key-value-pair
+                            .key-h UX Design
+                            .val-h Chris Norton
+                        .key-value-pair
+                            .key-h UI
+                            .val-h Chris Norton
+                        .key-value-pair
+                            .key-h HTML/Sass/CSS
+                            .val-h Chris Norton
+                .section
+                h3 Project goals
+                ol
+                    li Combine various single-use business applications under one central app.
+                    li Provide a catered experience to business owners, dealers, sales representatives, and service technicians that maintains current level of functionality
+                    li Make digital assets more re-usable and discoverable between departments
 
-            h4 Revised process
-            p The average time that candidates spent in the process easily halved and if highly motivated could be moved through the process in less than a week.  That's a huge difference compared to two months previously!
-            ol
-                li
-                    div
-                        strong DAY 1
-                        p Recruiter finds a potential candidate and reaches out for interest in setting up an interview. The recruiter pre-screens for behaviorial and to answer HR related questions. Interested candidates are passed directly to techs.
-                        p This was one of the biggest blockers. Having the tech take five minutes to pre-screen a resume/portfolio after a candidate expressed interest far outweighed the 1-3 weeks lost in waiting for someone less experience to pre-screen in person.
+            .section
+                h3 Overview
+                p John Deere was looking to reduce the cost of equipment maintenance by bringing duplicate silo apps under a singular technology solution and dev team.  The hope being that a unified application would allow for a more a more consistent experience and better visibility between departments and throughout the full workflow.
+                p The team decided initially decided to minimize usability and adoption issues by basing large portions of the creation and editing workflow around existing websites already in use by various teams. Where possible the flow for editing and creating assets would remain similar.  Much of the new flow came from connecting assets that were previously isolated and could now talk to each other.   Budget was also a consideration so starting from scratch was going to be out of scope.
 
-                li
-                    div
-                        strong Day 2
-                        p Technical interview via Skype or in person.
-                li
-                    div
-                        strong Day 3
-                        p Candidate interviews with client team where they will potentiall be placed.
+            .section
+                h3 Defining Users
+                p Using the project requirements document, email interviews, and phone calls and user tasks we built out personas which allowed us to prioritize and find each user’s most needed tasks.
+                h4 Business Owners and Dealers
+                p Needed to be able to monitor overall profitability and admin
+                h4 Sales Representatives
+                p Needed the ability to quickly pull from existing template agreements, view existing agreements and work within bundled groups of agreements for customers.
+                h4 Technicians
+                p Needed to be able to update the status of their job tickets on customer machines as services were performed.  They also needed to be alerted to upcoming and past due tasks to be able to predict upcoming needs for staff workloads and ordering inventory.
 
-
-            h3 Content strategy
-            p Having users not understand what the company did was a big deal. Out of curiosity I asked around and even internal employees struggled with any sort of elevator pitch. It made sense, the main source of marketing for decades had been the website and the website changed direction every few years.  So the content strategy needed to include internal effort into helping our own people understand what they're were working together to achieve. From the ground up I created guidelines for content and tone for social media, internal communication and external marketing.
-
-            h3 Imagery
-            p As part of the content strategy I defined example imagery to be used in the marketing materials. I picked overhead city drone photos to create the feeling of seeing the big picture through future tech which is exactly what we provide in solutions to clients- technology based solutions that work with large amounts of data at the proper scale.
-
-            h3 Social media
-            p We found candidates really only found us through a select few social media sites. As a conservation of effort we brought the branding in line with those particular sites and closed the remainder.  We also committed to a content strategy to prevent these areas from looking abandoned in the future.
-
-        .project#project2
-            h5 Project
-            p Service Admin Portal
-
-            h5 Client
-            p John Deere
-
-            h5 My roles
-            p UX Design
-
-            h5 Platforms
-            p Desktop, Tablet
-
-            h3 Overview
-            p I led UX on John Deere&rsquo;s new Service Agreements Portal
-
-            h3 Problem statement
-            p John Deere was looking to reduce the cost of maintenance by bringing duplicate silo apps under a singular technology solution and dev team. &nbsp;A unified application would allow better consistency and visibility between departments and quicker response throughout the overall workflow.
-
-            h3 Project goals
-            ol
-                li Combine various single-use applications under one central app.
-                li Maintain current level of functionality
-                li Provide a more intuitive user experience to multiple user roles
-                li Catered experience to business owners, dealers, sales representatives, and service technicians
-                li Make digital assets more re-usable and discoverable between departments
-
-            h3 Leveraging existing architecture
-            p Because there were a pre-existing internal websites being used to view agreements in various states already, the team decided to minimize usability issues and base the new site largely around what was already familiar and adopted by existing users. New features would include a speed boost by converting the experience to a single page app with and in building connections between assets that were previously isolated into the overall work-flow.
-            h4 A living style guide
-            p Visually, we were able to pull from a branded living style guide to define the look and feel of overall page and components to build out templates for rapid high-fidelity mockups.
-
-            h3 Engaging users
-            p Using the project requirements document, email interviews, and phone calls we built out personas. &nbsp;Having personas allowed us to walk each user type through prioritizing and finding their most needed tasks.
-
-            h4 Business owners and dealers
-            p Needed to be able to monitor overall profitability and admin
-
-            h4 Sales representatives
-            p Needed the ability to quickly pull from existing template agreements, view existing agreements and work within bundled groups of agreements for customers.
-
-            h4 Technicians
-            p Needed to be able to update the status of their job tickets on customer machines as services were performed. &nbsp;They also needed to be alerted to upcoming and past due tasks to be able to predict upcoming needs for staff workloads and ordering inventory.
-
-            h3 UX research methods
-            p In-person workshop sessions were used to ensure updated tasks were available and intuitive for each user type to build a general consensus. &nbsp;In some cases, we found that users were using multiple tabs as a gap fix to not having the context of the data in front of them for either global or minute actions even in the existing apps. &nbsp;These areas offered us the chance to make the experience better by showcasing the missing data alongside the task. &nbsp;
-
-            h4 Card sorting
-            p To pin down navigation, users were asked to place task cards into groups that made the most sense to them. &nbsp;Consideration was also given to how frequently the user would need to access the task.
-
-            h4 Tree/Chalk-mark testing
-            p Users were presented with menu structures and asked where they would click to find areas of the site or next steps in the work-flow.
-
-            h4 Whiteboard/wireframe prototypes
-            p In some cases, multiple levels of user access complicated the approval structure of assets to the point where workflows had to be redefined. Low-fidelity prototypes allowed us to check in with users and make sure the task could still be completed. Complicated component work-flows were whiteboarded and moved into iterative digital wireframes prototypes. &nbsp;Having a digital wireframe allowed us to get more buy-in from users as well as start to check for usability issues.
-
-            h3 Lessons learned
-            p One of the biggest challenges was introducing UX into an already established Agile-like development process. While we tried to map out major connections between sections ahead of development we ran into cases where the workflow dead-ended with the actual backend data available. Not an uncommon pain point, but some additional concept proofs for specific sections may have been helpful in preventing some of the data availability mismatches. &nbsp;Budgeting more time for iterations would have been more realistic. &nbsp;Overall though, allowing the users to have feedback early did make adoption very smooth as users were already familiar with how the new system would act.
+            .section
+                h3 User Testing and Findings
+                p In-person workshop sessions were used to ensure user tasks were available and intuitive for each user type.  In some cases, we found that users were using multiple tabs as a gap fix to not having the context of the data in front of them for either global or minute actions even in the existing apps.  These areas offered us the chance to make the experience better by showcasing the missing data alongside the task.
+                h4 Findings
+                p One of the biggest challenges was introducing UX into an already established Agile-like development process. While we tried to map out major connections between sections ahead of development we ran into cases where the workflow dead-ended with the actual backend data available. Some additional concept proofs for specific sections may have been helpful in preventing some of the data availability mismatches as well as budgeting more time for iteration as the team adjusted to including UX into their process would have given more wiggle room.  Overall, allowing the users to have feedback early and often did make adoption smoother and users were less surprised with the final product.
+                h4 Card Sorting for Better Navigation
+                p To pin down navigation, users were asked to place task cards into groups that made the most sense to them.  Consideration was also given to how frequently the user would need to access the task.
+                h4 Tree/Chalk-mark for Menus and Options
+                p Users were presented with menu structures and asked where they would click to find areas of the site or next steps in the work-flow.
+                h4 Whiteboard/Wireframe Prototypes
+                p In some cases, multiple levels of user access complicated the approval structure of assets to the point where workflows had to be completely redefined. Low-fidelity prototype drawings allowed us to check in with users frequently and make sure the task could still be completed before being moved into high-fidelity interactive prototypes.
+                h4 Consolidating multiple UI Specifications
+                p To build interactive, high-fidelity mockups we were able to pull from a living style guide being developed in parallel by a different team for many components.  When components were missing completely we took cues on fonts, colors, spacing and icons from what was already being developed and matched them as close as possible.  Part of my role included policing the style guide and returning it to developers if the final product mismatched these brand standards.
 script(src='js/app.js')
 
 

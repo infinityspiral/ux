@@ -115,7 +115,6 @@ ol {
 
 img {
     max-width: 100%;
-    margin: 0 auto;
     display: block;
 }
 video {
@@ -124,6 +123,8 @@ video {
     }
 }
 .video-container {
+margin-bottom: 20px;
+
     img {
 
         @media (min-width:$breakPhone) {
@@ -281,14 +282,52 @@ video {
     }
 }
 .main-content {
-    max-width: 950px;
-    padding: 36px;
+    max-width: 850px;
     margin: 16px 0 0 220px;
     counter-reset: project;
-    background: white;
 
     @media (max-width: $breakPhone){
         padding: $spaceUnit;
         margin: 0;
+    }
+}
+.section {
+    margin-bottom: $spaceUnit*4;
+}
+.main-content > .project {
+    background: white;
+    padding: 36px;
+    margin-bottom: 20px;
+}
+.project-title {
+    margin: -36px -36px 36px -36px;
+    padding: 12px 40px 12px 40px;
+    font-size: 20px;
+    border-bottom: 1px solid #f3f3f3;
+    font-weight: 600;
+    background: #F3F4F3;
+    color: #5a5a5a;
+}
+.key-v, .key-h {
+    display: block;
+    text-transform: uppercase;
+    color: $colorSecondary;
+    font-size: 1.2rem;
+    line-height: 1;
+}
+.val-v, .val-h {
+    font-size: 1.6rem;
+    margin-bottom: $spaceUnit*2;
+}
+
+.flex-row {
+
+    @media(min-width:$breakPhone) {
+        display: flex;
+        flex-flow: row nowrap;
+
+        > * {
+            margin-right: 40px;
+        }
     }
 }
