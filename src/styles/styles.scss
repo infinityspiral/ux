@@ -170,6 +170,9 @@ margin-bottom: 20px;
     background: $colorPrimary;
     padding: $spaceUnit 0px;
     overflow: hidden;
+    position: fixed;
+    top: 0;
+    z-index: 1;
 
     h1 {
         margin: 0;
@@ -281,9 +284,10 @@ margin-bottom: 20px;
 
     }
 }
+
 .main-content {
     max-width: 850px;
-    margin: 16px 0 0 220px;
+    margin: 76px 0 0 220px;
     counter-reset: project;
 
     @media (max-width: $breakPhone){

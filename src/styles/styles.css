@@ -514,6 +514,9 @@ video:focus {
   background: #282828;
   padding: 8px 0px;
   overflow: hidden;
+  position: fixed;
+  top: 0;
+  z-index: 1;
 }
 .header h1 {
   margin: 0;
@@ -616,7 +619,7 @@ video:focus {
 
 .main-content {
   max-width: 850px;
-  margin: 16px 0 0 220px;
+  margin: 76px 0 0 220px;
   counter-reset: project;
 }
 @media (max-width: 767px) {
