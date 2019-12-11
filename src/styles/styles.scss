@@ -184,6 +184,10 @@ margin-bottom: 20px;
             margin: 0 0 0 8px;
         }
 
+        a {
+            color: #a6a6a6;
+            text-decoration: none;
+        }
 
         &:before {
             content: 'UX';
@@ -334,5 +338,21 @@ margin-bottom: 20px;
         > * {
             margin-right: 40px;
         }
+    }
+}
+
+.email {
+    color: $colorSecondary;
+
+    &:hover {
+        opacity: .55;
+    }
+
+    i {
+        font-size: 18px;
+        display: inline-block;
+        position: relative;
+        top: -2px;
+        left: 8px;
     }
 }

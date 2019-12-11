@@ -529,6 +529,10 @@ video:focus {
     margin: 0 0 0 8px;
   }
 }
+.header h1 a {
+  color: #a6a6a6;
+  text-decoration: none;
+}
 .header h1:before {
   content: "UX";
   color: #b3b3b3;
@@ -671,6 +675,20 @@ video:focus {
   .flex-row > * {
     margin-right: 40px;
   }
+}
+
+.email {
+  color: #9b9b9b;
+}
+.email:hover {
+  opacity: 0.55;
+}
+.email i {
+  font-size: 18px;
+  display: inline-block;
+  position: relative;
+  top: -2px;
+  left: 8px;
 }
 
 /*# sourceMappingURL=styles.css.map */

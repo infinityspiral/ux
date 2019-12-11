@@ -7,16 +7,18 @@ html(lang="en")#top
 
         title Chris Norton: UX Portfolio
         link(href='https://fonts.googleapis.com/css?family=Open+Sans:300,600|Raleway:300,600',rel='stylesheet')
+        link(rel='stylesheet', href='https://cdnjs.Cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css')
         link(rel='stylesheet', href='styles/styles.css')
         script(src='js/polyfill.min.js')
 
 body
     .header
-        h1#header Chris Norton
+        h1#header <a href="#top">Chris Norton</a> <a class="email" title="Send Email" href="mailto:chris@infinityspiral.com"><i class="fa fa-envelope" style="font-size:24x; display:inline-block;"></i></a>
+
     ol.quick-nav
         h5 UX Solutions
         li
-            a('href'='#aquent-it-solutions-recruiting-website')
+            a('href'='#top')
                 span.project Recruiting Website
                 span.company Aquent IT Solutions
         li
@@ -152,8 +154,9 @@ body
                     p We found candidates really only found us through a select few social media sites. As a conservation of effort we brought the branding in line with those particular sites and closed the remainder. We also committed to a content strategy to prevent these areas from looking abandoned in the future.
                     h4 Imagery
                     p I defined example imagery to be used in the marketing materials, picking overhead drone photos to create the feeling of seeing the big picture through future tech which is exactly what we provide in our solutions to clients: technology-based solutions that work with large amounts of data at a digestible scale.
+                    a#service-admin-portal
 
-        .project#service-admin-portal
+        .project
             h3.project-title John Deere Service Admin Portal 
 
             p
