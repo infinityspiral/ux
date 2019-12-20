@@ -310,12 +310,47 @@ margin-bottom: 20px;
 }
 .project-title {
     margin: -36px -36px 36px -36px;
-    padding: 12px 40px 12px 40px;
+    padding: 12px 40px 12px 20px;
     font-size: 20px;
+    font-weight: 400;
     border-bottom: 1px solid #f3f3f3;
-    font-weight: 600;
     background: #F3F4F3;
-    color: #5a5a5a;
+    color: #8e8e8e;
+    position: relative;
+
+    &:before {
+        content: '';
+        display: inline-block;
+        vertical-align: baseline;
+        margin-right: 15px;
+        height: 20px;
+        position: relative;
+        top: 4px;
+        background-repeat: no-repeat;
+        background-position: center center;
+    }
+
+    &.aquent {
+
+        &:before {
+            width: 142px;
+            background-image: url("../images/logos/logo_aquent.png");
+        }
+    }
+    &.john-deere {
+
+        &:before {
+            width: 105px;
+            background-image: url("../images/logos/logo_john-deere.png");
+        }
+    }
+    &.boeing {
+
+        &:before {
+            width: 88px;
+            background-image: url("../images/logos/logo_boeing.png");
+        }
+    }
 }
 .key-v, .key-h {
     display: block;
