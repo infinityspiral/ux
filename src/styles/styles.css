@@ -458,6 +458,10 @@ img {
   display: block;
 }
 
+.img-frame {
+  flex: 0 0 50%;
+}
+
 video:focus {
   outline: none;
 }
@@ -756,6 +760,10 @@ video:focus {
   color: #9b9b9b;
   font-size: 1.2rem;
   line-height: 1;
+}
+
+.key-h {
+  text-transform: uppercase;
 }
 
 .val-v, .val-h {

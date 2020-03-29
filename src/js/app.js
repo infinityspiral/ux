@@ -31,8 +31,8 @@ window.onload = () => {
         toggleProjectMenu(e);
     });
 
-    const quickNavLinks = document.querySelectorAll('.project-jump a');
-    quickNavLinks.forEach(item=>{
+    const quickNavLinks = document.querySelectorAll('.project-jump');
+    quickNavLinks.forEach(item => {
 
         item.addEventListener('click', e => {
             e.preventDefault();

@@ -117,13 +117,18 @@ img {
     max-width: 100%;
     display: block;
 }
+.img-frame {
+    flex: 0 0 50%;
+}
+
 video {
     &:focus {
         outline: none;
     }
 }
+
 .video-container {
-margin-bottom: 20px;
+    margin-bottom: 20px;
 
     img {
 
@@ -440,6 +445,9 @@ margin-bottom: 20px;
     color: $colorSecondary;
     font-size: 1.2rem;
     line-height: 1;
+}
+.key-h {
+    text-transform: uppercase;
 }
 .val-v, .val-h {
     font-size: 1.6rem;

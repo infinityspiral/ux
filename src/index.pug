@@ -24,36 +24,72 @@ body
     .quick-nav
         h5 Projects
         ol
-            li.project-jump
-                a('href'='#boeing-insite')
+            //li.project-jump
+            //    a('href'='#pixelmania')
+            //        span.project Metroid: Varia
+            //        span.company Pixelmania
+            li
+                a.project-jump('href'='#boeing-insite')
                     span.project Social Media Platform
                     span.company Boeing
-            //li
-            //    a('href'='#pixelmania')
-            //        span.project Pixelmania
-            //        span.company Boeing
-            li.project-jump
-                a('href'='#boeing-historical-services')
+            li
+                a.project-jump('href'='#boeing-historical-services')
                     span.project Historical Services
                     span.company Boeing
-            li.project-jump
-                a('href'='#boeing-new-business-generator')
+            li
+                a.project-jump('href'='#boeing-new-business-generator')
                     span.project New Business Generator
                     span.company Boeing
-            li.project-jump
-                a('href'='#aquent-it-solutions-recruiting-website')
+            li
+                a.project-jump('href'='#aquent-it-solutions-recruiting-website')
                     span.project Employee Recruiting
                     span.company Aquent IT Solutions
-            li.project-jump
-                a('href'='#service-admin-portal')
+            li
+                a.project-jump('href'='#service-admin-portal')
                     span.project Service Admin Portal
                     span.company John Deere
             li.footer
                 .contact-info Contact
                     a('href'='mailto:chris@infinityspiral.com', target='_blank') chris@infinityspiral.com
-                a.back-to-top('href'='#top') Back to Top &#8593;
+                a.project-jump('href'='#boeing-insite') Back to Top &#8593;
 
     .main-content
+        //.project#pixelmania
+        //    h3.project-title.pixelmania Metroid: Varia
+        //    .section
+        //        .flex-row
+        //            div
+        //                h4 Details
+        //                .key-value-pair
+        //                    .key-v Project
+        //                    .val-v Metroid: Varia
+        //                .key-value-pair
+        //                    .key-v Client
+        //                    .val-v Pixelmania (Poland)
+        //                .key-value-pair
+        //                    .key-v Launched
+        //                    .val-v Multi-use, International
+        //
+        //            div
+        //                h4 Team
+        //                .key-value-pair
+        //                    .key-h Pre/Post Production & Camera
+        //                    .val-h Chris Norton
+        //                .key-value-pair
+        //                    .key-h Talent/Costume Fabrication
+        //                    .val-h Willow Creative (Netherlands)
+        //                .key-value-pair
+        //                    .key-h Set Assistant
+        //                    .val-h Katharine Repetski
+        //                .key-value-pair
+        //                    .key-h Location Scout/Manager
+        //                    .val-h Ambroży Kleks
+        //
+        //    .section
+        //        h3 Project Goal
+        //        p Boeing was looking to reduce the number of customer service calls and emails related by providing users with more information about the process of preserving historically significant Boeing artifacts like blueprints, prototypes, etc.
+        //
+        //
         .project#boeing-insite
             h3.project-title.boeing Social Media Platform
             .section
@@ -87,8 +123,11 @@ body
                             .val-h St. Louis Team
 
             .section
-                h3 Project Goal
-                p Boeing was hoping to make it easier for employees to connect with each other by updating the UI and adding mobile functionality to their social platform.
+                .flex-row
+                    div
+                        h3 Project Goal
+                        p Boeing was hoping to make it easier for employees to connect with each other by updating the UI and adding mobile functionality to their social platform.
+                    img(src='images/aquent/aquent-full.jpg')
             .section
                 h3 Overview
                 p I took over UX/UI efforts to add mobile functionality to a widely used social platform within the company. This tool was part of a larger application that allowed users to find team members, post news, ask questions, form groups, and organize events. I was tasked with providing design gap solutions to a few sections in progress and a few remaining major sections. User testing had not started when I was brought on.
@@ -110,61 +149,6 @@ body
                 h3 Reclaiming Team Trust in the Design Process
                 p Shifting design decisions to be driven by user feedback on prototypes helped instill a sense of trust that the design process would work for this team. Watching users struggle let the team see where users would bail on the new design even though it was duplicating all the old functionality. Because we now had a sense of priorities we could iterate away from the original design and provide tools for the tasks users wanted to complete.
                 p This sounds pretty basic after the fact, but when you’ve got a project going full steam ahead it takes a lot of effort and finesse to do course correction like this. Because this small piece now had success behind it, the team was more comfortable shifting away from just duplicating old functionality and instead moving towards gathering user information first to drive a design.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-        //.project#pixelmania
-        //    h3.project-title.pixelmania Pixelmania
-        //    .section
-        //        .flex-row
-        //            div
-        //                h4 Details
-        //                .key-value-pair
-        //                    .key-v Project
-        //                    .val-v Historical Services
-        //                .key-value-pair
-        //                    .key-v Client
-        //                    .val-v Boeing
-        //
-        //                .key-value-pair
-        //                    .key-v Platform
-        //                    .val-v Desktop, Tablet, Mobile
-        //
-        //                .key-value-pair
-        //                    .key-v Launched
-        //                    .val-v Internal Boeing Network
-        //            div
-        //                h4 Team
-        //                .key-value-pair
-        //                    .key-h Project Manager
-        //                    .val-h Adelle Squires
-        //                .key-value-pair
-        //                    .key-h Strategist/Creative Director
-        //                    .val-h Darryl Barrabee
-        //                .key-value-pair
-        //                    .key-h UX/UI Design
-        //                    .val-h Chris Norton
-        //                .key-value-pair
-        //                    .key-h Developer
-        //                    .val-h Teresa Jellison
-        //
-        //    .section
-        //        h3 Project Goal
-        //        p Boeing was looking to reduce the number of customer service calls and emails related by providing users with more information about the process of preserving historically significant Boeing artifacts like blueprints, prototypes, etc.
         .project#boeing-historical-services
             h3.project-title.boeing Historical Services
             .section
@@ -201,11 +185,15 @@ body
                             .val-h Teresa Jellison
 
             .section
-                h3 Project Goal
-                p Boeing was looking to reduce the number of customer service calls and emails related by providing users with more information about the process of preserving historically significant Boeing artifacts like blueprints, prototypes, etc.
-            .section
-                h3 Overview
-                p I led the UX/UI efforts to help turn a complex submission form into a more intuitive experience to reduce the amount of handholding needed by users through the process. We were able to provide better context and reduce time filling out the form by building in featured content and including category-specific submission CTA’s within new galleries.  Showing featured content also allowed us to better promote the value of the historical services team to other divisions within the company.
+                .flex-row
+                    div
+                        h3 Project Goal
+                        p Boeing was looking to reduce the number of customer service calls and emails related by providing users with more information about the process of preserving historically significant Boeing artifacts like blueprints, prototypes, etc.
+
+                        h3 Overview
+                        p I led the UX/UI efforts to help turn a complex submission form into a more intuitive experience to reduce the amount of handholding needed by users through the process. We were able to provide better context and reduce time filling out the form by building in featured content and including category-specific submission CTA’s within new galleries.  Showing featured content also allowed us to better promote the value of the historical services team to other divisions within the company.
+                    .img-frame
+                        img(src='images/boeing/historical-services.png')
             .section
                 h3 Refining and Iterating Project Goals
                 p To fulfill the original creative brief I was brought onto the team to handle the UX/UI on a few text-heavy pages provided by the client: Terms and Conditions page and Team Members.
