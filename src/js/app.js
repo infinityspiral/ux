@@ -31,7 +31,7 @@ window.onload = () => {
         toggleProjectMenu(e);
     });
 
-    const quickNavLinks = document.querySelectorAll('.quick-nav ol a');
+    const quickNavLinks = document.querySelectorAll('.project-jump a');
     quickNavLinks.forEach(item=>{
 
         item.addEventListener('click', e => {
@@ -40,8 +40,8 @@ window.onload = () => {
             const dest = e.currentTarget.getAttribute('href');
             const destEl = document.querySelector(dest.toString());
             getCoords(destEl,-76);
-            quickNav.classList.toggle("active");
-            projectMenuBtn.classList.toggle("active")
+            quickNav.classList.remove("active");
+            projectMenuBtn.classList.remove("active")
         })
 
         item.addEventListener('touchstart', e => {
@@ -50,15 +50,15 @@ window.onload = () => {
             const dest = e.currentTarget.getAttribute('href');
             const destEl = document.querySelector(dest.toString());
             getCoords(destEl,-116);
-            quickNav.classList.toggle("active");
-            projectMenuBtn.classList.toggle("active")
+            quickNav.classList.remove("active");
+            projectMenuBtn.classList.remove("active")
         })
     })
 
     const getCoords = (elem,offset) => {
         const scrollOffset = offset;
         let coordsY = elem.getBoundingClientRect().top;
-        window.scrollBy(0, coordsY+scrollOffset)
+        window.scrollBy(0, coordsY+scrollOffset);
     }
 
 };

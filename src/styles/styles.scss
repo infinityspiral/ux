@@ -361,7 +361,7 @@ margin-bottom: 20px;
 
     @media (max-width: $breakPhone){
         padding: $spaceUnit;
-        margin: 100px 0 0 0;
+        margin: 110px 0 0 0;
     }
 }
 .section {
@@ -394,13 +394,18 @@ margin-bottom: 20px;
         background-position: center center;
     }
 
+    @media (max-width:$breakPhone) {
+        font-size: 16px;
+        line-height: 24px;
+    }
+
     &.aquent {
 
-        &:before {
-            width: 100px;
-            background-image: url("../images/logos/logo_aquent.png");
-        }
+    &:before {
+        width: 100px;
+        background-image: url("../images/logos/logo_aquent.png");
     }
+}
     &.john-deere {
 
         &:before {
@@ -413,6 +418,11 @@ margin-bottom: 20px;
         &:before {
             width: 88px;
             background-image: url("../images/logos/logo_boeing.png");
+
+            @media (max-width:$breakPhone) {
+                top: 6px;
+            }
+
         }
     }
     &.pixelmania {

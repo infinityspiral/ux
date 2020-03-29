@@ -686,7 +686,7 @@ video:focus {
 @media (max-width: 767px) {
   .main-content {
     padding: 8px;
-    margin: 100px 0 0 0;
+    margin: 110px 0 0 0;
   }
 }
 
@@ -721,6 +721,12 @@ video:focus {
   background-repeat: no-repeat;
   background-position: center center;
 }
+@media (max-width: 767px) {
+  .project-title {
+    font-size: 16px;
+    line-height: 24px;
+  }
+}
 .project-title.aquent:before {
   width: 100px;
   background-image: url("../images/logos/logo_aquent.png");
@@ -732,6 +738,11 @@ video:focus {
 .project-title.boeing:before {
   width: 88px;
   background-image: url("../images/logos/logo_boeing.png");
+}
+@media (max-width: 767px) {
+  .project-title.boeing:before {
+    top: 6px;
+  }
 }
 .project-title.pixelmania:before {
   width: 57px;
