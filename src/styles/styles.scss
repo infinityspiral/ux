@@ -184,19 +184,73 @@ margin-bottom: 20px;
             margin: 0 0 0 8px;
         }
 
-        a {
-            color: #a6a6a6;
-            text-decoration: none;
+        @media (max-width:$breakPhone) {
+            display: flex;
+            flex-flow: row wrap;
+            text-align: center;
+            justify-content: center;
+
+            .user-name {
+                order:1;
+                flex: 0 0 100%;
+            }
+            .expertise {
+                order: 2;
+                margin: $spaceUnit 0 0 0;
+                font-size: 1.8rem;
+                position: relative;
+
+                &.active {
+                    .project-menu-triangle {
+                        transform: rotate(90deg);
+                    }
+                }
+
+            }
+
         }
 
-        &:before {
-            content: 'UX';
+
+        .project-menu-triangle {
+            display: none;
+
+            @media (max-width:$breakPhone) {
+                position: relative;
+                left: 8px;
+                padding: 4px;
+                margin-right: 8px;
+                display: inline-block;
+                transform: rotate(-90deg);
+                order: 3;
+                display: inline-block;
+            }
+        }
+
+        .user-name {
+            display: inline-block;
+        }
+
+        .expertise {
             color: darken(white,30%);
             background: darken(white,70%);
             padding: 2px 8px;
             border-radius: 4px;
             font-weight: 600;
             margin-right: $spaceUnit;
+
+            @media (min-width:$breakPhone) {
+                display: inline;
+            }
+        }
+
+        a {
+            color: #a6a6a6;
+            text-decoration: none;
+        }
+
+        .fa.fa-envelope {
+            font-size: 24px;
+            display: inline-block;
         }
     }
 }
@@ -248,7 +302,7 @@ margin-bottom: 20px;
         }
 
         .project {
-            display: block;
+            display: inline;
             text-transform: uppercase;
             color: $colorPrimary;
             font-size: 1.2rem;
@@ -258,6 +312,16 @@ margin-bottom: 20px;
 
     @media (max-width:$breakPhone) {
         display: none;
+        &.active {
+            display: block;
+            z-index: 1;
+            top: 92px;
+            left: 20px;
+            margin: 0 auto;
+            width: calc(100% - 40px);
+            margin: 0 auto;
+        }
+
     }
 
     .footer {
@@ -297,7 +361,7 @@ margin-bottom: 20px;
 
     @media (max-width: $breakPhone){
         padding: $spaceUnit;
-        margin: 0;
+        margin: 100px 0 0 0;
     }
 }
 .section {
@@ -349,6 +413,14 @@ margin-bottom: 20px;
         &:before {
             width: 88px;
             background-image: url("../images/logos/logo_boeing.png");
+        }
+    }
+    &.pixelmania {
+
+        &:before {
+            width: 57px;
+            background-image: url("../images/logos/logo_pixelmania.png");
+            background-position: left center;
         }
     }
 }
