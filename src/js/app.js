@@ -58,7 +58,10 @@ window.onload = () => {
     const getCoords = (elem,offset) => {
         const scrollOffset = offset;
         let coordsY = elem.getBoundingClientRect().top;
-        window.scrollBy(0, coordsY+scrollOffset);
+        window.scrollBy({
+            top:coordsY+scrollOffset,
+            behavior:'auto' //or smooth
+        });
     }
 
 };
