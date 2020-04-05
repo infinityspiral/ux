@@ -5,6 +5,7 @@ window.onload = () => {
     videoEl.forEach(item=>{
 
         item.defaultMuted = true;
+        item.muted = true;
         item.loop = true;
         item.autoplay = true;
         item.addEventListener('click', e =>{
