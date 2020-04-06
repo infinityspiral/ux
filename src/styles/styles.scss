@@ -534,7 +534,6 @@ video {
     }
 
     @media(min-width:$breakPhone) {
-        margin-left: 4px;
 
         span {
             display: inline-block;
@@ -556,7 +555,7 @@ video {
     }
 }
 
-a.color-chip {
+.color-chip {
     flex: 0 0 25%;
     background: #05eafb;
     border-radius: 6px;

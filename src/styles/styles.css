@@ -886,9 +886,6 @@ video:focus {
   margin: 0 4px 0 12px;
 }
 @media (min-width: 767px) {
-  .email {
-    margin-left: 4px;
-  }
   .email span {
     display: inline-block;
   }
@@ -905,7 +902,7 @@ video:focus {
   order: 1;
 }
 
-a.color-chip {
+.color-chip {
   flex: 0 0 25%;
   background: #05eafb;
   border-radius: 6px;
@@ -915,11 +912,11 @@ a.color-chip {
   margin-bottom: 28px;
   border: 4px solid #04d8e8;
 }
-a.color-chip .hex {
+.color-chip .hex {
   color: white;
 }
 @media (max-width: 767px) {
-  a.color-chip {
+  .color-chip {
     height: 80px;
   }
 }
