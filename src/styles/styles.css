@@ -888,7 +888,7 @@ video:focus {
 @media (min-width: 767px) {
   .email {
     position: absolute;
-    right: 16px;
+    left: 400px;
   }
   .email span {
     display: inline-block;
