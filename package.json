@@ -4,7 +4,9 @@
   "description": "Starter for html output with inline script tag, useful for code snippet generation. SCSS will render into CSS and then have vender prefixes added if needed.",
   "main": "index.js",
   "scripts": {
-    "start": "live-server --open=index.html --wait=50"
+    "start": "live-server --open=index.html --wait=50",
+    "eslintFix": "eslint --fix --ext .js,.jsx .",
+    "csslintFix": "stylelint --fix src/styles/*.scss"
   },
   "repository": {
     "type": "git",
@@ -24,13 +26,21 @@
   },
   "homepage": "https://github.com/infinityspiral/pug-scss-autoprefixer#readme",
   "devDependencies": {
-    "@babel/cli": "^7.7.5",
-    "@babel/core": "^7.7.5",
-    "@babel/preset-env": "^7.7.5",
+    "@babel/cli": "^7.8.4",
+    "@babel/core": "^7.9.0",
+    "@babel/preset-env": "^7.9.5",
     "babel-preset-minify": "^0.5.1",
-    "normalize.css": "^8.0.1"
+    "eslint": "^6.8.0",
+    "eslint-config-standard": "^14.1.1",
+    "eslint-plugin-import": "^2.20.2",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-promise": "^4.2.1",
+    "eslint-plugin-standard": "^4.0.1",
+    "stylelint": "^13.3.3",
+    "stylelint-scss": "^3.17.1"
   },
   "dependencies": {
-    "@babel/polyfill": "^7.7.0"
+    "@babel/polyfill": "^7.7.0",
+    "normalize.css": "^8.0.1"
   }
 }

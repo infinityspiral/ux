@@ -1,0 +1,11 @@
+{
+  "plugins": [
+    "stylelint-scss"
+  ],
+  "rules": {
+    "indentation": "tab",
+    "max-nesting-depth": 5,
+    "number-leading-zero": "always",
+    "selector-max-compound-selectors": 4
+  }
+}
