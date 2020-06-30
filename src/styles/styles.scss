@@ -508,6 +508,14 @@ video {
 			width: 57px;
 		}
 	}
+
+	&.paprika {
+		&::before {
+			background-image: url('../images/logos/logo_paprika.png');
+			background-position: left center;
+			width: 20px;
+		}
+	}
 }
 
 .key-v,

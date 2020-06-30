@@ -706,6 +706,10 @@ video:focus {
     background-image: url("../images/logos/logo_pixelmania.png");
     background-position: left center;
     width: 57px; }
+  .project-title.paprika::before {
+    background-image: url("../images/logos/logo_paprika.png");
+    background-position: left center;
+    width: 20px; }
 
 .key-v,
 .key-h {
