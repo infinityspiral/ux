@@ -1,0 +1,2 @@
+"use strict";module.exports={env:{browser:!0,es6:!0},extends:["standard"],globals:{Atomics:"readonly",SharedArrayBuffer:"readonly"},parserOptions:{ecmaVersion:2018},rules:{}};
+//# sourceMappingURL=.eslintrc.js.map
