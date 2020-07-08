@@ -25,10 +25,6 @@ body
         h5 Projects
         ol
             li
-                a.project-jump('href'='#paprika')
-                    span.project Mobile App with Conversational AI
-                    span.company Paprika
-            li
                 a.project-jump('href'='#pixelmania')
                     span.project Metroid: Varia
                     span.company Pixelmania
@@ -45,274 +41,159 @@ body
                     span.project New Business Generator
                     span.company Boeing
             li
+                a.project-jump('href'='#service-admin-portal')
+                    span.project Service Admin Portal
+                    span.company John Deere
+            li
                 a.project-jump('href'='#aquent-it-solutions-recruiting-website')
                     span.project Employee Recruiting
                     span.company Aquent IT Solutions
             li
-                a.project-jump('href'='#service-admin-portal')
-                    span.project Service Admin Portal
-                    span.company John Deere
+                a.project-jump('href'='#paprika')
+                    span.project Mobile App with Conversational AI
+                    span.company Paprika
             li.footer
                 .contact-info Contact
                     a('href'='mailto:chris@infinityspiral.com', target='_blank') chris@infinityspiral.com
                 a.project-jump('href'='#boeing-insite') Back to Top &#8593;
 
     .main-content
-        .project#paprika
-            .section
-                h3.project-title.paprika Mobile App with Conversational AI
-            .section
-                .flex-row
-                    div
-                        h4 Details
-                        .key-value-pair
-                            .key-v Project
-                            .val-v Paprika Mobile App
-                        .key-value-pair
-                            .key-v Client
-                            .val-v Hindsight Labs
-                    div
-                        h4 Team
-                        .key-value-pair
-                            .key-h UX Design
-                            .val-h Chris Norton
-                        .key-value-pair
-                            .key-h VUI Design
-                            .val-h Chris Norton
-            .section
-                .flex-row
-                    div
-                        h3 Project Goal
-                        p Provide a more inclusive user experience to an existing visual app through accessibility and functionality. Ultimately create more touchpoints for more users.
-
-                        h3 Project Overview
-                        p Paprika is a multi-modal recipe app that makes it easier to cook from home.  The application helps users to collect recipes, plan meals and shop for ingredients and includes touchpoints at home, on the go, and at the point of purchase.
-                        h3 Using Voice to Create More Touchpoints
-                        p VUI’s or Voice User Interfaces create unique opportunities to interact with products without having to physically touch them or even see them.  Tasks that require both hands or require the user to maintain eye contact are great candidates for a VUI.
-
-
-                    div(style='flex:0 0 300px;')
-                        p
-                            img(src='images/paprika/paprika-search.png')
-
-            .section
-                h3 Accessibility and Safety with Covid-19
-                p Especially with Covid-19, many companies are looking at reducing touch and controlling their applications via voice.  A lot of essential tasks such as banking, appointment scheduling, and grocery shopping have moved online. Making sure products are accessible to everyone, besides being the right thing to do is more important than ever as  companies are increasingly finding themselves in hot water when essential services don’t include considerations for users with disabilities such as those with reduced motor skills, memory and the visually impaired.
-            .section
-                h3 Why Conversational AI?
-                p Conversational AI operates as a layer to AI that translates user speech(utterances) into intents and commands. With a conversational approach, you lean on the AI to figure out what the user is trying to do versus training users to talk like computers. This makes apps more intuitive and accessible. There is less learning and more just doing.
-            .section
-                h3 Traditional vs Conversational Examples
-
-                h4 Traditional Speech Recognition of Commands
-                p Let’s say the user wants to find a recipe to make.  With traditional speech recognition that might look something like, “List recipes,” or, “Search chicken.”  The user is forced to know what tasks are available already.
-                p
-                    img(src='images/paprika/intents.jpg')
-
-
-                h4 Example of Conversational AI
-                p With conversational AI the user can say something more like, “What can I make?” and the digital brain can figure out that the user is looking for a recipe (because it’s a recipe app) and can follow up with something like, “I found three recipes in vegetarian(category) and two side dishes(category) that can be made with items in your pantry. *beat* Would you like me to list those results? You can say stop listing at any time.”
-                p
-                    img(src='images/paprika/utterances.jpg')
-            .section
-                h3 Step 1: User Research and Validation
-
-                h4 User Interviews
-                p To figure out if the voice would actually be able to solve the problem and reach more touchpoints with users we did a limited number of participants gauge user interest.
-
-                h4 Conversational Map/Journey Map
-                p To get a general sense of how the voice would affect various sections of the app we did a mix of role-play and  onsite guerilla-style interviews, or we just went home and logged potential interactions while actually trying to cook something.  Asking  people how they would ask the app to complete a task was helpful in drawing out some of the initial keywords towards commands and intents.
-                p
-                    img(src='images/paprika/conversational-map.jpg')
-
-                h4 Environment
-                p Looking back, using the environment as a constraint might have saved time in figuring out which sections were most useful.  It was really useful to have a starter library of keywords and actually language used though. User research indicated that users interacted with the app both inside and outside the home, but users were more motivated to use voice by themselves vs around others.  For example, both taking the bus and driving along both categorized the user as, “on the go,” but users were less self-conscious when they were driving alone.
-                p Users also found more value in voice interactions during tasks that already required both hands or when their hands were dirty.  Having their hands coated in flour or other messy ingredients also made a strong case for voice interaction.
-
-                .flex-row
-                    div
-                        h4 Environment-Driven Tasks
-                        p Looking at tasks that users would likely want to complete while driving or while cooking both seemed like good starting candidates.  A few example tasks:
-                        ul
-                            li Users who have scheduled recipes into a meal planner might want to verify that all ingredients have been added to their shopping list while on the way to the store.
-                            li Users might want to know the next or previous steps in a recipe as they work along.
-                            li Users might want to check off ingredients as they use them during food preparation.
-                    div(style='flex:0 0 300px;')
-                        p
-                            img(src='images/paprika/paprika-sections.png')
-
-                h4 Debunked Assumptions
-                p Interviewing users revealed confusion for doing anything cooking-related  tasks while driving. While some participants reported it useful to add eggs or snacks on the fly, people struggled with tying the need to work with shopping lists for recipes that had been scheduled on a calendar. We might not have worded the question very well either, but even after some explanation, it ranked as low-priority compared to other features.
-
-                h4 The Real MVP
-                p Users did however find it intuitive to have voice assistance during food preparation. It was very valuable to find recipes and walk through instructions after the user had started to work with ingredients.  This allowed users to keep working vs having to wash their hands after various steps in order to use the app.
-
-
-
-            .section
-                h3 Step 2: VUI (Voice User Interface) Design
-                p
-                    img(src='images/paprika/dialog-flow.jpg')
-
-                h4 Testing Dialog Prototypes
-                p Once we knew which sections and tasks were higher priority we could start iterating through various dialog prototypes of task flows.  A lot of these can just be back and forth conversations in various forms before you start any actual coding.
-
-                h4 Notecards/Post-its
-                p Two people sitting at a table with the existing app visible to both The “user” spoke phrases out loud and the “prototype” would sift through notecards and read the pre-written responses. This was an okay low-fidelity starter but the back and forth was a little awkward as the person playing the role of prototype searched through their pile of responses.  Also if there was no response it dead-ended the entire task flow causing another session to be scheduled for that flow.
-
-                h4 Puppet Master
-                p It was actually a lot faster to have the two people in different rooms just call each other and have the user side try to initiate tasks via voice while the person playing prototype puppeted the responses.  This way everything didn’t come to a halt if unknowns showed up.  The prototype could adlib suggested actions or route through to error states.
-
-                h4 Situational Recording
-                p Recording someone actually doing a task and interacting with the prototype was useful for gathering intents and language for indirect commands.  For example having someone say, “Hold on, I’m out of bowls!” wasn’t something the user was actively thinking about achieving, but the intent was still there to stop reading the current step until they washed one of the dirty bowls.
-
-                h3 Engaging Development and AI
-
-                h4 Voice-activated Prototypes
-                p Once you start to have a running list of user utterances/triggers, intents, and commands you can start to link the prototype up to the technology side to make the call and response process flow even smoother.  Adobe XD has voice recognition but it only lets you link up one user utterance to trigger a response.  It might just be easier to link up a prototype to something like an Alexa skill depending on where the dev team is at and what library they’re using. Building a digital prototype in this way also makes the switch from responses with baked-in data into real function calls a little more seamless.
-
-                h4 Engaging with AI
-                p You get a lot more out of the AI if you have a library of keywords and phrases built from the previous steps.  With a functional or semi-functional app in place,  you can leverage the AI to refine the keyword pairings that trigger commands and route the user into dialogs/flow for the tasks they are really asking for.
-
-                hr
-                small This project was done as a proof of a working process and was not contracted out by Hindsight Labs
-
-        .project#pixelmania
-            .section
-                h3.project-title.pixelmania Metroid: Varia
-                .metroid-intro
-                    .video-container
-                        img(src='video/metroid-static.jpg')
-                        <video id="aquent-home" width="768" height="514" poster="video/metroid-static.jpg" controls="true">
-                        <source src="video/metroid.mp4" type="video/mp4">
-                        </video>
-                    p
-                        img(src='images/pixelmania/infinityspiral-chris-norton-fui.jpg')
-
-            .section
-                .flex-row
-                    div
-                        h4 Details
-                        .key-value-pair
-                            .key-v Project
-                            .val-v Metroid: Varia
-                        .key-value-pair
-                            .key-v Client
-                            .val-v Pixelmania (Poland)
-                        .key-value-pair
-                            .key-v Launched
-                            .val-v Multi-use, International
-
-                    div
-                        h4 Team
-                        .key-value-pair
-                            .key-h Pre/Post Production & Camera
-                            .val-h Chris Norton
-                        .key-value-pair
-                            .key-h Talent/Costume Fabrication
-                            .val-h Willow Creative (Netherlands)
-                        .key-value-pair
-                            .key-h Assistant
-                            .val-h Katharine Repetski
-                        .key-value-pair
-                            .key-h Location Scout/Manager
-                            .val-h Ambroży Kleks
-
-            .section
-                .flex-row
-                    div
-                        h3 Project Goal
-                        p Pixelmania is an international collaboration laboratory for filmmakers, photographers, and costume designers to tell visual stories from comic books, movies, video games, and other pop culture. The event runs annually in Lubomierz, Poland.
-                        p Artists compete for acceptance with only around a hundred photographers allowed into the event each year. Almost every shoot I had was from a different country. Being able to work around a language barrier and work with different viewpoints was also a necessary skill.
-                    .countries
-                        .flag
-                            .australia
-                            span Australia
-                        .flag
-                            .czech-republic
-                            span Czech Republic
-                        .flag
-                            .france
-                            span France
-                        .flag
-                            .germany
-                            span Germany
-                        .flag
-                            .hungary
-                            span Hungary
-                        .flag
-                            .italy
-                            span Italy
-                        .flag
-                            .lithuania
-                            span Lithuania
-                        .flag
-                            .netherlands
-                            span Netherlands
-                        .flag
-                            .poland
-                            span Poland
-                        .flag
-                            .slovakia
-                            span Slovakia
-                        .flag
-                            .sweden
-                            span Sweden
-
-
-                h3 Project Overview
-                p During the event, attendees can book pre-scouted locations like ancient castles, abandoned factories, waterfalls, and Japanese gardens. Experts like animal handlers and pyrotechnicians are also available. I was able to work with the wolf dogs team and the pyrotechnics crew but you could also book horses to ride and other fun things too.
-            .section
-                h3 Pre-production
-                p As a photographer at this event, you are allowed to bring in an assistant to help carry gear, but you're the person responsible for making everything come together and delivering art. Producer, director, concept artist, camera operator, logistics- just everything. It's a lot of hats to make five shoots a day, three days in a row all come together in a foreign country.
-                p
-                    img(src='images/pixelmania/organization_800px.jpg')
-                p People fly into Poland from as far as Australia so it’s very common to plan upwards of fifteen complicated photoshoots for the three-day event. Months of planning go into building costumes, designing concepts, and planning travel. It’s a very friendly collaborative space, but teams are there to get something made and at a high level. With everyone sinking their own money into the cost of production it’s hard to walk away from the experience without also gaining a lot of respect for the time and money that goes into even larger group projects. With five to six complex shoots happening every day.
-
-
-                h3 IP Research / Moodboard
-                p To match the look and feel of the existing game I pulled
-                p
-                    img(src='images/pixelmania/moodBoard_768.jpg')
-            .section
-                h3 UI Design
-                p I wrote out the why for the design so I could focus on whether things were moving towards the intended purpose. My intent was to create a moment in time where the character was checking the status and configuring systems on their super-futuristic spacesuit and the faux user interface needed to support that. Things like checking weapon stock, battery usage, life support, damage assessment, threat detection, systems diagnostics, GPS, and general OS controls are all reasonable things a space adventurer needs to survive on a hostile planet by themselves.
-                p
-                    img(src='images/pixelmania/infinityspiral-chris-norton-fui-sketch.jpg')
-                p Once I locked in the reasons for design solves I laid down rapid sketches for possible icons and interfaces. The aim was to make sure I had enough variety and also that groups of UI could almost be guessed by the user without me have to spend lots of time finishing every icon out before having to throw parts away.
-
-                h3 3D Shaders Using Maya/Arnold
-                p
-                    img(src='images/pixelmania/infinityspiral-chris-norton-fui-shader.jpg')
-                p The costume builder on the Varia team was a master 3D modeler and 3D print expert. I thought the floating panel would be a great way to showcase her skills in multiple ways by including a render of her 3D print file.
-
-                h4 Learning
-                p Unfortunately, her model was too high-resolution to fit into the scene. The model matched the game design exactly, but became more of a focal point and broke the composition. In round two, I found a free low-poly version of the suit on Turbo Squid that was less distracting. After writing an X-ray shader, the low-poly version was a much better direction.
-
-
-
-
-            .section
-                h3 Illustrator conversion
-                p
-                    img(src='images/pixelmania/infinityspiral-chris-norton-fui-vector.jpg')
-                p I started creating vector art for the final composite once I had simple sketches in place. Mapping out the systems using UX flows made it easier to prioritize UI components according to available tasks. Threat warnings needed to be always visible whereas as monster guidebook might get tucked away.
-
-            .section
-                .flex-row
-                    .color-chip
-                        .hex #05eafb
-                    div
-                        h3 Color
-                        p Blue cues up the subconscious for science and learning. Green can feel toxic like a Disney villain or comforting like spring growth. Mixing a little green with blue introduces an other-worldly feel to the scene.
-            .section
-                h3 Font - Metroid Prime Hunters
-                p
-                    img(src='images/pixelmania/font-metroid-prime-hunters.jpg')
-                p There are several font sets used through the history of the game series but, “Metroid Prime Hunters,” retained more of a terminal feel when placed into the composition. It was a tough balancing act to find something that felt like it could live in a world within a world. The pixelated font helped the text stay in the panel even though you can’t  read most of it. It’s enough for it to just feel like you could read it if you needed to.
-                p
-                    img(src='images/pixelmania/infinityspiral-chris-norton-fui.jpg')
-
+        //.project#pixelmania
+        //    .section
+        //        h3.project-title.pixelmania Metroid: Varia
+        //        .metroid-intro
+        //            .video-container
+        //                img(src='video/metroid-static.jpg')
+        //                <video id="aquent-home" width="768" height="514" poster="video/metroid-static.jpg" controls="true">
+        //                <source src="video/metroid.mp4" type="video/mp4">
+        //                </video>
+        //            p
+        //                img(src='images/pixelmania/infinityspiral-chris-norton-fui.jpg')
+        //
+        //    .section
+        //        .flex-row
+        //            div
+        //                h4 Details
+        //                .key-value-pair
+        //                    .key-v Project
+        //                    .val-v Metroid: Varia
+        //                .key-value-pair
+        //                    .key-v Client
+        //                    .val-v Pixelmania (Poland)
+        //                .key-value-pair
+        //                    .key-v Launched
+        //                    .val-v Multi-use, International
+        //
+        //            div
+        //                h4 Team
+        //                .key-value-pair
+        //                    .key-h Pre/Post Production & Camera
+        //                    .val-h Chris Norton
+        //                .key-value-pair
+        //                    .key-h Talent/Costume Fabrication
+        //                    .val-h Willow Creative (Netherlands)
+        //                .key-value-pair
+        //                    .key-h Assistant
+        //                    .val-h Katharine Repetski
+        //                .key-value-pair
+        //                    .key-h Location Scout/Manager
+        //                    .val-h Ambroży Kleks
+        //
+        //    .section
+        //        .flex-row
+        //            div
+        //                h3 Project Goal
+        //                p Pixelmania is an international collaboration laboratory for filmmakers, photographers, and costume designers to tell visual stories from comic books, movies, video games, and other pop culture. The event runs annually in Lubomierz, Poland.
+        //                p Artists compete for acceptance with only around a hundred photographers allowed into the event each year. Almost every shoot I had was from a different country. Being able to work around a language barrier and work with different viewpoints was also a necessary skill.
+        //            .countries
+        //                .flag
+        //                    .australia
+        //                    span Australia
+        //                .flag
+        //                    .czech-republic
+        //                    span Czech Republic
+        //                .flag
+        //                    .france
+        //                    span France
+        //                .flag
+        //                    .germany
+        //                    span Germany
+        //                .flag
+        //                    .hungary
+        //                    span Hungary
+        //                .flag
+        //                    .italy
+        //                    span Italy
+        //                .flag
+        //                    .lithuania
+        //                    span Lithuania
+        //                .flag
+        //                    .netherlands
+        //                    span Netherlands
+        //                .flag
+        //                    .poland
+        //                    span Poland
+        //                .flag
+        //                    .slovakia
+        //                    span Slovakia
+        //                .flag
+        //                    .sweden
+        //                    span Sweden
+        //
+        //
+        //        h3 Project Overview
+        //        p During the event, attendees can book pre-scouted locations like ancient castles, abandoned factories, waterfalls, and Japanese gardens. Experts like animal handlers and pyrotechnicians are also available. I was able to work with the wolf dogs team and the pyrotechnics crew but you could also book horses to ride and other fun things too.
+        //    .section
+        //        h3 Pre-production
+        //        p As a photographer at this event, you are allowed to bring in an assistant to help carry gear, but you're the person responsible for making everything come together and delivering art. Producer, director, concept artist, camera operator, logistics- just everything. It's a lot of hats to make five shoots a day, three days in a row all come together in a foreign country.
+        //        p
+        //            img(src='images/pixelmania/organization_800px.jpg')
+        //        p People fly into Poland from as far as Australia so it’s very common to plan upwards of fifteen complicated photoshoots for the three-day event. Months of planning go into building costumes, designing concepts, and planning travel. It’s a very friendly collaborative space, but teams are there to get something made and at a high level. With everyone sinking their own money into the cost of production it’s hard to walk away from the experience without also gaining a lot of respect for the time and money that goes into even larger group projects. With five to six complex shoots happening every day.
+        //
+        //
+        //        h3 IP Research / Moodboard
+        //        p To match the look and feel of the existing game I pulled
+        //        p
+        //            img(src='images/pixelmania/moodBoard_768.jpg')
+        //    .section
+        //        h3 UI Design
+        //        p I wrote out the why for the design so I could focus on whether things were moving towards the intended purpose. My intent was to create a moment in time where the character was checking the status and configuring systems on their super-futuristic spacesuit and the faux user interface needed to support that. Things like checking weapon stock, battery usage, life support, damage assessment, threat detection, systems diagnostics, GPS, and general OS controls are all reasonable things a space adventurer needs to survive on a hostile planet by themselves.
+        //        p
+        //            img(src='images/pixelmania/infinityspiral-chris-norton-fui-sketch.jpg')
+        //        p Once I locked in the reasons for design solves I laid down rapid sketches for possible icons and interfaces. The aim was to make sure I had enough variety and also that groups of UI could almost be guessed by the user without me have to spend lots of time finishing every icon out before having to throw parts away.
+        //
+        //        h3 3D Shaders Using Maya/Arnold
+        //        p
+        //            img(src='images/pixelmania/infinityspiral-chris-norton-fui-shader.jpg')
+        //        p The costume builder on the Varia team was a master 3D modeler and 3D print expert. I thought the floating panel would be a great way to showcase her skills in multiple ways by including a render of her 3D print file.
+        //
+        //        h4 Learning
+        //        p Unfortunately, her model was too high-resolution to fit into the scene. The model matched the game design exactly, but became more of a focal point and broke the composition. In round two, I found a free low-poly version of the suit on Turbo Squid that was less distracting. After writing an X-ray shader, the low-poly version was a much better direction.
+        //
+        //
+        //
+        //
+        //    .section
+        //        h3 Illustrator conversion
+        //        p
+        //            img(src='images/pixelmania/infinityspiral-chris-norton-fui-vector.jpg')
+        //        p I started creating vector art for the final composite once I had simple sketches in place. Mapping out the systems using UX flows made it easier to prioritize UI components according to available tasks. Threat warnings needed to be always visible whereas as monster guidebook might get tucked away.
+        //
+        //    .section
+        //        .flex-row
+        //            .color-chip
+        //                .hex #05eafb
+        //            div
+        //                h3 Color
+        //                p Blue cues up the subconscious for science and learning. Green can feel toxic like a Disney villain or comforting like spring growth. Mixing a little green with blue introduces an other-worldly feel to the scene.
+        //    .section
+        //        h3 Font - Metroid Prime Hunters
+        //        p
+        //            img(src='images/pixelmania/font-metroid-prime-hunters.jpg')
+        //        p There are several font sets used through the history of the game series but, “Metroid Prime Hunters,” retained more of a terminal feel when placed into the composition. It was a tough balancing act to find something that felt like it could live in a world within a world. The pixelated font helped the text stay in the panel even though you can’t  read most of it. It’s enough for it to just feel like you could read it if you needed to.
+        //        p
+        //            img(src='images/pixelmania/infinityspiral-chris-norton-fui.jpg')
+        //
         .project#boeing-insite
             h3.project-title.boeing Social Media Platform
             p
@@ -539,6 +420,94 @@ body
                             p <strong>Solution</strong><br>Mapping out some basic user task flow allowed me to see where we were making users backtrack further than necessary.  Condensing steps and eliminating duplicate routes allowed users to jump from one task to another faster and eliminated dev requirements.
 
 
+        .project#service-admin-portal
+            h3.project-title.john-deere Service Admin Portal
+
+            p
+                img(src='images/john-deere/svap/svap-header.jpg')
+
+            .section
+                .flex-row
+                    div
+                        h4 Details
+                        .key-value-pair
+                            .key-v Project
+                            .val-v Service Admin Portal
+                        .key-value-pair
+                            .key-v Client
+                            .val-v John Deere
+
+                        .key-value-pair
+                            .key-v Platform
+                            .val-v Desktop, Tablet
+
+                        .key-value-pair
+                            .key-v Launched
+                            .val-v Internal JD Network
+                    div
+                        h4 Team
+                        .key-value-pair
+                            .key-h Project Manager
+                            .val-h Nancy Early
+                        .key-value-pair
+                            .key-h UX/UI Design
+                            .val-h Chris Norton
+                        .key-value-pair
+                            .key-h HTML/Sass/CSS
+                            .val-h Chris Norton
+            .section
+                h3 Project goals
+                ol
+                    li Combine various single-use business applications under one central app.
+                    li Provide a catered experience to business owners, dealers, sales representatives, and service technicians that maintains current level of functionality
+                    li Make digital assets more re-usable and discoverable between departments
+
+            .section
+                .flex-row
+                    div
+                        h3 Overview
+                        p John Deere was looking to reduce the cost of equipment maintenance by bringing duplicate silo apps under a singular technology solution and dev team.  The hope being that a unified application would allow for a more a more consistent experience and better visibility between departments and throughout the full workflow.
+                    p(style='flex:0 0 400px;')
+                        img(src='images/john-deere/svap/svap-03.jpg')
+
+                p The team decided initially decided to minimize usability and adoption issues by basing large portions of the creation and editing workflow around existing websites already in use by various teams. Where possible the flow for editing and creating assets would remain similar.  Much of the new flow came from connecting assets that were previously isolated and could now talk to each other.   Budget was also a consideration so starting from scratch was going to be out of scope.
+
+            .section
+                h3 Defining Users
+                p Using the project requirements document, email interviews, and phone calls and user tasks we built out personas which allowed us to prioritize and find each user’s most needed tasks.
+                h4 Business Owners and Dealers
+                p Needed to be able to monitor overall profitability and admin
+                h4 Sales Representatives
+                p Needed the ability to quickly pull from existing template agreements, view existing agreements and work within bundled groups of agreements for customers.
+                h4 Technicians
+                p Needed to be able to update the status of their job tickets on customer machines as services were performed.  They also needed to be alerted to upcoming and past due tasks to be able to predict upcoming needs for staff workloads and ordering inventory.
+
+            .section
+                p
+                    img(src='images/john-deere/svap/svap-invision.jpg')
+
+                h3 User Testing and Findings
+                p In-person workshop sessions were used to ensure user tasks were available and intuitive for each user type.  In some cases, we found that users were using multiple tabs as a gap fix to not having the context of the data in front of them for either global or minute actions even in the existing apps.  These areas offered us the chance to make the experience better by showcasing the missing data alongside the task.
+
+                h4 Findings
+                p One of the biggest challenges was introducing UX into an already established Agile-like development process. While we tried to map out major connections between sections ahead of development we ran into cases where the workflow dead-ended with the actual backend data available. Some additional concept proofs for specific sections may have been helpful in preventing some of the data availability mismatches as well as budgeting more time for iteration as the team adjusted to including UX into their process would have given more wiggle room.  Overall, allowing the users to have feedback early and often did make adoption smoother and users were less surprised with the final product.
+                h4 Card Sorting for Better Navigation
+                p To pin down navigation, users were asked to place task cards into groups that made the most sense to them.  Consideration was also given to how frequently the user would need to access the task.
+                h4 Tree/Chalk-mark for Menus and Options
+                p Users were presented with menu structures and asked where they would click to find areas of the site or next steps in the work-flow.
+
+                .flex-row
+                    div
+                        h4 Whiteboard/Wireframe Prototypes
+                        p In some cases, multiple levels of user access complicated the approval structure of assets to the point where workflows had to be completely redefined. Low-fidelity prototype drawings allowed us to check in with users frequently and make sure the task could still be completed before being moved into high-fidelity interactive prototypes.
+                    p(style='flex:0 0 300px;')
+                        img(src='images/john-deere/svap/svap-00.jpg')
+
+                h4 Consolidating multiple UI Specifications
+                p To build interactive, high-fidelity mockups we were able to pull from a living style guide being developed in parallel by a different team for many components.  When components were missing completely we took cues on fonts, colors, spacing and icons from what was already being developed and matched them as close as possible.  Part of my role included policing the style guide and returning it to developers if the final product mismatched these brand standards.
+                p
+                    img(src='images/john-deere/svap/icons.jpg')
+
         .project#aquent-it-solutions-recruiting-website
             h3.project-title.aquent Employee Recruiting
             .section
@@ -663,93 +632,119 @@ body
                 h4 Imagery
                 p I defined example imagery to be used in the marketing materials, picking overhead drone photos to create the feeling of seeing the big picture through future tech which is exactly what we provide in our solutions to clients: technology-based solutions that work with large amounts of data at a digestible scale.
 
-        .project#service-admin-portal
-            h3.project-title.john-deere Service Admin Portal
-
-            p
-                img(src='images/john-deere/svap/svap-header.jpg')
-
+        .project#paprika
+            .section
+                h3.project-title.paprika Mobile App with Conversational AI
             .section
                 .flex-row
                     div
                         h4 Details
                         .key-value-pair
                             .key-v Project
-                            .val-v Service Admin Portal
+                            .val-v Paprika Mobile App
                         .key-value-pair
                             .key-v Client
-                            .val-v John Deere
-
-                        .key-value-pair
-                            .key-v Platform
-                            .val-v Desktop, Tablet
-
-                        .key-value-pair
-                            .key-v Launched
-                            .val-v Internal JD Network
+                            .val-v (Design Study)
                     div
                         h4 Team
                         .key-value-pair
-                            .key-h Project Manager
-                            .val-h Nancy Early
-                        .key-value-pair
-                            .key-h UX/UI Design
+                            .key-h UX / VUI Design
                             .val-h Chris Norton
-                        .key-value-pair
-                            .key-h HTML/Sass/CSS
-                            .val-h Chris Norton
-            .section
-                h3 Project goals
-                ol
-                    li Combine various single-use business applications under one central app.
-                    li Provide a catered experience to business owners, dealers, sales representatives, and service technicians that maintains current level of functionality
-                    li Make digital assets more re-usable and discoverable between departments
-
             .section
                 .flex-row
                     div
-                        h3 Overview
-                        p John Deere was looking to reduce the cost of equipment maintenance by bringing duplicate silo apps under a singular technology solution and dev team.  The hope being that a unified application would allow for a more a more consistent experience and better visibility between departments and throughout the full workflow.
-                    p(style='flex:0 0 400px;')
-                        img(src='images/john-deere/svap/svap-03.jpg')
+                        h3 Project Goal
+                        p Provide a more inclusive user experience to an existing visual app through accessibility and functionality. Ultimately create more touchpoints for more users.
 
-                p The team decided initially decided to minimize usability and adoption issues by basing large portions of the creation and editing workflow around existing websites already in use by various teams. Where possible the flow for editing and creating assets would remain similar.  Much of the new flow came from connecting assets that were previously isolated and could now talk to each other.   Budget was also a consideration so starting from scratch was going to be out of scope.
+                        h3 Project Overview
+                        p Paprika is a multi-modal recipe app that makes it easier to cook from home.  The application helps users to collect recipes, plan meals and shop for ingredients and includes touchpoints at home, on the go, and at the point of purchase.
+                        h3 Using Voice to Create More Touchpoints
+                        p VUI’s or Voice User Interfaces create unique opportunities to interact with products without having to physically touch them or even see them.  Tasks that require both hands or require the user to maintain eye contact are great candidates for a VUI.
 
-            .section
-                h3 Defining Users
-                p Using the project requirements document, email interviews, and phone calls and user tasks we built out personas which allowed us to prioritize and find each user’s most needed tasks.
-                h4 Business Owners and Dealers
-                p Needed to be able to monitor overall profitability and admin
-                h4 Sales Representatives
-                p Needed the ability to quickly pull from existing template agreements, view existing agreements and work within bundled groups of agreements for customers.
-                h4 Technicians
-                p Needed to be able to update the status of their job tickets on customer machines as services were performed.  They also needed to be alerted to upcoming and past due tasks to be able to predict upcoming needs for staff workloads and ordering inventory.
+
+                    div(style='flex:0 0 300px;')
+                        p
+                            img(src='images/paprika/paprika-search.png')
 
             .section
+                h3 Accessibility and Safety with Covid-19
+                p Especially with Covid-19, many companies are looking at reducing touch and controlling their applications via voice.  A lot of essential tasks such as banking, appointment scheduling, and grocery shopping have moved online. Making sure products are accessible to everyone, besides being the right thing to do is more important than ever as  companies are increasingly finding themselves in hot water when essential services don’t include considerations for users with disabilities such as those with reduced motor skills, memory and the visually impaired.
+            .section
+                h3 Why Conversational AI?
+                p Conversational AI operates as a layer to AI that translates user speech(utterances) into intents and commands. With a conversational approach, you lean on the AI to figure out what the user is trying to do versus training users to talk like computers. This makes apps more intuitive and accessible. There is less learning and more just doing.
+            .section
+                h3 Traditional vs Conversational Examples
+
+                h4 Traditional Speech Recognition of Commands
+                p Let’s say the user wants to find a recipe to make.  With traditional speech recognition that might look something like, “List recipes,” or, “Search chicken.”  The user is forced to know what tasks are available already.
                 p
-                    img(src='images/john-deere/svap/svap-invision.jpg')
+                    img(src='images/paprika/intents.jpg')
 
-                h3 User Testing and Findings
-                p In-person workshop sessions were used to ensure user tasks were available and intuitive for each user type.  In some cases, we found that users were using multiple tabs as a gap fix to not having the context of the data in front of them for either global or minute actions even in the existing apps.  These areas offered us the chance to make the experience better by showcasing the missing data alongside the task.
 
-                h4 Findings
-                p One of the biggest challenges was introducing UX into an already established Agile-like development process. While we tried to map out major connections between sections ahead of development we ran into cases where the workflow dead-ended with the actual backend data available. Some additional concept proofs for specific sections may have been helpful in preventing some of the data availability mismatches as well as budgeting more time for iteration as the team adjusted to including UX into their process would have given more wiggle room.  Overall, allowing the users to have feedback early and often did make adoption smoother and users were less surprised with the final product.
-                h4 Card Sorting for Better Navigation
-                p To pin down navigation, users were asked to place task cards into groups that made the most sense to them.  Consideration was also given to how frequently the user would need to access the task.
-                h4 Tree/Chalk-mark for Menus and Options
-                p Users were presented with menu structures and asked where they would click to find areas of the site or next steps in the work-flow.
+                h4 Example of Conversational AI
+                p With conversational AI the user can say something more like, “What can I make?” and the digital brain can figure out that the user is looking for a recipe (because it’s a recipe app) and can follow up with something like, “I found three recipes in vegetarian(category) and two side dishes(category) that can be made with items in your pantry. *beat* Would you like me to list those results? You can say stop listing at any time.”
+                p
+                    img(src='images/paprika/utterances.jpg')
+            .section
+                h3 Step 1: User Research and Validation
+
+                h4 User Interviews
+                p To figure out if the voice would actually be able to solve the problem and reach more touchpoints with users we did a limited number of participants gauge user interest.
+
+                h4 Conversational Map/Journey Map
+                p To get a general sense of how the voice would affect various sections of the app we did a mix of role-play and  onsite guerilla-style interviews, or we just went home and logged potential interactions while actually trying to cook something.  Asking  people how they would ask the app to complete a task was helpful in drawing out some of the initial keywords towards commands and intents.
+                p
+                    img(src='images/paprika/conversational-map.jpg')
+
+                h4 Environment
+                p Looking back, using the environment as a constraint might have saved time in figuring out which sections were most useful.  It was really useful to have a starter library of keywords and actually language used though. User research indicated that users interacted with the app both inside and outside the home, but users were more motivated to use voice by themselves vs around others.  For example, both taking the bus and driving along both categorized the user as, “on the go,” but users were less self-conscious when they were driving alone.
+                p Users also found more value in voice interactions during tasks that already required both hands or when their hands were dirty.  Having their hands coated in flour or other messy ingredients also made a strong case for voice interaction.
 
                 .flex-row
                     div
-                        h4 Whiteboard/Wireframe Prototypes
-                        p In some cases, multiple levels of user access complicated the approval structure of assets to the point where workflows had to be completely redefined. Low-fidelity prototype drawings allowed us to check in with users frequently and make sure the task could still be completed before being moved into high-fidelity interactive prototypes.
-                    p(style='flex:0 0 300px;')
-                        img(src='images/john-deere/svap/svap-00.jpg')
+                        h4 Environment-Driven Tasks
+                        p Looking at tasks that users would likely want to complete while driving or while cooking both seemed like good starting candidates.  A few example tasks:
+                        ul
+                            li Users who have scheduled recipes into a meal planner might want to verify that all ingredients have been added to their shopping list while on the way to the store.
+                            li Users might want to know the next or previous steps in a recipe as they work along.
+                            li Users might want to check off ingredients as they use them during food preparation.
+                    div(style='flex:0 0 300px;')
+                        p
+                            img(src='images/paprika/paprika-sections.png')
 
-                h4 Consolidating multiple UI Specifications
-                p To build interactive, high-fidelity mockups we were able to pull from a living style guide being developed in parallel by a different team for many components.  When components were missing completely we took cues on fonts, colors, spacing and icons from what was already being developed and matched them as close as possible.  Part of my role included policing the style guide and returning it to developers if the final product mismatched these brand standards.
+                h4 Debunked Assumptions
+                p Interviewing users revealed confusion for doing anything cooking-related  tasks while driving. While some participants reported it useful to add eggs or snacks on the fly, people struggled with tying the need to work with shopping lists for recipes that had been scheduled on a calendar. We might not have worded the question very well either, but even after some explanation, it ranked as low-priority compared to other features.
+
+                h4 The Real MVP
+                p Users did however find it intuitive to have voice assistance during food preparation. It was very valuable to find recipes and walk through instructions after the user had started to work with ingredients.  This allowed users to keep working vs having to wash their hands after various steps in order to use the app.
+
+
+
+            .section
+                h3 Step 2: VUI (Voice User Interface) Design
                 p
-                    img(src='images/john-deere/svap/icons.jpg')
+                    img(src='images/paprika/dialog-flow.jpg')
+
+                h4 Testing Dialog Prototypes
+                p Once we knew which sections and tasks were higher priority we could start iterating through various dialog prototypes of task flows.  A lot of these can just be back and forth conversations in various forms before you start any actual coding.
+
+                h4 Notecards/Post-its
+                p Two people sitting at a table with the existing app visible to both The “user” spoke phrases out loud and the “prototype” would sift through notecards and read the pre-written responses. This was an okay low-fidelity starter but the back and forth was a little awkward as the person playing the role of prototype searched through their pile of responses.  Also if there was no response it dead-ended the entire task flow causing another session to be scheduled for that flow.
+
+                h4 Puppet Master
+                p It was actually a lot faster to have the two people in different rooms just call each other and have the user side try to initiate tasks via voice while the person playing prototype puppeted the responses.  This way everything didn’t come to a halt if unknowns showed up.  The prototype could adlib suggested actions or route through to error states.
+
+                h4 Situational Recording
+                p Recording someone actually doing a task and interacting with the prototype was useful for gathering intents and language for indirect commands.  For example having someone say, “Hold on, I’m out of bowls!” wasn’t something the user was actively thinking about achieving, but the intent was still there to stop reading the current step until they washed one of the dirty bowls.
+
+                h3 Engaging Development and AI
+
+                h4 Voice-activated Prototypes
+                p Once you start to have a running list of user utterances/triggers, intents, and commands you can start to link the prototype up to the technology side to make the call and response process flow even smoother.  Adobe XD has voice recognition but it only lets you link up one user utterance to trigger a response.  It might just be easier to link up a prototype to something like an Alexa skill depending on where the dev team is at and what library they’re using. Building a digital prototype in this way also makes the switch from responses with baked-in data into real function calls a little more seamless.
+
+                h4 Engaging with AI
+                p You get a lot more out of the AI if you have a library of keywords and phrases built from the previous steps.  With a functional or semi-functional app in place,  you can leverage the AI to refine the keyword pairings that trigger commands and route the user into dialogs/flow for the tasks they are really asking for.
+
 script(src='js/app.js')
 
 
