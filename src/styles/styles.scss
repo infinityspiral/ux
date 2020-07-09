@@ -331,8 +331,8 @@ video {
 	background: #ebebeb;
 	border-radius: 4px;
 	box-shadow: 0 4px 8px lighten(#000, 70%);
-	left: 16px;
-	margin: 0;
+	left: calc(50% - 622px);
+	margin: 0 auto;
 	padding: 8px 16px 0;
 	position: fixed;
 	top: 76px;
@@ -430,7 +430,7 @@ video {
 
 .main-content {
 	counter-reset: project;
-	margin: 76px 0 0 220px;
+	margin: 76px auto 0 auto;
 	max-width: 850px;
 
 	@media (max-width: $breakPhone) {
