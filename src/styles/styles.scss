@@ -231,102 +231,79 @@ video {
 .icon-fix {
 	background-image: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNDQuMDMgMjQ0LjAzIj48ZGVmcz48c3R5bGU+LmF7ZmlsbDpub25lO3N0cm9rZTojMDAwO3N0cm9rZS1saW5lY2FwOnJvdW5kO3N0cm9rZS1saW5lam9pbjpyb3VuZDtzdHJva2Utd2lkdGg6NC41cHg7fTwvc3R5bGU+PC9kZWZzPjx0aXRsZT5pY29uLWZpeDwvdGl0bGU+PHBhdGggY2xhc3M9ImEiIGQ9Ik01Ni44MSw0NC4wNWEzOCwzOCwwLDAsMSwxNy0zLjQ2LDM5LjEyLDM5LjEyLDAsMCwxLDM3LjMzLDMwLjY5LDM3LjY3LDM3LjY3LDAsMCwxLC4wOSwxNi41N0E0LjU2LDQuNTYsMCwwLDEsMTEwLjA2LDkwcS01LjgyLDUuNzMtMTEuNzUsMTEuMzRhMTYuNTEsMTYuNTEsMCwwLDAsLjU2LDI0LjI4bDEsLjgyYy0xLjYsMS40Ny0zLjE2LDIuOTItNC43OSw0LjQxLTMuNzUtMy43NC03LjUxLTcuMzgtMTEuMTMtMTEuMTdhNCw0LDAsMCwwLTQuMDctMS4zMUEzOS4wOCwzOS4wOCwwLDAsMSwzNi45MSw2NC4yM2MuNTYuNTIsMS4wNywxLDEuNTUsMS40Myw2LjQsNi4zOSwxMi43MiwxMi44NywxOS4yMiwxOS4xN2ExNC4yMSwxNC4yMSwwLDAsMCwyMy45MS02LjQ3YzEuNC01LjQtLjEyLTEwLjEtNC0xNFE2OC4yNSw1NSw1OC45MSw0NS43QzU4LjQsNDUuMiw1Ny43OCw0NC44MSw1Ni44MSw0NC4wNVoiLz48cGF0aCBjbGFzcz0iYSIgZD0iTTE3OS42Niw2OS41M2MuODYuOCwxLjM0LDEuMjMsMS43OSwxLjY4cTEyLjYsMTIuNTgsMjUuMTgsMjUuMTljNSw1LDUuMDUsMTEuMS4wNSwxNi4xMnEtMTQuODgsMTQuOS0yOS43NywyOS43OGE0LjUzLDQuNTMsMCwwLDEtLjQ2LjM0Yy0uNDgtLjQ1LTEtLjktMS40OC0xLjM5LTkuNy05LjU5LTE5LjM3LTE5LjIxLTI5LjEyLTI4Ljc2YTQuNTgsNC41OCwwLDAsMC0yLjg4LTEuMTVxLTguMDctLjE2LTE2LjE0LDBhNC41Myw0LjUzLDAsMCwwLTIuNzIsMS4wOGMtMi42NiwyLjM0LTUuMTcsNC44NS03Ljc3LDcuMjUtNC4xMiwzLjgxLTEwLDMuNjgtMTMuNTMtLjI0cy0zLTkuNjcsMS4xNS0xMy40OWMzLjUzLTMuMjMsNy02LjU4LDEwLjM0LTEwYTEwLjQyLDEwLjQyLDAsMCwxLDcuNzUtMy4yYzExLDAsMjIsMCwzMy4wNiwwYTMuOSwzLjksMCwwLDAsMy4wOS0xLjI0YzYuNjktNi43NiwxMy40NC0xMy40NiwyMC4xNS0yMC4yQTE0LjY1LDE0LjY1LDAsMCwwLDE3OS42Niw2OS41M1oiLz48cGF0aCBjbGFzcz0iYSIgZD0iTTExOC4wOCwxMjcuNzZjMy0yLjc2LDUuODYtNS41Miw4Ljg3LTguMTRhNC43LDQuNywwLDAsMSwyLjc0LTEuMDljMy40Ny0uMSw3LjMzLS45MiwxMC4zMS4zczUuMTIsNC41Myw3LjU3LDdRMTY4Ljc4LDE0NywxOTAsMTY4LjI5YzEwLjM2LDEwLjQ0LDcuMzQsMjcuNTYtNS45MiwzMy4yOC03Ljc0LDMuMzMtMTUuMTQsMi4yNi0yMS40OS0zLjI2LTQuMTUtMy41OS03Ljc3LTcuNzgtMTEuNzQtMTEuODEuNjMtLjc3LDEuMzQtMS42MSwyLTIuNDZBMTUuMDcsMTUuMDcsMCwwLDAsMTUwLDE2Mi4xMmEzLjUsMy41LDAsMCwxLTEuMjQtMi4zMmMtLjQ0LTYuMDgtMy4yMS0xMC41OC04Ljc2LTEzLjJhMi44MywyLjgzLDAsMCwxLTEuNzgtMi4yNWMtMS41OS03LjY4LTcuNTItMTIuNDQtMTUuMjctMTIuMjZhMi4zMSwyLjMxLDAsMCwxLTIuMzctMS4xOUEyOS4xNywyOS4xNywwLDAsMCwxMTguMDgsMTI3Ljc2Wm02Ni42LDU1LjE4YTguOTEsOC45MSwwLDEsMC0xNy44Mi4wOSw4LjkxLDguOTEsMCwwLDAsMTcuODItLjA5WiIvPjxwYXRoIGNsYXNzPSJhIiBkPSJNMTI3LjgyLDE3Ny41NmMtNC4yMiwyLjM4LTcuOTMsMy0xMS4yLS4yOHMtMi43Ni03LjA4LS4yNC0xMS40MmMtNC4yNiwyLjM2LTguMDgsMy4xNi0xMS40Mi0uMjNzLTIuNzgtNy4wNy0uMjctMTEuMjhsLTIuNiwxLjE0YTcuNzcsNy43NywwLDAsMS05LjQxLTIuMTQsNy4zNiw3LjM2LDAsMCwxLS4wOC05LjQ2LDE0My43MiwxNDMuNzIsMCwwLDEsMTEtMTFjMi41Mi0yLjI3LDYuMTktMi4wOSw5LS4xN2E3LjY3LDcuNjcsMCwwLDEsMy4wNiw4LjQ5Yy0uMjcsMS4wNy0uNjUsMi4xMS0xLjE1LDMuNzNsMy4yMi0zLjA5YzMuMjgtMy4yLDcuNTctMy41NCwxMC44MS0uODdzMy43Myw3LDEuMjMsMTAuNzhjLS4zMS40OS0uNjQsMS0xLjMsMS45NSw0LjgzLTIsOS0yLjE1LDExLjg5LDIuMjgsMi40NywzLjgzLDEuMTEsNy4zNi0yLDEwLjc1LDEuMTYsMCwxLjkxLS4xLDIuNjYtLjEyYTcuNDgsNy40OCwwLDAsMSw3LjI0LDQuMTksNy4xMiw3LjEyLDAsMCwxLS43LDguMTRjLTIuNTksMy4zLTUuMjksNi41Mi04LjEsOS42M2E3LjU4LDcuNTgsMCwwLDEtMTAsMS4zLDcuNzgsNy43OCwwLDAsMS0yLjcxLTkuODlDMTI3LDE3OS4zNywxMjcuMjksMTc4LjczLDEyNy44MiwxNzcuNTZaIi8+PC9zdmc+');
 }
+.warning {
+	padding: 8px 20px;
+    margin: 16px 0;
+    border: 1px solid #9e9e9e;
+    border-radius: 3px;
+    font-size: 1.6rem;
 
+	a {
+		color: black;
+		&:visited {
+			color: black;
+		}
+	}
+}
+.page {
+
+	@media (min-width:1273) {
+		display: flex;
+		justify-content: space-between;
+		width: 1013px;
+		margin:8px auto;
+		left: -82px;
+		position: relative;
+	}
+}
 .header {
-	background: $colorPrimary;
+	background: white;
+	box-shadow: 0 0 25px 0px #0000003b;
 	overflow: hidden;
 	padding: $spaceUnit 0;
 	position: fixed;
 	top: 0;
 	width: 100%;
 	z-index: 1;
+	text-align: center;
+	font-size: 2rem;
 
-	h1 {
-		font-weight: 300;
-		letter-spacing: 0.15px;
-		font-family: $fontBody;
-		color: darken(#fff, 35%);
-		display: flex;
+	@media (min-width:1273) {
 		font-size: 1.8rem;
-		justify-content: flex-start;
-		margin: 0;
-		padding: $spaceUnit;
+	}
 
-		@media (min-width:$breakPhone) {
-			margin: 0 0 0 8px;
-		}
-
-		@media (max-width:$breakPhone) {
-			display: flex;
-			flex-flow: row wrap;
-			justify-content: center;
-
-			.user-name {
-				flex: 0 0 100%;
-				order: 1;
-			}
-
-			.expertise {
-				font-size: 1.8rem;
-				margin: $spaceUnit 0 0 0;
-				order: 2;
-				position: relative;
-
-				&.active {
-					.project-menu-triangle {
-						transform: rotate(90deg);
-					}
-				}
-
-			}
-
-		}
-
-
-		.project-menu-triangle {
-			display: none;
-
-			@media (max-width:$breakPhone) {
-				display: inline-block;
-				left: 8px;
-				margin-right: 8px;
-				order: 3;
-				padding: 4px;
-				position: relative;
-				transform: rotate(-90deg);
-			}
-		}
 
 		.user-name {
-			display: flex;
-			justify-content: center;
-			margin-top: 4px;
-		}
+		display: inline;
+	}
 
-		.expertise {
-			border: 1px solid #4d4d4d;
-			border-radius: 4px;
-			color: darken(#fff, 30%);
-			margin: 0 $spaceUnit 0 0;
-			padding: 2px 8px;
+	.expertise {
+		display: inline;
+	}
 
-			@media (min-width:$breakPhone) {
-				display: inline;
-			}
-		}
+	a {
+		color: #a6a6a6;
+		text-decoration: none;
+	}
 
-		a {
-			color: #a6a6a6;
-			text-decoration: none;
-		}
+}
+.project-types {
+	a {
+		margin-right: 4px;
 
-		.fa.fa-envelope {
-			display: inline-block;
-			font-size: 18px;
+		&:hover,
+		&.active-section {
+			border-bottom: 4px solid black;
+			font-weight: bold;
+			color: black;
+			text-align: center;
 		}
 	}
-}
+	span {
+		margin-right: 4px;
 
+	}
+}
 .quick-nav {
 	background: #ebebeb;
 	border-radius: 4px;
@@ -335,17 +312,18 @@ video {
 	margin: 0 auto;
 	padding: 8px 16px 0;
 	position: fixed;
-	top: 76px;
+	top: 92px;
 	width: 184px;
 
 	h5 {
 		border-bottom: 1px solid #dadada;
 		border-top-left-radius: 4px;
 		border-top-right-radius: 4px;
-		color: #8c8c8c;
-		font-size: 1.2rem;
+		color: #908e8e;
+		font-size: 1.4rem;
 		margin-bottom: 16px;
 		padding-bottom: 4px;
+		padding-left: 16px;
 	}
 
 	li {
@@ -430,11 +408,11 @@ video {
 
 .main-content {
 	counter-reset: project;
-	margin: 76px auto 0 auto;
+	margin: 92px auto 0 auto;
 	max-width: 850px;
 
 	@media (max-width: $breakPhone) {
-		margin: 110px 0 0;
+			margin: 74px 0 0;
 		padding: $spaceUnit;
 	}
 }
@@ -450,7 +428,6 @@ video {
 }
 
 .project-title {
-	background: #f3f4f3;
 	border-bottom: 1px solid #f3f3f3;
 	color: #8e8e8e;
 	font-size: 20px;

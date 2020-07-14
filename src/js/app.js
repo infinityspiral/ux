@@ -13,21 +13,21 @@ window.onload = () => {
     item.click()
   })
 
-  const projectMenuBtn = document.querySelector('.expertise')
-  const quickNav = document.querySelector('.quick-nav')
-  const toggleProjectMenu = (e) => {
-    e.preventDefault()
-    quickNav.classList.toggle('active')
-    projectMenuBtn.classList.toggle('active')
-  }
-
-  projectMenuBtn.addEventListener('click', e => {
-    toggleProjectMenu(e)
-  })
-
-  projectMenuBtn.addEventListener('touchstart', e => {
-    toggleProjectMenu(e)
-  })
+  // const projectMenuBtn = document.querySelector('.project-jump-menu')
+  // const quickNav = document.querySelector('.quick-nav')
+  // const toggleProjectMenu = (e) => {
+  //   e.preventDefault()
+  //   quickNav.classList.toggle('active')
+  //   projectMenuBtn.classList.toggle('active')
+  // }
+  //
+  // projectMenuBtn.addEventListener('click', e => {
+  //   toggleProjectMenu(e)
+  // })
+  //
+  // projectMenuBtn.addEventListener('touchstart', e => {
+  //   toggleProjectMenu(e)
+  // })
 
   const quickNavLinks = document.querySelectorAll('.project-jump')
   quickNavLinks.forEach(item => {
@@ -36,7 +36,7 @@ window.onload = () => {
 
       const dest = e.currentTarget.getAttribute('href')
       const destEl = document.querySelector(dest.toString())
-      getCoords(destEl, -76)
+      getCoords(destEl, -92)
       quickNav.classList.remove('active')
       projectMenuBtn.classList.remove('active')
     })
