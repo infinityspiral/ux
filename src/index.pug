@@ -12,19 +12,32 @@ html(lang="en")#top
         script(src='js/polyfill.min.js')
 
 body
-    .header
-        .page
-            div
-                span Chris Norton
-                a(class='email',href='mailto:public.cnorton@gmail.com', title='Send Email')
-                    <i class="fa fa-envelope"></i>
-            .project-types
-                a(class='active-section', href='/ux') UX
-                span /
-                a(class='', href='/ux/ui.html') UI
-                span Designer
-            div
+    .sticky-header
+        .progress-indicator
+        div
+            h1 Chris Norton | <span class='accent'>UX Design</span>
+                a(href='#top').to-top <i class="fa fa-arrow-circle-up"></i> <span>Back to Top</span>
 
+            nav.contact
+                a(class='email',href='mailto:public.cnorton@gmail.com', title='Send Email', target='_blank')
+                    <i class="fa fa-envelope"></i>
+                    span public.cnorton@gmail.com
+
+    //    a(href='/ux') UX
+            //    a(href='/ux/ui.html') UI
+    //.header
+    //    .page
+    //        div
+    //            span Chris Norton
+    //            a(class='email',href='mailto:public.cnorton@gmail.com', title='Send Email')
+    //                <i class="fa fa-envelope"></i>
+    //        .project-types
+    //            a(class='active-section', href='/ux') UX
+    //            span /
+    //            a(class='', href='/ux/ui.html') UI
+    //            span Designer
+    //        div
+    //
     .quick-nav
         h5 UX Projects
         ol
@@ -449,7 +462,7 @@ body
                     .video-container
                         img(src='video/aquent-home-static.jpg')
                         <video id="aquent-home" width="223" height="470" poster="video/aquent-home.jpg">
-                            <source src="video/aquent-home.mp4" type="video/mp4">
+                        <source src="video/aquent-home.mp4" type="video/mp4">
                         </video>
                     div
                         h4 Details

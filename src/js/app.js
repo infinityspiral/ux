@@ -7,27 +7,10 @@ window.onload = () => {
     item.loop = true
     item.autoplay = true
     item.addEventListener('click', e => {
-      console.log(item.paused)
       e.currentTarget.play()
     })
     item.click()
   })
-
-  // const projectMenuBtn = document.querySelector('.project-jump-menu')
-  // const quickNav = document.querySelector('.quick-nav')
-  // const toggleProjectMenu = (e) => {
-  //   e.preventDefault()
-  //   quickNav.classList.toggle('active')
-  //   projectMenuBtn.classList.toggle('active')
-  // }
-  //
-  // projectMenuBtn.addEventListener('click', e => {
-  //   toggleProjectMenu(e)
-  // })
-  //
-  // projectMenuBtn.addEventListener('touchstart', e => {
-  //   toggleProjectMenu(e)
-  // })
 
   const quickNavLinks = document.querySelectorAll('.project-jump')
   quickNavLinks.forEach(item => {
@@ -37,8 +20,6 @@ window.onload = () => {
       const dest = e.currentTarget.getAttribute('href')
       const destEl = document.querySelector(dest.toString())
       getCoords(destEl, -92)
-      quickNav.classList.remove('active')
-      projectMenuBtn.classList.remove('active')
     })
 
     item.addEventListener('touchstart', e => {
@@ -47,8 +28,6 @@ window.onload = () => {
       const dest = e.currentTarget.getAttribute('href')
       const destEl = document.querySelector(dest.toString())
       getCoords(destEl, -116)
-      quickNav.classList.remove('active')
-      projectMenuBtn.classList.remove('active')
     })
   })
 
@@ -60,4 +39,27 @@ window.onload = () => {
       behavior: 'auto' // or smooth
     })
   }
+
+  const progressEl = document.querySelector('.progress-indicator')
+  const updateProgressIndicator = () => {
+    const pageHeight = Math.abs(document.querySelector('body').getBoundingClientRect().height) - window.innerHeight
+    const currPos = window.scrollY
+    const pos = parseInt(currPos / pageHeight * 100)
+    progressEl.style.width = `${pos}%`
+  }
+  updateProgressIndicator()
+
+  const stickyHeaderEl = document.querySelector('.sticky-header')
+  const updateHeaderSize = () => {
+    const currPos = window.scrollY
+    currPos > stickyHeaderEl.getBoundingClientRect().height ? stickyHeaderEl.classList.add('stickied') : stickyHeaderEl.classList.remove('stickied')
+    currPos > stickyHeaderEl.getBoundingClientRect().height ? document.querySelector('.quick-nav').classList.add('stickied') : document.querySelector('.quick-nav').classList.remove('stickied')
+    currPos > stickyHeaderEl.getBoundingClientRect().height ? document.querySelector('.main-content').classList.add('stickied') : document.querySelector('.main-content').classList.remove('stickied')
+  }
+  updateHeaderSize()
+
+  window.addEventListener('scroll', (e) => {
+    updateProgressIndicator()
+    updateHeaderSize()
+  })
 }
