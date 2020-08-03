@@ -32,37 +32,6 @@
 		position: relative;
 	}
 }
-.header {
-	background: white;
-	box-shadow: 0 0 25px 0px #0000003b;
-	overflow: hidden;
-	padding: $spaceUnit 0;
-	position: fixed;
-	top: 0;
-	width: 100%;
-	z-index: 1;
-	text-align: center;
-	font-size: 2rem;
-
-	@media (min-width:1273px) {
-		font-size: 1.8rem;
-	}
-
-
-	.user-name {
-		display: inline;
-	}
-
-	.expertise {
-		display: inline;
-	}
-
-	a {
-		color: #a6a6a6;
-		text-decoration: none;
-	}
-
-}
 
 .main-content {
 	counter-reset: project;
@@ -80,14 +49,5 @@
 		padding: $spaceUnit;
 	}
 }
-.main-content > .project {
-	background: #fff;
-	margin-bottom: 20px;
-	padding: 36px;
-}
-
-
-
-
 
 

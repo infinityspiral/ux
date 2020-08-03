@@ -53,7 +53,7 @@
 			display: block;
 		}
 
-		.project {
+		.project-title {
 			color: $colorPrimary;
 			display: inline;
 			font-size: 1.2rem;
@@ -142,22 +142,10 @@
 	}
 }
 
-.project-types {
-	a {
-		margin-right: 4px;
-
-		&:hover,
-		&.active-section {
-			border-bottom: 4px solid black;
-			font-weight: bold;
-			color: black;
-			text-align: center;
-		}
-	}
-	span {
-		margin-right: 4px;
-
-	}
+.project {
+	background: #fff;
+	margin-bottom: 20px;
+	padding: 36px;
 }
 
 .project-title {

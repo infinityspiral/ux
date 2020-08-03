@@ -442,28 +442,6 @@ video:focus {
     left: -82px;
     position: relative; } }
 
-.header {
-  background: white;
-  box-shadow: 0 0 25px 0px #0000003b;
-  overflow: hidden;
-  padding: 8px 0;
-  position: fixed;
-  top: 0;
-  width: 100%;
-  z-index: 1;
-  text-align: center;
-  font-size: 2rem; }
-  @media (min-width: 1273px) {
-    .header {
-      font-size: 1.8rem; } }
-  .header .user-name {
-    display: inline; }
-  .header .expertise {
-    display: inline; }
-  .header a {
-    color: #a6a6a6;
-    text-decoration: none; }
-
 .main-content {
   counter-reset: project;
   margin: 122px auto 0 auto;
@@ -475,11 +453,6 @@ video:focus {
     .main-content {
       margin: 110px 0 0;
       padding: 8px; } }
-
-.main-content > .project {
-  background: #fff;
-  margin-bottom: 20px;
-  padding: 36px; }
 
 .icon-ux {
   display: inline-block;
@@ -606,7 +579,7 @@ video:focus {
     .quick-nav li .company {
       color: #757575;
       display: block; }
-    .quick-nav li .project {
+    .quick-nav li .project-title {
       color: #282828;
       display: inline;
       font-size: 1.2rem;
@@ -666,15 +639,10 @@ video:focus {
     .warning a:visited {
       color: black; }
 
-.project-types a {
-  margin-right: 4px; }
-  .project-types a:hover, .project-types a.active-section {
-    border-bottom: 4px solid black;
-    font-weight: bold;
-    color: black;
-    text-align: center; }
-.project-types span {
-  margin-right: 4px; }
+.project {
+  background: #fff;
+  margin-bottom: 20px;
+  padding: 36px; }
 
 .project-title {
   border-bottom: 1px solid #f3f3f3;
