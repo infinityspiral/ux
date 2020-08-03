@@ -429,6 +429,8 @@
 	$timelineColor: lighten($colorAccent, 20%);
 	display: flex;
 	flex-flow: column;
+	align-items: flex-start;
+
 	border-left: 2px solid $timelineColor;
 	padding: 0 0 0 16px;
 	margin-bottom: 48px;
@@ -438,14 +440,15 @@
 		margin-left:0;
 		margin-top: 16px;
 		list-style: none;
-		font-size: 1.2rem;
-		line-height: 1.25;
 		border: 1px solid lighten($colorSecondary, 50%);
 		padding: 8px;
 		border-radius: 4px;
-		letter-spacing: 0.25px;
 		display: flex;
 		align-items: center;
+		max-width: 400px;
+		font-size: 1.6rem;
+		line-height: 1.5;
+
 
 		&:first-of-type {
 			margin-top: 0;
@@ -461,17 +464,20 @@
 		}
 	}
 
-	@media(min-width:$breakPhone) {
+	@media(min-width:$breakXL) {
 		flex-flow: row;
 		padding: 0;
 		border-left: none;
 		border-top: 2px solid $timelineColor;
 		justify-content: space-between;
-		align-items: flex-start;
 
 		li {
 			margin-left:24px;
 			margin-top: 16px;
+			max-width: 150px;
+			font-size: 1.2rem;
+			line-height: 1.25;
+
 
 			&:first-of-type {
 				margin-top: 16px;
@@ -491,6 +497,8 @@
 	$timelineColor: lighten($colorAccent, 20%);
 	display: flex;
 	flex-flow: column;
+	align-items: flex-start;
+
 	border-left: 2px solid $timelineColor;
 	padding: 0 0 0 16px;
 	margin-bottom: 48px;

@@ -1,25 +1,25 @@
-.flex-row {
-
-	@media(min-width:$breakPhone) {
-		display: flex;
-		flex-flow: row nowrap;
-
-		> * {
-			margin-right: 40px;
-		}
-
-		&.double {
-			:first-child {
-				flex: 0 0 40%;
-				margin-right: 20px;
-			}
-
-			> * {
-				margin-right: 0;
-			}
-		}
-	}
-}
+//.flex-row {
+//
+//	@media(min-width:$breakPhone) {
+//		display: flex;
+//		flex-flow: row nowrap;
+//
+//		> * {
+//			margin-right: 40px;
+//		}
+//
+//		&.double {
+//			:first-child {
+//				flex: 0 0 40%;
+//				margin-right: 20px;
+//			}
+//
+//			> * {
+//				margin-right: 0;
+//			}
+//		}
+//	}
+//}
 
 .page {
 
@@ -36,7 +36,7 @@
 .main-content {
 	counter-reset: project;
 	margin: 122px auto 0 auto;
-	max-width: 850px;
+	//max-width: 850px;
 	transition: top $stickyTime $stickyTransition;
 
 	&.stickied {
@@ -50,4 +50,38 @@
 	}
 }
 
+.grid-double {
+	@media (min-width: $breakPhone) {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		column-gap: 12px;
+	}
 
+}
+
+.project-header-grid-hero {
+	margin-bottom: 96px;
+
+
+	@media (min-width: $breakXL) {
+		grid-template-columns: 1fr 5fr 2fr;
+		display: grid;
+		column-gap: 48px;
+	}
+}
+
+.project-content-grid {
+	margin-bottom: 96px;
+
+	@media (min-width: $breakPhone) {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		column-gap: 96px;
+		justify-items: center;
+	}
+	@media (min-width: $breakXL) {
+		grid-template-columns: 1fr 1fr 1fr 1fr;
+	}
+
+
+}
