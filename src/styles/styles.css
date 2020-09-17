@@ -421,6 +421,9 @@ video:focus {
 .section {
   margin-bottom: 32px; }
 
+nav {
+  display: inline-block; }
+
 @media (min-width: 1273px) {
   .page {
     display: flex;
@@ -757,6 +760,9 @@ video:focus {
     .color-chip {
       height: 80px; } }
 
+.pages {
+  margin-left: 32px; }
+
 .sticky-header {
   width: 100%;
   position: fixed;
@@ -775,6 +781,15 @@ video:focus {
     font-weight: 700;
     line-height: 1;
     color: #818181; }
+  .sticky-header .pages a {
+    margin-left: 8px;
+    display: inline-block;
+    font-size: 1.6rem;
+    font-weight: 700;
+    line-height: 1;
+    color: #009dd2; }
+    .sticky-header .pages a.active {
+      color: #818181; }
   .sticky-header .email {
     display: inline-block; }
     .sticky-header .email i {
@@ -823,7 +838,6 @@ video:focus {
       margin-left: 16px;
       margin-top: 1px; }
     .sticky-header.stickied .contact {
-      display: inline-block;
       margin-left: 16px;
       text-transform: uppercase; }
       .sticky-header.stickied .contact a {
@@ -831,6 +845,12 @@ video:focus {
       .sticky-header.stickied .contact .email i {
         top: -1px; }
       .sticky-header.stickied .contact .email span {
+        display: none; }
+    .sticky-header.stickied .pages {
+      text-transform: uppercase; }
+      .sticky-header.stickied .pages .email i {
+        top: -1px; }
+      .sticky-header.stickied .pages .email span {
         display: none; }
     .sticky-header.stickied .to-top,
     .sticky-header.stickied .to-top:visited {

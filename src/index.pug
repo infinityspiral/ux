@@ -5,8 +5,8 @@ html(lang="en")#top
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
 
-        title Chris Norton: UX/UI Designer
-        link(href='https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;600&family=Roboto+Condensed:wght@400&display=swap',rel='stylesheet')
+        title Chris Norton: UX/UI Design
+        link(href='https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;600&family=Roboto+Condensed:wght@400&display=swap', rel='stylesheet')
         link(rel='stylesheet', href='https://cdnjs.Cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css')
         link(rel='stylesheet', href='styles/styles.css')
         script(src='js/polyfill.min.js')
@@ -15,67 +15,16 @@ body
     .sticky-header
         .progress-indicator
         div
-            h1 Chris Norton | <span class='accent'>UX/UI Designer</span>
+            h1 Chris Norton | <span class='accent'>UX/UI Design</span>
                 a(href='#top').to-top <i class="fa fa-arrow-circle-up"></i> <span>Back to Top</span>
 
             nav.contact
-                a(class='email',href='mailto:public.cnorton@gmail.com', title='Send Email', target='_blank')
+                a(class='email', href='mailto:public.cnorton@gmail.com', title='Send Email', target='_blank')
                     <i class="fa fa-envelope"></i>
                     span public.cnorton@gmail.com
-
-    ////    a(href='/ux') UX
-    //        //    a(href='/ux/ui.html') UI
-    ////.header
-    ////    .page
-    ////        div
-    ////            span Chris Norton
-    ////            a(class='email',href='mailto:public.cnorton@gmail.com', title='Send Email')
-    ////                <i class="fa fa-envelope"></i>
-    ////        .project-types
-    ////            a(class='active-section', href='/ux') UX
-    ////            span /
-    ////            a(class='', href='/ux/ui.html') UI
-    ////            span Designer
-    ////        div
-    ////
-    //
-    //.quick-nav
-    //    h5 UX Projects
-    //    ol
-    //        li
-    //            a.project-jump('href'='#boeing-insite')
-    //                span.project-title Social Media Platform
-    //                span.company Boeing
-    //        li
-    //            a.project-jump('href'='#boeing-new-business-generator')
-    //                span.project-title New Business Generator
-    //                span.company Boeing
-    //        li
-    //            a.project-jump('href'='#boeing-historical-services')
-    //                span.project-title Historical Services
-    //                span.company Boeing
-    //        li
-    //            a.project-jump('href'='#service-admin-portal')
-    //                span.project-title Service Admin Portal
-    //                span.company John Deere
-    //        li
-    //            a.project-jump('href'='#translations')
-    //                span.project-title Translations
-    //                span.company John Deere
-    //        li
-    //            a.project-jump('href'='#aquent-it-solutions-recruiting-website')
-    //                span.project-title Employee Recruiting
-    //                span.company Aquent IT Solutions
-    //        li
-    //            a.project-jump('href'='#paprika')
-    //                span.project-title Mobile App with Conversational AI
-    //                span.company Paprika
-    //        li.footer
-    //            .contact-info Contact
-    //                a('href'='mailto:public.cnorton@gmail.com', target='_blank') public.cnorton@gmail.com
-    //            a.project-jump('href'='#about') Back to Top &#8593;
-    //
-    //
+            nav.pages
+                a(class='active', href='index.html', title='UX/UI Design') UX/UI Design
+                a(href='ui.html', title='UI/Visual Design') UI/Visual Design
 
     .main-content
         .project
@@ -445,7 +394,7 @@ body
                         .val-h Mark Hein
                 div
                     p
-                        img(src='images/john-deere/translations/translations-header.jpg',width='100%')
+                        img(src='images/john-deere/translations/translations-header.jpg', width='100%')
                     p
                         img(src='images/john-deere/translations/usability-testing-scorecard.jpg')
 
@@ -518,9 +467,9 @@ body
                         img(src='images/aquent/aquent-map.jpg')
                 .section
                     .video-container
-                        img(src='video/aquent-home-static.jpg')
-                        <video id="aquent-home" width="223" height="470" poster="video/aquent-home.jpg">
-                        <source src="video/aquent-home.mp4" type="video/mp4">
+                        img(src='video/aquent/aquent-home-static.jpg')
+                        <video id="aquent-home" width="223" height="470" poster="video/aquent/aquent-home.jpg">
+                        <source src="video/aquent/aquent-home.mp4" type="video/mp4">
                         </video>
 
                     h3 What I Did
@@ -593,15 +542,9 @@ body
                 .section
                     h3 Content strategy
                     p Having users not understand what the company did was a big deal. Asking around, even internal employees struggled with any sort of elevator pitch. It made sense, the main source of marketing for decades had been the website and the website changed direction every few years. So really the content strategy needed to include internal effort as well to help our own people understand what they were working together to achieve. I created guidelines for content and tone for social media, internal communication and external marketing.
-                    p
-                        img(src='images/aquent/aquent-drone-vertical.jpg')
 
-                .section
                     h4 Social media
                     p We found candidates really only found us through a select few social media sites. As a conservation of effort we brought the branding in line with those particular sites and closed the remainder. We also committed to a content strategy to prevent these areas from looking abandoned in the future.
-                .section
-                    h4 Imagery
-                    p I defined example imagery to be used in the marketing materials, picking overhead drone photos to create the feeling of seeing the big picture through future tech which is exactly what we provide in our solutions to clients: technology-based solutions that work with large amounts of data at a digestible scale.
 
         .project#paprika
             .section

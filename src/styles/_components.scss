@@ -294,6 +294,10 @@
 	}
 }
 
+.pages {
+	margin-left: 32px;
+}
+
 .sticky-header {
 	width: 100%;
 	position: fixed;
@@ -314,6 +318,18 @@
 		font-weight: 700;
 		line-height: 1;
 		color: lighten($colorPrimary, 35%);
+	}
+	.pages a {
+		margin-left: 8px;
+		display: inline-block;
+		font-size: 1.6rem;
+		font-weight: 700;
+		line-height: 1;
+		color: $colorAccent;
+
+		&.active {
+			color: lighten($colorPrimary, 35%);
+		}
 	}
 	.email {
 		display: inline-block;
@@ -375,12 +391,23 @@
 			margin-top: 1px;
 		}
 		.contact {
-			display: inline-block;
 			margin-left: 16px;
 			text-transform: uppercase;
 			a {
 				color:  lighten($colorPrimary, 25%);
 			}
+			.email{
+				i {
+					top: -1px;
+				}
+				span {
+					display: none
+				}
+
+			}
+		}
+		.pages {
+			text-transform: uppercase;
 			.email{
 				i {
 					top: -1px;

@@ -5,8 +5,8 @@ html(lang="en")#top
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
 
-        title Chris Norton: UX/UI Designer
-        link(href='https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;600&family=Roboto+Condensed:wght@400&display=swap',rel='stylesheet')
+        title Chris Norton: UI/Visual Design
+        link(href='https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;600&family=Roboto+Condensed:wght@400&display=swap', rel='stylesheet')
         link(rel='stylesheet', href='https://cdnjs.Cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css')
         link(rel='stylesheet', href='styles/styles.css')
         script(src='js/polyfill.min.js')
@@ -15,40 +15,17 @@ body
     .sticky-header
         .progress-indicator
         div
-            h1 Chris Norton | <span class='accent'>UX/UI Designer</span>
+            h1 Chris Norton | <span class='accent'>UI/Visual Design</span>
                 a(href='#top').to-top <i class="fa fa-arrow-circle-up"></i> <span>Back to Top</span>
 
             nav.contact
-                a(class='email',href='mailto:public.cnorton@gmail.com', title='Send Email', target='_blank')
+                a(class='email', href='mailto:public.cnorton@gmail.com', title='Send Email', target='_blank')
                     <i class="fa fa-envelope"></i>
                     span public.cnorton@gmail.com
+            nav.pages
+                a(href='index.html', title='UX/UI Design') UX/UI Design
+                a(class='active', href='ui.html', title='UI/Visual Design') UI/Visual Design
 
-    //.header
-    //    .page
-    //        div
-    //            span Chris Norton
-    //            a(class='email',href='mailto:public.cnorton@gmail.com', title='Send Email')
-    //                <i class="fa fa-envelope"></i>
-    //        .project-types
-    //            a(class='', href='/ux') UX
-    //            span /
-    //            a(class='active-section', href='/ux/ui.html') UI
-    //            span Designer
-    //        div
-    //
-    //.quick-nav
-    //    h5 UI Projects
-    //    ol
-    //        li
-    //            a.project-jump('href'='#pixelmania')
-    //                span.project Metroid: Varia
-    //                span.company Pixelmania
-    //
-    //        li.footer
-    //            .contact-info Contact
-    //                a('href'='mailto:public.cnorton@gmail.com', target='_blank') public.cnorton@gmail.com
-    //            a.project-jump('href'='#pixelmania') Back to Top &#8593;
-    //
     .main-content
         .warning
             span <strong>Note:</strong> This section is currently being detailed. <a href='mailto:public.cnorton@gmail.com' target='_blank'>Email me</a> for more sample images.
@@ -84,9 +61,9 @@ body
                 div
                     .metroid-intro
                         .video-container
-                            img(src='video/metroid-static.jpg')
-                            <video id="aquent-home" width="768" height="514" poster="video/metroid-static.jpg" controls="true">
-                            <source src="video/metroid.mp4" type="video/mp4">
+                            img(src='video/pixelmania2019/metroid-static.jpg')
+                            <video id="aquent-home" width="768" height="514" poster="video/pixelmania2019/metroid-static.jpg" controls="true">
+                            <source src="video/pixelmania2019/metroid.mp4" type="video/mp4">
                             </video>
                         p
                             img(src='images/pixelmania/infinityspiral-chris-norton-fui.jpg')
@@ -182,6 +159,79 @@ body
                     p
                         img(src='images/pixelmania/font-metroid-prime-hunters.jpg')
                     p There are several font sets used through the history of the game series but, “Metroid Prime Hunters,” retained more of a terminal feel when placed into the composition. It was a tough balancing act to find something that felt like it could live in a world within a world. The pixelated font helped the text stay in the panel even though you can’t  read most of it. It’s enough for it to just feel like you could read it if you needed to.
+        .project#aquent-it-solutions-recruiting-website
+            h3.project-title.aquent Employee Recruiting
+            .project-header-grid-hero
+                .section
+                    h4 Details
+                    .key-value-pair
+                        .key-v Project
+                        .val-v Recruiting Website
+                    .key-value-pair
+                        .key-v Client
+                        .val-v Aquent IT Solutions
+
+                    .key-value-pair
+                        .key-v Platform
+                        .val-v Desktop, Tablet, Mobile
+
+                    .key-value-pair
+                        .key-v Launched
+                        .val-v <a href="https://aquent-it-solutions.com/" target="_blank">aquent-it-solutions.com</a>
+                    h4 Team
+                    .key-value-pair
+                        .key-h Project Manager
+                        .val-h Matt Kruse
+                    .key-value-pair
+                        .key-h UX/UI Design
+                        .val-h Chris Norton
+                    .key-value-pair
+                        .key-h UX Research/Testing
+                        .val-h Chris Norton<br>Pooja Arshanapally<br>Mark Hein
+                    .key-value-pair
+                        .key-h Front-end Developer
+                        .val-h Chris Norton
+
+                div
+                    .grid-double
+                        div
+                            p
+                                img(src='images/aquent/aquent-full.jpg')
+                            p
+                                img(src='images/aquent/aquent-drone-vertical.jpg')
+                        div
+                            .video-container
+                                img(src='video/aquent/aquent-drumroll-static.jpg')
+                                <video id="aquent-home" width="768" height="514" poster="video/aquent/aquent-drumroll.jpg" controls="true">
+                                <source src="video/aquent/aquent-drumroll.mp4" type="video/mp4">
+                                </video>
+                            .video-container
+                                img(src='video/aquent/aquent-logo-static.jpg')
+                                <video id="aquent-home" width="768" height="514" poster="video/aquent/aquent-logo.jpg" controls="true">
+                                <source src="video/aquent/aquent-logo.mp4" type="video/mp4">
+                                </video>
+                    p
+                        img(src='images/aquent/aquent-header.jpg')
+                    p
+                        img(src='images/aquent/aquent-map.jpg')
+
+
+                .section
+                    .video-container
+                        img(src='video/aquent/aquent-home-static.jpg')
+                        <video id="aquent-home" width="223" height="470" poster="video/aquent/aquent-home.jpg">
+                        <source src="video/aquent/aquent-home.mp4" type="video/mp4">
+                        </video>
+                    h3 What I Did
+                    p I led the UX/UI/Front-end development efforts for the project which included a deep dive into the core business model and journey map of hiring on a new employee. By understanding the surrounding steps the marketing team was able to better define what role the website was actually playing in the overall process.
+                    h3 Project Overview
+                    p Aquent IT Solutions was looking attract more recruits by updating the current website with a more modern look
+
+                    h3 Imagery
+                    p I defined example imagery to be used in the marketing materials, picking overhead drone photos to create the feeling of seeing the big picture through future tech which is exactly what we provide in our solutions to clients: technology-based solutions that work with large amounts of data at a digestible scale.
+                    h3 Motion Graphics
+                    p I drew up storyboards, animated motion graphics, and handled sound design for an internal video training library. The primary focus of this team is web development so a gear was used to show things, "working." Having the logo typed out creates familiarity with job tasks which included typing out and organizing code.
+
 
 
 script(src='js/app.js')
