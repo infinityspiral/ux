@@ -295,7 +295,11 @@
 }
 
 .pages {
-	margin-left: 32px;
+	margin-left: 0px;
+
+	@media(min-width:$breakPhone) {
+		margin-left: 32px;
+	}
 }
 
 .sticky-header {
@@ -389,9 +393,10 @@
 			padding-bottom: 0;
 			margin-left: 16px;
 			margin-top: 1px;
+			margin-bottom: 0;
 		}
 		.contact {
-			margin-left: 16px;
+			margin-left: 8px;
 			text-transform: uppercase;
 			a {
 				color:  lighten($colorPrimary, 25%);
@@ -408,6 +413,10 @@
 		}
 		.pages {
 			text-transform: uppercase;
+			margin-left: 8px;
+			position: relative;
+			top: -4px;
+
 			.email{
 				i {
 					top: -1px;

@@ -437,12 +437,12 @@ nav {
   counter-reset: project;
   margin: 122px auto 0 auto;
   transition: top 100ms ease-out; }
-  .main-content.stickied {
-    top: 92px; }
   @media (max-width: 767px) {
     .main-content {
-      margin: 110px 0 0;
+      margin: 140px 0 0;
       padding: 8px; } }
+  .main-content.stickied {
+    top: 92px; }
 
 @media (min-width: 767px) {
   .grid-double {
@@ -761,7 +761,10 @@ nav {
       height: 80px; } }
 
 .pages {
-  margin-left: 32px; }
+  margin-left: 0px; }
+  @media (min-width: 767px) {
+    .pages {
+      margin-left: 32px; } }
 
 .sticky-header {
   width: 100%;
@@ -836,9 +839,10 @@ nav {
       border-bottom: none;
       padding-bottom: 0;
       margin-left: 16px;
-      margin-top: 1px; }
+      margin-top: 1px;
+      margin-bottom: 0; }
     .sticky-header.stickied .contact {
-      margin-left: 16px;
+      margin-left: 8px;
       text-transform: uppercase; }
       .sticky-header.stickied .contact a {
         color: #686868; }
@@ -847,7 +851,10 @@ nav {
       .sticky-header.stickied .contact .email span {
         display: none; }
     .sticky-header.stickied .pages {
-      text-transform: uppercase; }
+      text-transform: uppercase;
+      margin-left: 8px;
+      position: relative;
+      top: -4px; }
       .sticky-header.stickied .pages .email i {
         top: -1px; }
       .sticky-header.stickied .pages .email span {

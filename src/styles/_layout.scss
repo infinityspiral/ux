@@ -39,14 +39,14 @@
 	//max-width: 850px;
 	transition: top $stickyTime $stickyTransition;
 
-	&.stickied {
-		top: 92px;
+	@media (max-width: $breakPhone) {
+		margin: 140px 0 0;
+		padding: $spaceUnit;
 	}
 
+	&.stickied {
+		top: 92px;
 
-	@media (max-width: $breakPhone) {
-		margin: 110px 0 0;
-		padding: $spaceUnit;
 	}
 }
 
