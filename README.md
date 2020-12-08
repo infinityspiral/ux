@@ -1,4 +1,4 @@
-# pug-scss-autoprefixer
+# UX/UI Portfolio
 A starter package with watchers for WebStorm that allow you to render scss directly on the page.  This is useful for doing quick code snippets without having to build out a whole big thing with webpack.  
 
 ## Setup
