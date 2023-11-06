@@ -5,7 +5,10 @@ A starter package with watchers for WebStorm that allow you to render scss direc
 
 ## Setup
 - Run `npm i pug-cli postcss-cli live-server autoprefixer -g`
-- To **enable watchers**:  
+- Run `npm install -g sass`
+ 
+
+To **enable watchers**:  
 *File>Settings>Tools>File Watchers* and turn on the watcher boxes.
 
 ##How to Use
