@@ -35,10 +35,6 @@ body
                         h3 My Road to UX
                         p Of course now you see digital menus at restaurants, self-checkouts in retail spaces, and way-finding tools in hotels, but in 2004 none of that was widespread and my team at Silver Beacon Media had to design digital signage and kiosk experiences from the ground up. Context became paramount as my team moved away from traditional web experiences, having to take into account the location, connectivity, sound levels, and accessibility within a space. Some experiences even included syncing up with live performers and hosts for traveling brand tours like TLC's What Not to Wear Mall Tour and NASCAR's driving simulator.
                         p I have since worked with teams all across the globe to create experiences on the web, print and video as both a team leader and designer and even dabbled in some front-end development. This past decade has seen me working with cross-functional digital teams to research, develop, and launch features and solutions that solve business problems such as building in innovation, reducing friction in the customer journey, increasing product adoption, and customer retention.
-
-
-                        //p My big introduction to UX came in 2004 working as creative director for Silver Beacon, a start-up digital signage company specializing in touch-screen applications. There was a big shift in thinking- websites at the time were primarily accessed while sitting at a desk while at home, work, or school, but our applications needed to perform out in the wild so designing for context became really important.
-                        //p Making interactive maps and building directories usable meant designing for noisy environments and addressing accessibility for impairment, especially in critical spaces like hospitals and safety critical applications. Self-checkout systems like those used now in grocery stores, fast food joints, and the post office included considerations for analyzing physical goods, processing transactions, collecting contact information, and security. Some kiosks needed to move around and were part of attractions or traveling tours and needed to sync up with hosts and live performers. There was just a mountain of new factors where environmental and procedural context became critically important considerations needed to be included in the designed experience for the product to be successful.
                         p <strong>Discovery Communications, 2004</strong>: A few example states my team designed for the What Not To Wear Mall Tour and Animal Planet's Eukanuba Dog Show booth.
                     div
                         img(src='images/DCI/dci.png')
@@ -50,7 +46,7 @@ body
             //    li Task flow, affected components and systems
             //    li UI: Desktop, Mobile, Watch, Voice, Internet of Things, etc
             //    li REPEAT
-
+            //
             //h3 Product Design Process
             //ul.timeline-horizontal
             //    li Define project goal and value it provides
@@ -75,13 +71,91 @@ body
             //    li Iterate user flow based on results
 
 
-        .project#aprimo-quickconnect
-            h3.project-title.aprimo QuickConnect
+        .project#aprimo-content-item-fullscreen
+            h3.project-title.aprimo Aprimo Content Item Preview
             .project-header-grid-hero
                 .section
                     h4 Details
                     Project
-                    .val-v Social Media Platform
+                    .val-v Aprimo Content Item Preview
+                    .key-value-pair
+                        .key-v Client
+                        .val-v Aprimo
+
+                    .key-value-pair
+                        .key-v Platform
+                        .val-v Desktop, Tablet, Mobile
+
+                    .key-value-pair
+                        .key-v Launched
+                        .val-v Aprimo DAM Platform
+                    h4 Team
+                    .key-value-pair
+                        .key-h Project Owner
+                        .val-h Gerda Oppewal
+                    .key-value-pair
+                        .key-h UX Research
+                        .val-h Chris Norton<br> Susan Patrick<br> Mitch Netterlund
+                    .key-value-pair
+                        .key-h UX Design/UI Design
+                        .val-h Chris Norton
+                    .key-value-pair
+                        .key-h Dev Teams
+                        .val-h Netherlands/Belgium
+
+                div
+                    p
+                        img(src='images/aprimo/content-item-pendo01.jpg' style='width: 100%;')
+                    p
+                        img(src='images/aprimo/content-item-pendo02.jpg')
+
+                .section
+                    h3 Project Goal
+                    p Move more users away from legacy software so that it could be retired in favor of using a new system.
+
+                    h3 Project Results
+                    p Success!  Over a rolling 90 days, we started seeing users shifting over to the new system.
+                    p
+                        img(src='images/aprimo/content-item-side-panel.jpg')
+                    h4 Here's what we fixed:
+                    ol
+                        li Released software for larger previews with more metadata reducing friction in identifying content.
+                        li Engaged implementation and client-services team to work with clients in configuring API calls.
+                        li Engaged back-end team to fix forms with bad redirects kicking users back to the old system.
+
+            .project-content-grid
+                .section
+                    h3 How to turn business goals into data-driven design
+                    p Feature-driven teams generally already have the problem defined for them, who the user is, and a general sense of direction on how to solve it and where.  When I work on innovation-driven teams though, those things are all yet to be discovered and it requires some research to figure out how that translates into problems which can be solved by product and service solutions.
+                    p In this case, the business goal was to move more users away from legacy software so that it could be retired in favor of using a new system.
+                .section
+                    h3 Who is using the old system?
+                    p UX Research Round 1 - Quantitative
+                    p An initial look at users with Pendo analytics showed that users in the old system were a combination of back-end client scripts and users that were performing actions in both the old and new systems. Correcting client scripts could be fixed by client services and the implementation team but there was still a significant portion of users using a combination of both systems
+                    p This told me a few things.  First in terms of user journey and the AIDA model (Awareness —> Interest -> Desire -> Action), it wasn't an awareness or interest problem. The greater majority of users in the legacy system were already using the new system so they knew about it and had already found value. So the problem was likely in the realm of desire or action.  Basically- there was some value in the old system that got missed during the development of the new system. Finding that would eliminate the friction users were experiencing in moving over to the new system completely.
+                .section
+                    h3 What features were keeping users on the old system?
+                    p UX Research Round 2 - Quantitative
+                    p Using Pendo analytics again the design team traced paths where users had moved between the old and new systems and found a few things. First, redirects where forms were not configured correctly- great a task for the back-end team, easy fix. But also we found most jumps happened around user-generated content items. We also found why the feature was likely missed in the new system. Not all the actions of a content item were hooked up to Pendo.
+                    p We couldn't initially see what feature exactly was missing but after some collaboration with dev teams we were able to get all the content item CTAs showing up in analytics and bingo we found our missing feature.  In the old system, users were using the fullscreen preview button in search results. Completely missing from the new system search results page. Users were using the old system because it was faster to get a larger preview on the results page. In the new system, users had to first load up the whole content item detail page.
+                .section
+                    h3 Data-driven design and prototyping
+                    p With research now front-loaded we could suggest features for ideation and prototyping to solve the business problem. For users to want to move over to the new system and take action, we would need to speed up the process of identifying content in search results which included larger/fullscreen previews and possibly speeding up the view of the full detail page.
+
+                    h3 Picking a solution
+                    p UX Research Round 3: Qualitative
+                    ol
+                        li Usability testing
+                        li Client Interviews
+                    p After iterating through several prototypes in Figma and running usability testing between internal team members we were able to reach out to clients still using the old system to showcase a few well-received options that included a preview side panel as an intermediate that also included additional metadata vs having to load up the full detail page.
+
+        .project#aprimo-quickconnect
+            h3.project-title.aprimo QuickConnect Web Plugin
+            .project-header-grid-hero
+                .section
+                    h4 Details
+                    Project
+                    .val-v QuickConnect Web Plugin
                     .key-value-pair
                         .key-v Client
                         .val-v Aprimo
@@ -155,12 +229,12 @@ body
 
 
         .project#aprimo-content-item-asset
-            h3.project-title.aprimo Content Item Asset
+            h3.project-title.aprimo DAM Content Item
             .project-header-grid-hero
                 .section
                     h4 Details
                     Project
-                    .val-v Core Business Object
+                    .val-v DAM Content Item
                     .key-value-pair
                         .key-v Client
                         .val-v Aprimo
@@ -171,8 +245,7 @@ body
 
                     .key-value-pair
                         .key-v Launched
-                        .val-v
-                            a(href='https://chrome.google.com/webstore/detail/aprimo-quickconnect/lgifolfphnohppapdhljncfahjaedmea' target='_blank') Chrome Web Store - QuickConnect
+                        .val-v Aprimo DAM Platform
                     h4 Team
                     .key-value-pair
                         .key-h UX/UI Design

@@ -189,6 +189,13 @@
 		}
 	}
 
+	&.aprimo {
+		&::before {
+			background-image: url('../images/logos/logo_aprimo.png');
+			width: 105px;
+		}
+	}
+
 	&.boeing {
 		&::before {
 			background-image: url('../images/logos/logo_boeing.png');

@@ -789,6 +789,10 @@ nav {
   background-image: url("../images/logos/logo_john-deere.png");
   width: 105px;
 }
+.project-title.aprimo::before {
+  background-image: url("../images/logos/logo_aprimo.png");
+  width: 105px;
+}
 .project-title.boeing::before {
   background-image: url("../images/logos/logo_boeing.png");
   width: 88px;
