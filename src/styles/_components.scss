@@ -151,9 +151,10 @@
 
 .project-title {
 	border-bottom: 1px solid #f3f3f3;
-	color: #8e8e8e;
+	color: $colorAccent;
 	font-size: 20px;
-	font-weight: 400;
+	font-weight: 600;
+
 	margin: -36px -36px 36px;
 	padding: 12px 40px 12px 20px;
 	position: relative;

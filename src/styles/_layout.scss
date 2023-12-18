@@ -59,6 +59,30 @@
 
 }
 
+.summary {
+	@media (min-width: $breakPhone) {
+		display: grid;
+		grid-template-columns: 2fr 1fr;
+		column-gap: 12px;
+
+		p {
+			text-align: left;
+		}
+	}
+}
+
+.road-to-ux {
+	@media (min-width: $breakPhone) {
+		display: grid;
+		grid-template-columns: 1fr 2fr;
+		column-gap: 12px;
+
+		div {
+			margin: 0 40px;
+		}
+	}
+}
+
 .project-header-grid-hero {
 	margin-bottom: 96px;
 
