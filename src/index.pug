@@ -5,8 +5,10 @@ html(lang="en")#top
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
 
-        title Chris Norton: UX/UI Design
-        link(href='https://fonts.googleapis.com/css2?family=Open+Sans:wght@100;300;600&family=Roboto+Condensed:wght@100;400&display=swap', rel='stylesheet')
+        title Chris Norton: UX/UI Designer
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        link(href='https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=Source+Sans+3&display=swap', rel='stylesheet')
         link(rel='stylesheet', href='https://cdnjs.Cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css')
         link(rel='stylesheet', href='styles/styles.css')
         script(src='js/polyfill.min.js')
@@ -37,8 +39,8 @@ body
 
                     div
                         img(src='images/DCI/dci.png', style='display:inline-block;')
-                div
-                    h3 Designer Summary
+                div.designer-summary
+                    h3 Achievements Summary
                     ul
                         li 20+ years in design and interactive products
                         li Happy in both leadership and non-leadership roles
@@ -49,32 +51,32 @@ body
                                 li 35+ feature sets on existing products
                                 li Countless function-level improvements
 
-                    h3 Core Skills
+                    h3 Core Design Skills
                     ul
-                        li <strong>Expert:</strong>
+                        li <h4>Expert:</h4>
                             ul
                                 li Interaction design
                                 li Visual design
-                        li <strong>Strong:</strong>
+                        li <h4>Strong:</h4>
                             ul
                                 li Prototyping
                                 li Writing
-                        li <strong>Capable:</strong>
+                        li <h4>Capable:</h4>
                             ul
                                 li User research
                                 li Information architecture
-                        li <strong>Leadership</strong>
-                            ul
-                                li Led solutioning of undefined problem spaces
-                                li Developed processes and approaches for tackling design problems
-                                li Built and managed design teams
-                                li Team planning and mentorship
-                                li Drove meetings
+                    h3 Leadership Skills
+                    ul
+                        li Led solutioning of undefined problem spaces
+                        li Developed processes and approaches for tackling design problems
+                        li Built and managed design teams
+                        li Team planning and mentorship
+                        li Drove meetings
 
 
 
         .project#aprimo-content-item-fullscreen
-            h3.project-title.aprimo Aprimo Content Item Preview
+            h2.project-title Aprimo Content Item Preview
             div
                 h4 Problem Solving Summary
                 ul.timeline-horizontal
@@ -154,7 +156,7 @@ body
                     p In this case, the business goal was to move more users away from legacy software products to the new system to consolidate support and development efforts going forward.
                 .section
                     h3 Locate Friction in the UX Journey
-                    p UX Research Round 1 - Quantitative
+                    h4 UX Research Round 1 - Quantitative
                     p An initial look at activity in Pendo analytics helped us trace paths where users had moved between the old and new systems and we found that connections in the old system were a combination of back-end client scripts and users that were performing actions in both the old and new systems.
                     h4 We found:
                     ol
@@ -168,7 +170,7 @@ body
 
                 .section
                     h3 Defining Problems for Product Development
-                    p UX Research Round 2 - Quantitative
+                    h4 UX Research Round 2 - Quantitative
                     p We knew a few things about real world users. In terms of user journey and the AIDA model (Awareness —> Interest -> Desire -> Action), it wasn't an awareness or interest problem. The greater majority of users in the legacy system were also using the new system and had already found value in other areas. So the problem was likely in the realm of desire and action.
                     p We stalled for a while on exactly why users were bouncing on user-generated content. There were many CTAs and many missing analytics hooks that Pendo couldn't easily catch. We needed to engage development teams to add the needed hooks into existing CTAs and gather missing research.
                     p With hooks in place though, the data revealed our missing feature.  In the old system, users were using the fullscreen preview button in search results. The button was completely missing from the new system search results page. Users were using the old system because it was faster to get a larger preview on the old results page. In the new system, users had to first load up a detail page for the content item before using the preview function.
@@ -177,7 +179,7 @@ body
                     p With research properly front-loaded, the design team now had a list of missing features that would help move the product towards it's business goals. For users to want to move over to the new system and take action, the new design would need to speed up the process of identifying content in search results including larger or fullscreen previews. I built interactive Firma prototypes that included larger preview options and included some metadata from the full detail page to be tested.
 
                     h3 Picking a solution
-                    p UX Research Round 3: Qualitative
+                    h4 UX Research Round 3: Qualitative
                     ol
                         li Usability testing
                         li Client Interviews
@@ -831,114 +833,114 @@ body
                     h4 Social media
                     p We found candidates really only found us through a select few social media sites. As a conservation of effort we brought the branding in line with those particular sites and closed the remainder. We also committed to a content strategy to prevent these areas from looking abandoned in the future.
 
-        .project#paprika
-            .section
-                h3.project-title.paprika Mobile App with Conversational AI
-                .project-header-grid-hero
-                    .section
-                        h4 Details
-                        .key-value-pair
-                            .key-v Project
-                            .val-v Paprika Mobile App
-                        .key-value-pair
-                            .key-v Client
-                            .val-v (Design Study)
-                        h4 Team
-                        .key-value-pair
-                            .key-h UX / VUI Design
-                            .val-h Chris Norton
-                    p
-                        img(src='images/paprika/utterances.jpg', width='100%')
-
-
-                    .section
-                        h3 What I Did
-                        p I helped run a new technology design study to incorporate UX/VUI and learn how to build multi-modal products using conversational AI.  I researched utterances vs intents with friends and coworkers and created conversational maps vs journey maps. I used Figma to visualize user scripts and task flows that paired with developer efforts building prototypes using Amazon’s Alexa.
-
-                        h3 Project Overview
-                        p The Aquent team was hoping to define a workflow and proof of concept for adding voice capability to new and existing applications to create more touchpoints for users.  The app would help users to collect recipes, plan meals and shop for ingredients and includes touchpoints at home, on the go, and at the point of purchase.
-
-                .project-content-grid
-                    .section
-                        h3 Using Voice to Create More Touchpoints
-                        p VUI’s or Voice User Interfaces create unique opportunities to interact with products without having to physically touch them or even see them.  Tasks that require both hands or require the user to maintain eye contact are great candidates for a VUI.
-
-                        h3 Accessibility and Safety with Covid-19
-                        p Especially with Covid-19, many companies are looking at reducing touch and controlling their applications via voice.  A lot of essential tasks such as banking, appointment scheduling, and grocery shopping have moved online. Making sure products are accessible to everyone, besides being the right thing to do is more important than ever as  companies are increasingly finding themselves in hot water when essential services don’t include considerations for users with disabilities such as those with reduced motor skills, memory and the visually impaired.
-                        h3 Why Conversational AI?
-                        p Conversational AI operates as a layer to AI that translates user speech(utterances) into intents and commands. With a conversational approach, you lean on the AI to figure out what the user is trying to do versus training users to talk like computers. This makes apps more intuitive and accessible. There is less learning and more just doing.
-                    .section
-                        h3 Traditional vs Conversational Examples
-
-                        h4 Traditional Speech Recognition of Commands
-                        p Let’s say the user wants to find a recipe to make.  With traditional speech recognition that might look something like, “List recipes,” or, “Search chicken.”  The user is forced to know what tasks are available already.
-                        p
-                            img(src='images/paprika/intents.jpg')
-
-                        h4 Example of Conversational AI
-                        p With conversational AI the user can say something more like, “What can I make?” and the digital brain can figure out that the user is looking for a recipe (because it’s a recipe app) and can follow up with something like, “I found three recipes in vegetarian(category) and two side dishes(category) that can be made with items in your pantry. *beat* Would you like me to list those results? You can say stop listing at any time.”
-                    p
-                        img(src='images/paprika/paprika-search.png')
-
-                    .section
-                        h3 Step 1: User Research and Validation
-
-                        h4 User Interviews
-                        p To figure out if the voice would actually be able to solve the problem and reach more touchpoints with users we did a limited number of participants gauge user interest.
-
-                        h4 Conversational Map/Journey Map
-                        p To get a general sense of how the voice would affect various sections of the app we did a mix of role-play and  onsite guerilla-style interviews, or we just went home and logged potential interactions while actually trying to cook something.  Asking  people how they would ask the app to complete a task was helpful in drawing out some of the initial keywords towards commands and intents.
-                        p
-                            img(src='images/paprika/conversational-map.jpg')
-
-                    .section
-                        h4 Environment
-                        p Looking back, using the environment as a constraint might have saved time in figuring out which sections were most useful.  It was really useful to have a starter library of keywords and actually language used though. User research indicated that users interacted with the app both inside and outside the home, but users were more motivated to use voice by themselves vs around others.  For example, both taking the bus and driving along both categorized the user as, “on the go,” but users were less self-conscious when they were driving alone.
-                        p Users also found more value in voice interactions during tasks that already required both hands or when their hands were dirty.  Having their hands coated in flour or other messy ingredients also made a strong case for voice interaction.
-
-                    .section
-                        h4 Environment-Driven Tasks
-                        p Looking at tasks that users would likely want to complete while driving or while cooking both seemed like good starting candidates.  A few example tasks:
-                        ul
-                            li Users who have scheduled recipes into a meal planner might want to verify that all ingredients have been added to their shopping list while on the way to the store.
-                            li Users might want to know the next or previous steps in a recipe as they work along.
-                            li Users might want to check off ingredients as they use them during food preparation.
-
-                    .section
-                        h4 Debunked Assumptions
-                        p Interviewing users revealed confusion for doing anything cooking-related  tasks while driving. While some participants reported it useful to add eggs or snacks on the fly, people struggled with tying the need to work with shopping lists for recipes that had been scheduled on a calendar. We might not have worded the question very well either, but even after some explanation, it ranked as low-priority compared to other features.
-
-                    .section
-                        h4 The Real MVP
-                        p Users did however find it intuitive to have voice assistance during food preparation. It was very valuable to find recipes and walk through instructions after the user had started to work with ingredients.  This allowed users to keep working vs having to wash their hands after various steps in order to use the app.
-
-                    .section
-                        h3 Step 2: VUI (Voice User Interface) Design
-                        p
-                            img(src='images/paprika/dialog-flow.jpg')
-
-                    .section
-                        h4 Testing Dialog Prototypes
-                        p Once we knew which sections and tasks were higher priority we could start iterating through various dialog prototypes of task flows.  A lot of these can just be back and forth conversations in various forms before you start any actual coding.
-
-                        h4 Notecards/Post-its
-                        p Two people sitting at a table with the existing app visible to both The “user” spoke phrases out loud and the “prototype” would sift through notecards and read the pre-written responses. This was an okay low-fidelity starter but the back and forth was a little awkward as the person playing the role of prototype searched through their pile of responses.  Also if there was no response it dead-ended the entire task flow causing another session to be scheduled for that flow.
-
-                    .section
-                        h4 Wizard of Oz
-                        p It was actually a lot faster to have the two people in different rooms just call each other and have the user side try to initiate tasks via voice while the person playing prototype puppeted the responses.  This way everything didn’t come to a halt if unknowns showed up.  The prototype could adlib suggested actions or route through to error states.
-
-                        h4 Situational Recording
-                        p Recording someone actually doing a task and interacting with the prototype was useful for gathering intents and language for indirect commands.  For example having someone say, “Hold on, I’m out of bowls!” wasn’t something the user was actively thinking about achieving, but the intent was still there to stop reading the current step until they washed one of the dirty bowls.
-
-                    .section
-                        h3 Engaging Development and AI
-
-                        h4 Voice-activated Prototypes
-                        p Once you start to have a running list of user utterances/triggers, intents, and commands you can start to link the prototype up to the technology side to make the call and response process flow even smoother.  Adobe XD has voice recognition but it only lets you link up one user utterance to trigger a response.  It might just be easier to link up a prototype to something like an Alexa skill depending on where the dev team is at and what library they’re using. Building a digital prototype in this way also makes the switch from responses with baked-in data into real function calls a little more seamless.
-
-                        h4 Engaging with AI
-                        p You get a lot more out of the AI if you have a library of keywords and phrases built from the previous steps.  With a functional or semi-functional app in place,  you can leverage the AI to refine the keyword pairings that trigger commands and route the user into dialogs/flow for the tasks they are really asking for.
+        //.project#paprika
+        //    .section
+        //        h3.project-title.paprika Mobile App with Conversational AI
+        //        .project-header-grid-hero
+        //            .section
+        //                h4 Details
+        //                .key-value-pair
+        //                    .key-v Project
+        //                    .val-v Paprika Mobile App
+        //                .key-value-pair
+        //                    .key-v Client
+        //                    .val-v (Design Study)
+        //                h4 Team
+        //                .key-value-pair
+        //                    .key-h UX / VUI Design
+        //                    .val-h Chris Norton
+        //            p
+        //                img(src='images/paprika/utterances.jpg', width='100%')
+        //
+        //
+        //            .section
+        //                h3 What I Did
+        //                p I helped run a new technology design study to incorporate UX/VUI and learn how to build multi-modal products using conversational AI.  I researched utterances vs intents with friends and coworkers and created conversational maps vs journey maps. I used Figma to visualize user scripts and task flows that paired with developer efforts building prototypes using Amazon’s Alexa.
+        //
+        //                h3 Project Overview
+        //                p The Aquent team was hoping to define a workflow and proof of concept for adding voice capability to new and existing applications to create more touchpoints for users.  The app would help users to collect recipes, plan meals and shop for ingredients and includes touchpoints at home, on the go, and at the point of purchase.
+        //
+        //        .project-content-grid
+        //            .section
+        //                h3 Using Voice to Create More Touchpoints
+        //                p VUI’s or Voice User Interfaces create unique opportunities to interact with products without having to physically touch them or even see them.  Tasks that require both hands or require the user to maintain eye contact are great candidates for a VUI.
+        //
+        //                h3 Accessibility and Safety with Covid-19
+        //                p Especially with Covid-19, many companies are looking at reducing touch and controlling their applications via voice.  A lot of essential tasks such as banking, appointment scheduling, and grocery shopping have moved online. Making sure products are accessible to everyone, besides being the right thing to do is more important than ever as  companies are increasingly finding themselves in hot water when essential services don’t include considerations for users with disabilities such as those with reduced motor skills, memory and the visually impaired.
+        //                h3 Why Conversational AI?
+        //                p Conversational AI operates as a layer to AI that translates user speech(utterances) into intents and commands. With a conversational approach, you lean on the AI to figure out what the user is trying to do versus training users to talk like computers. This makes apps more intuitive and accessible. There is less learning and more just doing.
+        //            .section
+        //                h3 Traditional vs Conversational Examples
+        //
+        //                h4 Traditional Speech Recognition of Commands
+        //                p Let’s say the user wants to find a recipe to make.  With traditional speech recognition that might look something like, “List recipes,” or, “Search chicken.”  The user is forced to know what tasks are available already.
+        //                p
+        //                    img(src='images/paprika/intents.jpg')
+        //
+        //                h4 Example of Conversational AI
+        //                p With conversational AI the user can say something more like, “What can I make?” and the digital brain can figure out that the user is looking for a recipe (because it’s a recipe app) and can follow up with something like, “I found three recipes in vegetarian(category) and two side dishes(category) that can be made with items in your pantry. *beat* Would you like me to list those results? You can say stop listing at any time.”
+        //            p
+        //                img(src='images/paprika/paprika-search.png')
+        //
+        //            .section
+        //                h3 Step 1: User Research and Validation
+        //
+        //                h4 User Interviews
+        //                p To figure out if the voice would actually be able to solve the problem and reach more touchpoints with users we did a limited number of participants gauge user interest.
+        //
+        //                h4 Conversational Map/Journey Map
+        //                p To get a general sense of how the voice would affect various sections of the app we did a mix of role-play and  onsite guerilla-style interviews, or we just went home and logged potential interactions while actually trying to cook something.  Asking  people how they would ask the app to complete a task was helpful in drawing out some of the initial keywords towards commands and intents.
+        //                p
+        //                    img(src='images/paprika/conversational-map.jpg')
+        //
+        //            .section
+        //                h4 Environment
+        //                p Looking back, using the environment as a constraint might have saved time in figuring out which sections were most useful.  It was really useful to have a starter library of keywords and actually language used though. User research indicated that users interacted with the app both inside and outside the home, but users were more motivated to use voice by themselves vs around others.  For example, both taking the bus and driving along both categorized the user as, “on the go,” but users were less self-conscious when they were driving alone.
+        //                p Users also found more value in voice interactions during tasks that already required both hands or when their hands were dirty.  Having their hands coated in flour or other messy ingredients also made a strong case for voice interaction.
+        //
+        //            .section
+        //                h4 Environment-Driven Tasks
+        //                p Looking at tasks that users would likely want to complete while driving or while cooking both seemed like good starting candidates.  A few example tasks:
+        //                ul
+        //                    li Users who have scheduled recipes into a meal planner might want to verify that all ingredients have been added to their shopping list while on the way to the store.
+        //                    li Users might want to know the next or previous steps in a recipe as they work along.
+        //                    li Users might want to check off ingredients as they use them during food preparation.
+        //
+        //            .section
+        //                h4 Debunked Assumptions
+        //                p Interviewing users revealed confusion for doing anything cooking-related  tasks while driving. While some participants reported it useful to add eggs or snacks on the fly, people struggled with tying the need to work with shopping lists for recipes that had been scheduled on a calendar. We might not have worded the question very well either, but even after some explanation, it ranked as low-priority compared to other features.
+        //
+        //            .section
+        //                h4 The Real MVP
+        //                p Users did however find it intuitive to have voice assistance during food preparation. It was very valuable to find recipes and walk through instructions after the user had started to work with ingredients.  This allowed users to keep working vs having to wash their hands after various steps in order to use the app.
+        //
+        //            .section
+        //                h3 Step 2: VUI (Voice User Interface) Design
+        //                p
+        //                    img(src='images/paprika/dialog-flow.jpg')
+        //
+        //            .section
+        //                h4 Testing Dialog Prototypes
+        //                p Once we knew which sections and tasks were higher priority we could start iterating through various dialog prototypes of task flows.  A lot of these can just be back and forth conversations in various forms before you start any actual coding.
+        //
+        //                h4 Notecards/Post-its
+        //                p Two people sitting at a table with the existing app visible to both The “user” spoke phrases out loud and the “prototype” would sift through notecards and read the pre-written responses. This was an okay low-fidelity starter but the back and forth was a little awkward as the person playing the role of prototype searched through their pile of responses.  Also if there was no response it dead-ended the entire task flow causing another session to be scheduled for that flow.
+        //
+        //            .section
+        //                h4 Wizard of Oz
+        //                p It was actually a lot faster to have the two people in different rooms just call each other and have the user side try to initiate tasks via voice while the person playing prototype puppeted the responses.  This way everything didn’t come to a halt if unknowns showed up.  The prototype could adlib suggested actions or route through to error states.
+        //
+        //                h4 Situational Recording
+        //                p Recording someone actually doing a task and interacting with the prototype was useful for gathering intents and language for indirect commands.  For example having someone say, “Hold on, I’m out of bowls!” wasn’t something the user was actively thinking about achieving, but the intent was still there to stop reading the current step until they washed one of the dirty bowls.
+        //
+        //            .section
+        //                h3 Engaging Development and AI
+        //
+        //                h4 Voice-activated Prototypes
+        //                p Once you start to have a running list of user utterances/triggers, intents, and commands you can start to link the prototype up to the technology side to make the call and response process flow even smoother.  Adobe XD has voice recognition but it only lets you link up one user utterance to trigger a response.  It might just be easier to link up a prototype to something like an Alexa skill depending on where the dev team is at and what library they’re using. Building a digital prototype in this way also makes the switch from responses with baked-in data into real function calls a little more seamless.
+        //
+        //                h4 Engaging with AI
+        //                p You get a lot more out of the AI if you have a library of keywords and phrases built from the previous steps.  With a functional or semi-functional app in place,  you can leverage the AI to refine the keyword pairings that trigger commands and route the user into dialogs/flow for the tasks they are really asking for.
 
 script(src='js/app.js')
 
