@@ -488,7 +488,7 @@ nav {
 @media (min-width: 767px) {
   .summary {
     display: grid;
-    grid-template-columns: 2fr 1fr;
+    grid-template-columns: 2fr 1.75fr;
     column-gap: 12px;
   }
   .summary p {
@@ -1152,6 +1152,12 @@ nav {
 
 .designer-summary {
   font-size: 1.6rem;
+  padding: 40px 60px;
+}
+@media (min-width: 767px) {
+  .designer-summary {
+    border-left: 1px dotted black;
+  }
 }
 .designer-summary h4 {
   margin: 0;

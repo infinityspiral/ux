@@ -60,9 +60,10 @@
 }
 
 .summary {
+
 	@media (min-width: $breakPhone) {
 		display: grid;
-		grid-template-columns: 2fr 1fr;
+		grid-template-columns: 2fr 1.75fr;
 		column-gap: 12px;
 
 		p {
