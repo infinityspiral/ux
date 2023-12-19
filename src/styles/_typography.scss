@@ -33,7 +33,7 @@ h2 {
 
 h3 {
 	font-size: 4.2rem;
-	margin: 0 0 24px;
+	margin: 40px 0 24px;
 }
 
 h4 {
@@ -51,6 +51,11 @@ h6 {
 p {
 	margin: 0 0 24px;
 	padding: 0;
+}
+
+strong {
+	font-family: $fontHeading;
+
 }
 
 .accent {
