@@ -1101,7 +1101,7 @@ nav {
 }
 .timeline-horizontal li:before {
   position: absolute;
-  left: -25.5px;
+  left: -25px;
   content: "●";
   text-align: left;
   font-size: 24px;
@@ -1128,7 +1128,7 @@ nav {
     margin-left: 0;
   }
   .timeline-horizontal li:before {
-    left: -25.5px;
+    left: initial;
     top: -38px;
     text-align: center;
     width: 100%;
@@ -1160,7 +1160,7 @@ nav {
 }
 .timeline-vertical li:before {
   position: absolute;
-  left: -25.5px;
+  left: -25px;
   content: "●";
   text-align: left;
   font-size: 24px;

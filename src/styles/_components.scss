@@ -507,7 +507,7 @@
 
 		&:before {
 			position: absolute;
-			left: -25.5px;
+			left: -25px;
 			content: '\25CF';
 			text-align: left;
 			font-size: 24px;
@@ -537,7 +537,7 @@
 			}
 
 			&:before {
-				left: -25.5px;
+				left: initial;
 				top: -38px;
 				text-align: center;
 				width: 100%;
@@ -573,7 +573,7 @@
 
 		&:before {
 			position: absolute;
-			left: -25.5px;
+			left: -25px;
 			content: '\25CF';
 			text-align: left;
 			font-size: 24px;
