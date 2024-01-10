@@ -803,42 +803,22 @@ nav {
 }
 
 .project-title {
-  padding-bottom: 32px;
-  margin: 0 0 48px;
-  border-bottom: 1px solid #f3f3f3;
   font-size: 4.4rem;
-  font-weight: 600;
+  font-weight: 100;
 }
-.project-title.aquent::before {
-  background-image: url("../images/logos/logo_aquent.png");
-  width: 100px;
-}
-.project-title.john-deere::before {
-  background-image: url("../images/logos/logo_john-deere.png");
-  width: 105px;
-}
-.project-title.aprimo::before {
-  background-image: url("../images/logos/logo_aprimo.png");
-  width: 105px;
-}
-.project-title.boeing::before {
-  background-image: url("../images/logos/logo_boeing.png");
-  width: 88px;
-}
-@media (max-width: 767px) {
-  .project-title.boeing::before {
-    top: 6px;
+@media (min-width: 1200px) {
+  .project-title {
+    grid-template-columns: 1fr 5fr 2fr;
+    display: grid;
+    column-gap: 48px;
+    align-items: center;
   }
 }
-.project-title.pixelmania::before {
-  background-image: url("../images/logos/logo_pixelmania.png");
-  background-position: left center;
-  width: 57px;
-}
-.project-title.paprika::before {
-  background-image: url("../images/logos/logo_paprika.png");
-  background-position: left center;
-  width: 20px;
+.project-title img {
+  position: relative;
+  padding: 24px 48px;
+  border: 1px solid #d9d9d9;
+  border-radius: 8px;
 }
 
 .key-v,

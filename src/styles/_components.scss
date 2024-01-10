@@ -59,6 +59,8 @@
 			font-size: 1.2rem;
 			font-weight: 600;
 			text-transform: uppercase;
+
+
 		}
 	}
 
@@ -150,82 +152,21 @@
 }
 
 .project-title {
-	padding-bottom: 32px;
-	margin: 0 0 48px;
-	border-bottom: 1px solid #f3f3f3;
+	@media (min-width: $breakXL) {
+		grid-template-columns: 1fr 5fr 2fr;
+		display: grid;
+		column-gap: 48px;
+		align-items: center;
+	}
+
 	font-size: 4.4rem;
-	font-weight: 600;
-	//border-bottom: 1px solid #f3f3f3;
-	//color: $colorAccent;
-	//
-	//margin: -36px -36px 36px;
-	//padding: 12px 40px 12px 20px;
-	//position: relative;
-	//
-	//&::before {
-	//	background-position: center center;
-	//	background-repeat: no-repeat;
-	//	content: '';
-	//	display: inline-block;
-	//	height: 20px;
-	//	margin-right: 15px;
-	//	position: relative;
-	//	top: 4px;
-	//	vertical-align: baseline;
-	//}
-	//
-	//@media (max-width:$breakPhone) {
-	//	font-size: 16px;
-	//	line-height: 24px;
-	//}
-	//
-	&.aquent {
-		&::before {
-			background-image: url("../images/logos/logo_aquent.png");
-			width: 100px;
-		}
-	}
+	font-weight: 100;
 
-	&.john-deere {
-		&::before {
-			background-image: url('../images/logos/logo_john-deere.png');
-			width: 105px;
-		}
-	}
-
-	&.aprimo {
-		&::before {
-			background-image: url('../images/logos/logo_aprimo.png');
-			width: 105px;
-		}
-	}
-
-	&.boeing {
-		&::before {
-			background-image: url('../images/logos/logo_boeing.png');
-			width: 88px;
-
-			@media (max-width:$breakPhone) {
-				top: 6px;
-			}
-
-		}
-	}
-
-	&.pixelmania {
-		&::before {
-			background-image: url('../images/logos/logo_pixelmania.png');
-			background-position: left center;
-			width: 57px;
-		}
-	}
-
-	&.paprika {
-		&::before {
-			background-image: url('../images/logos/logo_paprika.png');
-			background-position: left center;
-			width: 20px;
-		}
+	img {
+		position: relative;
+		padding: 24px 48px;
+		border: 1px solid #d9d9d9;
+		border-radius: 8px;
 	}
 }
 
