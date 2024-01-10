@@ -471,7 +471,7 @@ nav {
 }
 @media (max-width: 767px) {
   .main-content {
-    margin: 140px 0 0;
+    margin: 192px 0 0;
     padding: 8px;
   }
 }
@@ -501,12 +501,10 @@ nav {
   }
 }
 
-.designer-summary {
-  font-size: 1.6rem;
-  padding: 0 60px;
-}
 @media (min-width: 767px) {
   .designer-summary {
+    font-size: 1.6rem;
+    padding: 0 60px;
     border-left: 1px dotted black;
   }
 }
@@ -1130,7 +1128,7 @@ nav {
     margin-left: 0;
   }
   .timeline-horizontal li:before {
-    left: initial;
+    left: -25.5px;
     top: -38px;
     text-align: center;
     width: 100%;
