@@ -590,20 +590,3 @@
 	align-items: center;
 	background: #dedede;
 }
-
-.designer-summary {
-	font-size: 1.6rem;
-	padding: 40px 60px;
-
-	@media (min-width: $breakPhone) {
-		border-left: 1px dotted black;
-	}
-
-	h4 {
-		margin: 0;
-		color: $colorPrimary;
-	}
-	ul {
-		margin-bottom: 24px;
-	}
-}

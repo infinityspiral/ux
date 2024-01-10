@@ -60,29 +60,70 @@
 }
 
 .summary {
-
 	@media (min-width: $breakPhone) {
 		display: grid;
-		grid-template-columns: 2fr 1.75fr;
+		//grid-template-columns: 1fr 1fr;
+		grid-template-columns: auto 500px;
+
 		column-gap: 12px;
 
 		p {
 			text-align: left;
 		}
-	}
-}
-
-.road-to-ux {
-	@media (min-width: $breakPhone) {
-		display: grid;
-		grid-template-columns: 1fr 2fr;
-		column-gap: 12px;
-
-		div {
-			margin: 0 40px;
+		img {
+			width: 100%;
 		}
 	}
+
 }
+
+.designer-summary {
+	font-size: 1.6rem;
+	padding: 0 60px;
+
+	@media (min-width: $breakPhone) {
+		border-left: 1px dotted black;
+	}
+
+	h4 {
+		font-size: 2rem;
+		margin: 36px 0 0 0;
+		text-transform: capitalize;
+		color: #282828;
+		font-weight: 700;
+	}
+	h5 {
+		color: #282828;
+		font-size: 1.4rem;
+		margin: 0 0 0 0;
+		text-transform: capitalize;
+		background: #eee;
+		padding: 2px 8px;
+	}
+
+	ul {
+		margin: 0 0 8px 16px;
+		padding: 8px 12px 0 12px;
+	}
+
+	.level {
+		margin: 12px 0 16px 0;
+		border: 3px solid #eee;
+		border-radius: 5px;
+
+	}
+}
+//.road-to-ux {
+//	@media (min-width: $breakPhone) {
+//		display: grid;
+//		grid-template-columns: 1fr 2fr;
+//		column-gap: 12px;
+//
+//		div {
+//			margin: 0 40px;
+//		}
+//	}
+//}
 
 .project-header-grid-hero {
 	margin-bottom: 96px;

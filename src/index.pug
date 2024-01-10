@@ -31,16 +31,17 @@ body
     .main-content
         .project
             .summary
-                .road-to-ux
+                .grid-double
+                    img(src='images/DCI/dci.png', style='display:inline-block;')
                     div
                         h3 My Road to UX
                         p Of course now you see digital menus at restaurants, self-checkouts in retail spaces, and way-finding tools in hotels, but in 2004 none of that was widespread and my team at Silver Beacon Media had to design digital signage and kiosk experiences from the ground up. Context became paramount as my team moved away from traditional web experiences, having to take into account the location, connectivity, sound levels, and accessibility within a space. Some experiences even included syncing up with live performers and hosts for traveling brand tours like TLC's What Not to Wear Mall Tour and NASCAR's driving simulator.
                         p I have since worked with teams all across the globe to create experiences on the web, print and video as both a team leader and designer and even dabbled in some front-end development. This past decade has seen me working with cross-functional digital teams to research, develop, and launch features and solutions that solve business problems such as building in innovation, reducing friction in the customer journey, increasing product adoption, and customer retention.
 
-                    div
-                        img(src='images/DCI/dci.png', style='display:inline-block;')
                 div.designer-summary
-                    h3 Achievements Summary
+                    h3 Achievements
+
+                    h4 Summary
                     ul
                         li 20+ years in design and interactive products
                         li Happy in both leadership and non-leadership roles for flat  or hierarchical team structures
@@ -50,21 +51,23 @@ body
                                 li 35+ feature sets on existing products
                                 li Countless function-level improvements
 
-                    h3 Core Design Skills
-                    ul
-                        li <h4>Expert:</h4>
-                            ul
-                                li Interaction design
-                                li Visual design
-                        li <h4>Strong:</h4>
-                            ul
-                                li Prototyping
-                                li Writing
-                        li <h4>Capable:</h4>
-                            ul
-                                li User research
-                                li Information architecture
-                    h3 Leadership Skills
+                    h4 Core Design Skills
+                    div.level
+                        h5 Expert
+                        ul
+                            li Interaction design
+                            li Visual design
+                    div.level
+                        h5 Strong
+                        ul
+                            li Prototyping
+                            li Writing
+                    div.level
+                        h5 Capable
+                        ul
+                            li User research
+                            li Information architecture
+                    h4 Leadership Skills
                     ul
                         li Led solutioning of undefined problem spaces
                         li Developed processes and approaches for tackling design problems
@@ -187,25 +190,27 @@ body
 
         .project#aprimo-quickconnect
             h3.project-title.aprimo QuickConnect Web Plugin
-            //div
-            //    h3 Problem Solving Summary
-            //    ul.timeline-horizontal
-            //        li Define business goal
-            //        li Walk through CX/journey
-            //        li Quantitative research: locate friction in the funnel via Pendo
-            //        li Identify problems with system config and user CTAs
-            //        li Engage client-services, implementation, and development teams to help clients correctly configure API integrations
-            //        li Define new features for user CTAs
-            //        li Map out wireframe flow and engage stakeholders for review
-            //        li Build high-fidelity interactive Figma prototype solutions
-            //        li Qualitative research: internal usability testing
-            //        li Iterate on prototype solutions
-            //        li Quantitative research: select solution based on product forum voting
-            //        li Engage development teams on prototype features
-            //        li Execute solutions
-            //        li Quantitative follow-up: monitor engagement and danger metrics
-            //        li Business goal achieved
-            //
+            div
+                h4 Problem Solving Summary
+                ul.timeline-horizontal
+                    li Define business goal
+                    li Qualitative: User surveys
+                    li Build use cases
+                    li Walk through CX/journey with stakeholders
+                    li Learn the problem domain through OOUX
+                    li Align definitions of core business objects
+                    li Define and build object relationship matrix
+                    li Generate CTAs from relationship matrix
+                    li Prioritize new features from CTAs
+                    li Engage dev team and outline flowchart
+                    li Add object attributes to information architecture
+                    li Build high-fidelity interactive Figma prototype solutions
+                    li Qualitative research: internal usability testing
+                    li Iterate on prototype solutions
+                    li Engage development teams on prototype features
+                    li Execute solutions
+                    li Quantitative follow-up: monitor engagement
+                    li Business goal achieved
             .project-header-grid-hero
                 .section
                     h4 Details
@@ -254,10 +259,9 @@ body
                     p
                         img(src='images/aprimo/qc-page2.png')
 
-            p
-                img(src='images/aprimo/qc-ooux.jpg')
-            h3 What I Did
-
+                    p
+                        img(src='images/aprimo/qc-ooux.jpg')
+                h3 What I Did
             .project-content-grid
                 .section
                     h4 Making valuable contributions right away with OOUX
@@ -280,11 +284,23 @@ body
                     p
                         img(src='images/aprimo/qc-figma2.jpg')
 
-
-
-
         .project#aprimo-content-item-asset
             h3.project-title.aprimo DAM Content Item
+            div
+                h4 Problem Solving Summary
+                ul.timeline-horizontal
+                    li Identify bottleneck objects for design team
+                    li Research object instances within the system
+                    li Engage dev team to locate remaining instances
+                    li Build OOUX object maps for each instance
+                    li Compare and group inconsistent attributes
+                    li Decide on attribute priority for the object across the system
+                    li Prioritize CTAs across the system
+                    li High-fidelity Figma prototypes showing new attribute alignment
+                    li Qualitative research: internal usability testing
+                    li Iterate on Figma prototype solutions
+                    li Update documentation and design system
+                    li Communicate change to the org via UX Chapter
             .project-header-grid-hero
                 .section
                     h4 Details
@@ -347,6 +363,11 @@ body
 
         .project#boeing-insite
             h3.project-title.boeing Social Media Platform
+            //div
+            //    h4 Problem Solving Summary
+            //    ul.timeline-horizontal
+            //        li test
+
             .project-header-grid-hero
                 .section
                     h4 Details
@@ -419,6 +440,11 @@ body
 
         .project#aquent-it-solutions-recruiting-website
             h3.project-title.aquent Employee Recruiting
+            //div
+            //    h4 Problem Solving Summary
+            //    ul.timeline-horizontal
+            //        li test
+
             .project-header-grid-hero
                 .section
                     h4 Details
@@ -539,6 +565,11 @@ body
 
         .project#translations
             h3.project-title.john-deere Translations
+            //div
+            //    h4 Problem Solving Summary
+            //    ul.timeline-horizontal
+            //        li test
+
             .project-header-grid-hero
                 .section
                     h4 Details
@@ -598,6 +629,10 @@ body
 
         .project#service-admin-portal
             h3.project-title.john-deere Service Admin Portal
+            //div
+            //    h4 Problem Solving Summary
+            //    ul.timeline-horizontal
+            //        li test
             .project-header-grid-hero
                 .section
                     h4 Details
@@ -677,6 +712,10 @@ body
 
         .project#boeing-new-business-generator
             h3.project-title.boeing New Business Generator
+            //div
+            //    h4 Problem Solving Summary
+            //    ul.timeline-horizontal
+            //        li test
             .project-header-grid-hero
                 .section
                     h4 Details
@@ -710,9 +749,9 @@ body
 
                 div
                     p
-                        img(src='images/boeing/new-business-generator-provisional-persona.jpg', width='100%')
-                    p
                         img(src='images/boeing/new-business-generator-task-flow.jpg', width='100%')
+                    p
+                        img(src='images/boeing/new-business-generator-provisional-persona.jpg', width='100%')
 
                 .section
 
@@ -738,6 +777,10 @@ body
 
         .project#boeing-historical-services
             h3.project-title.boeing Historical Services
+            //div
+            //    h4 Problem Solving Summary
+            //    ul.timeline-horizontal
+            //        li test
             .project-header-grid-hero
                 .section
                     .flex-row
@@ -773,8 +816,8 @@ body
                                 .val-h Teresa Jellison
 
                 div
-                    p
-                        img(src='images/boeing/historical-services-storyboard.jpg', width='100%')
+                    //p
+                    //    img(src='images/boeing/historical-services-storyboard.jpg', width='100%')
                     p
                         img(src='images/boeing/historical-services.png')
 
