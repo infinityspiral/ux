@@ -1056,7 +1056,7 @@ figcaption {
   .sticky-header.stickied .to-top,
   .sticky-header.stickied .to-top:visited {
     bottom: initial;
-    top: 8px;
+    top: 18px;
     right: 16px;
     font-size: 2rem;
     opacity: 1;
