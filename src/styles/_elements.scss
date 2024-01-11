@@ -84,3 +84,15 @@ video {
 nav {
 	display: inline-block;
 }
+
+figure {
+	margin: 0;
+	padding: 0;
+}
+figcaption {
+	font-size: 1.2rem;
+	border: 1px solid gray;
+	padding: 2px 4px;
+	text-align: center;
+	margin-top: 12px;
+}

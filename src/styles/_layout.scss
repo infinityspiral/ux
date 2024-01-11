@@ -40,7 +40,7 @@
 	transition: top $stickyTime $stickyTransition;
 
 	@media (max-width: $breakPhone) {
-		margin: 192px 0 0;
+		margin: 340px 0 0;
 		padding: $spaceUnit;
 	}
 
@@ -151,3 +151,5 @@
 
 
 }
+
+image + blockquote {}

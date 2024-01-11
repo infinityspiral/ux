@@ -5,7 +5,7 @@ html(lang="en")#top
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
 
-        title Chris Norton: UX/UI Designer
+        title Chris Norton: Product/UX/UI/Visual Designer
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         link(href='https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=Source+Sans+3&display=swap', rel='stylesheet')
@@ -17,26 +17,36 @@ body
     .sticky-header
         .progress-indicator
         div
-            h1 Chris Norton: UX Designer
+            h1 Chris Norton: Product/UX/UI Visual Designer
                 a(href='#top').to-top <i class="fa fa-arrow-circle-up"></i> <span>Back to Top</span>
 
             nav.contact
                 a(class='email', href='mailto:public.cnorton@gmail.com', title='Send Email', target='_blank')
                     <i class="fa fa-envelope"></i>
                     span public.cnorton@gmail.com
+            //nav.pages
+            //    a(class='active', href='index.html', title='UX/UI Design') UX/UI Design
+            //    a(href='ui.html', title='UI/Visual Design') UI/Visual Design
             nav.pages
-                a(class='active', href='index.html', title='UX/UI Design') UX/UI Design
-                a(href='ui.html', title='UI/Visual Design') UI/Visual Design
+                a(href='#aprimo-content-item-fullscreen') UX: Content Item Preview
+                a(href='#aprimo-quickconnect') UX: QuickConnect Chrome Plugin
+                a(href='#aprimo-content-item-asset') UX: DAM Content Item
+                a(href='#boeing-insite') UX: Social Media Platform
+                a(href='#aquent-it-solutions-recruiting-website') UX/UI/Team Lead: Employee Recruiting Portal
+                a(href='#pixelmania') UI/Visual/Team Lead: PixelMania
 
     .main-content
         .project
             .summary
                 .grid-double
-                    img(src='images/DCI/dci.png', style='display:inline-block;')
+                    div
+                        img(src='images/DCI/dci.png', style='display:inline-block;')
                     div
                         h3 My Road to UX
                         p Of course now you see digital menus at restaurants, self-checkouts in retail spaces, and way-finding tools in hotels, but in 2004 none of that was widespread and my team at Silver Beacon Media had to design digital signage and kiosk experiences from the ground up. Context became paramount as my team moved away from traditional web experiences, having to take into account the location, connectivity, sound levels, and accessibility within a space. Some experiences even included syncing up with live performers and hosts for traveling brand tours like TLC's What Not to Wear Mall Tour and NASCAR's driving simulator.
                         p I have since worked with teams all across the globe to create experiences on the web, print and video as both a team leader and designer and even dabbled in some front-end development. This past decade has seen me working with cross-functional digital teams to research, develop, and launch features and solutions that solve business problems such as building in innovation, reducing friction in the customer journey, increasing product adoption, and customer retention.
+                        div(style='text-align:center;')
+                            img(src='images/john-deere/svap/svap-02.jpg', style='width:100%; max-width:700px; display:inline-block;')
 
                 div.designer-summary
                     h3 Achievements
@@ -413,8 +423,15 @@ body
                     .key-value-pair
                         .key-h Developers
                         .val-h St. Louis Team
-                p
-                    img(src='images/boeing/insite/miro1.png')
+                div
+                    p
+                        img(src='images/boeing/insite/miro1.png')
+                    p
+
+                    figure
+                        img(src='images/john-deere/translations/usability-testing-scorecard.jpg', width='100%')
+                        figcaption Example from another project, but same the same format was used.
+
                 .section
                     h3 Project Goal
                     p Create feature parity for mobile and modernize look and feel of the UI. Also  improve flows for finding team members, forming groups, posting news, asking questions, and organizing team events.
@@ -437,273 +454,278 @@ body
                         img(src='images/boeing/insite/posts.png')
                     h4 User permissions and feature prioritization
                     p I examined permissions in context with the journey it really helped give the team perspective on prioritizing features.  Do we fix a broken flow in the desktop app and also spend time creating parity on the mobile app or do we release faster and just fix the broken desktop flow first to see if that even moves the needle?  Why build 2 things that don't work?  This new lens allowed the team to be more focused and intentional with a better chance at having a real impact- or at least learn faster.
+                    figure
+                        img(src='images/john-deere/translations/task-prioritization.jpg')
+                        figcaption Example from another project, but same the same format was used.
+
                 .section
                     h4 Whiteboarding flows and wireframing
                     p I collaborated with the product owner and the dev team using Miro to draw out some initial flows and verify that ideas were even possible.  It also helped balance the effort from the dev team to be able to walk through some of their technical limitations and compromise on trade-offs and design alternatives. The comment system was also really helpful in resolving a visual to-do list for design using existing problem screenshots.
+                    p
+                        img(src='images/boeing/insite/miro2.png')
                     h4 Prototyping
                     p I built out interactive high-fidelity prototypes using Sketch and Figma pulling in styles from the new design system and updating library components as needed.
                     p
-                        img(src='images/boeing/insite/miro2.png')
+                        img(src='images/boeing/insite/inSite_D_FP_Results_Facet_Filter_CN.jpg')
+                .section
+                    p
+                        img(src='images/boeing/insite/inSite_FP_AdvResults_CN.png')
                 .section
                     h4 Usability testing
                     p I wrote and conducted remote usability testing with internal users.  I converted all the squishy feedback into metrics by charting feedback based on how much or how many times the user needed help to complete various tasks. I had done similar things for a Translations app for John Deere.
                     h4 Quantitative and Qualitative
                     p I also established a feedback loop allowing existing users to self-select and opt-in to upcoming releases to be able to provide feedback before rollouts would begin.  Rolling out with A/B testing also allowed us some danger metrics by seeing which users set their UI back after trying out the new system.
                     p
-                        img(src='images/boeing/insite/inSite_D_FP_Results_Facet_Filter_CN.jpg')
-                .section
-                    p
-                        img(src='images/boeing/insite/inSite_FP_AdvResults_CN.png')
-
-        .project#service-admin-portal
-            h3.project-title
-                img(src='images/john-deere/john-deere-logo.png')
-                span(style='color: #3d6c25') Service Admin Portal
-
-            .project-header-grid-hero
-                .section
-                    h4 Details
-                    .key-value-pair
-                        .key-v Project
-                        .val-v Service Admin Portal
-                    .key-value-pair
-                        .key-v Client
-                        .val-v John Deere
-
-                    .key-value-pair
-                        .key-v Platform
-                        .val-v Desktop, Tablet
-
-                    .key-value-pair
-                        .key-v Launched
-                        .val-v Internal JD Network
-                    h4 Team
-                    .key-value-pair
-                        .key-h Project Manager
-                        .val-h Nancy Early
-                    .key-value-pair
-                        .key-h UX/UI Design
-                        .val-h Chris Norton
-                p
-                    img(src='images/john-deere/svap/svap-header.jpg')
-
-                .section
-                    h3 What I Did
-                    p I mapped information architecture and iterated through complicated user task flows for a global single-page app managing billions of dollars in revenue and purchased customer services. Utilized techniques like empathy mapping, user personas, story mapping, card sorting, chalk mark testing, and reverse card sorting. I uncovered hidden gotchas not listed in requirements documents by walking business partners, project managers, and developers through user flows.  I used a variety of communication styles from running in-person ideation workshops to create low-fidelity wireframes as well as sending over Balsamiq prototypes for approval.  Balsamiq being low to medium fidelity allowed us to leverage the effort put into the design system.
-
-                    h3 Project Overview
-                    p John Deere was looking to reduce the cost of equipment maintenance by bringing duplicate silo apps under a singular technology solution and dev team.  The hope being that a unified application would allow for a more consistent experience and better visibility between departments and throughout the full workflow.
-            .project-content-grid
-                .section
-                    h3 Kick-off
-                    p The team initially decided to minimize usability and adoption issues by basing large portions of the creation and editing workflow around existing websites already in use by various teams. Where possible the flow for editing and creating assets would remain similar.  Much of the new flow came from connecting assets that were previously isolated and could now talk to each other.   Budget was also a consideration so starting from scratch was going to be out of scope.
-                    p
-                        img(src='images/john-deere/svap/svap-03.jpg')
-
-                .section
-                    h3 Defining Users
-                    p Using the project requirements document, email interviews, and phone calls and user tasks we built out personas which allowed us to prioritize and find each user’s most needed tasks.
-                    h4 Business Owners and Dealers
-                    p Needed to be able to monitor overall profitability and admin
-                    h4 Sales Representatives
-                    p Needed the ability to quickly pull from existing template agreements, view existing agreements and work within bundled groups of agreements for customers.
-                    h4 Technicians
-                    p Needed to be able to update the status of their job tickets on customer machines as services were performed.  They also needed to be alerted to upcoming and past due tasks to be able to predict upcoming needs for staff workloads and ordering inventory.
-
-                .section
-
-                    h3 User Testing and Findings
-                    p In-person workshop sessions were used to ensure user tasks were available and intuitive for each user type.  In some cases, we found that users were using multiple tabs as a gap fix to not having the context of the data in front of them for either global or minute actions even in the existing apps.  These areas offered us the chance to make the experience better by showcasing the missing data alongside the task.
-                    p
-                        img(src='images/john-deere/svap/svap-invision.jpg')
-
-                .section
-                    h4 Findings
-                    p One of the biggest challenges was introducing UX into an already established Agile-like development process. While we tried to map out major connections between sections ahead of development we ran into cases where the workflow dead-ended with the actual backend data available. Some additional concept proofs for specific sections may have been helpful in preventing some of the data availability mismatches as well as budgeting more time for iteration as the team adjusted to including UX into their process would have given more wiggle room.  Overall, allowing the users to have feedback early and often did make adoption smoother and users were less surprised with the final product.
-                .section
-                    h4 Card Sorting for Better Navigation
-                    p To pin down navigation, users were asked to place task cards into groups that made the most sense to them.  Consideration was also given to how frequently the user would need to access the task.
-                    h4 Tree/Chalk-mark for Menus and Options
-                    p Users were presented with menu structures and asked where they would click to find areas of the site or next steps in the work-flow.
-                .section
-                    h4 Whiteboard/Wireframe Prototypes
-                    p In some cases, multiple levels of user access complicated the approval structure of assets to the point where workflows had to be completely redefined. Low-fidelity prototype drawings allowed us to check in with users frequently and make sure the task could still be completed before being moved into high-fidelity interactive prototypes.
-                    p
-                        img(src='images/john-deere/svap/svap-00.jpg')
-
-                .section
-                    h4 Consolidating multiple UI Specifications
-                    p To build interactive, high-fidelity mockups we were able to pull from a living style guide being developed in parallel by a different team for many components.  When components were missing completely we took cues on fonts, colors, spacing and icons from what was already being developed and matched them as close as possible.  Part of my role included policing the style guide and returning it to developers if the final product mismatched these brand standards.
-                    p
-                        img(src='images/john-deere/svap/icons.jpg')
-
-        .project#boeing-new-business-generator
-            h3.project-title
-                img(src='images/boeing/Boeing-Logo.png')
-                span(style='color: #0033a1') New Business Generator
-
-            .project-header-grid-hero
-                .section
-                    h4 Details
-                    .key-value-pair
-                        .key-v Project
-                        .val-v New Business Generator
-                    .key-value-pair
-                        .key-v Client
-                        .val-v Boeing
-                    .key-value-pair
-                        .key-v Platform
-                        .val-v Desktop, Tablet
-                    .key-value-pair
-                        .key-v Launched
-                        .val-v Internal Boeing Network
-                    h4 Team
-                    .key-value-pair
-                        .key-h Project Manager
-                        .val-h Shing-Hwa Cheung
-                    .key-value-pair
-                        .key-h UX/UI Design
-                        .val-h Chris Norton
-                    .key-value-pair
-                        .key-h Developer
-                        .val-h Chris Norton, India Team
-                    h3 What I Did
-                    p I brought focus to feature development by interviewing stakeholders and tying feature sets/user tasks back to journey maps and personas. Asking the right questions allowed me to eliminate the assumed mobile requirement and save 4 weeks of development time from a team of 5 developers.  Being in charge of both UX and UI required me to articulate design decisions, strategies, and progress to a range of stakeholders including business partners, project managers, and external development teams.  I also built the initial html/css/js to capture the more complex animations for the developers to use as a starter in production.
-
-                    h3 Project Overview
-                    p Boeing's "New Business Generator" tool consolidates multiple internal tools under one roof and allows sales reps to manage active client relationships representing billions of dollars in revenue.
-
-                div
-                    p
-                        img(src='images/boeing/new-business-generator-task-flow.jpg', width='100%')
-                    p
-                        img(src='images/boeing/new-business-generator-provisional-persona.jpg', width='100%')
-
-                .section
+                        img(src='images/john-deere/translations/usability-testing-scorecard.jpg')
 
 
-                    h3 Save money through UX
-                    p A lot of organizations sometimes have trouble justifying bringing UX into the budget.  UX is a little bit intangible at the start and it's hard to quantify exactly how it will help adding another person to the team.  The thing is though, when a project has several hypothetical developers billing at $150+/hr, 8 hours a day, 5 days a week, it adds up fast.  Even just 5 developers would be $6,000 a day, and $30,000/week.
-                    p If you can find problems before any of those folks get involved you start saving a lot of money really fast. Throughout the course of this project I probably saved the dev team about 4 or 5 weeks worth of  work based on their initial screenshots of how the project flowed previously.
-
-                    h4 Key findings
-                    ol
-                        li
-                            div
-                                p Initially this project was slated to be launched on desktop, tablet and mobile phones.  Talking with actual users revealed that the complexity of the charts and data comparisons made it extremely difficult to see all necessary components at once on a mobile phone and that users would find this experience mostly unhelpful.
-                                p <strong>Solution</strong><br>The mobile phone requirement was removed.
-                        li
-                            div
-                                p The previous implementations had a lot of restrictions on how they could access and display data through the existing architecture.  Even though the new version allowed data to be grouped and displayed more freely it was hard for the team to imagine the product working beyond what it did previously.
-                                p <strong>Solution</strong><br>Mapping out some basic user task flow allowed me to see where we were making users backtrack further than necessary.  Condensing steps and eliminating duplicate routes allowed users to jump from one task to another faster and eliminated dev requirements.
-
-
-
-
-
-        .project#boeing-historical-services
-            h3.project-title
-                img(src='images/boeing/Boeing-Logo.png')
-                span(style='color: #0033a1') Historical Services
-
-            .project-header-grid-hero
-                .section
-                    .flex-row
-                        div
-                            h4 Details
-                            .key-value-pair
-                                .key-v Project
-                                .val-v Historical Services
-                            .key-value-pair
-                                .key-v Client
-                                .val-v Boeing
-
-                            .key-value-pair
-                                .key-v Platform
-                                .val-v Desktop, Tablet, Mobile
-
-                            .key-value-pair
-                                .key-v Launched
-                                .val-v Internal Boeing Network
-                        div
-                            h4 Team
-                            .key-value-pair
-                                .key-h Project Manager
-                                .val-h Adelle Squires
-                            .key-value-pair
-                                .key-h Strategist/Creative Director
-                                .val-h Darryl Barrabee
-                            .key-value-pair
-                                .key-h UX/UI Design
-                                .val-h Chris Norton
-                            .key-value-pair
-                                .key-h Developer
-                                .val-h Teresa Jellison
-
-                div
-                    p
-                        img(src='images/boeing/historical-services.png', width='100%')
-
-                div
-                    .section
-                        h3 What I Did
-                        p I brought focus to feature development by tying requested features in the brief back to journey maps and user tasks which revealed the potential for more modern design patterns to solve the real user problem.
-
-                        h3 Project Overview
-                        p Boeing was looking to reduce the number of customer service calls and emails related by providing users with more information about the process of preserving historically significant Boeing artifacts like blueprints, prototypes, etc.
-                    .section
-                        h3 Refining and Iterating Project Goals
-                        p To fulfill the original creative brief I was brought onto the team to handle the UX/UI on a few text-heavy pages provided by the client: Terms and Conditions page and Team Members.
-                        h4 Terms and Conditions Page
-                        p It took me a while to figure out what the Terms and Conditions page was trying to say during my first read-through which was a good indicator that the page needed a rewrite.  As it turned out, this page was less of a legal terms and conditions page and more of a reference manual that users could use if they got stuck on the form.
-
-                        h4 Team Members Page
-                        p The goal of the Team Members page was to find the best format to display various pieces of data like name, job role, department specialty, bio, etc.  Included with the brief were three suggested template variations that ranged from displaying data as key/value pairs to a more prose-like format.  UX was needed to find the best option. Ah, but the best option to… do what? Provide relevant information for someone writing an article? Showcase the efforts and expertise behind the scenes?
-                        p Regrouping with the client and talking through the benefits of each format helped reveal that the real problem was that users were confused about who they should choose to submit the form to. So the most important information was each team member’s area of expertise.
-                    .section
-                        h3 Solving the Real Problem
-                        p So once I had a better understanding of what the additional pages were supposed to accomplish I could work on providing an experience that required less legwork for the user and less cognitive load.  Ideally, this would increase submissions via the form versus having to contact a team member for assistance each time.
-                        h4 Previous User Route with Creative Brief Additions
-                        ol
-                            li User navigates from the home page to the submission form
-                            li User is asked which team member should receive their submission
-                            li User navigates to Team Page to look up the team member that specializes in the category of the item being submitted.
-                            li User navigates to the submission form and fills in a team member
-                            li User continues with the submission form and gets stuck on a question
-                            li User navigates to Terms and Conditions page
-                            li User searches or scrolls down to the relevant help section for more information
-                            li User navigates to the submission form
-                            li Progress is lost on the form so user opens a new tab to flip between the reference material and the form, repeating steps 4-8 until all the questions are complete
-                            li User submits form
-                            li Success!  Just kidding, the user dumps out and calls the direct line for help back at Step 2
-                    .section
-                        h3 Solutions
-                        p In both solves, the team page was removed in favor of letting the system determine where the form needed to go. This way the user could focus on their item being submitted and not have to worry so much about the process.
-                        .flex-row
-                            div
-                                h4 User Route 1
-                                ol
-                                    li User navigates from home page to the submission form
-                                    li User is walked through a form wizard that provides help text and example answers inline. A categorizing question is included so the system can route the form to the correct person behind the scenes
-                                    li Success! User submits form
-
-
-
-                            div
-                                h4 User Route 2
-                                ol
-                                    li User navigates from home page to a category gallery
-                                    li User navigates to the submission form from a category-specific call to action that invites the user to submit a similar item
-                                    li User is walked through a form wizard that provides help text and example answers inline. The normal categorizing question is skipped because the system already knows the category based on the call to action
-                                    li Success! User submits form
-                        h4 User Benefits
-                        p Including galleries helped make more of the work more easily accessible and gave users a better reference for what types of items would be accepted into the archives. Previously the homepage contained a very general overview of what the division did and instructions on where to find the form.  Archives were seen in-person only.  Providing categorized galleries also helped to shortcut the categorization issue that users were struggling to understand by allowing them to submit similar items to the ones already on screen.
-
-
-
-
-
-
+        //.project#service-admin-portal
+        //    h3.project-title
+        //        img(src='images/john-deere/john-deere-logo.png')
+        //        span(style='color: #3d6c25') Service Admin Portal
+        //
+        //    .project-header-grid-hero
+        //        .section
+        //            h4 Details
+        //            .key-value-pair
+        //                .key-v Project
+        //                .val-v Service Admin Portal
+        //            .key-value-pair
+        //                .key-v Client
+        //                .val-v John Deere
+        //
+        //            .key-value-pair
+        //                .key-v Platform
+        //                .val-v Desktop, Tablet
+        //
+        //            .key-value-pair
+        //                .key-v Launched
+        //                .val-v Internal JD Network
+        //            h4 Team
+        //            .key-value-pair
+        //                .key-h Project Manager
+        //                .val-h Nancy Early
+        //            .key-value-pair
+        //                .key-h UX/UI Design
+        //                .val-h Chris Norton
+        //        p
+        //            img(src='images/john-deere/svap/svap-header.jpg')
+        //
+        //        .section
+        //            h3 What I Did
+        //            p I mapped information architecture and iterated through complicated user task flows for a global single-page app managing billions of dollars in revenue and purchased customer services. Utilized techniques like empathy mapping, user personas, story mapping, card sorting, chalk mark testing, and reverse card sorting. I uncovered hidden gotchas not listed in requirements documents by walking business partners, project managers, and developers through user flows.  I used a variety of communication styles from running in-person ideation workshops to create low-fidelity wireframes as well as sending over Balsamiq prototypes for approval.  Balsamiq being low to medium fidelity allowed us to leverage the effort put into the design system.
+        //
+        //            h3 Project Overview
+        //            p John Deere was looking to reduce the cost of equipment maintenance by bringing duplicate silo apps under a singular technology solution and dev team.  The hope being that a unified application would allow for a more consistent experience and better visibility between departments and throughout the full workflow.
+        //    .project-content-grid
+        //        .section
+        //            h3 Kick-off
+        //            p The team initially decided to minimize usability and adoption issues by basing large portions of the creation and editing workflow around existing websites already in use by various teams. Where possible the flow for editing and creating assets would remain similar.  Much of the new flow came from connecting assets that were previously isolated and could now talk to each other.   Budget was also a consideration so starting from scratch was going to be out of scope.
+        //            p
+        //                img(src='images/john-deere/svap/svap-03.jpg')
+        //
+        //        .section
+        //            h3 Defining Users
+        //            p Using the project requirements document, email interviews, and phone calls and user tasks we built out personas which allowed us to prioritize and find each user’s most needed tasks.
+        //            h4 Business Owners and Dealers
+        //            p Needed to be able to monitor overall profitability and admin
+        //            h4 Sales Representatives
+        //            p Needed the ability to quickly pull from existing template agreements, view existing agreements and work within bundled groups of agreements for customers.
+        //            h4 Technicians
+        //            p Needed to be able to update the status of their job tickets on customer machines as services were performed.  They also needed to be alerted to upcoming and past due tasks to be able to predict upcoming needs for staff workloads and ordering inventory.
+        //
+        //        .section
+        //
+        //            h3 User Testing and Findings
+        //            p In-person workshop sessions were used to ensure user tasks were available and intuitive for each user type.  In some cases, we found that users were using multiple tabs as a gap fix to not having the context of the data in front of them for either global or minute actions even in the existing apps.  These areas offered us the chance to make the experience better by showcasing the missing data alongside the task.
+        //            p
+        //                img(src='images/john-deere/svap/svap-invision.jpg')
+        //
+        //        .section
+        //            h4 Findings
+        //            p One of the biggest challenges was introducing UX into an already established Agile-like development process. While we tried to map out major connections between sections ahead of development we ran into cases where the workflow dead-ended with the actual backend data available. Some additional concept proofs for specific sections may have been helpful in preventing some of the data availability mismatches as well as budgeting more time for iteration as the team adjusted to including UX into their process would have given more wiggle room.  Overall, allowing the users to have feedback early and often did make adoption smoother and users were less surprised with the final product.
+        //        .section
+        //            h4 Card Sorting for Better Navigation
+        //            p To pin down navigation, users were asked to place task cards into groups that made the most sense to them.  Consideration was also given to how frequently the user would need to access the task.
+        //            h4 Tree/Chalk-mark for Menus and Options
+        //            p Users were presented with menu structures and asked where they would click to find areas of the site or next steps in the work-flow.
+        //        .section
+        //            h4 Whiteboard/Wireframe Prototypes
+        //            p In some cases, multiple levels of user access complicated the approval structure of assets to the point where workflows had to be completely redefined. Low-fidelity prototype drawings allowed us to check in with users frequently and make sure the task could still be completed before being moved into high-fidelity interactive prototypes.
+        //            p
+        //                img(src='images/john-deere/svap/svap-00.jpg')
+        //
+        //        .section
+        //            h4 Consolidating multiple UI Specifications
+        //            p To build interactive, high-fidelity mockups we were able to pull from a living style guide being developed in parallel by a different team for many components.  When components were missing completely we took cues on fonts, colors, spacing and icons from what was already being developed and matched them as close as possible.  Part of my role included policing the style guide and returning it to developers if the final product mismatched these brand standards.
+        //            p
+        //                img(src='images/john-deere/svap/icons.jpg')
+        //
+        //.project#boeing-new-business-generator
+        //    h3.project-title
+        //        img(src='images/boeing/Boeing-Logo.png')
+        //        span(style='color: #0033a1') New Business Generator
+        //
+        //    .project-header-grid-hero
+        //        .section
+        //            h4 Details
+        //            .key-value-pair
+        //                .key-v Project
+        //                .val-v New Business Generator
+        //            .key-value-pair
+        //                .key-v Client
+        //                .val-v Boeing
+        //            .key-value-pair
+        //                .key-v Platform
+        //                .val-v Desktop, Tablet
+        //            .key-value-pair
+        //                .key-v Launched
+        //                .val-v Internal Boeing Network
+        //            h4 Team
+        //            .key-value-pair
+        //                .key-h Project Manager
+        //                .val-h Shing-Hwa Cheung
+        //            .key-value-pair
+        //                .key-h UX/UI Design
+        //                .val-h Chris Norton
+        //            .key-value-pair
+        //                .key-h Developer
+        //                .val-h Chris Norton, India Team
+        //            h3 What I Did
+        //            p I brought focus to feature development by interviewing stakeholders and tying feature sets/user tasks back to journey maps and personas. Asking the right questions allowed me to eliminate the assumed mobile requirement and save 4 weeks of development time from a team of 5 developers.  Being in charge of both UX and UI required me to articulate design decisions, strategies, and progress to a range of stakeholders including business partners, project managers, and external development teams.  I also built the initial html/css/js to capture the more complex animations for the developers to use as a starter in production.
+        //
+        //            h3 Project Overview
+        //            p Boeing's "New Business Generator" tool consolidates multiple internal tools under one roof and allows sales reps to manage active client relationships representing billions of dollars in revenue.
+        //
+        //        div
+        //            p
+        //                img(src='images/boeing/new-business-generator-task-flow.jpg', width='100%')
+        //            p
+        //                img(src='images/boeing/new-business-generator-provisional-persona.jpg', width='100%')
+        //
+        //        .section
+        //            h3 Save money through UX
+        //            p A lot of organizations sometimes have trouble justifying bringing UX into the budget.  UX is a little bit intangible at the start and it's hard to quantify exactly how it will help adding another person to the team.  The thing is though, when a project has several hypothetical developers billing at $150+/hr, 8 hours a day, 5 days a week, it adds up fast.  Even just 5 developers would be $6,000 a day, and $30,000/week.
+        //            p If you can find problems before any of those folks get involved you start saving a lot of money really fast. Throughout the course of this project I probably saved the dev team about 4 or 5 weeks worth of  work based on their initial screenshots of how the project flowed previously.
+        //
+        //            h4 Key findings
+        //            ol
+        //                li
+        //                    div
+        //                        p Initially this project was slated to be launched on desktop, tablet and mobile phones.  Talking with actual users revealed that the complexity of the charts and data comparisons made it extremely difficult to see all necessary components at once on a mobile phone and that users would find this experience mostly unhelpful.
+        //                        p <strong>Solution</strong><br>The mobile phone requirement was removed.
+        //                li
+        //                    div
+        //                        p The previous implementations had a lot of restrictions on how they could access and display data through the existing architecture.  Even though the new version allowed data to be grouped and displayed more freely it was hard for the team to imagine the product working beyond what it did previously.
+        //                        p <strong>Solution</strong><br>Mapping out some basic user task flow allowed me to see where we were making users backtrack further than necessary.  Condensing steps and eliminating duplicate routes allowed users to jump from one task to another faster and eliminated dev requirements.
+        //
+        //
+        //
+        //
+        //
+        //.project#boeing-historical-services
+        //    h3.project-title
+        //        img(src='images/boeing/Boeing-Logo.png')
+        //        span(style='color: #0033a1') Historical Services
+        //
+        //    .project-header-grid-hero
+        //        .section
+        //            .flex-row
+        //                div
+        //                    h4 Details
+        //                    .key-value-pair
+        //                        .key-v Project
+        //                        .val-v Historical Services
+        //                    .key-value-pair
+        //                        .key-v Client
+        //                        .val-v Boeing
+        //
+        //                    .key-value-pair
+        //                        .key-v Platform
+        //                        .val-v Desktop, Tablet, Mobile
+        //
+        //                    .key-value-pair
+        //                        .key-v Launched
+        //                        .val-v Internal Boeing Network
+        //                div
+        //                    h4 Team
+        //                    .key-value-pair
+        //                        .key-h Project Manager
+        //                        .val-h Adelle Squires
+        //                    .key-value-pair
+        //                        .key-h Strategist/Creative Director
+        //                        .val-h Darryl Barrabee
+        //                    .key-value-pair
+        //                        .key-h UX/UI Design
+        //                        .val-h Chris Norton
+        //                    .key-value-pair
+        //                        .key-h Developer
+        //                        .val-h Teresa Jellison
+        //
+        //        div
+        //            p
+        //                img(src='images/boeing/historical-services.png', width='100%')
+        //
+        //        div
+        //            .section
+        //                h3 What I Did
+        //                p I brought focus to feature development by tying requested features in the brief back to journey maps and user tasks which revealed the potential for more modern design patterns to solve the real user problem.
+        //
+        //                h3 Project Overview
+        //                p Boeing was looking to reduce the number of customer service calls and emails related by providing users with more information about the process of preserving historically significant Boeing artifacts like blueprints, prototypes, etc.
+        //            .section
+        //                h3 Refining and Iterating Project Goals
+        //                p To fulfill the original creative brief I was brought onto the team to handle the UX/UI on a few text-heavy pages provided by the client: Terms and Conditions page and Team Members.
+        //                h4 Terms and Conditions Page
+        //                p It took me a while to figure out what the Terms and Conditions page was trying to say during my first read-through which was a good indicator that the page needed a rewrite.  As it turned out, this page was less of a legal terms and conditions page and more of a reference manual that users could use if they got stuck on the form.
+        //
+        //                h4 Team Members Page
+        //                p The goal of the Team Members page was to find the best format to display various pieces of data like name, job role, department specialty, bio, etc.  Included with the brief were three suggested template variations that ranged from displaying data as key/value pairs to a more prose-like format.  UX was needed to find the best option. Ah, but the best option to… do what? Provide relevant information for someone writing an article? Showcase the efforts and expertise behind the scenes?
+        //                p Regrouping with the client and talking through the benefits of each format helped reveal that the real problem was that users were confused about who they should choose to submit the form to. So the most important information was each team member’s area of expertise.
+        //            .section
+        //                h3 Solving the Real Problem
+        //                p So once I had a better understanding of what the additional pages were supposed to accomplish I could work on providing an experience that required less legwork for the user and less cognitive load.  Ideally, this would increase submissions via the form versus having to contact a team member for assistance each time.
+        //                h4 Previous User Route with Creative Brief Additions
+        //                ol
+        //                    li User navigates from the home page to the submission form
+        //                    li User is asked which team member should receive their submission
+        //                    li User navigates to Team Page to look up the team member that specializes in the category of the item being submitted.
+        //                    li User navigates to the submission form and fills in a team member
+        //                    li User continues with the submission form and gets stuck on a question
+        //                    li User navigates to Terms and Conditions page
+        //                    li User searches or scrolls down to the relevant help section for more information
+        //                    li User navigates to the submission form
+        //                    li Progress is lost on the form so user opens a new tab to flip between the reference material and the form, repeating steps 4-8 until all the questions are complete
+        //                    li User submits form
+        //                    li Success!  Just kidding, the user dumps out and calls the direct line for help back at Step 2
+        //            .section
+        //                h3 Solutions
+        //                p In both solves, the team page was removed in favor of letting the system determine where the form needed to go. This way the user could focus on their item being submitted and not have to worry so much about the process.
+        //                .flex-row
+        //                    div
+        //                        h4 User Route 1
+        //                        ol
+        //                            li User navigates from home page to the submission form
+        //                            li User is walked through a form wizard that provides help text and example answers inline. A categorizing question is included so the system can route the form to the correct person behind the scenes
+        //                            li Success! User submits form
+        //
+        //
+        //
+        //                    div
+        //                        h4 User Route 2
+        //                        ol
+        //                            li User navigates from home page to a category gallery
+        //                            li User navigates to the submission form from a category-specific call to action that invites the user to submit a similar item
+        //                            li User is walked through a form wizard that provides help text and example answers inline. The normal categorizing question is skipped because the system already knows the category based on the call to action
+        //                            li Success! User submits form
+        //                h4 User Benefits
+        //                p Including galleries helped make more of the work more easily accessible and gave users a better reference for what types of items would be accepted into the archives. Previously the homepage contained a very general overview of what the division did and instructions on where to find the form.  Archives were seen in-person only.  Providing categorized galleries also helped to shortcut the categorization issue that users were struggling to understand by allowing them to submit similar items to the ones already on screen.
+        //
+        //
+        //
+        //
+        //
+        //
         //.project#paprika
         //    .section
         //        h3.project-title.paprika Mobile App with Conversational AI
@@ -812,6 +834,266 @@ body
         //
         //                h4 Engaging with AI
         //                p You get a lot more out of the AI if you have a library of keywords and phrases built from the previous steps.  With a functional or semi-functional app in place,  you can leverage the AI to refine the keyword pairings that trigger commands and route the user into dialogs/flow for the tasks they are really asking for.
+        .project#aquent-it-solutions-recruiting-website
+            h3.project-title
+                img(src='images/aquent/aquent-logo.jpg')
+                span(style='color: #e5a747') Employee Recruiting Portal
+            div
+                h4 Problem Solving Summary
+                ul.timeline-horizontal
+                    li Qualitative/Generative Research
+                    li Personas
+                    li Journey and Business Ecosystem Mapping
+                    li Define Points of Friction
+                    li Engage HR
+                    li Quantitative Research
+                    li Qualitative Research
+                    li Copywriting
+                    li Visual design
+                    li Imagery
+                    li Motion Graphics
+                    li Development
+                    li Quantitative Review
+
+            .project-header-grid-hero
+                .section
+                    h4 Details
+                    .key-value-pair
+                        .key-v Project
+                        .val-v Recruiting Website
+                    .key-value-pair
+                        .key-v Client
+                        .val-v Aquent IT Solutions
+
+                    .key-value-pair
+                        .key-v Platform
+                        .val-v Desktop, Tablet, Mobile
+
+                    .key-value-pair
+                        .key-v Launched
+                        .val-v <a href="https://aquent-it-solutions.com/" target="_blank">aquent-it-solutions.com</a>
+                    h4 Team
+                    .key-value-pair
+                        .key-h UX/UI Design Lead
+                        .val-h Chris Norton
+                    .key-value-pair
+                        .key-h UX Research/Testing
+                        .val-h Chris Norton<br>Pooja Arshanapally<br>Mark Hein
+                    .key-value-pair
+                        .key-h Front-end Developer
+                        .val-h Chris Norton
+
+                div
+                    .grid-double
+                        div
+                            p
+                                img(src='images/aquent/aquent-full.jpg')
+                            p
+                                img(src='images/aquent/aquent-drone-vertical.jpg')
+                        div
+                            .video-container
+                                img(src='video/aquent/aquent-drumroll-static.jpg')
+                                <video id="aquent-home" width="768" height="514" poster="video/aquent/aquent-drumroll.jpg" controls="true">
+                                <source src="video/aquent/aquent-drumroll.mp4" type="video/mp4">
+                                </video>
+                            .video-container
+                                img(src='video/aquent/aquent-logo-static.jpg')
+                                <video id="aquent-home" width="768" height="514" poster="video/aquent/aquent-logo.jpg" controls="true">
+                                <source src="video/aquent/aquent-logo.mp4" type="video/mp4">
+                                </video>
+                    p
+                        img(src='images/aquent/aquent-header.jpg')
+                    p
+                        img(src='images/aquent/aquent-map.jpg')
+
+
+                .section
+                    .video-container
+                        img(src='video/aquent/aquent-home-static.jpg')
+                        <video id="aquent-home" width="223" height="470" poster="video/aquent/aquent-home.jpg">
+                        <source src="video/aquent/aquent-home.mp4" type="video/mp4">
+                        </video>
+
+                    h3 Project Goal
+                    p Initially just modernize the website. Very low stakes. After taking ownership of the project and demonstrating the ability visualize some of these problems with design thinking however; the project became a deep focus for goal setting within the org.
+
+                    h3 Project Results
+                    p Materials have been successful for at least 5 years and last I check were still being used.
+
+                    h3 What We Fixed
+                    p Created a plan for improving the team culture and attracting new talent including reducing the overall interview and vetting process. We launched a few digital products including a new online video training portal and a recruiting site as part of a plan to better align the team environment and activities with the core business values. Landing pages allowed us better tracking for networking at events like job fairs and school visits.
+
+                    h3 What was Learned
+                    p The overall interview process was blocking the ability to hire in a timely manner. Company values didn't necessarily align with leadership decisions. There was a need to better define personas and document journeys. I would approach this a little differently after reading Org Design for Design Orgs by diving deeper into the core values and examining where they were mis-aligned with the environment and team activities. We did reach for these areas intuitively as options but I don't think their full impact was understood at the time.
+            h3 What I Did
+            p How I led end-to-end design and transformed a cosmetic refresh into something that actually moved the needle using data-driven design.
+
+            .project-content-grid
+                .section
+                    h4 Qualitative/Generative Research
+                    p Early on I was added to some brainstorming sessions for attracting new talent via updating the website. While we did generate lots of ideas I realized these didn't have holistic view to the overall journey and were all solutions based on bad data or no data. Even validated data was decades old. We didn't have any personas defined and there was no journey map or funnel to place ideas against. So no real context about where suggestions would live and if it would be effective at driving people to the next stage. It's no wonder most of the suggestions were surface level cosmetic changes about font and color preferences.
+                    h4 Personas
+                    p With no existing personas I needed to do some generative research and discovery to find out more about the intended users. I wrote up surveys for existing employees to find out a little more about why they chose Aquent. Using the surveys I built an overview of common facts, problems, behaviors and goals this would give context when we looked at friction points in the journey.
+                    h4 Journey and Business Ecosystem Mapping
+                    p After some digging I was able to find someone more familiar with the candidate journey and we mapped out the interview process. I then divided up the various stages and grouped them into a loose AIDA model (Awareness —> Interest -> Desire -> Action) so we could visualize and empathize with the user's state of mind at each stage. Were the users just casually browsing or were they deeply engaged? Were they even seeing us? Were the common problems and goals listed in the persona research being answered to the point of having enough desire to take action?
+                .section
+                    h4 Define Points of Friction
+                    p I cataloged points of friction in the journey and wrote user stories for new features that could be addressed by the website.
+                    h4 Engage HR
+                    p A website can fix a lot of things, but it isn't going to prevent culture problems like burnout and mixed messaging between values, working environment, and daily activities. I can't change the actual building or run in-person events from just a website refresh. Those items were prioritized and offloaded from the scope of the website.
+                    h4 Quantitative Research
+                    p Establishing landing pages for job fairs and other events with CTAs for sending in resumes would give us a great feedback loop to gauge interest from particular events over time.
+                    h4 Qualitative Research
+                    p I also wrote short surveys given to candidates during onboarding to give us some generative feedback on what was or wasn't attracting talent.
+                .section
+                    h4 Copywriting
+                    p I found the book "Letting Go of the Words" particularly helpful in rewriting all the copy for the website to address the problems and goals I found earlier in the persona discovery process.
+                    h4 Visual design
+                    p I used Adobe Photoshop, Illustrator, and Sketch to create graphics and page layouts. Colors, fonts and grid system were matched against the parent company website.
+                    h4 Imagery
+                    p I defined example imagery to be used in the marketing materials, picking overhead drone photos to create the feeling of seeing the big picture through future tech which is exactly what we provide in our solutions to clients: technology-based solutions that work with large amounts of data at a digestible scale.
+                    h4 Motion Graphics
+                    p I drew up storyboards, animated motion graphics, and handled sound design for an internal video training library. The primary focus of this team is web development so a gear was used to show things, "working." Having the logo typed out creates familiarity with job tasks which included typing out and organizing code.
+                .section
+                    h4 Development
+                    p I used HTML5/CSS3 and JavaScript to build out the designs and engineered a few node.js task runners to automatically generate compressed HTML/CSS from Sass and pug sources files. It also ran CSSlint and ESlint before pushing to git version control.
+                    h4 Quantitative Review
+                    p Internal review was very positive. I got moved to other projects but metrics control was handed over to recruiters. I have to assume things were working since they've kept the same website for 5+ years now.
+
+        .project#pixelmania
+            h3.project-title
+                img(src='images/pixelmania/pixelMania-logo.png')
+                span(style='color: #2b5091') PixelMania: Metroid
+            .project-header-grid-hero
+                .section
+                    h4 Details
+                    .key-value-pair
+                        .key-v Project
+                        .val-v Metroid: Varia
+                    .key-value-pair
+                        .key-v Client
+                        .val-v Pixelmania (Poland)
+                    .key-value-pair
+                        .key-v Launched
+                        .val-v Multi-use, International
+
+                    h4 Team
+                    .key-value-pair
+                        .key-h Creative Team Lead
+                        .val-h Chris Norton
+                    .key-value-pair
+                        .key-h Talent/Costume Fabrication
+                        .val-h Willow Creative (Netherlands)
+                    .key-value-pair
+                        .key-h Assistant
+                        .val-h Katharine Repetski
+                    .key-value-pair
+                        .key-h Location Scout/Manager
+                        .val-h Ambroży Kleks
+                div
+                    .metroid-intro
+                        .video-container
+                            img(src='video/pixelmania2019/metroid-static.jpg')
+                            <video id="aquent-home" width="100%" poster="video/pixelmania2019/metroid-static.jpg" controls="true">
+                            <source src="video/pixelmania2019/metroid.mp4" type="video/mp4">
+                            </video>
+                        p
+                            img(src='images/pixelmania/infinityspiral-chris-norton-fui.jpg', width='100%')
+
+
+                .section
+                    h3 What I Did
+                    p I led 15 different creative teams from 11 countries and as many languages over a 7 month period to produce 15 unique photo design projects for a single weekend event in Lubomierz, Poland.  I rallied teams around ideas by creating moodboards and storyboards and coordinated with a variety of team members including talent, location scouts and specialists like wolfdog trainers and pyrotechnicians.  I handled all the logistics of travel and timing including equipment, vehicle rental, and accommodations.  I was also the photographer/designer/retoucher for each project.
+
+                    h3 Project Overview
+                    p Pixelmania is an international collaboration laboratory for filmmakers, photographers, and costume designers to tell visual stories from comic books, movies, video games, and other pop culture. The event runs annually in Lubomierz, Poland.
+                    p Artists compete for acceptance with only around a hundred photographers allowed into the event each year. Almost every shoot I had was from a different country. Being able to work around a language barrier and work with different viewpoints was also a necessary skill.
+                    .countries
+                        .flag
+                            .australia
+                            span Australia
+                        .flag
+                            .czech-republic
+                            span Czech Republic
+                        .flag
+                            .france
+                            span France
+                        .flag
+                            .germany
+                            span Germany
+                        .flag
+                            .hungary
+                            span Hungary
+                        .flag
+                            .italy
+                            span Italy
+                        .flag
+                            .lithuania
+                            span Lithuania
+                        .flag
+                            .netherlands
+                            span Netherlands
+                        .flag
+                            .poland
+                            span Poland
+                        .flag
+                            .slovakia
+                            span Slovakia
+                        .flag
+                            .sweden
+                            span Sweden
+                    p During the event, attendees can book pre-scouted locations like ancient castles, abandoned factories, waterfalls, and Japanese gardens. Experts like animal handlers and pyrotechnicians are also available. I was able to work with the wolf dogs team and the pyrotechnics crew but you could also book horses to ride and other fun things too.
+
+            .project-content-grid
+
+                .section
+                    h3 Pre-production
+                    p As a photographer at this event, you are allowed to bring in an assistant to help carry gear, but you're the person responsible for making everything come together and delivering art. Producer, director, concept artist, camera operator, logistics- just everything. It's a lot of hats to make five shoots a day, three days in a row all come together in a foreign country.
+                    p
+                        img(src='images/pixelmania/organization_800px.jpg')
+                    p People fly into Poland from as far as Australia so it’s very common to plan upwards of fifteen complicated photoshoots for the three-day event. Months of planning go into building costumes, designing concepts, and planning travel. It’s a very friendly collaborative space, but teams are there to get something made and at a high level. With everyone sinking their own money into the cost of production it’s hard to walk away from the experience without also gaining a lot of respect for the time and money that goes into even larger group projects. With five to six complex shoots happening every day.
+
+                .section
+                    h3 IP Research / Moodboard
+                    p To match the look and feel of the existing game I pulled
+                    p
+                        img(src='images/pixelmania/moodBoard_768.jpg')
+                    h3 UI Design
+                    p I wrote out the why for the design so I could focus on whether things were moving towards the intended purpose. My intent was to create a moment in time where the character was checking the status and configuring systems on their super-futuristic spacesuit and the faux user interface needed to support that. Things like checking weapon stock, battery usage, life support, damage assessment, threat detection, systems diagnostics, GPS, and general OS controls are all reasonable things a space adventurer needs to survive on a hostile planet by themselves.
+                    p
+                        img(src='images/pixelmania/infinityspiral-chris-norton-fui-sketch.jpg')
+                    p Once I locked in the reasons for design solves I laid down rapid sketches for possible icons and interfaces. The aim was to make sure I had enough variety and also that groups of UI could almost be guessed by the user without me have to spend lots of time finishing every icon out before having to throw parts away.
+                .section
+
+                    h3 3D Shaders Using Maya/Arnold
+                    p
+                        img(src='images/pixelmania/infinityspiral-chris-norton-fui-shader.jpg')
+                    p The costume builder on the Varia team was a master 3D modeler and 3D print expert. I thought the floating panel would be a great way to showcase her skills in multiple ways by including a render of her 3D print file.
+
+                    h4 Learning
+                    p Unfortunately, her model was too high-resolution to fit into the scene. The model matched the game design exactly, but became more of a focal point and broke the composition. In round two, I found a free low-poly version of the suit on Turbo Squid that was less distracting. After writing an X-ray shader, the low-poly version was a much better direction.
+                    p
+                        img(src='images/pixelmania/infinityspiral-chris-norton-fui.jpg')
+
+                .section
+                    h3 Illustrator conversion
+                    p
+                        img(src='images/pixelmania/infinityspiral-chris-norton-fui-vector.jpg')
+                    p I started creating vector art for the final composite once I had simple sketches in place. Mapping out the systems using UX flows made it easier to prioritize UI components according to available tasks. Threat warnings needed to be always visible whereas as monster guidebook might get tucked away.
+
+                    .flex-row
+                        .color-chip
+                            .hex #05eafb
+                        div
+                            h3 Color
+                            p Blue cues up the subconscious for science and learning. Green can feel toxic like a Disney villain or comforting like spring growth. Mixing a little green with blue introduces an other-worldly feel to the scene.
+                    h3 Font - Metroid Prime Hunters
+                    p
+                        img(src='images/pixelmania/font-metroid-prime-hunters.jpg')
+                    p There are several font sets used through the history of the game series but, “Metroid Prime Hunters,” retained more of a terminal feel when placed into the composition. It was a tough balancing act to find something that felt like it could live in a world within a world. The pixelated font helped the text stay in the panel even though you can’t  read most of it. It’s enough for it to just feel like you could read it if you needed to.
+
+
+
 
 script(src='js/app.js')
 

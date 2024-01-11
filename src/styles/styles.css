@@ -453,6 +453,19 @@ nav {
   display: inline-block;
 }
 
+figure {
+  margin: 0;
+  padding: 0;
+}
+
+figcaption {
+  font-size: 1.2rem;
+  border: 1px solid gray;
+  padding: 2px 4px;
+  text-align: center;
+  margin-top: 12px;
+}
+
 @media (min-width: 1273px) {
   .page {
     display: flex;
@@ -471,7 +484,7 @@ nav {
 }
 @media (max-width: 767px) {
   .main-content {
-    margin: 192px 0 0;
+    margin: 340px 0 0;
     padding: 8px;
   }
 }
@@ -806,6 +819,13 @@ nav {
   font-size: 4.4rem;
   font-weight: 100;
 }
+.project-title img {
+  position: relative;
+  padding: 24px 48px;
+  border: 1px solid #d9d9d9;
+  border-radius: 8px;
+  margin-bottom: 24px;
+}
 @media (min-width: 1200px) {
   .project-title {
     grid-template-columns: 1fr 5fr 2fr;
@@ -813,12 +833,9 @@ nav {
     column-gap: 48px;
     align-items: center;
   }
-}
-.project-title img {
-  position: relative;
-  padding: 24px 48px;
-  border: 1px solid #d9d9d9;
-  border-radius: 8px;
+  .project-title img {
+    margin-bottom: 0;
+  }
 }
 
 .key-v,
@@ -927,15 +944,22 @@ nav {
   color: #818181;
 }
 .sticky-header .pages a {
-  margin-left: 8px;
+  margin-left: 12px;
   display: inline-block;
-  font-size: 1.6rem;
+  font-size: 1.4rem;
   font-weight: 700;
   line-height: 1;
   color: #009dd2;
+  text-transform: capitalize;
 }
 .sticky-header .pages a.active {
   color: #818181;
+}
+@media (max-width: 767px) {
+  .sticky-header .pages a {
+    display: block;
+    margin-top: 12px;
+  }
 }
 .sticky-header .email {
   display: inline-block;

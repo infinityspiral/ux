@@ -152,22 +152,28 @@
 }
 
 .project-title {
-	@media (min-width: $breakXL) {
-		grid-template-columns: 1fr 5fr 2fr;
-		display: grid;
-		column-gap: 48px;
-		align-items: center;
-	}
-
 	font-size: 4.4rem;
 	font-weight: 100;
-
 	img {
 		position: relative;
 		padding: 24px 48px;
 		border: 1px solid #d9d9d9;
 		border-radius: 8px;
+		margin-bottom: 24px;
 	}
+
+	@media (min-width: $breakXL) {
+		grid-template-columns: 1fr 5fr 2fr;
+		display: grid;
+		column-gap: 48px;
+		align-items: center;
+
+		img {
+			margin-bottom: 0;
+		}
+	}
+
+	
 }
 
 .key-v,
@@ -279,16 +285,23 @@
 		color: lighten($colorPrimary, 35%);
 	}
 	.pages a {
-		margin-left: 8px;
+		margin-left: 12px;
 		display: inline-block;
-		font-size: 1.6rem;
+		font-size: 1.4rem;
 		font-weight: 700;
 		line-height: 1;
 		color: $colorAccent;
+		text-transform: capitalize;
 
 		&.active {
 			color: lighten($colorPrimary, 35%);
 		}
+
+		@media(max-width:$breakPhone) {
+			display: block;
+			margin-top: 12px;
+		}
+
 	}
 	.email {
 		display: inline-block;
