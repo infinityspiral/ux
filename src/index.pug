@@ -21,19 +21,49 @@ body
                 a(href='#top').to-top <i class="fa fa-arrow-circle-up"></i> <span>Back to Top</span>
 
             nav.contact
+                a.menu-open(href='#') <i class="fa fa-list"></i> Project Guide
                 a(class='email', href='mailto:public.cnorton@gmail.com', title='Send Email', target='_blank')
                     <i class="fa fa-envelope"></i>
                     span public.cnorton@gmail.com
             //nav.pages
             //    a(class='active', href='index.html', title='UX/UI Design') UX/UI Design
             //    a(href='ui.html', title='UI/Visual Design') UI/Visual Design
-            nav.pages
-                a(href='#aprimo-content-item-fullscreen') UX: Content Item Preview
-                a(href='#aprimo-quickconnect') UX: QuickConnect Chrome Plugin
-                a(href='#aprimo-content-item-asset') UX: DAM Content Item
-                a(href='#boeing-insite') UX: Social Media Platform
-                a(href='#aquent-it-solutions-recruiting-website') UX/UI/Team Lead: Employee Recruiting Portal
-                a(href='#pixelmania') UI/Visual/Team Lead: PixelMania
+            //nav.pages
+            //    a(href='#aprimo-content-item-fullscreen') UX: Content Item Preview
+            //    a(href='#aprimo-quickconnect') UX: QuickConnect Chrome Plugin
+            //    a(href='#aprimo-content-item-asset') UX: DAM Content Item
+            //    a(href='#boeing-insite') UX: Social Media Platform
+            //    a(href='#aquent-it-solutions-recruiting-website') UX/UI/Team Lead: Employee Recruiting Portal
+            //    a(href='#pixelmania') UI/Visual/Team Lead: PixelMania
+            nav.menu
+                .about
+                    .menu-header
+                        h3 Project Guide
+                        a.menu-close(href='#') <i class="fa fa-times"></i>
+                    p <strong>Hidden Gem: </strong>I developed this site from scratch using <i>HTML5</i>, <i>CSS3</i>, and <i>JS</i> using <i>Node.js</i> to run a local preview server which compiles and minifies <i>Sass</i> on the fly with <i>Autoprefixer</i>, <i>CSS</i> Lint and <i>ES</i> Lint. Version control is run through <i>Github</i> pages.
+                .projects
+                    h3 Chapters
+                    a.project(href='#top')
+                        .title My Road to UX/Achievements
+                        .description How I got into design and what I've done alone the way. Achievements, core design skills and leadership skills.
+                    a.project(href='#aprimo-content-item-fullscreen')
+                        .title UX: Content Item Preview
+                        .description Leveraging data-driven design to uncover unknown problems and frame solution strategy for teams across the organization alongside new feature development.
+                    a.project(href='#aprimo-quickconnect')
+                        .title UX: QuickConnect Chrome Plugin
+                        .description Leading cross-functional teams through the design of a cross-platform product with new levels of fidelity using OOUX. Includes object definition, relationship diagramming, wireframing and interactive prototypes.
+                    a.project(href='#aprimo-content-item-asset')
+                        .title UX: DAM Content Item
+                        .description Training teams on OOUX methodologies to create more intuitive and recognizable objects within the system. Building consistency of data models across multiple levels of fidelity like lists, cards, and detail pages.
+                    a.project(href='#boeing-insite')
+                        .title UX: Social Media Platform
+                        .description Looking at the system holistically to prioritize features that gives users more value and how I assigned quantitative metrics to qualitative research and usability testing.
+                    a.project(href='#aquent-it-solutions-recruiting-website')
+                        .title UX/UI/Team Lead: Employee Recruiting Portal
+                        .description Giving design direction projects that have stalled for years to finally move business goals forward. Includes AIDA strategy, content strategy, persona/journey definition, art direction/graphic design and front-end development HTML/CSS/JS
+                    a.project(href='#pixelmania')
+                        .title UI/Visual/Team Lead: PixelMania
+                        .description Team lead for 15 different creative teams over the course of 6 months of prep and onsite execution with international logistics. Includes visual design showcasing typography, color theory and overal visual weight in graphic design.
 
     .main-content
         .project

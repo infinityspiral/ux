@@ -62,4 +62,25 @@ window.onload = () => {
     updateProgressIndicator()
     updateHeaderSize()
   })
+  const navMenu = document.querySelector('nav.menu')
+  const menuCloseEl = document.querySelector('.menu-close')
+  menuCloseEl.addEventListener('click', e => {
+    e.preventDefault()
+    navMenu.classList.remove('active')
+  })
+  const menuOpenEl = document.querySelector('.menu-open')
+  menuOpenEl.addEventListener('click', e => {
+    e.preventDefault()
+    navMenu.classList.add('active')
+  })
+
+  const projectEl = document.querySelectorAll('.menu .project')
+
+  projectEl.forEach(item => {
+    item.addEventListener('click', e => {
+      navMenu.classList.remove('active')
+    })
+    // item.click()
+  })
+
 }

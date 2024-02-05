@@ -484,7 +484,7 @@ figcaption {
 }
 @media (max-width: 767px) {
   .main-content {
-    margin: 340px 0 0;
+    margin: 210px 0 0;
     padding: 8px;
   }
 }
@@ -500,7 +500,7 @@ figcaption {
   }
 }
 
-@media (min-width: 767px) {
+@media (min-width: 992px) {
   .summary {
     display: grid;
     grid-template-columns: auto 500px;
@@ -697,7 +697,7 @@ figcaption {
   transition: top 100ms ease-out;
 }
 .quick-nav.stickied {
-  top: 58px;
+  top: 38px;
 }
 .quick-nav h5 {
   border-bottom: 1px solid #dadada;
@@ -820,6 +820,8 @@ figcaption {
   font-weight: 100;
 }
 .project-title img {
+  width: 100%;
+  max-width: 250px;
   position: relative;
   padding: 24px 48px;
   border: 1px solid #d9d9d9;
@@ -924,13 +926,25 @@ figcaption {
   position: fixed;
   top: 0;
   background: white;
-  padding: 12px 16px 12px 16px;
+  padding: 0 16px 12px 16px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.45);
   transition: padding 100ms ease-out;
   z-index: 1;
 }
+.sticky-header .menu-open {
+  color: #686868;
+  text-decoration: none;
+  margin-right: 24px;
+  margin-left: 5px;
+}
+.sticky-header .menu-open .fa {
+  margin-right: 8px;
+}
+.sticky-header .menu-open:hover {
+  opacity: 0.55;
+}
 .sticky-header h1 {
-  margin-top: 0;
+  margin-top: 8px;
   color: #282828;
   border-bottom: 1px solid #e2e2e2;
   padding-bottom: 12px;
@@ -964,11 +978,11 @@ figcaption {
 .sticky-header .email {
   display: inline-block;
 }
-.sticky-header .email i {
+.sticky-header .email .fa {
   font-size: 1.6rem;
   position: relative;
   top: 0;
-  margin: 0 4px 0 2px;
+  margin: 0 8px 0 2px;
   color: #a8a8a8;
 }
 .sticky-header .to-top,
@@ -1006,7 +1020,19 @@ figcaption {
   }
 }
 .sticky-header.stickied {
-  padding: 8px 4px 0px 4px;
+  padding: 8px 4px 6px 4px;
+}
+.sticky-header.stickied .menu-open {
+  top: 8px;
+  margin-left: 24px;
+}
+@media (max-width: 767px) {
+  .sticky-header.stickied .menu-open {
+    margin-left: 0;
+  }
+}
+.sticky-header.stickied .menu-open .fa {
+  margin-right: 4px;
 }
 .sticky-header.stickied h1 {
   font-size: 2rem;
@@ -1014,7 +1040,6 @@ figcaption {
   display: inline-block;
   border-bottom: none;
   padding-bottom: 0;
-  margin-left: 16px;
   margin-top: 1px;
   margin-bottom: 0;
 }
@@ -1022,14 +1047,17 @@ figcaption {
   margin-left: 8px;
   text-transform: uppercase;
 }
+@media (max-width: 767px) {
+  .sticky-header.stickied .contact {
+    margin-left: 0;
+  }
+}
 .sticky-header.stickied .contact a {
   color: #686868;
 }
-.sticky-header.stickied .contact .email i {
-  top: -5px;
-}
-.sticky-header.stickied .contact .email span {
-  display: none;
+.sticky-header.stickied .contact .email .fa {
+  top: -2px;
+  margin-right: 4px;
 }
 .sticky-header.stickied .pages {
   text-transform: uppercase;
@@ -1056,7 +1084,7 @@ figcaption {
   .sticky-header.stickied .to-top,
   .sticky-header.stickied .to-top:visited {
     bottom: initial;
-    top: 18px;
+    top: 8px;
     right: 16px;
     font-size: 2rem;
     opacity: 1;
@@ -1178,6 +1206,89 @@ figcaption {
   justify-content: center;
   align-items: center;
   background: #dedede;
+}
+
+nav.menu {
+  padding: 24px 0;
+  z-index: 0;
+  display: none;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #e6e6e6;
+  font-size: 1.4rem;
+  opacity: 0;
+  transition: opacity 500ms ease-out;
+}
+nav.menu h3, nav.menu p {
+  width: 100%;
+  max-width: 400px;
+}
+nav.menu .projects {
+  height: 100;
+  padding-bottom: 48px;
+  display: inline-block;
+  overflow-y: auto;
+}
+nav.menu .project {
+  padding: 12px 16px;
+  margin: 0;
+  display: flex;
+  flex-flow: column;
+  width: 100%;
+  max-width: 400px;
+  border-radius: 8px;
+  cursor: pointer;
+  background: #d9d9d9;
+}
+nav.menu .project:hover {
+  background: #f2f2f2;
+}
+nav.menu .project + .project {
+  margin-top: 12px;
+}
+nav.menu .project .title {
+  font-size: 1.6rem;
+  font-weight: bold;
+}
+nav.menu a {
+  text-decoration: none;
+  color: #282828;
+}
+nav.menu.active {
+  display: flex;
+  z-index: 1;
+  opacity: 1;
+}
+
+.about {
+  width: 100%;
+  max-width: 400px;
+  margin-bottom: 12px;
+}
+.about .menu-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 12px;
+  margin-bottom: 12px;
+  border-bottom: 1px solid #b1b1b1;
+}
+.about h3 {
+  margin: 0;
+  padding: 0;
+}
+.about p {
+  margin-bottom: 12px;
+  font-size: 1.4rem;
+}
+.about .fa {
+  font-size: 24px;
 }
 
 /*# sourceMappingURL=styles.css.map */

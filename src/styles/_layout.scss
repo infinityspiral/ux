@@ -40,7 +40,7 @@
 	transition: top $stickyTime $stickyTransition;
 
 	@media (max-width: $breakPhone) {
-		margin: 340px 0 0;
+		margin: 210px 0 0;
 		padding: $spaceUnit;
 	}
 
@@ -60,7 +60,7 @@
 }
 
 .summary {
-	@media (min-width: $breakPhone) {
+	@media (min-width: $breakTablet) {
 		display: grid;
 		//grid-template-columns: 1fr 1fr;
 		grid-template-columns: auto 500px;
