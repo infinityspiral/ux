@@ -1,0 +1,55 @@
+@import 'normalize';
+@import 'vars';
+@import 'typography';
+@import 'elements';
+@import 'layout';
+@import 'icons';
+@import 'international';
+@import 'components';
+
+$gridUnit: 12px;
+$breakNotPhone: 992px;
+
+body {
+  margin:0;
+  padding: 0;
+}
+
+.form-group {
+  width: 100%;
+  max-width: 600px;
+  margin: $gridUnit*4 auto;
+}
+ input,textarea {
+   width: 100%;
+ }
+
+label {
+  margin-bottom: $gridUnit;
+  display: block;
+}
+
+.wrapper {
+  margin:0;
+  padding:0 0 0 $gridUnit;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #c0d9ef;
+
+  @media (min-width: $breakNotPhone) {
+    padding:0 $gridUnit;
+  }
+}
+
+.content {
+  width: 100vw;
+  height: 100vh;
+  margin: 0;
+  padding: $gridUnit;
+  background: white;
+
+  @media (min-width: $breakNotPhone) {
+    max-width: $breakNotPhone;
+  }
+}
