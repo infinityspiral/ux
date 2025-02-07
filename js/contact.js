@@ -1,0 +1,2 @@
+"use strict";window.onload=function(){var a=document.getElementById("contactForm");a.addEventListener("submit",function(b){b.preventDefault(),fetch("https://script.google.com/macros/s/AKfycbzQOF_mWVbxkbhEVYlv4bkQOoNPdmAw2_rQdaKXTFn7w4PlJSqQPUwEqVEHpZ3G0RuT/exec",{method:"POST",body:new FormData(a)}).then(function(){return alert("Thank you! your form is submitted successfully.")}).then(function(){window.location.reload()})["catch"](function(a){return console.error("Error!",a.message)})})};
+//# sourceMappingURL=contact.js.map
