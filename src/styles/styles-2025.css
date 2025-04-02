@@ -1306,7 +1306,7 @@ section {
 .bg-light-4 a.project.aquent .preview,
 .bg-dark-2 a.project.aquent .preview,
 .bg-dark-3 a.project.aquent .preview {
-  background: url("../../images/aquent/aquent-white.png") no-repeat center center;
+  background: url("../images/aquent/aquent-white.png") no-repeat center center;
   background-size: contain;
 }
 .project.aquent:hover,
