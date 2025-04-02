@@ -1,0 +1,114 @@
+@mixin gradMaker($hex1, $hex2) {
+  background:linear-gradient(180deg, $hex1 0%, $hex2 100%);
+}
+
+
+//Colorbox
+//https://colorbox.io/?c0=%26p%24s%24%3D5%26p%24h%24st%24%3D81%26p%24h%24e%24%3D209%26p%24h%24c%24%3Deqto%26p%24sa%24st%24%3D0.03%26p%24sa%24e%24%3D0.87%26p%24sa%24r%24%3D1.6%26p%24sa%24c%24%3Desi%26p%24b%24st%24%3D0.96%26p%24b%24e%24%3D0.46%26p%24b%24c%24%3Desi%26o%24n%24%3DNew+Color+Copy%26o%24ro%24%3Dcw%26o%24ms%24%3D1%26o%24minorStep%24%3D1
+
+$color-text-light:#fff;
+$color-text-light-neg1:rgba(255,255,255,0.62);
+$color-text-dark:#000;
+$color-text-dark-neg1:rgba(000,000,000,0.62);
+
+//Use dark text
+$color-bg-1:#f1f5e9;
+$color-bg-2:#caece6;
+$color-bg-3:#9dd9de;
+$color-bg-4:#74b4d0;
+
+//Use light text
+$color-bg-5:#0e60a3;
+$color-bg-6:#003d75;
+
+.bg-white {
+  background: white;
+  color: $color-text-dark;
+
+  a {
+    color: $color-text-dark;
+    border-bottom-color: $color-text-dark;
+  }
+
+}
+
+.bg-light-1 {
+  background: $color-bg-1;
+  color: $color-text-dark;
+
+  a {
+    color: $color-text-dark;
+    border-bottom-color: $color-text-dark;
+  }
+
+}
+
+.bg-light-2 {
+  background: $color-bg-2;
+  color: $color-text-dark;
+
+  a {
+    color: $color-text-dark;
+    border-bottom-color: $color-text-dark;
+  }
+
+}
+
+.bg-light-3 {
+  background: $color-bg-3;
+  color: $color-text-dark;
+
+  a {
+    color: $color-text-dark;
+    border-bottom-color: $color-text-dark;
+  }
+}
+
+.bg-light-4 {
+  background: $color-bg-4;
+  color: $color-text-dark;
+
+  a {
+    color: $color-text-dark;
+    border-bottom-color: $color-text-dark;
+  }
+
+}
+
+.bg-dark-1 {
+  background: $color-bg-5;
+  @include gradMaker($color-bg-5,$color-bg-6);
+  color: $color-text-light;
+
+  a {
+    color: $color-text-dark;
+    border-bottom-color: $color-text-light;
+  }
+}
+
+.bg-dark-2 {
+  background: $color-bg-6;
+  color: $color-text-light;
+
+  a {
+    color: $color-text-dark;
+    border-bottom-color: $color-text-light;
+  }
+  h3 {
+    color: $color-bg-4;
+  }
+}
+
+.bg-dark-3 {
+  background: #222;
+  color: #B0B0B0;
+
+  a {
+    color: $color-text-light;
+    border-bottom-color: $color-text-light;
+  }
+
+  h1,h2,h3,h4,h5,h6 {
+    color: #8A8A8A;
+  }
+}

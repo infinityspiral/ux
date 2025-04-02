@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 15.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 width="608.507px" height="605.513px" viewBox="0 0 608.507 605.513" enable-background="new 0 0 608.507 605.513"
+	 xml:space="preserve">
+<g>
+	<g>
+		<g>
+			<path fill="transparent" d="M576.153,531.898c0,8.25-6.75,15-15,15H76.464c-8.25,0-15-6.75-15-15V47.209c0-8.25,6.75-15,15-15
+				h484.689c8.25,0,15,6.75,15,15V531.898z"/>
+			<path fill="none" stroke="#000000" stroke-width="6" stroke-miterlimit="10" d="M576.153,531.898c0,8.25-6.75,15-15,15H76.464
+				c-8.25,0-15-6.75-15-15V47.209c0-8.25,6.75-15,15-15h484.689c8.25,0,15,6.75,15,15V531.898z"/>
+		</g>
+		<g>
+			<g>
+				
+					<line fill="none" stroke="#000000" stroke-width="4.5" stroke-miterlimit="10" x1="318.81" y1="32.209" x2="318.81" y2="35.209"/>
+				
+					<line fill="none" stroke="#000000" stroke-width="4.5" stroke-miterlimit="10" stroke-dasharray="5.9846,5.9846" x1="318.81" y1="41.193" x2="318.81" y2="540.906"/>
+				
+					<line fill="none" stroke="#000000" stroke-width="4.5" stroke-miterlimit="10" x1="318.81" y1="543.898" x2="318.81" y2="546.898"/>
+			</g>
+		</g>
+		<g>
+			<g>
+				
+					<line fill="none" stroke="#000000" stroke-width="4.5" stroke-miterlimit="10" x1="576.153" y1="289.554" x2="573.153" y2="289.554"/>
+				
+					<line fill="none" stroke="#000000" stroke-width="4.5" stroke-miterlimit="10" stroke-dasharray="5.9846,5.9846" x1="567.169" y1="289.554" x2="67.457" y2="289.554"/>
+				
+					<line fill="none" stroke="#000000" stroke-width="4.5" stroke-miterlimit="10" x1="64.465" y1="289.554" x2="61.465" y2="289.554"/>
+			</g>
+		</g>
+	</g>
+	<g>
+		<text transform="matrix(1 0 0 1 76.4639 582.4053)" font-family="'HelveticaNeueLTStd-Bd'" font-size="18">Effort</text>
+		<g>
+			
+				<line fill="none" stroke="#000000" stroke-width="3.8971" stroke-linecap="round" stroke-linejoin="round" x1="549.967" y1="576.898" x2="137.801" y2="576.898"/>
+			<g>
+				<g>
+					<path d="M547.693,572.17c0-1.65,1.169-2.325,2.598-1.5l8.265,4.771c1.429,0.825,1.429,2.175,0,3l-8.265,4.772
+						c-1.429,0.825-2.598,0.15-2.598-1.5V572.17z"/>
+				</g>
+			</g>
+		</g>
+	</g>
+	<g>
+		
+			<text transform="matrix(4.489660e-011 -1 1 4.489660e-011 34.2183 531.8955)" font-family="'HelveticaNeueLTStd-Bd'" font-size="18">Impact</text>
+		<g>
+			
+				<line fill="none" stroke="#000000" stroke-width="3.8971" stroke-linecap="round" stroke-linejoin="round" x1="28.711" y1="58.396" x2="28.711" y2="458.561"/>
+			<g>
+				<g>
+					<g>
+						<path d="M23.982,60.67c-1.65,0-2.325-1.169-1.5-2.598l4.771-8.265c0.825-1.429,2.175-1.429,3,0l4.773,8.265
+							c0.825,1.429,0.15,2.598-1.5,2.598H23.982z"/>
+					</g>
+				</g>
+			</g>
+		</g>
+	</g>
+</g>
+</svg>

@@ -1,17 +1,8 @@
-$spaceUnit: 8px;
-$componentSpace: 48px;
-$componentSpace2: 96px;
+$gridUnit: 8px;
 
-$colorAccent: #009dd2;
-$colorPrimary: #282828;
-$colorSecondary: #b1b1b1;
-
-$fontHeading: 'Open Sans', sans-serif;
-$fontBody: 'Source Sans 3', sans-serif;
-
-$breakPhone: 767px;
-$breakTablet: 992px;
-$breakXL: 1200px;
+$breakForTablet: 767px;
+$breakForDesktop: 992px;
 
 $stickyTime: 100ms;
 $stickyTransition: ease-out;
+

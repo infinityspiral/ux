@@ -52,7 +52,7 @@
 	max-width: 476px;
 	padding: 8px;
 
-	@media (min-width:$breakPhone) {
+	@media (min-width:$breakForTablet) {
 		margin: 16px;
 		padding: 36px 0 0;
 	}
