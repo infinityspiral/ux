@@ -2,17 +2,7 @@ include _header.pug
 body
     .wrapper.bg-light-1
         .page
-            header
-                h1 Christopher Norton
-                nav
-                    a(href='index.html') Home
-                    a(href='index.html#projects') Projects
-                    a(href='#contactForm') Contact
-                    a(href='https://www.linkedin.com/in/christopher-p-norton/', target='_blank', class='linkedin')
-                        img(src='images/logos/icons8-linkedin-50.png', class='icon-linkedin', style='height: 40px; position:relative; top:-13px; ')
-
-
-
+            include _navigation.pug
             .hero
                 .content
                     h3 Hello!
