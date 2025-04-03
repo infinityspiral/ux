@@ -303,7 +303,7 @@ section {
 	margin: 0 auto;
 	padding: $gridUnit $gridUnit*2;
 
-	@media (min-width: $breakForDesktop) {
+	@media (min-width: $breakForTablet) {
 		width: 100%;
 		padding: 80px 142px  116px 142px;
 	}
@@ -315,7 +315,7 @@ section {
 	background: url("../images/hero/paper-city.png") no-repeat top center;
 	background-size: cover;
 	width: 100%;
-	padding: $gridUnit*4;
+	padding: $gridUnit*2;
 
 	@media (min-width: $breakForTablet) {
 		padding: $gridUnit*8 $gridUnit*16  $gridUnit*8 $gridUnit*16;
@@ -337,7 +337,7 @@ section {
 
 	.content {
 		margin-top: $gridUnit*4;
-		padding:  $gridUnit*2 $gridUnit*8 $gridUnit*8 $gridUnit*8;
+		padding:  $gridUnit*3 $gridUnit*4 $gridUnit*3 $gridUnit*4;
 		margin-bottom: $gridUnit*3;
 		position: relative;
 		border-radius: 24px;
@@ -347,6 +347,7 @@ section {
 		@media (min-width: $breakForTablet) {
 			margin-bottom: $gridUnit*8;
 			max-width: 600px;
+			padding:  $gridUnit*2 $gridUnit*8 $gridUnit*8 $gridUnit*8;
 		}
 	}
 }

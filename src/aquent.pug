@@ -1,37 +1,4 @@
-<!DOCTYPE html>
-html(lang="en")#top
-    head
-        <meta charset="UTF-8"/>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
-
-        title Chris Norton: Product/UX/UI/Visual Designer
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        //link(href='https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=Source+Sans+3&display=swap', rel='stylesheet')
-
-
-        link(href='https://fonts.googleapis.com/css2?family=Arimo:ital,wght@0,400..700;1,400..700&family=Source+Sans+3&display=swap&display=swap' rel='stylesheet')
-        style.
-            .bg-dark-3 {
-                h3 {
-                    color: #e49d2e!important;
-                }
-                h6 {
-                    color: #e49d2e!important;
-                }
-            }
-
-            .bg-white {
-                h3,h6 {
-                    color: black!important;
-                }
-            }
-
-        link(rel='stylesheet', href='https://cdnjs.Cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css')
-        link(rel='stylesheet', href='styles/styles-2025.css')
-        script(src='js/polyfill.min.js')
-
+include _header.pug
 body
     .wrapper.bg-light-1
         .page
@@ -200,35 +167,6 @@ body
                         </svg>Projects
 
 
-    footer.bg-light-4
-        .about-me
-            h6 Christopher Norton
-            p Senior designer with experience in UX/UI launching 26 new products and countless features for web and mobile in the last 10 years. Able to lead, execute, analyze, and iterate on products from start to finish for cross-functional and regionally diverse teams. Strong problem-solving skills and a design thinker with a proven track record in enterprise-level B2B, B2C and SaaS products for clients such as: <strong>Boeing</strong>, <strong>Dell</strong>, <strong>John Deere</strong>, <strong>Booz Allen</strong>, <strong>Animal Planet</strong>, <strong>The Learning Channel</strong>, and others.
-            small <strong>Hidden Gem</strong>: I also developed this site from scratch using HTML5, CSS3, and JS using Node.js to run a local preview server which compiles and minifies Sass on the fly with Autoprefixer, CSS Lint and ES Lint. Version control is run through Github pages. I have wide a wide range of skills enabling me to bridge the communication gap between business stakeholders, designers and engineering teams.
-
-        .social-links
-            h4 Site
-            a(href='index.html') Home
-            a(href='index.html#projects') Projects
-            a(href='https://www.linkedin.com/in/christopher-p-norton/', target='_blank') LinkedIn
-
-        form(method='post', name='contactForm', id='contactForm')
-            h6 Contact Me
-
-            .form-group
-                label(for='fullName') Full Name
-                input(name='fullName', id='fullName' type='text')
-            .form-group
-                label(for='email') Email
-                input(name='email', id='email' type='text')
-            .form-group
-                label(for='message') Message
-                textarea(name='message', id='message', rows="7")
-            .form-group
-                button(type='submit', id='submitContact') Send
-            .form-group
-                p#formStatus Your message has been sent.
-
-script(src='js/contact.js')
+    include _footer.pug
 
 

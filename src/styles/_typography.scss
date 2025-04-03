@@ -18,10 +18,17 @@ h1, h2, h3, h4, h5, h6 {
 //minor third 1.2
 $typeBase: 1.6rem;
 $typeRatio: 1.2;
+$mobileTypeRatio:1.1;
 
 @mixin typeScale($ratio, $step){
 	$multiplier: math.pow($ratio,$step);
 	font-size: ($typeBase*$multiplier);
+
+	@media (max-width: $breakForTablet) {
+		$mobileMultiplier: math.pow($mobileTypeRatio,$step);
+		font-size: (1.4rem*$mobileMultiplier);
+		line-height: (1.4rem*$mobileMultiplier*1.4);
+	}
 }
 
 
@@ -68,6 +75,10 @@ p {
 	line-height: 36px;
 	@include typeScale($typeRatio,2);
 	text-rendering: auto;
+}
+
+h3+h4 {
+	opacity:0.6;
 }
 
 small {

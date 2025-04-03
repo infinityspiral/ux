@@ -405,11 +405,23 @@ h1 {
   line-height: 7.2rem;
   font-size: 6.879707136rem;
 }
+@media (max-width: 767px) {
+  h1 {
+    font-size: 3.001024334rem;
+    line-height: 4.2014340676rem;
+  }
+}
 
 h2 {
   margin-top: 1.330893px;
   line-height: 60px;
   font-size: 5.73308928rem;
+}
+@media (max-width: 767px) {
+  h2 {
+    font-size: 2.72820394rem;
+    line-height: 3.819485516rem;
+  }
 }
 
 h3 {
@@ -417,17 +429,35 @@ h3 {
   line-height: 60px;
   font-size: 4.7775744rem;
 }
+@media (max-width: 767px) {
+  h3 {
+    font-size: 2.4801854rem;
+    line-height: 3.47225956rem;
+  }
+}
 
 h4 {
   margin-top: 2.18688px;
   line-height: 48px;
   font-size: 3.981312rem;
 }
+@media (max-width: 767px) {
+  h4 {
+    font-size: 2.254714rem;
+    line-height: 3.1565996rem;
+  }
+}
 
 h5 {
   margin-top: 6.8224px;
   line-height: 40px;
   font-size: 3.31776rem;
+}
+@media (max-width: 767px) {
+  h5 {
+    font-size: 2.04974rem;
+    line-height: 2.869636rem;
+  }
 }
 
 h6 {
@@ -436,6 +466,12 @@ h6 {
   line-height: 36px;
   font-size: 2.7648rem;
 }
+@media (max-width: 767px) {
+  h6 {
+    font-size: 1.8634rem;
+    line-height: 2.60876rem;
+  }
+}
 
 p {
   margin: 16.96px 0 16px 0;
@@ -443,6 +479,16 @@ p {
   line-height: 36px;
   font-size: 2.304rem;
   text-rendering: auto;
+}
+@media (max-width: 767px) {
+  p {
+    font-size: 1.694rem;
+    line-height: 2.3716rem;
+  }
+}
+
+h3 + h4 {
+  opacity: 0.6;
 }
 
 small {
@@ -464,6 +510,12 @@ ul, ol {
   margin-inline-end: 0px;
   padding-inline-start: 24px;
   counter-reset: inst;
+}
+@media (max-width: 767px) {
+  ul, ol {
+    font-size: 1.694rem;
+    line-height: 2.3716rem;
+  }
 }
 
 li {
@@ -756,7 +808,7 @@ section {
   margin: 0 auto;
   padding: 8px 16px;
 }
-@media (min-width: 992px) {
+@media (min-width: 767px) {
   section {
     width: 100%;
     padding: 80px 142px 116px 142px;
@@ -769,7 +821,7 @@ section {
   background: url("../images/hero/paper-city.png") no-repeat top center;
   background-size: cover;
   width: 100%;
-  padding: 32px;
+  padding: 16px;
 }
 @media (min-width: 767px) {
   .hero {
@@ -789,7 +841,7 @@ section {
 }
 .hero .content {
   margin-top: 32px;
-  padding: 16px 64px 64px 64px;
+  padding: 24px 32px 24px 32px;
   margin-bottom: 24px;
   position: relative;
   border-radius: 24px;
@@ -799,6 +851,7 @@ section {
   .hero .content {
     margin-bottom: 64px;
     max-width: 600px;
+    padding: 16px 64px 64px 64px;
   }
 }
 
