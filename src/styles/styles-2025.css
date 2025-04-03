@@ -1516,13 +1516,13 @@ section {
   margin: 0.96px 0 0 0;
   display: flex;
   align-items: flex-start;
-  color: rgba(255, 255, 255, 0.62);
 }
 .feature svg {
   width: 42px;
   height: auto;
   padding-right: 16px;
   margin-top: 2px;
+  filter: brightness(40%) saturate(300%);
 }
 
 .page-nav {
