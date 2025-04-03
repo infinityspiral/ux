@@ -2,34 +2,18 @@ include _header.pug
 body
     .wrapper.bg-light-1
         .page
-            header
-                h1 Christopher Norton
-                nav
-                    a(href='#') Home
-                    a(href='#projects') Projects
-                    a(href='#contactForm') Contact
-                    a(href='https://www.linkedin.com/in/christopher-p-norton/', target='_blank', class='linkedin')
-                        img(src='images/logos/icons8-linkedin-50.png', class='icon-linkedin', style='height: 40px; position:relative; top:-13px; ')
-
-
-
-            section.bubble
+            include _navigation.pug
+            section.bg-dark-3
                 .page-nav
                     a(href='index.html#projects').back
                         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M20 18V20H13.5C9.91 20 7 17.09 7 13.5V7.83L3.91 10.92L2.5 9.5L8 4L13.5 9.5L12.09 10.91L9 7.83V13.5C9 16 11 18 13.5 18H20Z" fill="black"/>
+                        <path d="M20 18V20H13.5C9.91 20 7 17.09 7 13.5V7.83L3.91 10.92L2.5 9.5L8 4L13.5 9.5L12.09 10.91L9 7.83V13.5C9 16 11 18 13.5 18H20Z" fill="white"/>
                         </svg>Projects
                 .content
                     h2 PixelMania
                     .tags
                         .tag.ui UI
                         .tag.vis Visual
-
-
-                    h4 sample
-                    p sample
-                    h6 sample
-                    p sample
 
                     h3.project-title
                         PixelMania: Metroid
@@ -165,11 +149,11 @@ body
                                 img(src='images/pixelmania/font-metroid-prime-hunters.jpg')
                             p There are several font sets used through the history of the game series but, “Metroid Prime Hunters,” retained more of a terminal feel when placed into the composition. It was a tough balancing act to find something that felt like it could live in a world within a world. The pixelated font helped the text stay in the panel even though you can’t  read most of it. It’s enough for it to just feel like you could read it if you needed to.
 
-            .page-nav
-                a(href='index.html#projects').back
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M20 18V20H13.5C9.91 20 7 17.09 7 13.5V7.83L3.91 10.92L2.5 9.5L8 4L13.5 9.5L12.09 10.91L9 7.83V13.5C9 16 11 18 13.5 18H20Z" fill="black"/>
-                    </svg>Projects
+                .page-nav
+                    a(href='index.html#projects').back
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M20 18V20H13.5C9.91 20 7 17.09 7 13.5V7.83L3.91 10.92L2.5 9.5L8 4L13.5 9.5L12.09 10.91L9 7.83V13.5C9 16 11 18 13.5 18H20Z" fill="white"/>
+                        </svg>Projects
 
     include _footer.pug
 
