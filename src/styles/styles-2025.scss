@@ -7,47 +7,5 @@
 //@import 'layout';
 @import 'international';
 //@import 'components';
+@import 'animations';
 
-.box {
-  border: 1px solid red;
-
-  h1, h2, h3, h4, h5, h6 {
-    padding-top: 0;
-  }
-
-  h1{
-    margin-top: -.17em;
-    margin-bottom: -2.5rem;
-  }
-  h2{
-    margin-top: 0;
-    margin-bottom: -2.1rem;
-  }
-  h3{
-    margin-top: -2.3rem;
-    margin-bottom: -2.7rem;
-  }
-  h4{
-    margin-top: 0.2rem;
-    margin-bottom: -2.2rem;
-  }
-
-  h5{
-    margin-top: 0.4rem;
-    margin-bottom: -2.1rem;
-  }
-
-  h6{
-    margin-top: 0.4rem;
-    margin-bottom: -2.1rem;
-  }
-
-  p{
-    margin-top: 0rem;
-    margin-bottom: -1.2rem;
-  }
-
-  p + p{
-    padding-top: $gridUnit*3;
-  }
-}

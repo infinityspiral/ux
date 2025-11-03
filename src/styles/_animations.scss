@@ -1,0 +1,35 @@
+@keyframes heroAnimation {
+  from {
+    opacity: 1;
+    transform: scale(1) translateY(150px);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1) translateY(0px);
+  }
+}
+.hero .content {
+  animation-name: heroAnimation;
+  animation-duration: 350ms;
+  animation-delay: 0s;
+  animation-timing-function: ease-in;
+}
+
+
+@keyframes avatarAnimation {
+  from {
+    opacity: 0.5;
+    transform: scale(0.25, 0.25) rotate(45deg) translateX(350px);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1, 1) translateX(0);
+  }
+}
+
+.hero .avatar{
+  opacity: 0;
+  animation: avatarAnimation ease-out 550ms forwards;
+  //animation-duration: 350ms;
+  animation-delay: 350ms;
+}
