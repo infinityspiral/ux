@@ -10,9 +10,34 @@ h1, h2, h3, h4, h5, h6 {
 	text-transform: capitalize;
 
 	@media (min-width: $breakForTablet) {
-		padding-top: $gridUnit*3;
+		//padding-top: $gridUnit*3;
 	}
 }
+p+h1, p+h2, p+h3, p+h4, p+h5, p+h6,
+small+h1, small+h2, small+h3, small+h4, small+h5, small+h6
+{
+  padding-top: $gridUnit*8;
+
+  @media (max-width: $breakForTablet) {
+    padding-top: $gridUnit*4;
+  }
+}
+
+p+p, p+ul, p+ol, p+.user-list {
+  padding-top: $gridUnit*4;
+
+  @media (max-width: $breakForTablet) {
+    padding-bottom: 0;
+  }
+}
+
+.has-subtitle {
+  padding-bottom: $gridUnit*4;
+}
+p.has-subtitle {
+  padding-bottom: 0 ;
+}
+
 
 //line heights by 1.25
 //minor third 1.2
@@ -33,45 +58,84 @@ $mobileTypeRatio:1.1;
 
 
 h1 {
-	margin-top: -3.20292864px;
+    margin-top: 0;
+    margin-bottom: -2.1rem;
+    padding-bottom: $gridUnit*8;
+    @media (max-width: $breakForTablet) {
+      padding-bottom: $gridUnit*4;
+    }
+	//margin-top: -3.20292864px;
 	line-height: 7.2rem;
 	@include typeScale($typeRatio,8)
 }
 
 h2 {
-	margin-top: 1.330893px;
+    margin-top: 0;
+    margin-bottom: -2.1rem;
+    padding-bottom: $gridUnit*8;
+    @media (max-width: $breakForTablet) {
+      padding-bottom: $gridUnit*4;
+    }
+
+	//margin-top: 1.330893px;
 	line-height: 60px;
 	@include typeScale($typeRatio,7)
 }
 
 h3 {
-	margin-top: 47.775744px;
+    margin-top: -2.3rem;
+    margin-bottom: -2.7rem;
+    padding-bottom: $gridUnit*8;
+    @media (max-width: $breakForTablet) {
+      padding-bottom: $gridUnit*4;
+    }
+	//margin-top: 47.775744px;
 	line-height: 60px;
 	@include typeScale($typeRatio,6)
 }
 
 h4 {
-	margin-top: 2.18688px;
+    margin-top: 0.2rem;
+    margin-bottom: -2.2rem;
+    padding-bottom: $gridUnit*8;
+    @media (max-width: $breakForTablet) {
+      padding-bottom: $gridUnit*4;
+    }
+	//margin-top: 2.18688px;
 	line-height: 48px;
 	@include typeScale($typeRatio,5)
 }
 
 h5 {
-	margin-top: 6.8224px;
+    margin-top: 0.4rem;
+    margin-bottom: -2.1rem;
+    padding-bottom: $gridUnit*8;
+    @media (max-width: $breakForTablet) {
+      padding-bottom: $gridUnit*4;
+    }
+	//margin-top: 6.8224px;
 	line-height: 40px;
 	@include typeScale($typeRatio,4)
 }
 
 h6 {
-	margin-top: 8.352px;
-	margin-bottom: 4px;
+    margin-top: 0.4rem;
+    margin-bottom: -2.1rem;
+    padding-bottom: $gridUnit*4;
+	//margin-top: 8.352px;
+	//margin-bottom: 4px;
 	line-height: 36px;
 	@include typeScale($typeRatio,3)
 }
 
 p {
-	margin: 16.96px 0 $gridUnit*2 0;
-	padding: 0;
+    margin-top: 0rem;
+    margin-bottom: -1.2rem;
+	//margin: 16.96px 0 $gridUnit*2 0;
+    @media (max-width: $breakForTablet) {
+      padding-top: $gridUnit*2;
+    }
+    padding: 0;
 	line-height: 36px;
 	@include typeScale($typeRatio,2);
 	text-rendering: auto;

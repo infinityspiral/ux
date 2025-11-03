@@ -4,12 +4,12 @@ body
         .page
             include _navigation.pug
             section.bubble
-                .page-nav
-                    a(href='index.html#projects').back
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M20 18V20H13.5C9.91 20 7 17.09 7 13.5V7.83L3.91 10.92L2.5 9.5L8 4L13.5 9.5L12.09 10.91L9 7.83V13.5C9 16 11 18 13.5 18H20Z" fill="black"/>
-                        </svg>Projects
                 .content
+                    .page-nav.top
+                        a(href='index.html#projects').back
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M20 18V20H13.5C9.91 20 7 17.09 7 13.5V7.83L3.91 10.92L2.5 9.5L8 4L13.5 9.5L12.09 10.91L9 7.83V13.5C9 16 11 18 13.5 18H20Z" fill="black"/>
+                            </svg>Projects
                     h2 Boeing
                     p New Business Generator
 
@@ -68,23 +68,24 @@ body
 
                     h4 More Examples
                     p I worked on multiple, less secretive sites as well, but these launched quickly and there really wasn't a ton of iteration or data-driven design before launch date.
-                    .full-img
+                    p.full-img
                         h6 Enterprise Sourcing Office
                         img(src='images/boeing/boeing-eso.jpg', style='width;100%')
-                    .full-img
+                    p.full-img
                         h6 Advanced Quality Product Planning
                         img(src='images/boeing/Advanced-Quality-Product-Planning.jpg', style='width;100%')
-                    .full-img
+                    p.full-img
                         h6 inSite - Social Media Platform
                         img(src='images/boeing/boeing-insite.jpg', style='width;100%')
-                    .full-img
+                    p.full-img
                         h6 Commerical Airplanes Total Quality
                         img(src='images/boeing/boeing-bca.jpg', style='width;100%')
-            .page-nav
-                a(href='index.html#projects').back
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M20 18V20H13.5C9.91 20 7 17.09 7 13.5V7.83L3.91 10.92L2.5 9.5L8 4L13.5 9.5L12.09 10.91L9 7.83V13.5C9 16 11 18 13.5 18H20Z" fill="black"/>
-                    </svg>Projects
+
+                    .page-nav.bottom
+                        a(href='index.html#projects').back
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M20 18V20H13.5C9.91 20 7 17.09 7 13.5V7.83L3.91 10.92L2.5 9.5L8 4L13.5 9.5L12.09 10.91L9 7.83V13.5C9 16 11 18 13.5 18H20Z" fill="black"/>
+                            </svg>Projects
 
 
     include _footer.pug

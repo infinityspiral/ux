@@ -48,6 +48,13 @@ img {
 	max-width: 100%;
 }
 
+p img,
+figure img
+{
+  margin-top: $gridUnit*4;
+  margin-bottom: $gridUnit*4;
+}
+
 .img-frame {
 	flex: 0 0 50%;
 }
@@ -232,6 +239,9 @@ footer {
 			min-width: 500px;
 			order: 2;
 		}
+      p{
+        padding-bottom: $gridUnit*4;
+      }
 
 	}
 	.social-links {
@@ -264,7 +274,7 @@ footer {
 
 	form {
 		margin-top: 16px;
-		padding: 0 $gridUnit*4 $gridUnit*2 $gridUnit*4;
+		padding: $gridUnit*2 $gridUnit*4 $gridUnit*2 $gridUnit*4;
 		border: 8px solid $color-bg-4;
 		background: #cee4ee;
 		border-radius: $gridUnit*2;
@@ -274,13 +284,13 @@ footer {
 			flex: 0 0 auto;
 			max-width: 500px;
 			order: 3;
-			padding: 0 $gridUnit*4 $gridUnit*2 $gridUnit*4;
+			padding: $gridUnit*2 $gridUnit*4 $gridUnit*2 $gridUnit*4;
 		}
 
 
 		h6 {
 			color: #548ca5;
-			margin-bottom: 1.2rem;
+			//margin-bottom: 1.2rem;
 		}
 
 		button {
@@ -301,11 +311,11 @@ footer {
 
 section {
 	margin: 0 auto;
-	padding: $gridUnit $gridUnit*2;
+	padding: $gridUnit*4 $gridUnit*2;
 
 	@media (min-width: $breakForTablet) {
 		width: 100%;
-		padding: 80px 142px  116px 142px;
+		padding: 80px 142px  76px 142px;
 	}
 }
 
@@ -318,7 +328,7 @@ section {
 	padding: $gridUnit*2;
 
 	@media (min-width: $breakForTablet) {
-		padding: $gridUnit*8 $gridUnit*16  $gridUnit*8 $gridUnit*16;
+		padding: $gridUnit*16 $gridUnit*16  $gridUnit*8 $gridUnit*16;
 	}
 
 	@media (min-width: $breakForDesktop) {
@@ -337,7 +347,7 @@ section {
 
 	.content {
 		margin-top: $gridUnit*4;
-		padding:  $gridUnit*3 $gridUnit*4 $gridUnit*3 $gridUnit*4;
+		padding:  44px $gridUnit*4 0 $gridUnit*4;
 		margin-bottom: $gridUnit*3;
 		position: relative;
 		border-radius: 24px;
@@ -347,13 +357,23 @@ section {
 		@media (min-width: $breakForTablet) {
 			margin-bottom: $gridUnit*8;
 			max-width: 600px;
-			padding:  $gridUnit*2 $gridUnit*8 $gridUnit*8 $gridUnit*8;
+			padding:  60px $gridUnit*8 48px $gridUnit*8;
 		}
+        h3 {
+          padding-bottom: $gridUnit*6;
+
+          @media (max-width: $breakForTablet) {
+            padding-bottom: $gridUnit*2;
+          }
+        }
+        p {
+          padding-bottom: 18px;
+        }
 	}
 }
 
 .content {
-	padding: $gridUnit*2;
+	padding: 26px $gridUnit*2 $gridUnit*2 $gridUnit*2;
 
 	@media (min-width: $breakForDesktop) {
 		max-width: 992px;
@@ -373,8 +393,7 @@ section {
 	width: calc(100vw - 48px);
 	overflow: hidden;
 	height: fit-content;
-	padding: $gridUnit*2;
-	padding-bottom: 0;
+	//padding: $gridUnit*2;
 	margin: $gridUnit*2 auto;
 	background: white;
 	border-radius: 20px;
@@ -383,6 +402,7 @@ section {
 	@media (min-width: $breakForDesktop) {
 		width: calc(100% - $gridUnit*24);
 		margin: $gridUnit*16 $gridUnit*8 $gridUnit*16 $gridUnit*4;
+        padding-top: $gridUnit*16;
 		margin-left: auto;
 		margin-right: auto;
 		padding-bottom: 80px;
@@ -519,21 +539,29 @@ section {
 		box-shadow: none;
 	}
 	.title {
-		margin-bottom: 8px;
+		margin-bottom: 0;
 		display: flex;
 		flex-flow: column;
 		align-items: flex-start;
 		font-size: 2rem;
 		font-weight: bold;
 		font-family: $fontHeading;
+        @media (max-width: $breakForTablet) {
+    		font-size: 1.6rem;
+        }
 
 		small {
 			font-weight: normal;
 		}
 	}
+	.tags {
+		padding-top: 0;
+		padding-bottom:$gridUnit*4;
+	}
 	.impact {
 		font-size: 2rem;
 		line-height: 2.8rem;
+        padding-bottom:$gridUnit;
 	}
 
 	&:hover {
@@ -692,7 +720,7 @@ section {
 	}
 }
 .features {
-	padding-top: $gridUnit*8;
+	padding-top: $gridUnit*4;
 	padding-bottom: $gridUnit*6;
 	display: grid;
 	grid-template-columns: 1fr;
@@ -712,16 +740,20 @@ section {
 	font-size: 2rem;
 	margin: 0.96px 0 0 0;
 	display: flex;
-	align-items: flex-start;
+	align-items: center;
 
 	svg {
 		width: 42px;
 		height: auto;
-		padding-right: $gridUnit*2;
 		margin-top: 2px;
 		//filter: invert(100%) sepia(100%) saturate(1000%) hue-rotate(180deg);
 		filter: brightness(40%) saturate(300%);
 	}
+    span {
+      //padding-top: 4px;
+      padding-left: $gridUnit;
+      font-size: 1.6rem;
+    }
 }
 
 .page-nav {
@@ -738,6 +770,12 @@ section {
 		border: none;
 	}
 }
+.page-nav.top {
+  margin-bottom: $gridUnit*6;
+}
+.page-nav.bottom {
+  margin-top: $gridUnit*8;
+}
 
 @mixin tagColor($color){
 	background: $color;
@@ -747,8 +785,8 @@ section {
 
 .tags {
 	margin-bottom: $gridUnit;
-	padding-top: 2px;
-	padding-bottom: 6px;
+	padding-top: 14px;
+	padding-bottom: 58px;
 	+ h6 {
 		margin-top: $gridUnit*6;
 	}
@@ -872,11 +910,17 @@ blockquote {
 		& > * {
 			margin: $gridUnit*2;
 		}
+        p+p {
+          padding-top: 0;
+        }
 	}
 
 }
 
 .video-container {
+  @media (max-width: $breakForTablet) {
+    padding: $gridUnit*4 0;
+  }
 
 	video {
 		display: none;
@@ -918,6 +962,7 @@ blockquote {
 			flex: 0 1 auto;
 			padding-right: $gridUnit*4;
 		}
+        padding-bottom: $gridUnit*8;
 	}
 
 	.questions {
@@ -929,7 +974,7 @@ blockquote {
 	}
 	.question {
 		margin-bottom: $gridUnit*2;
-		padding: $gridUnit*2;
+		padding: 6px 20px 14px 20px;
 		background: #00000005;
 		border: 1px solid #00000020;
 		border-radius: 16px;
@@ -937,8 +982,8 @@ blockquote {
 		h6 {
 			margin: 0;
 			padding: 0;
-			font-size: 2rem;
-			line-height: 3.2rem;
+			font-size: 1.6rem;
+			line-height: 2.8rem;
 		}
 		ul {
 			margin: 0;

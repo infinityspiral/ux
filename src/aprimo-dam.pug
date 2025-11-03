@@ -4,12 +4,13 @@ body
         .page
             include _navigation.pug
             section.bubble
-                .page-nav
-                    a(href='index.html#projects').back
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M20 18V20H13.5C9.91 20 7 17.09 7 13.5V7.83L3.91 10.92L2.5 9.5L8 4L13.5 9.5L12.09 10.91L9 7.83V13.5C9 16 11 18 13.5 18H20Z" fill="black"/>
-                        </svg>Projects
                 .content
+                    .page-nav.top
+                        a(href='index.html#projects').back
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M20 18V20H13.5C9.91 20 7 17.09 7 13.5V7.83L3.91 10.92L2.5 9.5L8 4L13.5 9.5L12.09 10.91L9 7.83V13.5C9 16 11 18 13.5 18H20Z" fill="black"/>
+                            </svg>Projects
+
                     h2 Aprimo
                     //a(href='https://chrome.google.com/webstore/detail/aprimo-quickconnect/lgifolfphnohppapdhljncfahjaedmea' target='_blank') Chrome Web Store - QuickConnect
                     p DAM & Marketing Ops Applications
@@ -52,7 +53,7 @@ body
 
             section.bg-light-3
                 .content
-                    h4 Aprimo DAM
+                    h4.has-subtitle Aprimo DAM
                     p Helps companies store, organize, collaborate, and generate a wide range of content items.
 
                     h6 Sample CTAs
@@ -67,7 +68,7 @@ body
 
             section.bg-light-2
                 .content
-                    h4 Marketing Ops
+                    h4.has-subtitle Marketing Ops
                     p Helps companies manage marketing efforts including strategy, campaigns and collaboration with team members across managed timelines.
                     h6 Sample CTAs
                     ul.bubble-list
@@ -120,7 +121,7 @@ body
             section.bg-light-1
                 .content
                     h3 Who, Where, When
-                    h4 Framing Goals into Solvable Problems
+                    h6 Framing Goals into Solvable Problems
                     p Before I could design a better experience I really needed to know the who, where, when and why users weren’t switching over to a more modern-looking app that supposedly had feature parity. So what gives? What got missed?
             section.bg-white
                 .content
@@ -164,7 +165,7 @@ body
             section.bg-light-4
                 .content
                     h3 How
-                    h4 Validation
+                    h6 Validation
                     p We’d know these worked when the old API stopped receiving requests. Visits to legacy pages targeted by forms should also be going down.
 
 
@@ -179,7 +180,7 @@ body
             section.bg-light-3
                 .content
                     h3 What
-                    h4 Prototyping
+                    h6.has-subtitle Prototyping
                     p The new system changed the flow to get to a larger preview.
                     h6 Old system flow:
                     ol
@@ -250,7 +251,7 @@ body
             section.bg-light-1
                 .content
                     h3 How
-                    h4 Validation
+                    h6 Validation
                     ul.checkmark-list
                         li Over a rolling 90 days, we started seeing users shifting over to the new system.
                         li Reduced bounce rate to legacy app
@@ -275,7 +276,7 @@ body
 
             section.bg-light-1
                 .content
-                    h4 ACHIEVED BUSINESS GOALS
+                    h6 ACHIEVED BUSINESS GOALS
                     ul.checkmark-list
                         li Speed up design decisions and prototyping
                         li Allow development teams to work on new competitive features vs supporting decades old flows
@@ -330,11 +331,11 @@ body
                     p(style="text-align: center;")
                         img(src='images/aprimo/ooux/questions.jpg' style='width: 100%;')
 
-                .page-nav
-                    a(href='index.html#projects').back
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M20 18V20H13.5C9.91 20 7 17.09 7 13.5V7.83L3.91 10.92L2.5 9.5L8 4L13.5 9.5L12.09 10.91L9 7.83V13.5C9 16 11 18 13.5 18H20Z" fill="black"/>
-                        </svg>Projects
+                    .page-nav.bottom
+                        a(href='index.html#projects').back
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M20 18V20H13.5C9.91 20 7 17.09 7 13.5V7.83L3.91 10.92L2.5 9.5L8 4L13.5 9.5L12.09 10.91L9 7.83V13.5C9 16 11 18 13.5 18H20Z" fill="black"/>
+                            </svg>Projects
 
 
     include _footer.pug
