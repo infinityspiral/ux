@@ -81,9 +81,9 @@ nav {
 
 a {
 	text-decoration: none;
-	border-width: 0;
-	border-bottom-width: 3px;
-	border-style: dotted;
+	//border-width: 0;
+	//border-bottom-width: 3px;
+	//border-style: dotted;
 
 	&:hover {
 		opacity: .35;
@@ -816,9 +816,6 @@ section {
 	&.uxr {
 		@include tagColor(#7eae27);
 	}
-	&.uxr {
-		@include tagColor(#7eae27);
-	}
 	&.vis {
 		@include tagColor(#8127ae);
 	}
@@ -1082,4 +1079,28 @@ blockquote {
 		text-decoration: none;
 		border: none;
 	}
+}
+
+.color-chip {
+  margin: $gridUnit*2 0;
+  height: 150px;
+  width: 200px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+  background: #05eafb;
+  background: linear-gradient(0deg, #05eafb, #05eafb);
+  border: 1px solid rgb(3 188 202 / 61%);
+  border-radius: 12px;
+  box-shadow: 0 8px 12px -11px rgba(0, 0, 0, 0.8);
+  border-top-color: rgb(127 255 242);
+  border-left-color: rgb(127 255 242);
+
+  .hex {
+    padding: 4px;
+    margin: 8px;
+    background: #0000004a;
+    color: white;
+    border-radius: 6px;
+  }
 }

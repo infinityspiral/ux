@@ -651,9 +651,6 @@ nav a:hover {
 
 a {
   text-decoration: none;
-  border-width: 0;
-  border-bottom-width: 3px;
-  border-style: dotted;
 }
 a:hover {
   opacity: 0.35;
@@ -1695,11 +1692,6 @@ section {
   border-color: rgb(154.5211267606, 209.9577464789, 54.0422535211) rgb(95.8309859155, 132.338028169, 29.661971831) rgb(95.8309859155, 132.338028169, 29.661971831) rgb(154.5211267606, 209.9577464789, 54.0422535211);
   text-shadow: 1px 1px rgb(95.8309859155, 132.338028169, 29.661971831);
 }
-.tag.uxr {
-  background: #7eae27;
-  border-color: rgb(154.5211267606, 209.9577464789, 54.0422535211) rgb(95.8309859155, 132.338028169, 29.661971831) rgb(95.8309859155, 132.338028169, 29.661971831) rgb(154.5211267606, 209.9577464789, 54.0422535211);
-  text-shadow: 1px 1px rgb(95.8309859155, 132.338028169, 29.661971831);
-}
 .tag.vis {
   background: #8127ae;
   border-color: rgb(157.985915493, 54.0422535211, 209.9577464789) rgb(98.1126760563, 29.661971831, 132.338028169) rgb(98.1126760563, 29.661971831, 132.338028169) rgb(157.985915493, 54.0422535211, 209.9577464789);
@@ -1941,6 +1933,29 @@ blockquote {
   border: none;
 }
 
+.color-chip {
+  margin: 16px 0;
+  height: 150px;
+  width: 200px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+  background: #05eafb;
+  background: linear-gradient(0deg, #05eafb, #05eafb);
+  border: 1px solid rgba(3, 188, 202, 0.61);
+  border-radius: 12px;
+  box-shadow: 0 8px 12px -11px rgba(0, 0, 0, 0.8);
+  border-top-color: rgb(127, 255, 242);
+  border-left-color: rgb(127, 255, 242);
+}
+.color-chip .hex {
+  padding: 4px;
+  margin: 8px;
+  background: rgba(0, 0, 0, 0.2901960784);
+  color: white;
+  border-radius: 6px;
+}
+
 .sweden {
   background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAASwAAADICAYAAABS39xVAAAACXBIWXMAAAsSAAALEgHS3X78AAAC7UlEQVR4nO3WQY0CAQxA0c4K4YYPggSueEAMaMAG4b4SuCFkZw1wJvOT9xQ0bfLTZU63dfiqw+41j/N1c0s/3i/zfO83MAl89mMvQIVgARmCBWQIFpAhWECGYAEZggVkCBaQIVhAhmABGYIFZAgWkCFYQIZgARmCBWQIFpAhWECGYAEZggVkCBaQIVhAhmABGYIFZAgWkCFYQIZgARmCBWQIFpAhWECGYAEZggVkCBaQIVhAhmABGYIFZAgWkCFYQIZgARmCBWQIFpAhWECGYAEZggVkCBaQIVhAhmABGYIFZAgWkCFYQIZgARmCBWQIFpAhWECGYAEZggVkCBaQIVhAhmABGYIFZAgWkCFYQIZgARmCBWQIFpAhWECGYAEZggVkCBaQIVhAhmABGYIFZAgWkCFYQIZgARmCBWQIFpAhWECGYAEZggVkLH+/szoXUODDAjIEC8gQLCBDsIAMwQIyBAvIECwgQ7CADMECMgQLyBAsIEOwgAzBAjIEC8gQLCBDsIAMwQIyBAvIECwgQ7CADMECMgQLyBAsIEOwgAzBAjIEC8gQLCBDsIAMwQIyBAvIECwgQ7CADMECMgQLyBAsIEOwgAzBAjIEC8gQLCBjmdNtda7vOuxe8zhfNzfX8X6Z53u/gUngMx8WkCFYQIZgARmCBWQIFpAhWECGYAEZggVkCBaQIVhAhmABGYIFZAgWkCFYQIZgARmCBWQIFpAhWECGYAEZggVkCBaQIVhAhmABGYIFZAgWkCFYQIZgARmCBWQIFpAhWECGYAEZggVkCBaQIVhAhmABGYIFZAgWkCFYQIZgARmCBWQIFpAhWECGYAEZggVkCBaQIVhAhmABGYIFZAgWkCFYQIZgARmCBWQIFpAhWECGYAEZggVkCBaQIVhAhmABGYIFZAgWkCFYQIZgARmCBWQIFpAhWECGYAEZggVkCBaQIVhAhmABGYIFZAgWkCFYQIZgARmCBWQIFpAhWECGYAENM/MPWjkUHgYmfmIAAAAASUVORK5CYII=");
 }
@@ -1991,22 +2006,14 @@ blockquote {
   flex: 0 0 310px;
   flex-flow: row wrap;
   justify-content: flex-start;
-  margin: 16px 0 24px;
-  max-width: 476px;
-  padding: 8px;
-}
-@media (min-width: 767px) {
-  .countries {
-    margin: 16px;
-    padding: 36px 0 0;
-  }
+  margin: 64px 0 12px 0;
 }
 
 .flag {
   height: 64px;
   line-height: 14px;
   text-align: center;
-  width: 68px;
+  width: 80px;
 }
 .flag :first-child {
   background-repeat: no-repeat;

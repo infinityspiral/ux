@@ -48,22 +48,14 @@
 	flex: 0 0 310px;
 	flex-flow: row wrap;
 	justify-content: flex-start;
-	margin: 16px 0 24px;
-	max-width: 476px;
-	padding: 8px;
-
-	@media (min-width:$breakForTablet) {
-		margin: 16px;
-		padding: 36px 0 0;
-	}
-
+	margin: 64px 0 12px 0;
 }
 
 .flag {
 	height: 64px;
 	line-height: 14px;
 	text-align: center;
-	width: 68px;
+	width: 80px;
 
 	:first-child {
 		background-repeat: no-repeat;

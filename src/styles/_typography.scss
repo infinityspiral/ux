@@ -1,6 +1,17 @@
 @use 'sass:math';
+
 $fontHeading: 'Arimo', serif;
 $fontBody: 'Source Sans 3', sans-serif;
+$phi: 1.618;
+
+//$higherNumber: math.pow(10, 2); // 100
+//$lowerNumber: math.sqrt(100); // 10
+//
+//@mixin liftKitOffsetUp($curSize, $step){
+//  $multiplied: math.pow($curSize, $step);
+//  margin-bottom: (1.6rem*$multiplied);
+//}
+//
 
 h1, h2, h3, h4, h5, h6 {
 	font-family: $fontHeading;
