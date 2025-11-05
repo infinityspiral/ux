@@ -48,11 +48,8 @@ img {
 	max-width: 100%;
 }
 
-p img,
-figure img
-{
-  margin-top: $gridUnit*4;
-  margin-bottom: $gridUnit*4;
+figure img {
+  margin-bottom: $padding-xs;
 }
 
 .img-frame {
@@ -95,14 +92,7 @@ figure {
 	padding: 0;
 }
 figcaption {
-	padding-left: 80px;
-	font-weight: 700;
-
-	small {
-		display: block;
-		font-weight: normal;
-		line-height: 2.4rem;
-	}
+  @include typeScale($typeRatio,2);
 }
 
 .form-group {
@@ -311,11 +301,11 @@ footer {
 
 section {
 	margin: 0 auto;
-	padding: $gridUnit*4 $gridUnit*2;
+    padding: $padding-xs;
 
 	@media (min-width: $breakForTablet) {
 		width: 100%;
-		padding: 80px 142px  76px 142px;
+        padding: $padding-lg;
 	}
 }
 
@@ -360,10 +350,10 @@ section {
 			padding:  60px $gridUnit*8 48px $gridUnit*8;
 		}
         h3 {
-          padding-bottom: $gridUnit*6;
+          //padding-bottom: $gridUnit*6;
 
           @media (max-width: $breakForTablet) {
-            padding-bottom: $gridUnit*2;
+            //padding-bottom: $gridUnit*2;
           }
         }
         p {
@@ -373,14 +363,13 @@ section {
 }
 
 .content {
-	padding: 26px $gridUnit*2 $gridUnit*2 $gridUnit*2;
+	padding: $padding-xs;
 
 	@media (min-width: $breakForDesktop) {
+        padding: $padding-sm;
 		max-width: 992px;
 		width: 100%;
 		margin: 0 auto;
-		padding: $gridUnit*4;
-		padding: 4px 0 0 0;
 	}
 
 	p {
@@ -393,20 +382,10 @@ section {
 	width: calc(100vw - 48px);
 	overflow: hidden;
 	height: fit-content;
-	//padding: $gridUnit*2;
-	margin: $gridUnit*2 auto;
+	margin: $padding-sm auto;
 	background: white;
 	border-radius: 20px;
 	box-shadow: 0 10px 20px rgba(0, 0, 0, .2);
-
-	@media (min-width: $breakForDesktop) {
-		width: calc(100% - $gridUnit*24);
-		margin: $gridUnit*16 $gridUnit*8 $gridUnit*16 $gridUnit*4;
-        padding-top: $gridUnit*16;
-		margin-left: auto;
-		margin-right: auto;
-		padding-bottom: 80px;
-	}
 }
 
 .dark-bubble {
@@ -460,7 +439,6 @@ section {
 }
 .projects {
 	width: calc(100% - 0px);
-	padding: $gridUnit*4 0;
 	overflow-y: auto;
 	display: grid;
 	grid-template-columns: repeat(auto-fill, minmax(350px, 100%));
@@ -472,7 +450,6 @@ section {
 		//grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
 		grid-template-columns: 1fr 1fr;
 		gap: $gridUnit*4;
-		padding: $gridUnit*4 0;
 	}
 	@media (min-width:$breakForDesktop) {
 		grid-template-columns: 1fr 1fr 1fr;
@@ -536,8 +513,8 @@ section {
 		border-radius: 8px;
 		margin-bottom: $gridUnit*2;
 		border: none;
-		box-shadow: none;
-	}
+        box-shadow: inset 0 0 24px rgba(0, 0, 0, 0.2);
+    }
 	.title {
 		margin-bottom: 0;
 		display: flex;
@@ -556,7 +533,7 @@ section {
 	}
 	.tags {
 		padding-top: 0;
-		padding-bottom:$gridUnit*4;
+		margin-bottom:$padding-sm;
 	}
 	.impact {
 		font-size: 2rem;
@@ -720,19 +697,18 @@ section {
 	}
 }
 .features {
-	padding-top: $gridUnit*4;
-	padding-bottom: $gridUnit*6;
 	display: grid;
 	grid-template-columns: 1fr;
 
-	gap: $gridUnit*2;
+	gap: $padding-xs;
 
 	@media screen and (min-width: $breakForTablet) {
-		gap: $gridUnit*4;
+      margin-top: $padding-sm;
+		gap: $padding-xs;
 		grid-template-columns: 1fr 1fr;
 	}
 	@media screen and (min-width: $breakForDesktop) {
-		gap: $gridUnit*2;
+		gap: $padding-xs;
 		grid-template-columns: 1fr 1fr 1fr 1fr;
 	}
 }
@@ -771,10 +747,10 @@ section {
 	}
 }
 .page-nav.top {
-  margin-bottom: $gridUnit*6;
+  margin-bottom: $padding-sm;
 }
 .page-nav.bottom {
-  margin-top: $gridUnit*8;
+  margin-top: $padding-sm;
 }
 
 @mixin tagColor($color){
@@ -784,12 +760,8 @@ section {
 }
 
 .tags {
-	margin-bottom: $gridUnit;
-	padding-top: 14px;
-	padding-bottom: 58px;
-	+ h6 {
-		margin-top: $gridUnit*6;
-	}
+	margin-top: 0;
+	margin-bottom: $padding-md;
 }
 
 .tag {
@@ -951,15 +923,16 @@ blockquote {
 
 	@media (min-width: $breakForTablet) {
 		display: flex;
-	}
+        align-items: center;
+  	}
 
 	.overview {
+      padding-bottom: $padding-xs;
 
 		@media (min-width: $breakForTablet) {
 			flex: 0 1 auto;
-			padding-right: $gridUnit*4;
-		}
-        padding-bottom: $gridUnit*8;
+			padding-right: $padding-md;
+  		}
 	}
 
 	.questions {
@@ -971,7 +944,7 @@ blockquote {
 	}
 	.question {
 		margin-bottom: $gridUnit*2;
-		padding: 6px 20px 14px 20px;
+		padding:10px $padding-xs $padding-xs $padding-xs;
 		background: #00000005;
 		border: 1px solid #00000020;
 		border-radius: 16px;
@@ -988,8 +961,8 @@ blockquote {
 			display: block;
 		}
 		li {
-			display: block;
-			margin: 0;
+			//display: block;
+			margin: 4px 0 0 20px;
 			padding: 0;
 			font-size: 1.6rem;
 			line-height: 2rem;
@@ -1007,8 +980,8 @@ blockquote {
 
 	li {
 		width: 100%;
-		margin: 0 $gridUnit*2 $gridUnit*2 0;
-		padding: $gridUnit*2;
+		margin: 0 $padding-xs $padding-xs 0;
+		padding: $padding-xs;
 		list-style: none;
 		background: #00000005;
 		border: 3px dashed #00000030;
