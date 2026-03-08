@@ -304,7 +304,9 @@ section {
 
 	@media (min-width: $breakForTablet) {
 		width: 100%;
-        padding: $padding-lg;
+	}
+	@media (min-width: $breakForDesktop) {
+        //padding: $padding-lg;
 	}
 }
 
@@ -435,26 +437,23 @@ section {
 	}
 }
 #project-content {
-	@media (min-width:$breakForTablet) {
-		max-width: fit-content;
+	max-width: 1400px;
+	//@media (min-width:$breakForTablet) {
+	//	max-width: fit-content;
+	//}
+	h4#projects {
+		justify-self: center;
 	}
 }
 .projects {
-	width: calc(100% - 0px);
-	overflow-y: auto;
-	display: grid;
-	grid-template-columns: repeat(auto-fill, minmax(350px, 100%));
-	gap: $gridUnit*4;
+	width: 100%;
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: center;
 
 	@media (min-width:$breakForTablet) {
-		width: calc(100% - ($gridUnit*2) );
-		grid-template-columns: repeat(3, minmax(400px, 1fr));
-		//grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
-		grid-template-columns: 1fr 1fr;
-		gap: $gridUnit*4;
 	}
 	@media (min-width:$breakForDesktop) {
-		grid-template-columns: 1fr 1fr 1fr;
 	}
 }
 
@@ -468,9 +467,9 @@ section {
 .bg-dark-3 a.project {
 	width: 100%;
 	padding: 24px 24px 16px 24px;
-	margin: 0;
+	margin: 0 24px 24px 0;
 	position: relative;
-	display: flex;
+	display: inline-flex;
 	flex-flow: column;
 	cursor: pointer;
 	background: darken(white, 15%);
@@ -481,6 +480,7 @@ section {
 
 	@media screen and (min-width: $breakForDesktop) {
 		max-width: 400px;
+		min-width: 350px;
 	}
 
 	.description {

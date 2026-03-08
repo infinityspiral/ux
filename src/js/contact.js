@@ -35,7 +35,6 @@ function validateEmail (email) {
 
   return true
 }
-
 function validateName (name) {
   if (!name || typeof name !== 'string') return false
 
@@ -58,8 +57,7 @@ function validateName (name) {
 
   return true
 }
-
-window.onload = () => {
+window.addEventListener('load', () => {
   // window bar messaging
   const defaultTitle = document.title
   window.addEventListener('blur', e => {
@@ -112,4 +110,4 @@ window.onload = () => {
       contactFormStatus.style.display = 'block'
     }
   })
-}
+})

@@ -830,10 +830,8 @@ section {
 @media (min-width: 767px) {
   section {
     width: 100%;
-    padding: 144px;
   }
 }
-
 .hero {
   margin: 16px auto;
   padding: 0;
@@ -947,33 +945,19 @@ section {
   opacity: 0.4;
 }
 
-@media (min-width: 767px) {
-  #project-content {
-    max-width: fit-content;
-  }
+#project-content {
+  max-width: 1400px;
+}
+#project-content h4#projects {
+  justify-self: center;
 }
 
 .projects {
-  width: calc(100% - 0px);
-  overflow-y: auto;
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(350px, 100%));
-  gap: 32px;
+  width: 100%;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
 }
-@media (min-width: 767px) {
-  .projects {
-    width: calc(100% - 16px);
-    grid-template-columns: repeat(3, minmax(400px, 1fr));
-    grid-template-columns: 1fr 1fr;
-    gap: 32px;
-  }
-}
-@media (min-width: 992px) {
-  .projects {
-    grid-template-columns: 1fr 1fr 1fr;
-  }
-}
-
 .project,
 .bg-neutral a.project,
 .bg-light-1 a.project,
@@ -984,9 +968,9 @@ section {
 .bg-dark-3 a.project {
   width: 100%;
   padding: 24px 24px 16px 24px;
-  margin: 0;
+  margin: 0 24px 24px 0;
   position: relative;
-  display: flex;
+  display: inline-flex;
   flex-flow: column;
   cursor: pointer;
   background: rgb(216.75, 216.75, 216.75);
@@ -1005,6 +989,7 @@ section {
   .bg-dark-2 a.project,
   .bg-dark-3 a.project {
     max-width: 400px;
+    min-width: 350px;
   }
 }
 .project .description,

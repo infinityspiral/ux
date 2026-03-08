@@ -1,0 +1,977 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>DS NavBar Component</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600&family=Geist:wght@400;500;600&display=swap" rel="stylesheet" />
+
+  <style>
+    /* ================================================================
+       DS NavBar — Design System Header Navigation Component
+       ================================================================
+
+       CSS CUSTOM PROPERTIES (override to theme):
+       ─────────────────────────────────────────
+       --nav-bg            Background color
+       --nav-border        Border / divider color
+       --nav-text          Primary text color
+       --nav-muted         Secondary / link text color
+       --nav-accent        Active / hover accent color
+       --nav-dropdown-bg   Dropdown panel background
+
+       DATA ATTRIBUTES on <header class="ds-nav">:
+       ─────────────────────────────────────────
+       data-variant="light | dark | glass"
+       data-sticky="true | false"
+
+       SECTION NAV — add data-title to any <section>:
+       ───────────────────────────────────────────────
+       <section data-title="Overview"> … </section>
+
+       • Desktop → fixed left sidebar appears, vertically centred
+       • Mobile  → drawer shows "On this page" panel; back button
+                   returns to the normal nav
+
+       ================================================================ */
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    /* ── Token defaults (light) ──────────────────────────────────── */
+    :root {
+      --nav-font:        'DM Sans', sans-serif;
+      --nav-mono:        'Geist', 'DM Sans', sans-serif;
+      --nav-height:      60px;
+
+      --nav-bg:          #ffffff;
+      --nav-border:      rgba(0,0,0,.09);
+      --nav-text:        #111111;
+      --nav-muted:       #555555;
+      --nav-accent:      #0052ff;
+      --nav-dropdown-bg: #ffffff;
+    }
+
+    /* ── Root element ────────────────────────────────────────────── */
+    .ds-nav {
+      font-family: var(--nav-font);
+      background: var(--nav-bg);
+      border-bottom: 1px solid var(--nav-border);
+      width: 100%;
+      z-index: 1000;
+      transition: box-shadow .25s, background .3s, border-color .3s;
+    }
+    .ds-nav[data-sticky="true"] { position: sticky; top: 0; }
+    .ds-nav.is-scrolled { box-shadow: 0 2px 24px rgba(0,0,0,.08); }
+
+    /* ── Variant: dark ───────────────────────────────────────────── */
+    .ds-nav[data-variant="dark"] {
+      --nav-bg:          #0d0d0d;
+      --nav-border:      rgba(255,255,255,.08);
+      --nav-text:        #f0f0f0;
+      --nav-muted:       #999999;
+      --nav-accent:      #4d8aff;
+      --nav-dropdown-bg: #1a1a1a;
+    }
+
+    /* ── Variant: glass ──────────────────────────────────────────── */
+    .ds-nav[data-variant="glass"] {
+      --nav-bg:          rgba(255,255,255,.65);
+      --nav-border:      rgba(255,255,255,.35);
+      --nav-text:        #111111;
+      --nav-muted:       #444444;
+      --nav-accent:      #0052ff;
+      --nav-dropdown-bg: rgba(255,255,255,.88);
+      backdrop-filter: blur(18px) saturate(180%);
+      -webkit-backdrop-filter: blur(18px) saturate(180%);
+    }
+
+    /* ── Inner wrapper ───────────────────────────────────────────── */
+    .ds-nav__inner {
+      max-width: 1280px;
+      margin: 0 auto;
+      height: var(--nav-height);
+      display: flex;
+      align-items: center;
+      padding: 0 24px;
+      gap: 8px;
+    }
+
+    /* ── Logo ────────────────────────────────────────────────────── */
+    .ds-nav__logo {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      text-decoration: none;
+      color: var(--nav-text);
+      font-weight: 600;
+      font-size: 1.05rem;
+      letter-spacing: -.025em;
+      flex-shrink: 0;
+      margin-right: 16px;
+    }
+    .ds-nav__logo svg { flex-shrink: 0; }
+    .ds-nav__logo-wordmark { font-family: var(--nav-mono); }
+
+    /* ── Primary links ───────────────────────────────────────────── */
+    .ds-nav__links {
+      display: flex;
+      align-items: center;
+      gap: 2px;
+      list-style: none;
+      flex: 1;
+    }
+
+    /* ── Nav item wrapper ────────────────────────────────────────── */
+    .ds-nav__item { position: relative; }
+
+    /* ── Link / button shared ────────────────────────────────────── */
+    .ds-nav__link {
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      padding: 7px 12px;
+      border-radius: 8px;
+      font-family: var(--nav-font);
+      font-size: .875rem;
+      font-weight: 500;
+      color: var(--nav-muted);
+      text-decoration: none;
+      background: none;
+      border: none;
+      cursor: pointer;
+      white-space: nowrap;
+      transition: color .15s, background .15s;
+      line-height: 1;
+    }
+    .ds-nav__link:hover,
+    .ds-nav__link[aria-expanded="true"] {
+      color: var(--nav-text);
+      background: rgba(128,128,128,.09);
+    }
+    .ds-nav__link.is-active { color: var(--nav-accent); }
+
+    /* caret */
+    .ds-nav__caret {
+      width: 13px; height: 13px;
+      flex-shrink: 0;
+      transition: transform .2s ease;
+      color: var(--nav-muted);
+    }
+    .ds-nav__link[aria-expanded="true"] .ds-nav__caret { transform: rotate(180deg); }
+
+    /* ── Dropdown panel ──────────────────────────────────────────── */
+    .ds-nav__dropdown {
+      position: absolute;
+      top: calc(100% + 8px);
+      left: 0;
+      min-width: 200px;
+      background: var(--nav-dropdown-bg);
+      border: 1px solid var(--nav-border);
+      border-radius: 12px;
+      padding: 6px;
+      list-style: none;
+      box-shadow: 0 8px 32px rgba(0,0,0,.12);
+      z-index: 200;
+      animation: ds-pop-in .18s ease;
+      transform-origin: top left;
+    }
+    @keyframes ds-pop-in {
+      from { opacity: 0; transform: translateY(-6px) scale(.97); }
+      to   { opacity: 1; transform: translateY(0) scale(1); }
+    }
+    .ds-nav__dropdown[hidden] { display: none; }
+    .ds-nav__dropdown li a {
+      display: block;
+      padding: 8px 12px;
+      border-radius: 7px;
+      font-size: .85rem;
+      font-weight: 400;
+      color: var(--nav-muted);
+      text-decoration: none;
+      transition: color .12s, background .12s;
+    }
+    .ds-nav__dropdown li a:hover {
+      color: var(--nav-text);
+      background: rgba(128,128,128,.09);
+    }
+
+    /* ── Actions ─────────────────────────────────────────────────── */
+    .ds-nav__actions {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-left: auto;
+      flex-shrink: 0;
+    }
+
+    /* ── Hamburger ───────────────────────────────────────────────── */
+    .ds-nav__burger {
+      display: none;
+      flex-direction: column;
+      justify-content: space-between;
+      width: 38px; height: 38px;
+      padding: 10px 8px;
+      background: none;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      margin-left: auto;
+      flex-shrink: 0;
+      transition: background .15s;
+    }
+    .ds-nav__burger:hover { background: rgba(128,128,128,.1); }
+    .ds-nav__burger span {
+      display: block;
+      width: 100%;
+      height: 2px;
+      min-height: 2px;
+      background: var(--nav-text);
+      border-radius: 2px;
+      transition: transform .25s ease, opacity .2s ease;
+      transform-origin: center;
+      flex-shrink: 0;
+    }
+    .ds-nav__burger[aria-expanded="true"] span:nth-child(1) { transform: translateY(8px) rotate(45deg); }
+    .ds-nav__burger[aria-expanded="true"] span:nth-child(2) { opacity: 0; }
+    .ds-nav__burger[aria-expanded="true"] span:nth-child(3) { transform: translateY(-8px) rotate(-45deg); }
+
+    /* ── Mobile drawer ───────────────────────────────────────────── */
+    .ds-nav__drawer {
+      border-top: 1px solid var(--nav-border);
+      padding: 10px 16px 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 2px;
+    }
+    @keyframes ds-drawer-in {
+      from { opacity: 0; transform: translateY(-8px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+    .ds-nav__drawer[hidden] { display: none; }
+
+    /* Drawer panels — only one visible at a time */
+    .ds-nav__drawer-panel { display: contents; }
+    .ds-nav__drawer-panel[hidden] { display: none; }
+
+    /* ── Drawer: back button ─────────────────────────────────────── */
+    .ds-nav__drawer-back {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      padding: 9px 12px;
+      border-radius: 8px;
+      font-family: var(--nav-font);
+      font-size: .85rem;
+      font-weight: 500;
+      color: var(--nav-muted);
+      background: none;
+      border: none;
+      cursor: pointer;
+      margin-bottom: 2px;
+      transition: color .12s, background .12s;
+      width: 100%;
+      text-align: left;
+    }
+    .ds-nav__drawer-back:hover {
+      color: var(--nav-text);
+      background: rgba(128,128,128,.09);
+    }
+    .ds-nav__drawer-back svg { width: 15px; height: 15px; flex-shrink: 0; }
+
+    /* ── Drawer: label above section list ────────────────────────── */
+    .ds-nav__drawer-eyebrow {
+      font-family: var(--nav-mono);
+      font-size: .67rem;
+      letter-spacing: .06em;
+      text-transform: uppercase;
+      color: var(--nav-muted);
+      padding: 8px 12px 4px;
+      opacity: .55;
+    }
+
+    /* ── Drawer: shared link + toggle ────────────────────────────── */
+    .ds-nav__drawer-link,
+    .ds-nav__drawer-toggle {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 10px 12px;
+      border-radius: 8px;
+      font-family: var(--nav-font);
+      font-size: .9rem;
+      font-weight: 500;
+      color: var(--nav-muted);
+      text-decoration: none;
+      background: none;
+      border: none;
+      cursor: pointer;
+      width: 100%;
+      text-align: left;
+      transition: color .12s, background .12s;
+    }
+    .ds-nav__drawer-link:hover,
+    .ds-nav__drawer-toggle:hover {
+      color: var(--nav-text);
+      background: rgba(128,128,128,.09);
+    }
+    .ds-nav__drawer-link.is-active {
+      color: var(--nav-accent);
+      background: rgba(0,82,255,.05);
+    }
+    .ds-nav__drawer-toggle .ds-nav__caret { color: inherit; }
+    .ds-nav__drawer-toggle[aria-expanded="true"] .ds-nav__caret { transform: rotate(180deg); }
+
+    .ds-nav__drawer-sub {
+      padding: 4px 0 4px 16px;
+      display: flex;
+      flex-direction: column;
+      gap: 2px;
+    }
+    .ds-nav__drawer-sub[hidden] { display: none; }
+    .ds-nav__drawer-sub a {
+      display: block;
+      padding: 8px 12px;
+      border-radius: 7px;
+      font-size: .85rem;
+      color: var(--nav-muted);
+      text-decoration: none;
+      transition: color .12s, background .12s;
+    }
+    .ds-nav__drawer-sub a:hover {
+      color: var(--nav-text);
+      background: rgba(128,128,128,.09);
+    }
+
+    .ds-nav__drawer-actions {
+      margin-top: 10px;
+      padding-top: 14px;
+      border-top: 1px solid var(--nav-border);
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+    .ds-nav__drawer-actions .ds-btn-primary,
+    .ds-nav__drawer-actions .ds-btn-ghost { width: 100%; justify-content: center; }
+
+    /* ── Button tokens ───────────────────────────────────────────── */
+    .ds-btn-primary {
+      display: inline-flex; align-items: center;
+      padding: 8px 18px; border-radius: 8px;
+      font-family: var(--nav-font); font-size: .875rem; font-weight: 600;
+      background: var(--nav-accent); color: #fff; border: none; cursor: pointer;
+      white-space: nowrap; text-decoration: none;
+      transition: opacity .15s, transform .12s;
+    }
+    .ds-btn-primary:hover { opacity: .86; transform: translateY(-1px); }
+    .ds-btn-primary:active { transform: none; }
+
+    .ds-btn-ghost {
+      display: inline-flex; align-items: center;
+      padding: 8px 18px; border-radius: 8px;
+      font-family: var(--nav-font); font-size: .875rem; font-weight: 500;
+      background: transparent; color: var(--nav-text);
+      border: 1px solid var(--nav-border); cursor: pointer;
+      white-space: nowrap; text-decoration: none;
+      transition: background .15s, transform .12s;
+    }
+    .ds-btn-ghost:hover { background: rgba(128,128,128,.09); transform: translateY(-1px); }
+    .ds-btn-ghost:active { transform: none; }
+
+    /* ── Breakpoints ─────────────────────────────────────────────── */
+    @media (max-width: 767px) {
+      .ds-nav__links, .ds-nav__actions { display: none !important; }
+      .ds-nav__burger { display: flex; }
+    }
+    @media (min-width: 768px) {
+      .ds-nav__drawer { display: none !important; }
+    }
+
+
+    /* ================================================================
+       DS Section Nav — fixed left sidebar (desktop only)
+       ================================================================ */
+
+    .ds-section-nav {
+      position: fixed;
+      left: 20px;
+      top: 50%;
+      transform: translateY(-50%);
+      z-index: 900;
+      display: flex;
+      flex-direction: column;
+      align-items: stretch;
+      padding: 8px 6px;
+      background: var(--nav-bg);
+      border: 1px solid var(--nav-border);
+      border-radius: 14px;
+      box-shadow: 0 4px 24px rgba(0,0,0,.08);
+      /* starts hidden */
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity .3s ease, background .3s, border-color .3s;
+    }
+    .ds-section-nav.is-visible {
+      opacity: 1;
+      pointer-events: auto;
+    }
+
+    /* variant colours — mirror the header tokens */
+    .ds-section-nav[data-variant="dark"] {
+      --nav-bg:     #0d0d0d;
+      --nav-border: rgba(255,255,255,.08);
+      --nav-text:   #f0f0f0;
+      --nav-muted:  #999;
+      --nav-accent: #4d8aff;
+    }
+    .ds-section-nav[data-variant="glass"] {
+      --nav-bg:     rgba(255,255,255,.72);
+      --nav-border: rgba(255,255,255,.35);
+      --nav-text:   #111;
+      --nav-muted:  #444;
+      --nav-accent: #0052ff;
+      backdrop-filter: blur(18px) saturate(180%);
+      -webkit-backdrop-filter: blur(18px) saturate(180%);
+    }
+
+    /* each link */
+    .ds-section-nav__link {
+      display: flex;
+      align-items: center;
+      gap: 9px;
+      padding: 7px 10px 7px 8px;
+      border-radius: 8px;
+      font-family: var(--nav-font);
+      font-size: .78rem;
+      font-weight: 500;
+      color: var(--nav-muted);
+      text-decoration: none;
+      white-space: nowrap;
+      background: none;
+      border: none;
+      cursor: pointer;
+      transition: color .15s, background .15s;
+    }
+    .ds-section-nav__link:hover {
+      color: var(--nav-text);
+      background: rgba(128,128,128,.09);
+    }
+    .ds-section-nav__link.is-active { color: var(--nav-accent); }
+
+    /* dot indicator */
+    .ds-section-nav__dot {
+      width: 6px; height: 6px;
+      border-radius: 50%;
+      background: currentColor;
+      flex-shrink: 0;
+      transition: transform .2s ease;
+    }
+    .ds-section-nav__link.is-active .ds-section-nav__dot { transform: scale(1.6); }
+
+    .ds-section-nav__label {
+      font-size: .75rem;
+      opacity: .7;
+      transition: opacity .15s;
+    }
+    .ds-section-nav__link:hover .ds-section-nav__label,
+    .ds-section-nav__link.is-active .ds-section-nav__label { opacity: 1; }
+
+    /* thin divider between items */
+    .ds-section-nav__divider {
+      height: 1px;
+      background: var(--nav-border);
+      margin: 3px 6px;
+    }
+
+    /* hidden on mobile — drawer handles it */
+    @media (max-width: 767px) { .ds-section-nav { display: none !important; } }
+
+
+    /* ================================================================
+       DEMO PAGE STYLES — remove when integrating
+       ================================================================ */
+    html { scroll-behavior: smooth; }
+    body { font-family: 'DM Sans', sans-serif; background: #f4f5f7; min-height: 100vh; }
+
+    .demo-stage { min-height: 100vh; transition: background .35s; }
+    .demo-stage[data-variant="dark"]  { background: #0d0d0d; color: #f0f0f0; }
+    .demo-stage[data-variant="glass"] {
+      background: linear-gradient(135deg,#dbeafe 0%,#fef3c7 50%,#fce7f3 100%);
+    }
+
+    .demo-hero {
+      display: flex; flex-direction: column; align-items: center;
+      justify-content: center; text-align: center;
+      padding: 80px 24px 60px; gap: 18px;
+    }
+    .demo-tag {
+      font-family: 'Geist', 'DM Sans', sans-serif; font-size: .72rem; font-weight: 500;
+      background: #0052ff; color: #fff; padding: 4px 12px; border-radius: 100px;
+      letter-spacing: .05em; text-transform: uppercase;
+    }
+    .demo-hero h1 { font-size: clamp(2rem,5vw,3.4rem); font-weight: 600; letter-spacing: -.035em; line-height: 1.12; }
+    .demo-hero p  { font-size: 1rem; opacity: .55; max-width: 480px; line-height: 1.65; }
+
+    .demo-controls { display: flex; gap: 8px; flex-wrap: wrap; justify-content: center; margin-top: 8px; }
+    .demo-controls button {
+      padding: 8px 20px; border-radius: 8px; border: 1px solid rgba(0,0,0,.12);
+      background: #fff; font-family: 'DM Sans',sans-serif; font-size: .85rem;
+      font-weight: 500; cursor: pointer; transition: background .12s, color .12s, border-color .12s;
+    }
+    .demo-controls button.is-active { background: #0052ff; color: #fff; border-color: #0052ff; }
+    [data-variant="dark"] .demo-controls button { background:#1a1a1a; color:#f0f0f0; border-color:rgba(255,255,255,.1); }
+    [data-variant="dark"] .demo-controls button.is-active { background:#4d8aff; border-color:#4d8aff; }
+
+    .demo-sections { max-width: 820px; margin: 0 auto; padding: 0 32px 120px; }
+    .demo-section {
+      padding: 72px 0 56px;
+      border-bottom: 1px solid rgba(128,128,128,.12);
+    }
+    .demo-section:last-child { border-bottom: none; }
+    .demo-section h2 { font-size: 1.6rem; font-weight: 600; letter-spacing: -.025em; margin-bottom: 16px; }
+    .demo-section p  { font-size: .95rem; line-height: 1.7; opacity: .55; max-width: 580px; }
+    [data-variant="dark"] .demo-section { border-color: rgba(255,255,255,.06); }
+  </style>
+</head>
+<body>
+
+<div class="demo-stage" id="demoStage" data-variant="light">
+
+  <!-- ============================================================
+       DS NavBar — copy from <header> … to the closing </nav> + sidebar
+       ============================================================ -->
+  <header class="ds-nav" id="mainNav" data-variant="light" data-sticky="true" role="banner">
+    <div class="ds-nav__inner">
+
+      <!-- Logo -->
+      <a href="#" class="ds-nav__logo" aria-label="Home">
+        <svg width="26" height="26" viewBox="0 0 26 26" fill="none" aria-hidden="true">
+          <rect width="26" height="26" rx="6" fill="#0052ff"/>
+          <path d="M7 19l6-12 6 12" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M9.5 14.5h7" stroke="#fff" stroke-width="1.5" stroke-linecap="round"/>
+        </svg>
+        <span class="ds-nav__logo-wordmark">Apex</span>
+      </a>
+
+      <!-- Primary navigation (desktop) -->
+      <nav aria-label="Primary navigation">
+        <ul class="ds-nav__links" role="list">
+
+          <li class="ds-nav__item">
+            <button class="ds-nav__link" aria-haspopup="true" aria-expanded="false" aria-controls="dd-products">
+              Products
+              <svg class="ds-nav__caret" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+                <path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </button>
+            <ul class="ds-nav__dropdown" id="dd-products" hidden role="menu">
+              <li role="none"><a href="#analytics"    role="menuitem">Analytics</a></li>
+              <li role="none"><a href="#automation"   role="menuitem">Automation</a></li>
+              <li role="none"><a href="#integrations" role="menuitem">Integrations</a></li>
+              <li role="none"><a href="#api"          role="menuitem">API</a></li>
+            </ul>
+          </li>
+
+          <li class="ds-nav__item">
+            <button class="ds-nav__link" aria-haspopup="true" aria-expanded="false" aria-controls="dd-solutions">
+              Solutions
+              <svg class="ds-nav__caret" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+                <path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </button>
+            <ul class="ds-nav__dropdown" id="dd-solutions" hidden role="menu">
+              <li role="none"><a href="#startups"   role="menuitem">For Startups</a></li>
+              <li role="none"><a href="#enterprise" role="menuitem">For Enterprise</a></li>
+              <li role="none"><a href="#agencies"   role="menuitem">For Agencies</a></li>
+            </ul>
+          </li>
+
+          <li class="ds-nav__item"><a href="#pricing" class="ds-nav__link">Pricing</a></li>
+          <li class="ds-nav__item"><a href="#docs"    class="ds-nav__link">Docs</a></li>
+          <li class="ds-nav__item"><a href="#blog"    class="ds-nav__link">Blog</a></li>
+
+        </ul>
+      </nav>
+
+      <!-- Right-side actions (desktop) -->
+      <div class="ds-nav__actions">
+        <a href="#login"  class="ds-btn-ghost">Log in</a>
+        <a href="#signup" class="ds-btn-primary">Get Started</a>
+      </div>
+
+      <!-- Mobile burger -->
+      <button class="ds-nav__burger" id="burgerBtn"
+              aria-label="Open menu" aria-expanded="false" aria-controls="mobileDrawer">
+        <span></span><span></span><span></span>
+      </button>
+
+    </div><!-- /.ds-nav__inner -->
+
+    <!-- Mobile drawer -->
+    <nav id="mobileDrawer" class="ds-nav__drawer" hidden aria-label="Mobile navigation">
+
+      <!-- Panel A: normal nav (default) ─────────────────────────── -->
+      <div class="ds-nav__drawer-panel" id="drawerPanelMain">
+
+        <div>
+          <button class="ds-nav__drawer-toggle" aria-expanded="false" aria-controls="mob-products">
+            Products
+            <svg class="ds-nav__caret" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+              <path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </button>
+          <div class="ds-nav__drawer-sub" id="mob-products" hidden>
+            <a href="#analytics">Analytics</a>
+            <a href="#automation">Automation</a>
+            <a href="#integrations">Integrations</a>
+            <a href="#api">API</a>
+          </div>
+        </div>
+
+        <div>
+          <button class="ds-nav__drawer-toggle" aria-expanded="false" aria-controls="mob-solutions">
+            Solutions
+            <svg class="ds-nav__caret" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+              <path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </button>
+          <div class="ds-nav__drawer-sub" id="mob-solutions" hidden>
+            <a href="#startups">For Startups</a>
+            <a href="#enterprise">For Enterprise</a>
+            <a href="#agencies">For Agencies</a>
+          </div>
+        </div>
+
+        <a href="#pricing" class="ds-nav__drawer-link">Pricing</a>
+        <a href="#docs"    class="ds-nav__drawer-link">Docs</a>
+        <a href="#blog"    class="ds-nav__drawer-link">Blog</a>
+
+        <div class="ds-nav__drawer-actions">
+          <a href="#login"  class="ds-btn-ghost">Log in</a>
+          <a href="#signup" class="ds-btn-primary">Get Started</a>
+        </div>
+
+      </div><!-- /#drawerPanelMain -->
+
+      <!-- Panel B: section nav (populated by JS) ─────────────────── -->
+      <div class="ds-nav__drawer-panel" id="drawerPanelSections" hidden>
+
+        <!-- Back button -->
+        <button class="ds-nav__drawer-back" id="drawerBackBtn" aria-label="Back to main menu">
+          <svg viewBox="0 0 16 16" fill="none" aria-hidden="true">
+            <path d="M10 3L5 8l5 5" stroke="currentColor" stroke-width="1.6"
+                  stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+          Main menu
+        </button>
+
+        <span class="ds-nav__drawer-eyebrow">On this page</span>
+
+        <!-- Section links injected by JS -->
+        <div id="drawerSectionLinks"></div>
+
+      </div><!-- /#drawerPanelSections -->
+
+    </nav><!-- /#mobileDrawer -->
+
+  </header><!-- /.ds-nav -->
+
+  <!-- Desktop section sidebar (populated by JS) -->
+  <nav class="ds-section-nav" id="sectionNav" aria-label="Page sections"></nav>
+  <!-- ── end DS component ── -->
+
+
+  <!-- ============================================================
+       DEMO CONTENT — remove when integrating
+       ============================================================ -->
+  <div class="demo-hero">
+    <span class="demo-tag">Design System · NavBar</span>
+    <h1>Responsive Header<br>Navigation Component</h1>
+    <p>Sticky scroll · Dropdowns · Section sidebar · Mobile section panel · Light / Dark / Glass</p>
+    <div class="demo-controls">
+      <button onclick="setVariant('light')" class="is-active" id="btn-light">Light</button>
+      <button onclick="setVariant('dark')"  id="btn-dark">Dark</button>
+      <button onclick="setVariant('glass')" id="btn-glass">Glass</button>
+    </div>
+  </div>
+
+  <div class="demo-sections">
+
+    <section data-title="Overview" id="sec-overview" class="demo-section">
+      <h2>Overview</h2>
+      <p>This section uses <code>data-title="Overview"</code>. When the JS detects any <code>&lt;section data-title&gt;</code> elements on the page it automatically builds a fixed left-side pill menu on desktop and adds an "On this page" panel to the mobile drawer — no manual wiring needed.</p>
+    </section>
+
+    <section data-title="Features" id="sec-features" class="demo-section">
+      <h2>Features</h2>
+      <p>Scroll down to watch the active indicator track which section is currently in view. The dot snaps to the correct item using an <code>IntersectionObserver</code> with no external dependencies.</p>
+    </section>
+
+    <section data-title="Installation" id="sec-installation" class="demo-section">
+      <h2>Installation</h2>
+      <p>Copy the <code>&lt;header&gt;</code>, the <code>.ds-section-nav</code> element, all CSS between the DS markers, and the JS IIFE into your page. The JS autodiscovers <code>section[data-title]</code> elements at runtime.</p>
+    </section>
+
+    <section data-title="Configuration" id="sec-configuration" class="demo-section">
+      <h2>Configuration</h2>
+      <p>Override the CSS custom properties on <code>:root</code> or any ancestor to theme the component. Switch between light, dark, and glass by setting <code>data-variant</code> on the <code>&lt;header&gt;</code>. The sidebar mirrors the same attribute automatically.</p>
+    </section>
+
+    <section data-title="Accessibility" id="sec-accessibility" class="demo-section">
+      <h2>Accessibility</h2>
+      <p>All interactive elements carry correct ARIA roles, states, and labels. The section sidebar is a <code>&lt;nav&gt;</code> landmark distinct from the header nav. Dropdowns close on outside click and <kbd>Escape</kbd>.</p>
+    </section>
+
+    <section data-title="Changelog" id="sec-changelog" class="demo-section">
+      <h2>Changelog</h2>
+      <p>v2 adds the section nav sidebar and mobile section drawer panel, driven by <code>IntersectionObserver</code>. v1 introduced the base navbar with dropdowns, animated hamburger, and three colour variants.</p>
+    </section>
+
+  </div>
+
+</div><!-- /demo-stage -->
+
+
+<script>
+/* ================================================================
+   NavBar + Section Nav — vanilla JS behaviour
+   ================================================================ */
+(function () {
+
+  const nav    = document.getElementById('mainNav');
+  const burger = document.getElementById('burgerBtn');
+  const drawer = document.getElementById('mobileDrawer');
+
+  // ── Sticky scroll shadow ──────────────────────────────────────
+  if (nav.dataset.sticky === 'true') {
+    const onScroll = () => nav.classList.toggle('is-scrolled', window.scrollY > 4);
+    window.addEventListener('scroll', onScroll, { passive: true });
+    onScroll();
+  }
+
+  // ── Desktop dropdowns ─────────────────────────────────────────
+  const dropdownTriggers = nav.querySelectorAll('.ds-nav__links .ds-nav__link[aria-haspopup]');
+
+  function closeAllDropdowns(except) {
+    dropdownTriggers.forEach(btn => {
+      if (btn === except) return;
+      btn.setAttribute('aria-expanded', 'false');
+      document.getElementById(btn.getAttribute('aria-controls')).hidden = true;
+    });
+  }
+
+  dropdownTriggers.forEach(btn => {
+    const panel = document.getElementById(btn.getAttribute('aria-controls'));
+    btn.addEventListener('click', e => {
+      e.stopPropagation();
+      const isOpen = btn.getAttribute('aria-expanded') === 'true';
+      closeAllDropdowns(btn);
+      btn.setAttribute('aria-expanded', String(!isOpen));
+      panel.hidden = isOpen;
+    });
+  });
+
+  document.addEventListener('click', () => closeAllDropdowns(null));
+  nav.addEventListener('click', e => e.stopPropagation());
+  document.addEventListener('keydown', e => { if (e.key === 'Escape') closeAllDropdowns(null); });
+
+  // ── Mobile drawer open/close ──────────────────────────────────
+  function openDrawer() {
+    burger.setAttribute('aria-expanded', 'true');
+    burger.setAttribute('aria-label', 'Close menu');
+    drawer.hidden = false;
+    drawer.style.animation = 'ds-drawer-in .22s ease';
+    syncDrawerPanel(); // show correct panel
+  }
+  function closeDrawer() {
+    burger.setAttribute('aria-expanded', 'false');
+    burger.setAttribute('aria-label', 'Open menu');
+    drawer.hidden = true;
+  }
+
+  burger.addEventListener('click', () => {
+    burger.getAttribute('aria-expanded') === 'true' ? closeDrawer() : openDrawer();
+  });
+
+  window.addEventListener('resize', () => {
+    if (window.innerWidth >= 768) closeDrawer();
+  });
+
+  // ── Mobile accordion sub-menus ────────────────────────────────
+  const drawerToggles = drawer.querySelectorAll('.ds-nav__drawer-toggle');
+  drawerToggles.forEach(btn => {
+    const sub = document.getElementById(btn.getAttribute('aria-controls'));
+    btn.addEventListener('click', () => {
+      const isOpen = btn.getAttribute('aria-expanded') === 'true';
+      drawerToggles.forEach(b => {
+        if (b === btn) return;
+        b.setAttribute('aria-expanded', 'false');
+        document.getElementById(b.getAttribute('aria-controls')).hidden = true;
+      });
+      btn.setAttribute('aria-expanded', String(!isOpen));
+      sub.hidden = isOpen;
+    });
+  });
+
+  // Close drawer when any drawer link is tapped
+  drawer.querySelectorAll('a').forEach(link => {
+    link.addEventListener('click', () => closeDrawer());
+  });
+
+  // ── Active nav link (hash-based) ──────────────────────────────
+  function setActiveNavLink() {
+    const hash = location.hash || '#';
+    nav.querySelectorAll('.ds-nav__link, .ds-nav__drawer-link').forEach(el => {
+      el.classList.toggle('is-active', el.getAttribute('href') === hash);
+    });
+  }
+  window.addEventListener('hashchange', setActiveNavLink);
+  setActiveNavLink();
+
+
+  /* ==============================================================
+     SECTION NAV
+     Discovers all <section data-title>, builds desktop sidebar
+     and mobile drawer panel, tracks active section.
+     ============================================================== */
+
+  const sectionNavEl        = document.getElementById('sectionNav');
+  const drawerPanelMain     = document.getElementById('drawerPanelMain');
+  const drawerPanelSections = document.getElementById('drawerPanelSections');
+  const drawerSectionLinks  = document.getElementById('drawerSectionLinks');
+  const drawerBackBtn       = document.getElementById('drawerBackBtn');
+
+  // Discover sections
+  const sections = Array.from(document.querySelectorAll('section[data-title]'));
+
+  // Auto-assign ids if missing
+  sections.forEach((sec, i) => { if (!sec.id) sec.id = 'ds-sec-' + i; });
+
+  // Smooth-scroll helper (works around sticky header height)
+  function scrollToSection(sec) {
+    const offset = nav.offsetHeight + 12;
+    const top = sec.getBoundingClientRect().top + window.scrollY - offset;
+    window.scrollTo({ top, behavior: 'smooth' });
+  }
+
+  // Which drawer panel to show: section panel if any section is visible
+  function syncDrawerPanel() {
+    if (sections.length === 0) return;
+    const anyVisible = sections.some(sec => {
+      const r = sec.getBoundingClientRect();
+      return r.top < window.innerHeight && r.bottom > 0;
+    });
+    drawerPanelMain.hidden     =  anyVisible;
+    drawerPanelSections.hidden = !anyVisible;
+  }
+
+  if (sections.length > 0) {
+
+    /* ── Build desktop sidebar ─────────────────────────────────── */
+    sections.forEach((sec, i) => {
+      if (i > 0) {
+        const hr = document.createElement('div');
+        hr.className = 'ds-section-nav__divider';
+        sectionNavEl.appendChild(hr);
+      }
+
+      const a = document.createElement('a');
+      a.href = '#' + sec.id;
+      a.className = 'ds-section-nav__link';
+      a.dataset.sectionId = sec.id;
+      a.innerHTML =
+        `<span class="ds-section-nav__dot"></span>` +
+        `<span class="ds-section-nav__label">${sec.dataset.title}</span>`;
+
+      a.addEventListener('click', e => {
+        e.preventDefault();
+        scrollToSection(sec);
+      });
+      sectionNavEl.appendChild(a);
+    });
+
+    sectionNavEl.classList.add('is-visible');
+
+    /* ── Build mobile drawer section panel ─────────────────────── */
+    sections.forEach(sec => {
+      const a = document.createElement('a');
+      a.href = '#' + sec.id;
+      a.className = 'ds-nav__drawer-link';
+      a.dataset.sectionId = sec.id;
+      a.textContent = sec.dataset.title;
+      a.addEventListener('click', e => {
+        e.preventDefault();
+        closeDrawer();
+        // slight delay so drawer animation finishes before scroll
+        setTimeout(() => scrollToSection(sec), 130);
+      });
+      drawerSectionLinks.appendChild(a);
+    });
+
+    /* ── Back button ───────────────────────────────────────────── */
+    drawerBackBtn.addEventListener('click', () => {
+      drawerPanelSections.hidden = true;
+      drawerPanelMain.hidden = false;
+    });
+
+    /* ── IntersectionObserver — active state ───────────────────── */
+    function updateActive(id) {
+      sectionNavEl.querySelectorAll('.ds-section-nav__link').forEach(a => {
+        a.classList.toggle('is-active', a.dataset.sectionId === id);
+      });
+      drawerSectionLinks.querySelectorAll('.ds-nav__drawer-link').forEach(a => {
+        a.classList.toggle('is-active', a.dataset.sectionId === id);
+      });
+    }
+
+    // Seed with first section
+    if (sections[0]) updateActive(sections[0].id);
+
+    const observer = new IntersectionObserver(entries => {
+      // pick the entry nearest the top of the viewport
+      const visible = entries
+        .filter(e => e.isIntersecting)
+        .sort((a, b) => a.boundingClientRect.top - b.boundingClientRect.top);
+      if (visible.length) updateActive(visible[0].target.id);
+    }, {
+      rootMargin: '-20% 0px -60% 0px',
+      threshold: 0
+    });
+
+    sections.forEach(sec => observer.observe(sec));
+  }
+
+
+  /* ==============================================================
+     Expose syncDrawerPanel so openDrawer() can call it
+     ============================================================== */
+  function syncDrawerPanel() {
+    if (sections.length === 0) return;
+    const anyVisible = sections.some(sec => {
+      const r = sec.getBoundingClientRect();
+      return r.top < window.innerHeight && r.bottom > 0;
+    });
+    drawerPanelMain.hidden     =  anyVisible;
+    drawerPanelSections.hidden = !anyVisible;
+  }
+
+})();
+
+
+/* ================================================================
+   DEMO ONLY — variant switcher
+   Remove when integrating into your design system
+   ================================================================ */
+function setVariant(v) {
+  document.getElementById('mainNav').dataset.variant    = v;
+  document.getElementById('demoStage').dataset.variant  = v;
+  document.getElementById('sectionNav').dataset.variant = v;
+  ['light','dark','glass'].forEach(id => {
+    document.getElementById('btn-' + id).classList.toggle('is-active', id === v);
+  });
+}
+</script>
+
+</body>
+</html>
