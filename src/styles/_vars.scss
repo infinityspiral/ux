@@ -1,6 +1,5 @@
 $gridUnit: (8px);
 
-
 $breakForTablet: 767px;
 $breakForDesktop: 992px;
 
@@ -13,3 +12,27 @@ $padding-sm: $gridUnit*5;   //40
 $padding-xs: $gridUnit*2;   //16
 $padding-xxs: $gridUnit;    //8
 $padding-xxxs: $gridUnit/2; //4
+
+//:root {
+//  //breakpoints
+//  --breakForTablet: 767px;
+//  --breakForDesktop: 992px;
+//
+//  //color
+//  --color-primary: #689497;
+//  --color-secondary: #7b9768;
+//  --color-tertiary: #ac5349;
+//  --color-neutral: rgba(0, 0, 0, 0.89);
+//
+//  //typography
+//  --font-body: 'Roboto', sans-serif;
+//  --font-headline: 'Source Sans 3', sans-serif;
+//  --font-display: 'Source Sans 3', sans-serif;
+//
+//  //spacing
+//  --spacingUnit: 8px;
+//  --spacingSmall: 16px;
+//  --spacingMed: 24px;
+//  --spacingLg: 40px;
+//  --spacingXL: 80px;
+//}

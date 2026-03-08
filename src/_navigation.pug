@@ -1,8 +1,64 @@
-header
-    h1 Christopher Norton
-    nav
-        a(href='index.html') Home
-        a(href='index.html#projects') Projects
-        a(href='#contactForm') Contact
-        a(href='https://www.linkedin.com/in/christopher-p-norton/', target='_blank', class='linkedin')
-            img(src='images/logos/icons8-linkedin-50.png', class='icon-linkedin', style='height: 40px; position:relative; top:-13px; ')
+//- ============================================================
+//-  DS NavBar — copy from header … to the closing nav + sidebar
+//- ============================================================
+header.ds-nav#mainNav(data-variant="light" data-sticky="true" role="banner")
+  .ds-nav__inner
+
+    //- Logo
+    a.ds-nav__logo(href="index.html" aria-label="Home")
+      span.ds-nav__logo-wordmark Christopher Norton
+      //- Primary navigation (desktop)
+
+    //- Right-side actions (desktop)
+    .ds-nav__actions
+      a(href="index.html") Home
+      a(href="index.html#projects") Projects
+      a(href="#contactForm") Contact
+      a.linkedin(href="#contactForm")
+        img(src='images/logos/icons8-linkedin-50.png', class='icon-linkedin', style='height: 40px; position:relative; ')
+
+        //- Mobile burger
+    button.ds-nav__burger#burgerBtn(aria-label="Open menu" aria-expanded="false" aria-controls="mobileDrawer")
+      span
+      span
+      span
+
+  //- /.ds-nav__inner
+
+  //- Mobile drawer
+  nav#mobileDrawer.ds-nav__drawer(hidden aria-label="Mobile navigation")
+
+    //- Panel A: normal nav (default) ─────────────────────────────
+    .ds-nav__drawer-panel#drawerPanelMain
+
+      a.ds-nav__drawer-link(href="index.html") Home
+      a.ds-nav__drawer-link(href="index.html#projects") Projects
+      a.ds-nav__drawer-link(href="#contactForm") Contact
+
+
+
+        //- /#drawerPanelMain
+
+    //- Panel B: section nav (populated by JS) ────────────────────
+    .ds-nav__drawer-panel#drawerPanelSections(hidden)
+
+      //- Back button
+      button.ds-nav__drawer-back#drawerBackBtn(aria-label="Back to main menu")
+        svg(viewBox="0 0 16 16" fill="none" aria-hidden="true")
+          path(d="M10 3L5 8l5 5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round")
+        | Main menu
+
+      span.ds-nav__drawer-eyebrow On this page
+
+      //- Section links injected by JS
+      #drawerSectionLinks
+
+    //- /#drawerPanelSections
+
+  //- /#mobileDrawer
+
+//- /.ds-nav
+
+//- Desktop section sidebar (populated by JS)
+nav.ds-section-nav#sectionNav(aria-label="Page sections")
+//- ── end DS component ──

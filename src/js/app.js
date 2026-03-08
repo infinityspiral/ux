@@ -1,4 +1,4 @@
-window.onload = () => {
+window.addEventListener("load", ) = () => {
   const videoEl = document.querySelectorAll('video')
 
   videoEl.forEach(item => {
