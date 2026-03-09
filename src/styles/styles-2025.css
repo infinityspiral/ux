@@ -1959,6 +1959,7 @@ blockquote {
 /* ── Inner wrapper ───────────────────────────────────────────── */
 .ds-nav__inner {
   width: 100%;
+  max-width: 1200px;
   margin: 0 auto;
   height: var(--nav-height);
   display: flex;
