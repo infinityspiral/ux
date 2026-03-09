@@ -106,7 +106,7 @@ window.addEventListener('load', () => {
     const drawerBackBtn = document.getElementById('drawerBackBtn')
 
     // Discover sections
-    const sections = Array.from(document.querySelectorAll('section[data-title]'))
+    const sections = Array.from(document.querySelectorAll('[data-title]'))
 
     // Auto-assign ids if missing
     sections.forEach((sec, i) => { if (!sec.id) sec.id = 'ds-sec-' + i })

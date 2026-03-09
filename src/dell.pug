@@ -3,7 +3,7 @@ body
     .wrapper.bg-light-1
         .page
             include _navigation.pug
-            section.bg-dark-3
+            section.bg-dark-3(data-title="Overview")
                 .content
                     .page-nav.top
                         a(href='index.html#projects').back
@@ -16,10 +16,10 @@ body
                         .tag.uxr UXR
                         .tag.vis Visual
 
-                    h3(style='color:#f2c92b;') Impact
+                    h3(style='color:#f2c92b;')(data-title="Impact") Impact
                     p Helped the business turn a complicated cyber security report into a package people actually wanted to read through infographics. These became a bit of a collectible within the company. I worked on a few of these - themed around TRON, The Walking Dead, and True Detectives. The first TRON project was originally budgeted as a one-off, dynamic calculator project living on their website, but the additional posters went over so well they ordered more infographics alongside the calculator.
 
-                    h6(style='color:#e89a23;') Sample Initial Questions
+                    h6(style='color:#e89a23;')(data-title="Thinking") Sample Initial Questions
                     p Design always depends on context. Before starting on any design I'm always looking to understand what the solution is supposed to achieve and for who and under what constraints for both the business and the user.
                     ul.checkmark-list
                         li What problem does this solve or what result are we aiming for?
@@ -48,7 +48,7 @@ body
                     h4(style='color:#f2c92b;') How (to measure success)
                     p I told these projects were extremely well-received, especially internally although I never got any stats back on exactly how many posters were sent out. Tracking how many people also downloaded the full report would also be a great metric.
 
-                p(style='margin-top:128px; margin-bottom:128px;')
+                p(style='margin-top:128px; margin-bottom:128px;')(data-title="Solutioning   ")
                     img(src='images/dell/DELL-infographic.jpg', style='box-shadow:0 0 80px 5px #f2c92b; ')
 
                 .page-nav.bottom

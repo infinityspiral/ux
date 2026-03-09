@@ -3,7 +3,8 @@ body
     .wrapper.bg-light-1
         .page
             include _navigation.pug
-            section.bg-white
+            section.bg-white(data-title="Overview")
+
                 .page-nav
                     a(href='index.html#projects').back
                         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -24,7 +25,7 @@ body
                         p.has-subtitle New Design
                             img(src='images/aquent/aquent-renovation-2.png', style='width:100%; margin-top:0')
 
-                    h3 Impact
+                    h3(data-title="Impact") Impact
                     p Enabled the business to hire new talent faster and to better communicate their key value proposition both externally and internally. The updated website was maintained for over five years.
                     h3 Improvements
                     ul
@@ -35,7 +36,7 @@ body
                     p
                         img(src='images/aquent/aquent-map.jpg', style='width:100%; margin-left:auto;margin-right:auto;')
 
-            section.bg-light-1
+            section.bg-light-1(data-title="Thinking")
                 .content
                     .design-roadmap
                         .overview
@@ -92,7 +93,7 @@ body
                     h6 Hiring Process
                     p As it turned out, the overall interview process was blocking the ability to hire in a timely manner.
 
-            section.bg-white
+            section.bg-white(data-title="Solutions")
                 .content
                     h3 What
                     h6 Solution 1 – Recruiting process
@@ -149,7 +150,7 @@ body
                     small Slide built in After FX for presentation template
                     h6 Development
                     p I used HTML5/CSS3 and JavaScript to build out the designs and engineered a few Node.js task runners to automatically generate compressed HTML/CSS from Sass and pug sources files. It also ran CSSlint and ESLint before pushing to git version control.
-            section.bg-white
+            section.bg-white(data-title="Validation")
                 .content
                     h3 How
                     p There are lots of ways to measure success. I established feedback loops and wrote short surveys given to candidates during on-boarding to give us some updated data on what was or wasn't attracting talent. Landing pages for job fairs and other events with CTAs for sending in resumes would also allow us to gauge interest from particular events over time. Overall recruiters could monitor if how many times they had to reach out to clients or how many candidates they were able to fill.

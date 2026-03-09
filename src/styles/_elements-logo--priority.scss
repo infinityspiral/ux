@@ -311,7 +311,7 @@ section {
 }
 
 .hero {
-	margin: $gridUnit*2 auto;
+	margin: 0 auto $gridUnit*2 auto;
 	padding: 0;
 	background: url("../images/hero/paper-city.png") no-repeat top center;
 	background-size: cover;
@@ -381,6 +381,7 @@ section {
 
 .bubble {
 	width: calc(100vw - 48px);
+	max-width: 1200px;
 	overflow: hidden;
 	height: fit-content;
 	margin: $padding-sm auto;

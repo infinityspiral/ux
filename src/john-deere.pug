@@ -3,7 +3,7 @@ body
     .wrapper.bg-light-1
         .page
             include _navigation.pug
-            section.bubble
+            section.bubble(data-title="Overview: Limited")
                 .content
                     .page-nav.top
                         a(href='index.html#projects').back
@@ -29,7 +29,7 @@ body
                     h4 Limited
                     p Due to the sensitive nature of the projects I worked on at John Deere, I walked away with very few visuals despite my 6 years there as a solo designer to various dev teams so you'll just have to take my word for it that I worked on <strong>6 enterprise-level</strong>, process and state-driven web and mobile applications both internal and customer-facing.
 
-                    h6 Here's a few things I did during my time:
+                    h6(data-title="Day to Day") Here's a few things I did during my time:
                     ul
                         li Designed customer-facing e-commerce sites for $750,000+ vehicles and machinery for agriculture, forestry, and construction.
                         li Worked on applications and features that touched <strong>billions</strong> of dollars in sales and services.
@@ -45,7 +45,7 @@ body
                         li Provided markup instructions and working HTML/CSS/JS prototypes for dev teams to execute flows.
                         li Served as the secret CSS ninja troubleshooting the most complex CSS layout issues.
                         li Performed usability and accessibility testing on prototypes and from live deployments, compiling results based on promotion success, time to complete tasks, feature adoption, ticket closure rates, and other metrics.
-                    h6 Sample Planning Artifacts
+                    h6(data-title="More Examples") Sample Planning Artifacts
                     p
                         img(src='images/john-deere/translations/translations-header.jpg', style='width;100%')
                         small Mindmap defining problems and anchoring some CTAs for a simple translations app discussion.
