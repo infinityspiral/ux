@@ -44,8 +44,8 @@ $mobileTypeRatio:1.1;
 
 	@media (max-width: $breakForTablet) {
 		$mobileMultiplier: math.pow($mobileTypeRatio,$step);
-		font-size: (1.3rem*$mobileMultiplier); // was 1.4rem — slightly tighter on small screens
-		line-height: (1.3rem*$mobileMultiplier*1.35); // tighter line-height ratio on mobile
+		font-size: (1.1rem*$mobileMultiplier); // was 1.4rem — slightly tighter on small screens
+		line-height: (1.1rem*$mobileMultiplier*1.35); // tighter line-height ratio on mobile
 	}
 }
 
@@ -76,12 +76,12 @@ h6 {
 
 p {
     margin-top: 0;
-	@include typeScale($typeRatio,2);
+	@include typeScale($typeRatio,0);
     line-height: 1.5;
 }
 
 small {
-    @include typeScale($typeRatio,1);
+    @include typeScale($typeRatio,-1);
   display: block;
 }
 
@@ -89,7 +89,7 @@ ul ,ol{
 	margin: 0;
 	padding: $padding-xs 0 $padding-xs 0;
 	line-height: 32px;
-	@include typeScale($typeRatio,2);
+	@include typeScale($typeRatio,0);
 	margin-block-start: 0em;
 	margin-block-end: 0em;
 	margin-inline-start: 0px;

@@ -413,8 +413,8 @@ h1 {
 }
 @media (max-width: 767px) {
   h1 {
-    font-size: 2.786665453rem;
-    line-height: 3.7619983616rem;
+    font-size: 2.357947691rem;
+    line-height: 3.1832293829rem;
   }
 }
 
@@ -425,8 +425,8 @@ h2 {
 }
 @media (max-width: 767px) {
   h2 {
-    font-size: 2.53333223rem;
-    line-height: 3.4199985105rem;
+    font-size: 2.14358881rem;
+    line-height: 2.8938448935rem;
   }
 }
 
@@ -437,8 +437,8 @@ h3 {
 }
 @media (max-width: 767px) {
   h3 {
-    font-size: 2.3030293rem;
-    line-height: 3.109089555rem;
+    font-size: 1.9487171rem;
+    line-height: 2.630768085rem;
   }
 }
 
@@ -449,8 +449,8 @@ h4 {
 }
 @media (max-width: 767px) {
   h4 {
-    font-size: 2.093663rem;
-    line-height: 2.82644505rem;
+    font-size: 1.771561rem;
+    line-height: 2.39160735rem;
   }
 }
 
@@ -461,8 +461,8 @@ h5 {
 }
 @media (max-width: 767px) {
   h5 {
-    font-size: 1.90333rem;
-    line-height: 2.5694955rem;
+    font-size: 1.61051rem;
+    line-height: 2.1741885rem;
   }
 }
 
@@ -474,35 +474,35 @@ h6 {
 }
 @media (max-width: 767px) {
   h6 {
-    font-size: 1.7303rem;
-    line-height: 2.335905rem;
+    font-size: 1.4641rem;
+    line-height: 1.976535rem;
   }
 }
 
 p {
   margin-top: 0;
-  font-size: 2.304rem;
-  line-height: 2.7648rem;
+  font-size: 1.6rem;
+  line-height: 1.92rem;
   margin-bottom: 16px;
   line-height: 1.5;
 }
 @media (max-width: 767px) {
   p {
-    font-size: 1.573rem;
-    line-height: 2.12355rem;
+    font-size: 1.1rem;
+    line-height: 1.485rem;
   }
 }
 
 small {
-  font-size: 1.92rem;
-  line-height: 2.304rem;
+  font-size: 1.3333333333rem;
+  line-height: 1.6rem;
   margin-bottom: 16px;
   display: block;
 }
 @media (max-width: 767px) {
   small {
-    font-size: 1.43rem;
-    line-height: 1.9305rem;
+    font-size: 1rem;
+    line-height: 1.35rem;
   }
 }
 
@@ -510,8 +510,8 @@ ul, ol {
   margin: 0;
   padding: 16px 0 16px 0;
   line-height: 32px;
-  font-size: 2.304rem;
-  line-height: 2.7648rem;
+  font-size: 1.6rem;
+  line-height: 1.92rem;
   margin-bottom: 16px;
   margin-block-start: 0em;
   margin-block-end: 0em;
@@ -522,8 +522,8 @@ ul, ol {
 }
 @media (max-width: 767px) {
   ul, ol {
-    font-size: 1.573rem;
-    line-height: 2.12355rem;
+    font-size: 1.1rem;
+    line-height: 1.485rem;
   }
 }
 
@@ -619,8 +619,8 @@ figcaption {
 }
 @media (max-width: 767px) {
   figcaption {
-    font-size: 1.573rem;
-    line-height: 2.12355rem;
+    font-size: 1.331rem;
+    line-height: 1.79685rem;
   }
 }
 
