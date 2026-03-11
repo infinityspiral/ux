@@ -204,109 +204,100 @@ header {
 footer {
 	display: flex;
 	flex-flow: column;
-	min-height: 600px;
-	padding: 0 $gridUnit 0 $gridUnit;
+	min-height: 400px;
+	padding: $gridUnit*4 $gridUnit*3;
+	gap: $gridUnit*4;
+
+	@media (min-width: $breakForTablet) {
+		padding: $gridUnit*6;
+	}
 
 	@media (min-width: $breakForDesktop) {
-		padding:$gridUnit*4;
 		flex-flow: row;
-		justify-content: space-between;
 		align-items: flex-start;
+		justify-content: space-between;
+		gap: $gridUnit*8;
+		padding: $gridUnit*8 $gridUnit*10;
 	}
 
-	.about-me {
-		margin-bottom: $gridUnit*2;
-		order: 3;
-		line-height: 1;
-		opacity: 0.66;
-		padding: $gridUnit;
-
-		@media (min-width: $breakForDesktop) {
-			margin-bottom: 0;
-			padding: $gridUnit*4;
-			flex: 0 0 auto;
-			max-width: 33%;
-			min-width: 500px;
-			order: 2;
-		}
-
-	}
 	.social-links {
-		display: none;
+		display: flex;
 		flex-flow: column;
-		margin-bottom: 0;
-		order: 1;
-		padding: 0 $gridUnit $gridUnit*4 $gridUnit;
+		gap: $gridUnit;
+		flex: 0 0 auto;
 
-		@media (min-width: $breakForTablet) {
-			display: flex;
-			padding: 0 $gridUnit $gridUnit $gridUnit;
-		}
-		@media (min-width: $breakForDesktop) {
-			margin-bottom: 32px;
-			padding: $gridUnit*4;
-			flex: 0 2 70%;
-			max-width: 50%;
-			order: 1;
+		h4 {
+			margin-bottom: $gridUnit;
 		}
 
 		a {
-			font-size: 1.8rem;
-			line-height: 1.5;
+			font-size: 1.6rem;
+			line-height: 1.6;
 			border: none;
 			color: $color-text-dark-neg1;
-		}
 
+			&:hover { opacity: 0.6; }
+		}
 	}
 
-	form {
-		margin-top: 16px;
-		padding: $gridUnit*2 $gridUnit*4 $gridUnit*2 $gridUnit*4;
-		border: 8px solid $color-bg-4;
-		background: #cee4ee;
-		border-radius: $gridUnit*2;
-		order: 1;
-        margin: $padding-xs;
+	.bio-group {
+		display: flex;
+		flex-flow: column;
+		gap: $gridUnit*3;
+		flex: 0 1 760px;
 
 		@media (min-width: $breakForDesktop) {
-			flex: 0 0 auto;
-			max-width: 500px;
-			order: 3;
-            margin-bottom: 0;
-			padding: $gridUnit*2 $gridUnit*4 $gridUnit*2 $gridUnit*4;
-		}
-
-
-		h6 {
-			color: #548ca5;
-			//margin-bottom: 1.2rem;
-		}
-
-		button {
-			width: 100%;
-			margin-top: 12px;
-			padding: 16px 32px;
-			border: 3px solid $color-bg-4;
-			background: $color-bg-4;
-			border-radius: 12px;
-			font-size: 1.4rem;
-			letter-spacing: 1.5px;
-			font-weight: 700;
-			color: white;
-			text-transform: uppercase;
+			flex-flow: row;
+			align-items: flex-start;
+			gap: $gridUnit*5;
 		}
 	}
+
+	.about-me {
+		flex: 1 1 auto;
+		padding: $gridUnit*3 $gridUnit*4;
+		border: 1px solid rgba(0,0,0,0.15);
+		border-radius: $gridUnit*2;
+		line-height: 1.6;
+		opacity: 0.85;
+
+		small {
+			font-size: 1.4rem;
+			display: block;
+		}
+	}
+
+	.bio {
+		flex: 0 0 auto;
+		max-width: 320px;
+
+		h6 {
+			font-size: 2rem;
+			font-weight: 700;
+			margin-bottom: $gridUnit*2;
+		}
+
+		p {
+			font-size: 1.5rem;
+			line-height: 1.7;
+			color: $color-text-dark-neg1;
+		}
+	}
+
+	form { display: none; }
 }
+
 
 section {
 	margin: 0 auto;
-    padding: $padding-xs;
+	padding: $gridUnit*2 $gridUnit*3; // 16px 24px mobile
 
 	@media (min-width: $breakForTablet) {
 		width: 100%;
+		padding: $gridUnit*4 $gridUnit*8; // 32px 64px tablet
 	}
 	@media (min-width: $breakForDesktop) {
-        //padding: $padding-lg;
+		padding: $gridUnit*8 $gridUnit*14 $gridUnit*10 $gridUnit*14; // 64px 112px 80px desktop
 	}
 }
 
@@ -380,33 +371,33 @@ section {
 }
 
 .bubble {
-	width: calc(100vw - 48px);
+	width: calc(100vw - $gridUnit*4);
 	max-width: 1200px;
 	overflow: hidden;
 	height: fit-content;
-	margin: $padding-sm auto;
+	margin: $padding-sm auto; // 40px — same on mobile
 	background: white;
 	border-radius: 20px;
 	box-shadow: 0 10px 20px rgba(0, 0, 0, .2);
-    @media (min-width: $breakForTablet) {
-      margin: $padding-lg auto;
-    }
+	@media (min-width: $breakForTablet) {
+		margin: $padding-md auto; // 80px — was $padding-lg (144px), too heavy
+	}
 }
 
 .dark-bubble {
 	width: calc(100% - ($gridUnit*4));
 	height: fit-content;
 	padding-bottom: 0;
-	margin: $gridUnit*16 $gridUnit*8 $gridUnit*16 $gridUnit*4;
+	margin: $padding-md auto; // was $gridUnit*16 (128px) with mismatched left/right — now centered
 	background: white;
 	border-radius: 20px;
 	box-shadow: 0 10px 20px rgba(0, 0, 0, .2);
 
 	@media (min-width: $breakForDesktop) {
-		width: calc(100% - $gridUnit*24);
+		width: calc(100% - $gridUnit*16); // was $gridUnit*24 (192px eaten) — now 128px
 		margin-left: auto;
 		margin-right: auto;
-		padding-bottom: 80px;
+		padding-bottom: $gridUnit*6; // was 80px hardcoded
 	}
 }
 
@@ -447,14 +438,23 @@ section {
 	}
 }
 .projects {
+	display: grid;
+	grid-template-columns: 1fr; // 1 per row mobile
+	gap: $gridUnit*3; // 24px
 	width: 100%;
-	display: flex;
-	flex-flow: row wrap;
-	justify-content: center;
+	max-width: 940px; // 2-col cap — overridden at XL
+	margin-left: auto;
+	margin-right: auto;
 
-	@media (min-width:$breakForTablet) {
+	@media (min-width: $breakForTablet) {
+		grid-template-columns: repeat(2, 1fr); // 2 per row tablet
+		gap: $gridUnit*4; // 32px
 	}
-	@media (min-width:$breakForDesktop) {
+
+	@media (min-width: 1280px) {
+		grid-template-columns: repeat(3, 1fr); // 3 per row large desktop
+		max-width: 1380px;
+		gap: $gridUnit*5; // 40px
 	}
 }
 
@@ -468,7 +468,7 @@ section {
 .bg-dark-3 a.project {
 	width: 100%;
 	padding: 24px 24px 16px 24px;
-	margin: 0 24px 24px 0;
+	margin: 0;
 	position: relative;
 	display: inline-flex;
 	flex-flow: column;
@@ -478,11 +478,6 @@ section {
 	border-bottom-color: #ffffff10;
 	border-radius: 24px;
 	color: $color-text-light-neg1;
-
-	@media screen and (min-width: $breakForDesktop) {
-		max-width: 400px;
-		min-width: 350px;
-	}
 
 	.description {
 		display: none;
@@ -722,31 +717,84 @@ section {
 	align-items: center;
 
 	svg {
-		width: 42px;
+		width: 18px; // smaller on mobile
 		height: auto;
 		margin-top: 2px;
-		//filter: invert(100%) sepia(100%) saturate(1000%) hue-rotate(180deg);
 		filter: brightness(40%) saturate(300%);
+
+		@media screen and (min-width: $breakForTablet) {
+			width: 42px; // restore at tablet+
+		}
 	}
-    span {
-      //padding-top: 4px;
-      padding-left: $gridUnit;
-      font-size: 1.6rem;
-    }
+	span {
+		padding-left: $gridUnit/2;
+		font-size: 1.3rem; // smaller on mobile
+
+		@media screen and (min-width: $breakForTablet) {
+			padding-left: $gridUnit;
+			font-size: 1.6rem; // restore at tablet+
+		}
+	}
 }
 
 .page-nav {
 	display: flex;
 	justify-content: flex-start;
-	align-items: flex-start;
+	align-items: center;
+	margin-bottom: $gridUnit*3;
 
-	p{
+
+	p {
 		margin: 0;
 	}
 
 	.back {
+		display: inline-flex;
+		align-items: center;
+		gap: $gridUnit;
 		margin-right: $gridUnit;
-		border: none;
+		padding: $gridUnit $gridUnit*2;
+		border-radius: $gridUnit;
+		border-width: 2px;
+		border-style: solid;
+		border-color: #59595957;
+		background: transparent;
+		font-size: 1.5rem;
+		font-weight: 600;
+		color: #595959e8;
+		text-decoration: none;
+		transition: background 150ms ease, color 150ms ease, border-color 150ms ease;
+
+		.fa {
+			font-size: 3.2rem;
+		}
+
+		&:hover {
+			border-color: #595959e8;
+			color: #595959e8;
+			opacity: 1; // override global a:hover opacity:.35
+
+			&::before {
+				transform: translateX(-3px);
+			}
+		}
+
+		&.dell {
+			border-color: #f2c92b9e;
+			color: #f2c92b;
+			&:hover {
+				color: #f2c92b9e;
+				border-color: #f2c92b38;
+			}
+		}
+		&.jd {
+			border-color: #4371306b;
+			color: #437130;
+			&:hover {
+				color: #4371306b;
+				border-color: #4371302b;
+			}
+		}
 	}
 }
 .page-nav.top {
@@ -803,10 +851,10 @@ blockquote {
 	max-width: 600px;
 	background: $color-bg-5;
 	color: $color-text-light;
-	font-size: 2.4rem;
-	line-height: 3.2rem;
-	padding: $gridUnit*8 $gridUnit*6;
-	margin: 0 auto $gridUnit*6 auto;
+	font-size: 1.8rem; // was 2.4rem
+	line-height: 1.6; // was fixed 3.2rem
+	padding: $gridUnit*5 $gridUnit*4; // was $gridUnit*8 $gridUnit*6
+	margin: 0 auto $gridUnit*4 auto; // was $gridUnit*6
 	border-radius: $gridUnit*2;
 }
 

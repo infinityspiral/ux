@@ -263,13 +263,13 @@
   padding: 9px 12px;
   border-radius: 8px;
   font-family: var(--nav-font);
-  font-size: .85rem;
-  font-weight: 500;
-  color: var(--nav-muted);
-  background: none;
+  font-size: 1.4rem; // was .85rem — too small vs the 1.6rem drawer links, felt like fine print
+  font-weight: 600; // was 500 — needs to read as a clear navigation action
+  color: var(--nav-text); // was nav-muted — muted color made it easy to overlook
+  background: rgba(128,128,128,.06); // subtle tint to signal it's a separate nav control
   border: none;
   cursor: pointer;
-  margin-bottom: 2px;
+  margin-bottom: 6px; // was 2px — a little more separation before the section list
   transition: color .12s, background .12s;
   width: 100%;
   text-align: left;
@@ -283,12 +283,12 @@
 /* ── Drawer: label above section list ────────────────────────── */
 .ds-nav__drawer-eyebrow {
   font-family: var(--nav-mono);
-  font-size: .67rem;
+  font-size: .75rem; // was .67rem — barely legible at small sizes
   letter-spacing: .06em;
   text-transform: uppercase;
   color: var(--nav-muted);
   padding: 8px 12px 4px;
-  opacity: .55;
+  opacity: .65; // was .55 — a touch more legible
 }
 
 /* ── Drawer: shared link + toggle ────────────────────────────── */

@@ -44,8 +44,8 @@ $mobileTypeRatio:1.1;
 
 	@media (max-width: $breakForTablet) {
 		$mobileMultiplier: math.pow($mobileTypeRatio,$step);
-		font-size: (1.4rem*$mobileMultiplier);
-		line-height: (1.4rem*$mobileMultiplier*1.4);
+		font-size: (1.3rem*$mobileMultiplier); // was 1.4rem — slightly tighter on small screens
+		line-height: (1.3rem*$mobileMultiplier*1.35); // tighter line-height ratio on mobile
 	}
 }
 
@@ -70,7 +70,8 @@ h5 {
 }
 
 h6 {
-	@include typeScale($typeRatio,3)
+	@include typeScale($typeRatio,3);
+	margin-bottom: $gridUnit; // 8px — was $padding-xs (16px) from mixin; tighter below overline labels
 }
 
 p {
