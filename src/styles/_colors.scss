@@ -108,7 +108,10 @@ $color-bg-6:#003d75;
     border-bottom-color: $color-text-light;
   }
 
-  h1,h2,h3,h4,h5,h6 {
-    color: $color-text-light;
+  h1,h2,h4,h5,h6 {
+    color: #e18839;
+  }
+  h3 {
+    color: #3c9dbb;
   }
 }

@@ -383,8 +383,11 @@ template {
   color: #fff;
   border-bottom-color: #fff;
 }
-.bg-dark-3 h1, .bg-dark-3 h2, .bg-dark-3 h3, .bg-dark-3 h4, .bg-dark-3 h5, .bg-dark-3 h6 {
-  color: #fff;
+.bg-dark-3 h1, .bg-dark-3 h2, .bg-dark-3 h4, .bg-dark-3 h5, .bg-dark-3 h6 {
+  color: #e18839;
+}
+.bg-dark-3 h3 {
+  color: #3c9dbb;
 }
 
 h1, h2, h3, h4, h5, h6 {
