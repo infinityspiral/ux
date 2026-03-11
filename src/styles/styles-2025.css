@@ -613,15 +613,11 @@ figure {
 }
 
 figcaption {
-  font-size: 2.304rem;
-  line-height: 2.7648rem;
-  margin-bottom: 16px;
-}
-@media (max-width: 767px) {
-  figcaption {
-    font-size: 1.331rem;
-    line-height: 1.79685rem;
-  }
+  font-size: 1.3rem;
+  border: 1px solid gray;
+  padding: 4px 8px;
+  text-align: center;
+  margin-top: 8px;
 }
 
 .form-group {
@@ -1680,6 +1676,14 @@ blockquote {
   border-radius: 16px;
 }
 
+.fa-thumbs-up {
+  color: forestgreen;
+}
+
+.fa-thumbs-down {
+  color: palevioletred;
+}
+
 .graph-priority {
   display: inline-block;
   position: relative;
@@ -1710,13 +1714,15 @@ blockquote {
   left: -24px;
   z-index: 2;
 }
-.graph-priority .point span {
+.graph-priority .point i {
   position: absolute;
   width: 24px;
   height: 24px;
   top: -16px;
   left: -24px;
   z-index: 2;
+  font-size: 20px;
+  line-height: 1;
 }
 
 .full-img {
@@ -1769,12 +1775,19 @@ blockquote {
 }
 
 .checkmark-list li {
-  list-style-type: "✓";
+  list-style-type: none;
+  padding-left: 32px;
+  position: relative;
 }
-.checkmark-list li::marker {
+.checkmark-list li::before {
+  content: "\f00c";
+  font-family: "Font Awesome 6 Free";
+  font-weight: 900;
+  font-style: normal;
   color: #4fc100;
-  font-family: "Arimo", serif;
-  font-weight: 700;
+  position: absolute;
+  left: 8px;
+  top: 0;
 }
 
 @media (min-width: 767px) {

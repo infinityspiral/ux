@@ -88,11 +88,11 @@ figure {
 	padding: 0;
 }
 figcaption {
-	font-size: 1.2rem;
+	font-size: 1.3rem;
 	border: 1px solid gray;
-	padding: 2px 4px;
+	padding: 4px 8px;
 	text-align: center;
-	margin-top: 12px;
+	margin-top: $padding-xxs; // 8px grid-aligned
 }
 
 .form-group {

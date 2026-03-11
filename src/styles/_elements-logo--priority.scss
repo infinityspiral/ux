@@ -92,7 +92,11 @@ figure {
 	padding: 0;
 }
 figcaption {
-  @include typeScale($typeRatio,2);
+  font-size: 1.3rem;
+  border: 1px solid gray;
+  padding: 4px 8px;
+  text-align: center;
+  margin-top: $padding-xxs; // 8px grid-aligned
 }
 
 .form-group {
@@ -856,6 +860,12 @@ blockquote {
 	border-radius: $gridUnit*2;
 }
 
+.fa-thumbs-up {
+	color: forestgreen;
+}
+.fa-thumbs-down {
+	color: palevioletred;
+}
 
 .graph-priority {
 	display: inline-block;
@@ -888,13 +898,15 @@ blockquote {
 			left: -24px;
 			z-index: 2;
 		}
-		span {
+		i {
 			position: absolute;
 			width: 24px;
 			height: 24px;
 			top: -16px;
 			left: -24px;
 			z-index: 2;
+			font-size: 20px;
+			line-height: 1;
 		}
 	}
 }
@@ -959,11 +971,19 @@ blockquote {
 
 .checkmark-list {
 	li {
-		list-style-type: '\2713';
-		&::marker {
+		list-style-type: none;
+		padding-left: $gridUnit*4;
+		position: relative;
+
+		&::before {
+			content: '\f00c'; // fa-check
+			font-family: 'Font Awesome 6 Free';
+			font-weight: 900;
+			font-style: normal;
 			color: #4fc100;
-			font-family: $fontHeading;
-			font-weight: 700;
+			position: absolute;
+			left: $gridUnit;
+			top: 0;
 		}
 	}
 }
