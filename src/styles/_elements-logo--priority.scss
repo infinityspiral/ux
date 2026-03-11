@@ -254,7 +254,6 @@ footer {
 	}
 
 	.about-me {
-		flex: 1 1 auto;
 		padding: $gridUnit*3 $gridUnit*4;
 		border: 1px solid rgba(0,0,0,0.15);
 		border-radius: $gridUnit*2;
@@ -696,14 +695,13 @@ section {
 }
 .features {
 	display: grid;
-	grid-template-columns: 1fr;
+	grid-template-columns: 1fr 1fr;
 
 	gap: $padding-xs;
 
 	@media screen and (min-width: $breakForTablet) {
-      margin-top: $padding-sm;
+		margin-top: $padding-sm;
 		gap: $padding-xs;
-		grid-template-columns: 1fr 1fr;
 	}
 	@media screen and (min-width: $breakForDesktop) {
 		gap: $padding-xs;

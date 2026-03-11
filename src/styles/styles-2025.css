@@ -784,7 +784,6 @@ footer .bio-group {
   }
 }
 footer .about-me {
-  flex: 1 1 auto;
   padding: 24px 32px;
   border: 1px solid rgba(0, 0, 0, 0.15);
   border-radius: 16px;
@@ -1517,14 +1516,13 @@ section {
 
 .features {
   display: grid;
-  grid-template-columns: 1fr;
+  grid-template-columns: 1fr 1fr;
   gap: 16px;
 }
 @media screen and (min-width: 767px) {
   .features {
     margin-top: 40px;
     gap: 16px;
-    grid-template-columns: 1fr 1fr;
   }
 }
 @media screen and (min-width: 992px) {
