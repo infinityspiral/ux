@@ -414,23 +414,11 @@ h1 {
   line-height: 8.2556485632rem;
   margin-bottom: 16px;
 }
-@media (max-width: 767px) {
-  h1 {
-    font-size: 2.357947691rem;
-    line-height: 3.1832293829rem;
-  }
-}
 
 h2 {
   font-size: 5.73308928rem;
   line-height: 6.879707136rem;
   margin-bottom: 16px;
-}
-@media (max-width: 767px) {
-  h2 {
-    font-size: 2.14358881rem;
-    line-height: 2.8938448935rem;
-  }
 }
 
 h3 {
@@ -438,23 +426,11 @@ h3 {
   line-height: 5.73308928rem;
   margin-bottom: 16px;
 }
-@media (max-width: 767px) {
-  h3 {
-    font-size: 1.9487171rem;
-    line-height: 2.630768085rem;
-  }
-}
 
 h4 {
   font-size: 3.981312rem;
   line-height: 4.7775744rem;
   margin-bottom: 16px;
-}
-@media (max-width: 767px) {
-  h4 {
-    font-size: 1.771561rem;
-    line-height: 2.39160735rem;
-  }
 }
 
 h5 {
@@ -462,24 +438,12 @@ h5 {
   line-height: 3.981312rem;
   margin-bottom: 16px;
 }
-@media (max-width: 767px) {
-  h5 {
-    font-size: 1.61051rem;
-    line-height: 2.1741885rem;
-  }
-}
 
 h6 {
   font-size: 2.7648rem;
   line-height: 3.31776rem;
   margin-bottom: 16px;
   margin-bottom: 8px;
-}
-@media (max-width: 767px) {
-  h6 {
-    font-size: 1.4641rem;
-    line-height: 1.976535rem;
-  }
 }
 
 p {
@@ -489,24 +453,12 @@ p {
   margin-bottom: 16px;
   line-height: 1.5;
 }
-@media (max-width: 767px) {
-  p {
-    font-size: 1.1rem;
-    line-height: 1.485rem;
-  }
-}
 
 small {
   font-size: 1.3333333333rem;
   line-height: 1.6rem;
   margin-bottom: 16px;
   display: block;
-}
-@media (max-width: 767px) {
-  small {
-    font-size: 1rem;
-    line-height: 1.35rem;
-  }
 }
 
 ul, ol {
@@ -522,12 +474,6 @@ ul, ol {
   margin-inline-end: 0px;
   padding-inline-start: 24px;
   counter-reset: inst;
-}
-@media (max-width: 767px) {
-  ul, ol {
-    font-size: 1.1rem;
-    line-height: 1.485rem;
-  }
 }
 
 li {

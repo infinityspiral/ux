@@ -41,12 +41,6 @@ $mobileTypeRatio:1.1;
 	font-size: ($typeBase*$multiplier);
     line-height: ($typeBase*$multiplier*$ratio);
     margin-bottom: $padding-xs;
-
-	@media (max-width: $breakForTablet) {
-		$mobileMultiplier: math.pow($mobileTypeRatio,$step);
-		font-size: (1.1rem*$mobileMultiplier); // was 1.4rem — slightly tighter on small screens
-		line-height: (1.1rem*$mobileMultiplier*1.35); // tighter line-height ratio on mobile
-	}
 }
 
 
