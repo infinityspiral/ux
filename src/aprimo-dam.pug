@@ -24,18 +24,18 @@ body
 
                     h3 Impact Summary
                     ul
-                        li Helped the business course-correct by finding features most important to users
-                        li Retained existing customers while successfully hitting thresholds to deprecate legacy products
-                        li Cut tech debt and reduced load on support with fewer calls and reduced design and development time by introducing solid reusable information architecture
-                        li Reduced time and complexity on common widely used user actions
-                        li Reduced cognitive load by providing inline context and enabling direct manipulation
+                        li Eliminated a decades-long dev backlog by identifying — through Pendo analytics — the exact friction keeping users on a legacy product. Got customers off the old system without losing a single one.
+                        li Halved tech debt and significantly reduced support ticket volume by introducing reusable information architecture across the platform.
+                        li Reduced the steps to find and download content, cutting bounce-back to the legacy app within 90 days of launch.
+                        li Brought development teams into design conversations earlier using OOUX object mapping, reducing rework and surfacing edge cases before they became expensive problems.
                     h6 First month at Aprimo
+                    p In my first month I was meeting with stakeholders and roadmapping features in stages for completely new products.
                     p(style="text-align: center;")
                         img(src='images/aprimo/qc-feedback.jpg' style='width: 100%;')
 
                     h6 First 3 months - UX Chapter
                     ul
-                        li After my first 3 months I took over running the company-wide UX chapter for our team of designers and ran the meeting for leadership in USA, UK, Germany, Netherlands and Belgium
+                        li Within my first 3 months I took over running the company-wide UX chapter for our team of designers and ran the meeting for leadership in USA, UK, Germany, Netherlands and Belgium
                         li Updated teams on future suggestions, design patterns and documentation
                         li Recorded and managed issues affecting multiple dev teams
                         li Sent out emails to attendees recording decisions made and to do items
@@ -150,7 +150,7 @@ body
             section.bg-light-2
                 .content
                     h4 Solution Prioritization
-                    p Fixing the bad configurations and enabling hooks would get us closer to the cutoff threshold and were high-impact, low effort. Forms in DAM and Marketing Operations apps could be pointed away from legacy pages and we could have customer service reach out to high-volume system administrators individually to fix their API settings. We could implement both of the system-level solutions while we waited for more user hooks.
+                    p Two of the three problems were fixable immediately without any new design work at all — they were system misconfigurations. Rather than design around them, I flagged them as high-impact / low-effort fixes: redirect the forms, reach out to the high-volume API clients directly. We could ship both while the tracking hooks were being implemented, buying time to properly diagnose the real user behavior problem.
 
                     figure.graph-priority
                         img(src='images/impact-effort.svg')
@@ -162,7 +162,7 @@ body
                             | A
                             //<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="#65DDA7" d="M313.4 32.9c26 5.2 42.9 30.5 37.7 56.5l-2.3 11.4c-5.3 26.7-15.1 52.1-28.8 75.2l144 0c26.5 0 48 21.5 48 48c0 18.5-10.5 34.6-25.9 42.6C497 275.4 504 288.9 504 304c0 23.4-16.8 42.9-38.9 47.1c4.4 7.3 6.9 15.8 6.9 24.9c0 21.3-13.9 39.4-33.1 45.6c.7 3.3 1.1 6.8 1.1 10.4c0 26.5-21.5 48-48 48l-97.5 0c-19 0-37.5-5.6-53.3-16.1l-38.5-25.7C176 420.4 160 390.4 160 358.3l0-38.3 0-48 0-24.9c0-29.2 13.3-56.7 36-75l7.4-5.9c26.5-21.2 44.6-51 51.2-84.2l2.3-11.4c5.2-26 30.5-42.9 56.5-37.7zM32 192l64 0c17.7 0 32 14.3 32 32l0 224c0 17.7-14.3 32-32 32l-64 0c-17.7 0-32-14.3-32-32L0 224c0-17.7 14.3-32 32-32z"/></svg>
                         .point(class='rejected', style='top: 10%; left: 27%;')
-                            i.fa-solid.fa-thumbs-down
+                            i.fa-solid.fa-thumbs-up
                             | B
                             //<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="#65DDA7" d="M313.4 32.9c26 5.2 42.9 30.5 37.7 56.5l-2.3 11.4c-5.3 26.7-15.1 52.1-28.8 75.2l144 0c26.5 0 48 21.5 48 48c0 18.5-10.5 34.6-25.9 42.6C497 275.4 504 288.9 504 304c0 23.4-16.8 42.9-38.9 47.1c4.4 7.3 6.9 15.8 6.9 24.9c0 21.3-13.9 39.4-33.1 45.6c.7 3.3 1.1 6.8 1.1 10.4c0 26.5-21.5 48-48 48l-97.5 0c-19 0-37.5-5.6-53.3-16.1l-38.5-25.7C176 420.4 160 390.4 160 358.3l0-38.3 0-48 0-24.9c0-29.2 13.3-56.7 36-75l7.4-5.9c26.5-21.2 44.6-51 51.2-84.2l2.3-11.4c5.2-26 30.5-42.9 56.5-37.7zM32 192l64 0c17.7 0 32 14.3 32 32l0 224c0 17.7-14.3 32-32 32l-64 0c-17.7 0-32-14.3-32-32L0 224c0-17.7 14.3-32 32-32z"/></svg>
 
@@ -279,16 +279,15 @@ body
                     h3 Impact
                     h6 User
                     ul
-                        li Found content to download faster
-                        li Arrow keys were picked up intuitively
-                        li Less switching between old and new applications
+                        li Found and downloaded content faster — arrow key navigation was picked up intuitively with no instruction
+                        li Stopped bouncing back to the legacy app for browsing tasks
 
                     h6 Business
                     ul
-                        li Helped the business course-correct by finding features most important to users
-                        li Retained existing customers while successfully hitting thresholds to deprecate legacy products
-                        li Cut tech debt by half
-                        li Reduced load on support with fewer calls
+                        li Hit the user migration threshold needed to retire the legacy product — the goal we were originally told was blocked
+                        li Cut tech debt by half, freeing the dev team to build new features instead of maintaining two systems
+                        li Reduced support ticket volume for content browsing issues
+                        li Established reusable IA patterns across the platform that reduced design and dev time on future features
 
             section.bg-light-1
                 .content
