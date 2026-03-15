@@ -517,7 +517,6 @@ body {
   font-weight: 400;
   vertical-align: baseline;
   background: #f1f5e9;
-  overflow-x: hidden;
   text-wrap: balance;
 }
 
@@ -606,7 +605,6 @@ input, textarea {
   min-height: 100vh;
   margin: 0;
   padding: 0;
-  overflow-x: hidden;
 }
 
 .page {
@@ -1056,6 +1054,22 @@ section {
     font-size: 1.6rem;
   }
 }
+.project .title .company,
+.bg-neutral a.project .title .company,
+.bg-light-1 a.project .title .company,
+.bg-light-2 a.project .title .company,
+.bg-light-3 a.project .title .company,
+.bg-light-4 a.project .title .company,
+.bg-dark-2 a.project .title .company,
+.bg-dark-3 a.project .title .company {
+  font-weight: 400;
+  opacity: 0.65;
+  font-size: 1.6rem;
+  letter-spacing: 0.15px;
+  line-height: 1;
+  margin-top: 16px;
+  text-shadow: 1px 1px rgba(0, 0, 0, 0.2);
+}
 .project .title small,
 .bg-neutral a.project .title small,
 .bg-light-1 a.project .title small,
@@ -1276,6 +1290,48 @@ section {
 .bg-dark-2 a.project.aprimo:hover .preview,
 .bg-dark-3 a.project.aprimo:hover .preview {
   background: url("../images/aprimo/qc-figma2.jpg") no-repeat top center;
+  background-size: cover;
+}
+.project.proofing-gallery,
+.bg-neutral a.project.proofing-gallery,
+.bg-light-1 a.project.proofing-gallery,
+.bg-light-2 a.project.proofing-gallery,
+.bg-light-3 a.project.proofing-gallery,
+.bg-light-4 a.project.proofing-gallery,
+.bg-dark-2 a.project.proofing-gallery,
+.bg-dark-3 a.project.proofing-gallery {
+  background: #232323;
+}
+.project.proofing-gallery .preview,
+.bg-neutral a.project.proofing-gallery .preview,
+.bg-light-1 a.project.proofing-gallery .preview,
+.bg-light-2 a.project.proofing-gallery .preview,
+.bg-light-3 a.project.proofing-gallery .preview,
+.bg-light-4 a.project.proofing-gallery .preview,
+.bg-dark-2 a.project.proofing-gallery .preview,
+.bg-dark-3 a.project.proofing-gallery .preview {
+  background: url("../images/proofing-gallery/infinityspiral-white.png") no-repeat center top;
+  background-size: contain;
+}
+.project.proofing-gallery:hover,
+.bg-neutral a.project.proofing-gallery:hover,
+.bg-light-1 a.project.proofing-gallery:hover,
+.bg-light-2 a.project.proofing-gallery:hover,
+.bg-light-3 a.project.proofing-gallery:hover,
+.bg-light-4 a.project.proofing-gallery:hover,
+.bg-dark-2 a.project.proofing-gallery:hover,
+.bg-dark-3 a.project.proofing-gallery:hover {
+  background: rgb(242.25, 242.25, 242.25);
+}
+.project.proofing-gallery:hover .preview,
+.bg-neutral a.project.proofing-gallery:hover .preview,
+.bg-light-1 a.project.proofing-gallery:hover .preview,
+.bg-light-2 a.project.proofing-gallery:hover .preview,
+.bg-light-3 a.project.proofing-gallery:hover .preview,
+.bg-light-4 a.project.proofing-gallery:hover .preview,
+.bg-dark-2 a.project.proofing-gallery:hover .preview,
+.bg-dark-3 a.project.proofing-gallery:hover .preview {
+  background: url("../images/proofing-gallery/gallery-selections.jpg") no-repeat center top;
   background-size: cover;
 }
 .project.aquent,
@@ -1614,6 +1670,16 @@ section {
   border-color: rgb(25.5, 25.5, 25.5) black black rgb(25.5, 25.5, 25.5);
   text-shadow: 1px 1px black;
 }
+.tag.ai {
+  background: #2e7db5;
+  border-color: rgb(70.013215859, 150.7533039648, 207.986784141) rgb(35.6651982379, 96.9162995595, 140.3348017621) rgb(35.6651982379, 96.9162995595, 140.3348017621) rgb(70.013215859, 150.7533039648, 207.986784141);
+  text-shadow: 1px 1px rgb(35.6651982379, 96.9162995595, 140.3348017621);
+}
+.tag.fd {
+  background: #7a8a6e;
+  border-color: rgb(147.7983870968, 161.4112903226, 137.5887096774) rgb(96.9112903226, 109.6209677419, 87.3790322581) rgb(96.9112903226, 109.6209677419, 87.3790322581) rgb(147.7983870968, 161.4112903226, 137.5887096774);
+  text-shadow: 1px 1px rgb(96.9112903226, 109.6209677419, 87.3790322581);
+}
 
 blockquote {
   max-width: 600px;
@@ -1887,6 +1953,121 @@ blockquote {
   border-radius: 6px;
 }
 
+.stat-row {
+  display: flex;
+  border: 1px solid #ddd;
+  border-radius: 3px;
+  overflow: hidden;
+  margin: 16px 0 24px;
+}
+@media (max-width: 767px) {
+  .stat-row {
+    flex-wrap: wrap;
+  }
+}
+
+.stat-cell {
+  flex: 1;
+  padding: 16px 16px;
+  border-right: 1px solid #ddd;
+  background: #fff;
+}
+.stat-cell:last-child {
+  border-right: none;
+}
+@media (max-width: 767px) {
+  .stat-cell {
+    min-width: 48%;
+  }
+}
+
+.stat-n {
+  font-size: 2.4rem;
+  font-weight: 700;
+  color: #000;
+  line-height: 1;
+  margin-bottom: 4px;
+}
+
+.stat-l {
+  font-size: 1.1rem;
+  color: rgba(0, 0, 0, 0.62);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  line-height: 1.4;
+}
+
+.info-box {
+  border: 1px solid #ddd;
+  border-radius: 3px;
+  padding: 16px 16px;
+  margin: 8px 0 16px;
+  background: #fafafa;
+}
+.info-box h6 {
+  margin-top: 0;
+}
+.info-box p {
+  font-size: 1.4rem;
+}
+
+.comp-table {
+  border: 1px solid #ddd;
+  border-radius: 3px;
+  overflow: hidden;
+  margin: 16px 0 24px;
+  font-size: 1.4rem;
+}
+
+.comp-head,
+.comp-row {
+  display: grid;
+  grid-template-columns: 1.1fr 1fr 1fr 1.1fr;
+  border-bottom: 1px solid #ddd;
+}
+.comp-head:last-child,
+.comp-row:last-child {
+  border-bottom: none;
+}
+@media (max-width: 767px) {
+  .comp-head,
+  .comp-row {
+    grid-template-columns: 1fr 1fr;
+  }
+  .comp-head .comp-cell:nth-child(2),
+  .comp-row .comp-cell:nth-child(2) {
+    display: none;
+  }
+}
+
+.comp-head .comp-cell {
+  padding: 8px 12px;
+  background: #f5f5f5;
+  font-size: 1.1rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: #999;
+}
+.comp-head .comp-cell.hl {
+  color: #0e60a3;
+}
+
+.comp-row .comp-cell {
+  padding: 8px 12px;
+  color: #777;
+  line-height: 1.5;
+  border-right: 1px solid #eee;
+}
+.comp-row .comp-cell:last-child {
+  border-right: none;
+}
+.comp-row .comp-cell.hl {
+  color: #000;
+  font-weight: 500;
+  background: #f9fbfd;
+}
+
 /* ================================================================
    DS NavBar — Design System Header Navigation Component
    ================================================================
@@ -1938,6 +2119,7 @@ blockquote {
   width: 100%;
   z-index: 1000;
   transition: box-shadow 0.25s, background 0.3s, border-color 0.3s;
+  background: var(--nav-bg);
 }
 
 .ds-nav[data-sticky=true] {
@@ -2506,6 +2688,15 @@ blockquote {
     display: none !important;
   }
 }
+@media (max-width: 767px) {
+  .ds-nav__logo-wordmark, .ds-nav__drawer-link, .ds-nav, .ds-nav__drawer-panel .ds-nav__drawer-link {
+    background: #0d0d0d;
+    color: #f0f0f0;
+  }
+  .ds-nav__burger span {
+    background: #f0f0f0;
+  }
+}
 /* ================================================================
    DEMO PAGE STYLES — remove when integrating
    ================================================================ */
@@ -2524,7 +2715,7 @@ body {
   transition: background 0.35s;
 }
 
-.demo-stage[data-variant=dark] {
+[data-variant=dark] {
   background: #0d0d0d;
   color: #f0f0f0;
 }

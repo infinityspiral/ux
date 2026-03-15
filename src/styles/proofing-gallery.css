@@ -1,0 +1,505 @@
+/* ─────────────────────────────────────────────────────
+   proofing-gallery.css
+   Light-mode components for Client Proofing Gallery.
+   All mockups use light backgrounds, muted photo
+   placeholders, and clear structure — readable against
+   the site's bg-light-1 page background.
+───────────────────────────────────────────────────── */
+
+/* ── ITERATION LIST ── */
+.iter-list {
+    border: 1px solid #ddd;
+    border-radius: 3px;
+    overflow: hidden;
+    margin: 16px 0 28px;
+}
+.iter-row {
+    display: grid;
+    grid-template-columns: 36px 1fr;
+    border-bottom: 1px solid #ddd;
+    background: #fff;
+}
+.iter-n {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    padding-top: 14px;
+    font-size: 15px;
+    font-weight: 700;
+    color: #ccc;
+    background: #f7f7f7;
+    border-right: 1px solid #ddd;
+}
+.iter-body { padding: 14px 16px; }
+.iter-phase {
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: #bbb;
+    margin-bottom: 3px;
+}
+.iter-title {
+    font-size: 14px;
+    font-weight: 600;
+    color: #222;
+    margin-bottom: 5px;
+}
+.iter-desc {
+    font-size: 13px;
+    color: #666;
+    line-height: 1.6;
+    margin-bottom: 5px;
+}
+.iter-note {
+    font-size: 12px;
+    color: #aaa;
+    font-style: italic;
+}
+
+/* ════════════════════════════════════════════════════
+   MOCKUPS — light-background wireframe style
+   Photo placeholders = muted color-coded rectangles
+   Structure shown with borders and soft fills
+════════════════════════════════════════════════════ */
+
+.pg-mockup {
+    background: #fff;
+    border: 1px solid #ddd;
+    border-top: none;
+    border-bottom: 1px solid #ddd;
+    margin: 0 0 0 36px;
+    overflow: hidden;
+}
+
+/* Mimics a browser address bar — light gray strip */
+.pg-mock-label {
+    background: #f0f0f0;
+    border-bottom: 1px solid #ddd;
+    padding: 6px 12px;
+    font-family: monospace;
+    font-size: 10px;
+    color: #999;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.pg-mock-label::before {
+    content: '';
+    display: inline-flex;
+    width: 6px; height: 6px;
+    border-radius: 50%;
+    background: #ccc;
+    box-shadow: 10px 0 0 #ccc, 20px 0 0 #ccc;
+    flex-shrink: 0;
+    margin-right: 14px;
+}
+
+.pg-mock-body {
+    padding: 14px;
+    background: #fafafa;
+}
+
+/* ── Photo placeholder color swatches ── */
+/* Muted, clearly-placeholder, visually distinct from UI */
+.pg-thumb-img,
+.pg-cf-img,
+.pg-zoom-img {
+    width: 100%; height: 100%;
+    border-radius: 2px;
+}
+
+.c1 { background: #c9d4dc; } /* cool blue-gray   */
+.c2 { background: #d4c9c0; } /* warm taupe       */
+.c3 { background: #c9d4c9; } /* muted sage       */
+.c4 { background: #d4d0c9; } /* warm gray        */
+
+/* ── Gallery grid ── */
+.pg-gallery {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 6px;
+}
+
+.pg-thumb {
+    position: relative;
+    border: 1px solid #ddd;
+    border-radius: 3px;
+    overflow: hidden;
+    background: #eee;
+    aspect-ratio: 1;
+}
+
+.pg-thumb.selected {
+    border-color: #2a6496;
+    box-shadow: 0 0 0 1px #2a6496;
+}
+
+.pg-thumb-stars {
+    position: absolute;
+    bottom: 0; left: 0; right: 0;
+    background: rgba(255,255,255,0.88);
+    border-top: 1px solid #e0e0e0;
+    display: flex;
+    justify-content: center;
+    gap: 1px;
+    padding: 3px 0;
+}
+
+.ps { color: #e8a020; font-size: 8px; }
+.ps.off { color: #ddd; }
+
+/* Checkbox */
+.pg-chk {
+    position: absolute;
+    top: 4px; left: 4px;
+    width: 14px; height: 14px;
+    border-radius: 2px;
+    background: #2a6496;
+    color: #fff;
+    font-size: 9px;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #1e4d72;
+}
+
+.pg-chk.empty {
+    background: rgba(255,255,255,0.8);
+    border: 1px solid #bbb;
+    color: transparent;
+}
+
+/* Action bar */
+.pg-action-bar {
+    margin-top: 8px;
+    background: #2a6496;
+    border-radius: 3px;
+    padding: 7px 12px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.pg-action-bar span {
+    font-size: 12px;
+    color: #fff;
+    font-weight: 500;
+}
+
+.pg-btn {
+    background: #fff;
+    color: #2a6496;
+    border: none;
+    border-radius: 2px;
+    padding: 4px 10px;
+    font-size: 11px;
+    font-weight: 700;
+    cursor: pointer;
+    letter-spacing: 0.03em;
+}
+
+/* ── Compare mode ── */
+.pg-compare {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 1fr;
+    gap: 6px;
+    align-items: start;
+}
+
+.pg-cf {
+    border: 1px solid #ddd;
+    border-radius: 3px;
+    overflow: hidden;
+    background: #fff;
+}
+
+.pg-cf.wide { /* already wider via grid */ }
+
+.pg-cf-img {
+    aspect-ratio: 3/2;
+}
+
+.pg-cf.wide .pg-cf-img {
+    aspect-ratio: 16/9;
+}
+
+.pg-cf-footer {
+    padding: 5px 7px;
+    background: #f7f7f7;
+    border-top: 1px solid #e8e8e8;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    flex-wrap: wrap;
+}
+
+.pg-cf-stars {
+    font-size: 9px;
+    color: #e8a020;
+    letter-spacing: 0px;
+    flex-shrink: 0;
+}
+
+.pg-cf-name {
+    font-size: 10px;
+    color: #888;
+    font-family: monospace;
+    flex: 1;
+    min-width: 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.pg-cf-remove {
+    background: none;
+    border: 1px solid #ddd;
+    color: #aaa;
+    border-radius: 2px;
+    width: 16px; height: 16px;
+    font-size: 9px;
+    cursor: pointer;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* ── Zoom mode ── */
+.pg-zoom-frame {
+    border: 1px solid #ddd;
+    border-radius: 3px;
+    overflow: hidden;
+    background: #fff;
+    aspect-ratio: 16/9;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.pg-zoom-img {
+    position: absolute;
+    inset: 0;
+    height: 100%;
+    opacity: 0.6; /* lighter — communicates zoomed-into state */
+}
+
+.pg-zoom-badge {
+    position: absolute;
+    top: 8px; right: 8px;
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 3px;
+    padding: 3px 8px;
+    font-family: monospace;
+    font-size: 11px;
+    color: #444;
+    font-weight: 700;
+    z-index: 1;
+}
+
+.pg-zoom-hint {
+    position: absolute;
+    bottom: 8px; left: 50%;
+    transform: translateX(-50%);
+    font-size: 10px;
+    color: #aaa;
+    background: rgba(255,255,255,0.85);
+    padding: 2px 8px;
+    border-radius: 8px;
+    white-space: nowrap;
+    z-index: 1;
+}
+
+/* Crosshair */
+.pg-zoom-frame::before,
+.pg-zoom-frame::after {
+    content: '';
+    position: absolute;
+    background: rgba(42, 100, 150, 0.25);
+    z-index: 1;
+}
+.pg-zoom-frame::before { width: 1px; height: 60%; left: 50%; top: 20%; }
+.pg-zoom-frame::after  { width: 60%; height: 1px; top: 50%; left: 20%; }
+
+.pg-zoom-controls {
+    position: absolute;
+    bottom: 8px; right: 8px;
+    display: flex;
+    gap: 4px;
+    align-items: center;
+    z-index: 1;
+}
+
+.pg-zoom-btn {
+    width: 22px; height: 22px;
+    border-radius: 3px;
+    background: #fff;
+    border: 1px solid #ddd;
+    color: #555;
+    font-size: 14px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 300;
+}
+
+.pg-zoom-val {
+    font-family: monospace;
+    font-size: 11px;
+    color: #666;
+}
+
+/* ── Export view ── */
+.pg-export {
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 3px;
+    overflow: hidden;
+    font-size: 13px;
+    font-family: monospace;
+}
+
+.pg-export-row {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 7px 12px;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.pg-export-row:last-of-type { border-bottom: 1px solid #ddd; }
+
+.pg-export-row.dimmed { background: #fafafa; }
+
+.pg-export-stars {
+    color: #e8a020;
+    font-size: 11px;
+    flex-shrink: 0;
+    width: 62px;
+}
+
+.pg-export-name {
+    color: #aaa;
+    flex: 1;
+    font-size: 12px;
+}
+
+.pg-export-name.sel { color: #2a6496; font-weight: 500; }
+
+.pg-export-badge {
+    font-size: 10px;
+    background: #eaf2fb;
+    color: #2a6496;
+    border: 1px solid #c0d8ee;
+    border-radius: 10px;
+    padding: 1px 7px;
+    flex-shrink: 0;
+}
+
+.pg-export-badge.skip {
+    background: #f5f5f5;
+    color: #bbb;
+    border-color: #e0e0e0;
+}
+
+.pg-export-summary {
+    display: block;
+    padding: 8px 12px;
+    font-size: 11px;
+    color: #888;
+    background: #f7f7f7;
+    font-style: italic;
+}
+
+/* ── STATE PROBLEMS ── */
+.state-list {
+    border: 1px solid #ddd;
+    border-radius: 3px;
+    overflow: hidden;
+    margin: 12px 0 20px;
+}
+
+.sp {
+    padding: 14px 16px;
+    border-bottom: 1px solid #eee;
+    background: #fff;
+}
+
+.sp:last-child { border-bottom: none; }
+
+.sp-title {
+    font-size: 14px;
+    font-weight: 600;
+    color: #222;
+    margin-bottom: 5px;
+}
+
+.sp p {
+    font-size: 13px;
+    color: #666;
+    line-height: 1.6;
+    margin: 0;
+}
+
+/* Workflow compare */
+.wf {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1px;
+    background: #ddd;
+    border: 1px solid #ddd;
+    border-radius: 3px;
+    overflow: hidden;
+    margin: 14px 0 28px;
+}
+
+.wf-col { padding: 16px 18px; background: #f7f7f7; }
+.wf-col.new { background: #fff; }
+
+.wf-head {
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: #bbb;
+    margin-bottom: 10px;
+}
+
+.wf-col.new .wf-head { color: #2a6496; }
+
+.wf-steps { list-style: none; margin: 0; padding: 0; }
+
+.wf-steps li {
+    font-size: 13px;
+    color: #999;
+    padding-left: 14px;
+    position: relative;
+    margin-bottom: 6px;
+    line-height: 1.45;
+}
+
+.wf-steps li::before { content: '→'; position: absolute; left: 0; color: #ddd; }
+.wf-col.new .wf-steps li::before { color: #ccc; }
+.wf-col.new .wf-steps li.hl { color: #1a1a1a; font-weight: 500; }
+.wf-col.new .wf-steps li.hl::before { color: #2a6496; }
+
+/* ── RESPONSIVE ── */
+@media (max-width: 620px) {
+    .stat-row { flex-wrap: wrap; }
+    .stat-cell { min-width: 48%; }
+    .comp-head, .comp-row { grid-template-columns: 1fr 1fr; }
+    .comp-head .comp-cell:nth-child(2),
+    .comp-row  .comp-cell:nth-child(2) { display: none; }
+    .pg-gallery { grid-template-columns: repeat(3, 1fr); }
+    .pg-compare { grid-template-columns: 1fr 1fr; }
+    .pg-cf.wide { grid-column: span 2; }
+    .wf { grid-template-columns: 1fr; }
+    .pg-mockup { margin-left: 0; }
+    .iter-list .iter-row { grid-template-columns: 28px 1fr; }
+}

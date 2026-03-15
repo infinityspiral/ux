@@ -47,6 +47,7 @@
   width: 100%;
   z-index: 1000;
   transition: box-shadow .25s, background .3s, border-color .3s;
+  background: var(--nav-bg);
 }
 .ds-nav[data-sticky="true"] { position: sticky; top: 0; }
 .ds-nav.is-scrolled { box-shadow: 0 2px 24px rgba(0,0,0,.08); }
@@ -488,6 +489,17 @@
 /* hidden on mobile — drawer handles it */
 @media (max-width: 767px) { .ds-section-nav { display: none !important; } }
 
+@media (max-width: 767px) {
+  // force dark mode on mobile
+  .ds-nav__logo-wordmark, .ds-nav__drawer-link,.ds-nav,.ds-nav__drawer-panel .ds-nav__drawer-link{
+    background: #0d0d0d; color: #f0f0f0;
+  }
+  .ds-nav__burger span {
+    background: #f0f0f0;
+  }
+
+}
+
 
 /* ================================================================
    DEMO PAGE STYLES — remove when integrating
@@ -496,7 +508,9 @@ html { scroll-behavior: smooth; }
 body { font-family: 'DM Sans', sans-serif; background: #f4f5f7; min-height: 100vh; }
 
 .demo-stage { min-height: 100vh; transition: background .35s; }
-.demo-stage[data-variant="dark"]  { background: #0d0d0d; color: #f0f0f0; }
+[data-variant="dark"]  {
+  background: #0d0d0d; color: #f0f0f0;
+}
 .demo-stage[data-variant="glass"] {
   background: linear-gradient(135deg,#dbeafe 0%,#fef3c7 50%,#fce7f3 100%);
 }
