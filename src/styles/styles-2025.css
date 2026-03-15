@@ -893,6 +893,36 @@ section {
   justify-self: center;
 }
 
+.sidenote {
+  margin-top: 40px;
+  margin-right: auto;
+  margin-left: auto;
+  color: rgba(0, 0, 0, 0.62);
+  text-wrap: initial;
+  font-size: 1.3333333333rem;
+  line-height: 1.6rem;
+  margin-bottom: 16px;
+  color: rgba(0, 0, 0, 0.7019607843);
+  padding-bottom: 40px;
+}
+.sidenote strong {
+  margin-bottom: 16px;
+}
+.sidenote p {
+  margin: 0;
+}
+@media (min-width: 767px) {
+  .sidenote {
+    padding-bottom: 0;
+    margin-bottom: 80px;
+    opacity: 0.8;
+  }
+}
+.sidenote strong {
+  display: block;
+  line-height: 1.2;
+}
+
 .projects {
   display: grid;
   grid-template-columns: 1fr;

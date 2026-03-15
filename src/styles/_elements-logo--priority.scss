@@ -440,6 +440,34 @@ section {
 		justify-self: center;
 	}
 }
+.sidenote {
+	margin-top: $padding-sm;
+	margin-right: auto;
+	margin-left: auto;
+	//padding: $padding-sm;
+	color: $color-text-dark-neg1;
+	text-wrap: initial;
+	@include typeScale($typeRatio,-1);
+	color: #000000b3;
+	padding-bottom: $padding-sm;
+
+	strong {
+		margin-bottom: $padding-xs;
+	}
+	p {
+		margin: 0;
+	}
+
+	@media (min-width: $breakForTablet) {
+		padding-bottom: 0;
+		margin-bottom: $padding-md;
+		opacity: .8;
+	}
+	strong {
+		display: block;
+		line-height: 1.2;
+	}
+}
 .projects {
 	display: grid;
 	grid-template-columns: 1fr; // 1 per row mobile
