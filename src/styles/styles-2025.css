@@ -759,6 +759,21 @@ footer form {
 section {
   margin: 0 auto;
   padding: 16px 24px;
+  position: relative;
+}
+section::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: url("../images/texturetastic_gray.jpg") repeat; /* or repeat-x / repeat-y */
+  background-size: auto; /* keeps natural tile size — change if needed */
+  opacity: 0.75;
+  mix-blend-mode: multiply;
+  pointer-events: none; /* so it doesn't block clicks */
+}
+section > * { /* keep children especially images above the texture */
+  position: relative;
+  z-index: 1;
 }
 @media (min-width: 767px) {
   section {
@@ -827,6 +842,12 @@ section {
     margin: 0 auto;
   }
 }
+section.bg-dark-3::before {
+  background: url("../images/texturetastic_black.jpg") repeat; /* or repeat-x / repeat-y */
+  opacity: 0.75;
+  mix-blend-mode: screen;
+}
+
 .bubble {
   width: calc(100vw - 32px);
   max-width: 1200px;
@@ -836,6 +857,9 @@ section {
   background: white;
   border-radius: 20px;
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+.bubble::before {
+  opacity: 0.25;
 }
 @media (min-width: 767px) {
   .bubble {

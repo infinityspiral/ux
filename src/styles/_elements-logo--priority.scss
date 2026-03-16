@@ -294,6 +294,23 @@ footer {
 section {
 	margin: 0 auto;
 	padding: $gridUnit*2 $gridUnit*3; // 16px 24px mobile
+	position: relative;
+
+	&::before {
+		content: '';
+		position: absolute;
+		inset: 0;
+		background: url('../images/texturetastic_gray.jpg') repeat; /* or repeat-x / repeat-y */
+		background-size: auto; /* keeps natural tile size — change if needed */
+		opacity: 0.75;
+		mix-blend-mode: multiply;
+		pointer-events: none; /* so it doesn't block clicks */
+	}
+
+	& > * { /* keep children especially images above the texture */
+		position: relative;
+		z-index: 1;
+	}
 
 	@media (min-width: $breakForTablet) {
 		width: 100%;
@@ -373,7 +390,15 @@ section {
 		}
 	}
 }
+section.bg-dark-3 {
 
+	&::before {
+		background: url('../images/texturetastic_black.jpg') repeat; /* or repeat-x / repeat-y */
+		opacity: .75;
+		mix-blend-mode: screen;
+
+	}
+}
 .bubble {
 	width: calc(100vw - $gridUnit*4);
 	max-width: 1200px;
@@ -383,6 +408,11 @@ section {
 	background: white;
 	border-radius: 20px;
 	box-shadow: 0 10px 20px rgba(0, 0, 0, .2);
+
+	&::before {
+		opacity: 0.25;
+	}
+
 	@media (min-width: $breakForTablet) {
 		margin: $padding-md auto; // 80px — was $padding-lg (144px), too heavy
 	}
@@ -636,7 +666,6 @@ section {
 
 	}
 	&.aprimo {
-
 		background: #335d7c;
 
 		.preview {
