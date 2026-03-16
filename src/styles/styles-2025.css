@@ -1940,7 +1940,7 @@ blockquote {
   }
 }
 
-.figma-ptorotype {
+.figma-prototype {
   width: auto;
   display: inline-block;
   content: " ";
@@ -1952,10 +1952,10 @@ blockquote {
   font-size: 1.6rem;
   line-height: 2rem;
 }
-.figma-ptorotype a {
+.figma-prototype a {
   border: none;
 }
-.figma-ptorotype a:hover {
+.figma-prototype a:hover {
   text-decoration: none;
   border: none;
 }
