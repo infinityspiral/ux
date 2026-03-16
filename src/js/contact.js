@@ -79,35 +79,36 @@ window.addEventListener('load', () => {
     })
     item.click()
   })
+    // contact
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbzQOF_mWVbxkbhEVYlv4bkQOoNPdmAw2_rQdaKXTFn7w4PlJSqQPUwEqVEHpZ3G0RuT/exec'
+    const contactForm = document.getElementById('contactForm')
+    const contactFormBtn = document.getElementById('submitContact')
+    const contactFormStatus = document.getElementById('formStatus')
 
-  // contact
-  const scriptURL = 'https://script.google.com/macros/s/AKfycbzQOF_mWVbxkbhEVYlv4bkQOoNPdmAw2_rQdaKXTFn7w4PlJSqQPUwEqVEHpZ3G0RuT/exec'
-  const contactForm = document.getElementById('contactForm')
-  const contactFormBtn = document.getElementById('submitContact')
-  const contactFormStatus = document.getElementById('formStatus')
+  if (contactForm) {
+    const fullName = contactForm.querySelector('#fullName')
+    const email = contactForm.querySelector('#email')
 
-  const fullName = contactForm.querySelector('#fullName')
-  const email = contactForm.querySelector('#email')
+    contactForm.addEventListener('submit', e => {
+      e.preventDefault()
+      contactFormBtn.innerText = 'Sending...'
 
-  contactForm.addEventListener('submit', e => {
-    e.preventDefault()
-    contactFormBtn.innerText = 'Sending...'
-
-    if (validateName(fullName.value) && validateEmail(email.value)) {
-      fetch(scriptURL, { method: 'POST', body: new FormData(contactForm) })
-        .then(response => {
-          contactFormBtn.style.display = 'none'
-          contactFormStatus.style.display = 'block'
-        // alert('Thank you! your form is submitted successfully.')
-        })
-        .catch(error => {
-          contactFormBtn.disabled = true
-          contactFormBtn.innerText = 'Try again later.'
-          console.error('Error!', error.message)
-        })
-    } else {
-      contactFormBtn.style.display = 'none'
-      contactFormStatus.style.display = 'block'
-    }
-  })
+      if (validateName(fullName.value) && validateEmail(email.value)) {
+        fetch(scriptURL, { method: 'POST', body: new FormData(contactForm) })
+          .then(response => {
+            contactFormBtn.style.display = 'none'
+            contactFormStatus.style.display = 'block'
+          // alert('Thank you! your form is submitted successfully.')
+          })
+          .catch(error => {
+            contactFormBtn.disabled = true
+            contactFormBtn.innerText = 'Try again later.'
+            console.error('Error!', error.message)
+          })
+      } else {
+        contactFormBtn.style.display = 'none'
+        contactFormStatus.style.display = 'block'
+      }
+    })
+  }
 })
