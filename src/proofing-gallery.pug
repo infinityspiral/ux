@@ -23,71 +23,78 @@ body
                         .tag.ai AI
 
                     h4(data-title="Impact") Impact
-                    p Replaced $200–300/year SaaS proofing platforms with a self-hosted tool built around how photography clients actually make selection decisions. Clients stopped sending "can you compare #47 and #52?" emails — they were doing that comparison themselves and arriving with a confident, exportable selection. Multiple photographers in the community have expressed interest in purchasing the tool once it reaches a stable, distributable state, validating that the gap it fills is wider than one studio. Shipped in 2 days using Claude AI for rapid full-stack prototyping — no Figma-to-developer handoff required.
+                    p Most photo proofing tools are built around rating images funneling thumbnails into higher rankings until the thumbnails can be compared. That's not how clients actually make decisions — they need to see similar images together as large as possible. I designed and built a self-hosted comparison tool from scratch to solve that gap, using AI-assisted prototyping to go from concept to shipped production tool in 2 days.
+                    ul
+                        li Existing proofing platforms charged $200–300/year for a viewing experience that hadn't evolved in years — so I built a replacement that solved the actual problem
+                        li No instructions needed — clients opened a link and started choosing images for retouching without any guidance
+                        li Clients were making those comparisons themselves and arriving with confident, exportable selections
+                        li Retouching cart upsells converted directly from the selection flow — clients purchased additional services without a separate sales conversation
+                        li Unsolicited purchase interest from other photographers confirmed this is a market gap, not just a personal workflow problem
 
                     p.full-img
-                        img(src='images/proofing-gallery/gallery-selections.jpg' style='width:100%')
-                        small Gallery view with 3 images selected and the compare action bar active — live at infinityspiral.com
+                        a(href='https://infinityspiral.com/galleries/2026-Uchicon-etaru/', target='_blank')
+                            img(src='images/proofing-gallery/gallery-selections.jpg' style='width:100%')
+                            small Gallery view with 3 images selected and the compare action bar active.
 
                     .stat-row
-                        .stat-cell
-                            .stat-n $300
-                            .stat-l Annual savings vs SaaS
-                        .stat-cell
-                            .stat-n 5×
-                            .stat-l Max simultaneous comparison
                         .stat-cell
                             .stat-n 2 days
                             .stat-l Concept to shipped tool
                         .stat-cell
+                            .stat-n 5×
+                            .stat-l Max simultaneous comparison
+                        .stat-cell
                             .stat-n 0
-                            .stat-l Client accounts or installs
+                            .stat-l Accounts, installs, or logins required
+                        .stat-cell
+                            .stat-n Unsolicited
+                            .stat-l Purchase interest from photographers before any distribution
 
                     h4(data-title="Thinking") Why
                     h6 Why are we building this? What problems are we trying to solve?
-                    p As a working photographer I ran into the same friction after every shoot. Clients needed to review proof images and choose which ones they wanted retouched, but the available tools were either too expensive or broken for how real selection decisions actually get made.
-                    p The SaaS proofing platforms on the market charged <strong>$200–300/year</strong> with storage caps, gallery expiration dates, and a one-at-a-time viewing experience that hadn't evolved in years. The core design failure: when a client is choosing between subtle lighting variations or similar poses, they need to see those images <em>together</em> — not flip between them trying to hold one in memory while viewing another.
+                    p As a working photographer I ran into the same friction after every shoot. Clients needed to review proof images and choose which ones they wanted retouched, but the available tools were broken for how real selection decisions actually get made.
+                    p The SaaS proofing platforms on the market charged <strong>$200–300/year</strong> with storage caps, gallery expiration dates, image limits and many of these tools hadn't evolved in years. The core design failure: when a client is choosing between subtle lighting variations or similar poses, they need to see those images <em>together, and BIG</em> — not flip between them trying to hold one in memory while viewing another.
                     p User interviews confirmed what I was experiencing firsthand. Clients weren't struggling with the concept of rating images — they were struggling with the inability to hold multiple similar images in view at the same time. The market had built rating tools. Nobody had built a real comparison tool designed for the end client.
-                    p I reviewed Adobe Lightroom's Survey Mode and Capture One's online collaboration gallery as reference points. Both had relevant pieces but neither solved the client-facing problem: Survey Mode is desktop-only and client-inaccessible; Capture One limits comparison to two images.
+                    p I reviewed Adobe Lightroom's Survey Mode and Capture One's online collaboration gallery as reference points. Both had relevant pieces but neither solved the client-facing problem: Survey Mode is desktop-only and client-inaccessible; Capture One is limited to ratings filtering only.
 
                     .comp-table
                         .comp-head
                             .comp-cell
-                            .comp-cell Adobe Lightroom
+                            .comp-cell Adobe Lightroom<br>Proofing Gallery
                             .comp-cell Capture One
                             .comp-cell.hl Client Proofing Gallery
                         .comp-row
                             .comp-cell Side-by-side compare
-                            .comp-cell Desktop only
-                            .comp-cell 2 images max
+                            .comp-cell Thumbnail only
+                            .comp-cell Thumbnail only
                             .comp-cell.hl Up to 5 images
                         .comp-row
                             .comp-cell Client-accessible
-                            .comp-cell No
+                            .comp-cell Yes
                             .comp-cell Yes
                             .comp-cell.hl Yes — any browser, no login
                         .comp-row
                             .comp-cell Annual cost
-                            .comp-cell Subscription required
+                            .comp-cell $150/yr
                             .comp-cell $200–300/yr
                             .comp-cell.hl Self-hosted, free
                         .comp-row
                             .comp-cell Storage limits
-                            .comp-cell Local only
-                            .comp-cell Capped
+                            .comp-cell Creative Cloud Limit
+                            .comp-cell 1 month per session
                             .comp-cell.hl None
 
                     h4 Who, Where, When
                     h6 Primary User
                     p The photographer's clients — people who hired a photographer for portraits, events, or commercial work and need to select which images they want retouched. They have no photography background and varying technical comfort. The tool must work fluently for the least technical person in the room, on whatever device they pick up. No tutorial. No account. Just a link that works.
                     h6 Secondary User
-                    p The photographer. Every minute a client spends uncertain or sending back-and-forth emails is time spent managing communication instead of editing. The tool needs to get clients to a confident, exportable selection without hand-holding.
+                    p The photographer. Every minute a client spends sending back-and-forth emails is time spent managing communication instead of editing. The tool needs to get clients to a confident, exportable selection without hand-holding.
                     h6 Where &amp; When
-                    p Hosted on the photographer's own website. Clients receive a link via email immediately after a shoot, when proof images are delivered, and review 100+ photos in a single session at their own pace — on desktop or mobile, with no friction before they can start.
+                    p Hosted on the photographer's own website. Clients receive a link via email after a shoot, when proof images are delivered, and review 100+ photos in a single session at their own pace — on desktop or mobile, with no friction before they can start.
 
                     h4(data-title="Solutions") What
                     h6 How do we prioritize?
-                    p Features were sequenced by what would most reduce client hesitation and back-and-forth communication. The build moved fast — 2 days, 5 iterations — because I was prototyping directly in the browser with Claude AI rather than designing in Figma and waiting on a development handoff.
+                    p Features were divided into phases by what would most reduce client hesitation and back-and-forth communication. The build moved through 5 phases in 2 days. Because I was prototyping directly in the browser with Claude AI rather than designing in Figma and waiting on a development handoff I was able to explore flows more more completely even with multiple non-linear application states.
 
                     .iter-list
 
@@ -100,7 +107,6 @@ body
                                 p.iter-note ↳ Insight: rating without context doesn't work — clients needed to see images together
 
                         .pg-mockup
-                            .pg-mock-label yoursite.com/gallery
                             .pg-mock-body
                                 .pg-gallery
                                     .pg-thumb
@@ -161,7 +167,6 @@ body
                                 p.iter-note ↳ Insight: the action bar had to feel native, not like a separate mode
 
                         .pg-mockup
-                            .pg-mock-label yoursite.com/gallery
                             .pg-mock-body
                                 .pg-gallery
                                     .pg-thumb.selected
@@ -225,13 +230,12 @@ body
                         .iter-row
                             .iter-n 3
                             .iter-body
-                                p.iter-phase Phase 2 · Core Feature Continued
+                                p.iter-phase Phase 3 · Core Feature Continued
                                 p.iter-title 5-Image Compare Mode Lightbox
                                 p.iter-desc Up to 5 images side-by-side at the same height, with individual rating controls and a remove button per image. Inspired by Lightroom's Survey Mode but designed for clients who need to act — rate, remove, decide — not just view.
                                 p.iter-note ↳ This was the feature photographers said they'd wanted for years
 
                         .pg-mockup
-                            .pg-mock-label yoursite.com/gallery — compare mode
                             .pg-mock-body
                                 .pg-compare
                                     .pg-cf.wide
@@ -262,13 +266,12 @@ body
                         .iter-row
                             .iter-n 4
                             .iter-body
-                                p.iter-phase Phase 3 · Detail Inspection
+                                p.iter-phase Phase 4 · Detail Inspection
                                 p.iter-title Zoom + Pan Controls (Up to 5×)
                                 p.iter-desc Per-image zoom in both lightbox and compare mode. Double-click toggles zoom, mouse wheel adjusts up to 5×, drag-to-pan lets clients inspect sharpness and expression independently per panel. Each panel maintains its own zoom state.
                                 p.iter-note ↳ Clients check sharpness and expression — impossible at thumbnail scale
 
                         .pg-mockup
-                            .pg-mock-label yoursite.com/gallery — zoom mode
                             .pg-mock-body
                                 .pg-zoom-frame
                                     .pg-zoom-img.c1
@@ -282,13 +285,12 @@ body
                         .iter-row
                             .iter-n 5
                             .iter-body
-                                p.iter-phase Phase 1 · Export + Persistence
+                                p.iter-phase Phase 5 · Export + Persistence
                                 p.iter-title URL State Encoding + Export Filter
                                 p.iter-desc All ratings encode into the URL in real-time — clients can bookmark mid-session or share their exact view. Export generates a filtered filename list by star rating for the photographer. No accounts, no email threads.
                                 p.iter-note ↳ URL-as-save-state: zero friction, no login required
 
                         .pg-mockup
-                            .pg-mock-label yoursite.com/gallery?r=5:IMG_0031,4:IMG_0047...
                             .pg-mock-body
                                 .pg-export
                                     .pg-export-row
@@ -313,13 +315,27 @@ body
                                         span.pg-export-badge.skip 3★
                                     .pg-export-summary ↳ Exporting 4 images rated 4★ or above
 
-                    p.full-img
-                        img(src='images/proofing-gallery/retouching-cart.jpg' style='width:100%')
-                        small Retouching cart modal showing selected images, included count, and payment options — a feature added after initial launch
+                        .iter-row
+                            .iter-n 6
+                            .iter-body
+                                p.iter-phase Phase 6 · Business Layer
+                                p.iter-title Retouching Cart + Payment Options
+                                p.iter-desc After finalizing their selection, clients are shown a retouching cart summarizing their chosen images and how many are included in their existing package. If they want additional images retouched beyond what's included, they can purchase extras directly via Zelle QR code or credit card link — without any back-and-forth with the photographer.
 
-                    h4(data-title="Process") Process — AI-Assisted Design &amp; Build
-                    h6 How Claude AI changed the workflow
-                    p This project didn't follow a traditional UX process. Rather than designing flows in Figma, writing interaction specs, and handing off to a developer, I used <strong>Claude AI for vibe coding</strong> — describing design intent in plain language and iterating on working browser prototypes in real time. It's how I now operate as a designer who can also build: faster feedback loops, complex state problems caught before they're expensive, and a 2-day path from concept to shipped production tool.
+                                p.iter-note ↳ Showing included images first makes the upsell feel informative rather than pushy — clients understand exactly what they're paying for before they're asked to pay
+
+                        .pg-mockup
+                            .pg-mock-body
+                                .pg-export
+                                    p.full-img
+                                        img(src='images/proofing-gallery/retouching-cart.jpg' style='width:100%')
+                                        small Retouching cart modal showing selected images, included count, and payment options — a feature added after initial launch
+
+
+
+                    h4(data-title="Process") Process — AI-Assisted Prototyping &amp; Build
+                    h6 Why I prototyped in the browser instead of Figma
+                    p This project called for a different process. The interface has three interconnected views sharing live state — the kind of nonlinear, stateful interactions that look fine in a Figma prototype and break immediately in a real browser. Rather than designing static flows and writing specs for a developer to interpret, <strong>I used Claude AI to prototype directly in the browser</strong> — describing design intent in plain language and iterating on working code in real time. Complex state problems got caught during design, not QA. The result was a 2-day path from concept to shipped production tool.
 
                     .info-box
                         h6 The core advantage over a Figma handoff
@@ -361,13 +377,28 @@ body
                                 li Ship production-ready code directly
                                 li.hl 2 days, concept to live tool
 
-                    h4(data-title="Validation") How
-                    h6 How can we measure impact and growth to validate the solution?
-                    p Client feedback was immediate and consistent: the comparison feature was the thing people talked about. Several described the selection process as finally feeling manageable. Nobody needed instructions — they opened the link and started rating.
-                    p When I shared the tool with other photographers in my community, multiple photographers said multi-image compare was something they had been wanting for years. One noted their client turnaround time for selections dropped noticeably — fewer back-and-forth emails, faster decisions, smoother handoffs to retouching.
-                    p What started as a personal workflow solution has since generated unsolicited purchase interest from photographers in the community — a signal that the comparison gap it fills is wider than one studio. Future plans include a stable distributable release, optional client commenting, and a streamlined setup experience for non-developer photographers.
+                    h3(data-title="Validation") How
+                    p How did I measure impact and growth to validate the solution?
+
+                    h6 User
+                    ul
+                        li Clients needed no instructions — they opened a link and started rating without any guidance, which is the clearest signal a client-facing tool can give you
+                        li Multiple clients described the selection process as feeling easy
+                        li Clients purchased additional upsells
+
+                    h6 Community validation
+                    ul
+                        li Other photographers in the community said multi-image compare was something they'd wanted for years — confirming the gap wasn't unique to my studio
+                        li Unsolicited purchase interest from multiple photographers before any marketing or distribution effort
+
+                    h6 Next
+                    ul
+                        li Stable distributable release for non-developer photographers
+                        li Optional client commenting
+                        li Streamlined setup experience
 
                     .page-nav.bottom
                         a(href='index.html#projects').back
                             i.fa.fa-solid.fa-angle-left(aria-hidden='true')
                             | Projects
+include _footer.pug
