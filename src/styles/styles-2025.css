@@ -775,13 +775,14 @@ section {
 .hero {
   margin: 0 auto 16px auto;
   padding: 0;
-  background: url("../images/hero/paper-city.png") no-repeat top center;
+  background: url("../images/hero/wheres-waldo.jpg") no-repeat center center;
   background-size: cover;
   width: 100%;
   padding: 16px;
 }
 @media (min-width: 767px) {
   .hero {
+    min-height: 75vh;
     padding: 128px 128px 64px 128px;
   }
 }
