@@ -1686,54 +1686,44 @@ section.bg-dark-3::before {
 
 .tag {
   margin-top: 0.96px;
-  padding: 4px 8px;
+  margin-right: 2px;
+  padding: 6px 8px;
   display: inline-block;
-  border: 1px solid #c1c1c1;
+  border: 1px solid rgba(0, 0, 0, 0.3);
   border-radius: 4px;
   background: #b0b0b0;
   font-size: 1.6rem;
   line-height: 1;
-  color: white;
-  border-width: 1px;
-  border-style: solid;
+  color: rgba(0, 0, 0, 0.65);
+  text-transform: uppercase;
+  font-weight: 600;
+  font-size: 12px;
 }
 .tag + .tag {
   margin-left: 4px;
 }
 .tag.ux {
-  background: #479dcf;
-  border-color: rgb(111.4482758621, 178.5431034483, 217.5517241379) rgb(46.9655172414, 131.1120689655, 180.0344827586) rgb(46.9655172414, 131.1120689655, 180.0344827586) rgb(111.4482758621, 178.5431034483, 217.5517241379);
-  text-shadow: 1px 1px rgb(46.9655172414, 131.1120689655, 180.0344827586);
+  background: #F2903A;
 }
 .tag.ui {
-  background: #d55858;
-  border-color: rgb(223.2488038278, 128.7511961722, 128.7511961722) rgb(199.7607655502, 50.2392344498, 50.2392344498) rgb(199.7607655502, 50.2392344498, 50.2392344498) rgb(223.2488038278, 128.7511961722, 128.7511961722);
-  text-shadow: 1px 1px rgb(199.7607655502, 50.2392344498, 50.2392344498);
+  background: #DBD44D;
 }
 .tag.uxr {
-  background: #7eae27;
-  border-color: rgb(154.5211267606, 209.9577464789, 54.0422535211) rgb(95.8309859155, 132.338028169, 29.661971831) rgb(95.8309859155, 132.338028169, 29.661971831) rgb(154.5211267606, 209.9577464789, 54.0422535211);
-  text-shadow: 1px 1px rgb(95.8309859155, 132.338028169, 29.661971831);
+  background: #8AE05E;
 }
 .tag.vis {
-  background: #8127ae;
-  border-color: rgb(157.985915493, 54.0422535211, 209.9577464789) rgb(98.1126760563, 29.661971831, 132.338028169) rgb(98.1126760563, 29.661971831, 132.338028169) rgb(157.985915493, 54.0422535211, 209.9577464789);
-  text-shadow: 1px 1px rgb(98.1126760563, 29.661971831, 132.338028169);
+  background: #4FC5F4;
 }
 .tag.redacted {
   background: #000000;
-  border-color: rgb(25.5, 25.5, 25.5) black black rgb(25.5, 25.5, 25.5);
-  text-shadow: 1px 1px black;
+  color: rgba(255, 255, 255, 0.65);
+  border: 1px solid rgba(255, 255, 255, 0.65);
 }
 .tag.ai {
-  background: #2e7db5;
-  border-color: rgb(70.013215859, 150.7533039648, 207.986784141) rgb(35.6651982379, 96.9162995595, 140.3348017621) rgb(35.6651982379, 96.9162995595, 140.3348017621) rgb(70.013215859, 150.7533039648, 207.986784141);
-  text-shadow: 1px 1px rgb(35.6651982379, 96.9162995595, 140.3348017621);
+  background: #D64DB6;
 }
 .tag.fd {
-  background: #7a8a6e;
-  border-color: rgb(147.7983870968, 161.4112903226, 137.5887096774) rgb(96.9112903226, 109.6209677419, 87.3790322581) rgb(96.9112903226, 109.6209677419, 87.3790322581) rgb(147.7983870968, 161.4112903226, 137.5887096774);
-  text-shadow: 1px 1px rgb(96.9112903226, 109.6209677419, 87.3790322581);
+  background: #bd80ff;
 }
 
 blockquote {

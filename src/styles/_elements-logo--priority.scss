@@ -890,8 +890,8 @@ section.bg-dark-3 {
 
 @mixin tagColor($color){
 	background: $color;
-	border-color: lighten($color, 10%) darken($color, 10%) darken($color, 10%) lighten($color, 10%);
-	text-shadow: 1px 1px darken($color, 10%);
+	//border-color: lighten($color, 10%) darken($color, 10%) darken($color, 10%) lighten($color, 10%);
+	//text-shadow: 1px 1px rgba(0, 0, 0, 0.5);
 }
 
 .tags {
@@ -901,39 +901,44 @@ section.bg-dark-3 {
 
 .tag {
 	margin-top: 0.96px;
-	padding: 4px 8px;
+	margin-right: 2px;
+	padding: 6px 8px;
 	display: inline-block;
-	border: 1px solid #c1c1c1;
+	border: 1px solid rgba(0, 0, 0, 0.3);
 	border-radius: 4px;
 	background: #b0b0b0;
 	font-size: 1.6rem;
 	line-height: 1;
-	color: white;
-	border-width: 1px;
-	border-style: solid;
+	color: rgba(0, 0, 0, 0.65);
+	text-transform: uppercase;
+	font-weight: 600;
+	font-size: 12px;
+
 	& + .tag {
 		margin-left: 4px;
 	}
 	&.ux {
-		@include tagColor(#479dcf);
+		@include tagColor(#F2903A);
 	}
 	&.ui {
-		@include tagColor(#d55858);
+		@include tagColor(#DBD44D);
 	}
 	&.uxr {
-		@include tagColor(#7eae27);
+		@include tagColor(#8AE05E);
 	}
 	&.vis {
-		@include tagColor(#8127ae);
+		@include tagColor(#4FC5F4);
 	}
 	&.redacted {
 		@include tagColor(#000000);
+		color: rgba(255, 255, 255, 0.65);
+		border: 1px solid rgba(255, 255, 255, 0.65);
 	}
 	&.ai {
-		@include tagColor(#2e7db5);
+		@include tagColor(#D64DB6);
 	}
 	&.fd {
-		@include tagColor(#7a8a6e);
+		@include tagColor(#bd80ff);
 	}
 }
 
