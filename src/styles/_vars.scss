@@ -36,3 +36,32 @@ $padding-xxxs: $gridUnit/2; //4
 //  --spacingLg: 40px;
 //  --spacingXL: 80px;
 //}
+
+:root,
+[data-theme="light"] {
+  --ink: #181614;
+  --muted: #706C68;
+  --rule: rgba(0,0,0,0.10);
+  --surface: #F7F5F2;
+  --paper: #FDFCFA;
+  --nav-bg: rgba(253,252,250,0.95);
+  --accent: #C4973A;
+  --accent-light: #F5EDDD;
+  --text: #302C28;
+  --text-light: #706C68;
+  --white: #FFFFFF;
+}
+
+[data-theme="dark"] {
+  --ink: #F0EDE8;
+  --muted: #7A756F;
+  --rule: rgba(255,255,255,0.08);
+  --surface: #1E1C19;
+  --paper: #161410;
+  --nav-bg: rgba(18,16,12,0.95);
+  --accent: #DDB96B;
+  --accent-light: rgba(196,151,58,0.12);
+  --text: #C8C3BC;
+  --text-light: #7A756F;
+  --white: #1E1C19;
+}

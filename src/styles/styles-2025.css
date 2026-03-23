@@ -308,6 +308,35 @@ template {
   display: none;
 }
 
+:root,
+[data-theme=light] {
+  --ink: #181614;
+  --muted: #706C68;
+  --rule: rgba(0,0,0,0.10);
+  --surface: #F7F5F2;
+  --paper: #FDFCFA;
+  --nav-bg: rgba(253,252,250,0.95);
+  --accent: #C4973A;
+  --accent-light: #F5EDDD;
+  --text: #302C28;
+  --text-light: #706C68;
+  --white: #FFFFFF;
+}
+
+[data-theme=dark] {
+  --ink: #F0EDE8;
+  --muted: #7A756F;
+  --rule: rgba(255,255,255,0.08);
+  --surface: #1E1C19;
+  --paper: #161410;
+  --nav-bg: rgba(18,16,12,0.95);
+  --accent: #DDB96B;
+  --accent-light: rgba(196,151,58,0.12);
+  --text: #C8C3BC;
+  --text-light: #7A756F;
+  --white: #1E1C19;
+}
+
 .bg-white {
   background: white;
   color: #000;
@@ -788,7 +817,7 @@ section > * { /* keep children especially images above the texture */
 }
 
 .hero {
-  margin: 0 auto 16px auto;
+  margin: 0 auto 0 auto;
   padding: 0;
   background: url("../images/hero/wheres-waldo.jpg") no-repeat center center;
   background-size: cover;
@@ -1791,6 +1820,11 @@ blockquote {
   flex-flow: column nowrap;
   justify-content: center;
 }
+.full-img small {
+  text-align: center;
+  margin-top: 16px;
+  color: rgba(0, 0, 0, 0.62);
+}
 
 @media (min-width: 992px) {
   .usability-testing-scripts {
@@ -2111,6 +2145,72 @@ blockquote {
   color: #000;
   font-weight: 500;
   background: #f9fbfd;
+}
+
+.device-laptop {
+  padding: 0 2.5rem;
+  max-width: 800px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.device-laptop-shell {
+  background: var(--surface);
+  border: 1px solid var(--rule);
+  border-radius: 8px 8px 0 0;
+  padding: 0.75rem 0.75rem 0;
+  position: relative;
+}
+
+.device-laptop-notch {
+  width: 60px;
+  height: 8px;
+  background: var(--rule);
+  border-radius: 4px;
+  margin: 0 auto 0.5rem;
+}
+
+.device-laptop-screen {
+  background: #fff;
+  border-radius: 4px 4px 0 0;
+  overflow: hidden;
+  border: 1px solid rgba(0, 0, 0, 0.06);
+}
+
+[data-theme=dark] .device-laptop-screen {
+  background: #111;
+  border-color: rgba(255, 255, 255, 0.06);
+}
+
+.device-laptop-screen img {
+  width: 100%;
+  display: block;
+}
+
+.device-laptop-base {
+  background: var(--surface);
+  border: 1px solid var(--rule);
+  border-top: none;
+  border-radius: 0 0 4px 4px;
+  height: 18px;
+  position: relative;
+}
+
+.device-laptop-base::after {
+  content: "";
+  display: block;
+  width: 30%;
+  height: 5px;
+  background: var(--rule);
+  border-radius: 0 0 4px 4px;
+  margin: 0 auto;
+}
+
+.device-base-foot {
+  background: var(--rule);
+  height: 6px;
+  border-radius: 0 0 8px 8px;
+  margin: 0 1rem;
 }
 
 /* ================================================================

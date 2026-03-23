@@ -322,7 +322,7 @@ section {
 }
 
 .hero {
-	margin: 0 auto $gridUnit*2 auto;
+	margin: 0 auto 0 auto;
 	padding: 0;
 	background: url("../images/hero/wheres-waldo.jpg") no-repeat center center;
 	background-size: cover;
@@ -1008,6 +1008,12 @@ blockquote {
 	display: flex;
 	flex-flow: column nowrap;
 	justify-content: center;
+
+	small {
+		text-align: center;
+		margin-top: $gridUnit*2;
+		color: $color-text-dark-neg1;
+	}
 }
 
 .usability-testing-scripts {
@@ -1354,4 +1360,58 @@ blockquote {
 		font-weight: 500;
 		background: #f9fbfd;
 	}
+}
+
+.device-laptop {
+	padding: 0 2.5rem;
+	max-width: 800px;
+	margin-right: auto;
+	margin-left: auto;
+}
+.device-laptop-shell {
+	background: var(--surface);
+	border: 1px solid var(--rule);
+	border-radius: 8px 8px 0 0;
+	padding: 0.75rem 0.75rem 0;
+	position: relative;
+}
+.device-laptop-notch {
+	width: 60px; height: 8px;
+	background: var(--rule);
+	border-radius: 4px;
+	margin: 0 auto 0.5rem;
+}
+.device-laptop-screen {
+	background: #fff;
+	border-radius: 4px 4px 0 0;
+	overflow: hidden;
+	border: 1px solid rgba(0,0,0,0.06);
+}
+[data-theme="dark"] .device-laptop-screen { background: #111; border-color: rgba(255,255,255,0.06); }
+.device-laptop-screen img {
+	width: 100%;
+	display: block;
+}
+.device-laptop-base {
+	background: var(--surface);
+	border: 1px solid var(--rule);
+	border-top: none;
+	border-radius: 0 0 4px 4px;
+	height: 18px;
+	position: relative;
+}
+.device-laptop-base::after {
+	content: '';
+	display: block;
+	width: 30%;
+	height: 5px;
+	background: var(--rule);
+	border-radius: 0 0 4px 4px;
+	margin: 0 auto;
+}
+.device-base-foot {
+	background: var(--rule);
+	height: 6px;
+	border-radius: 0 0 8px 8px;
+	margin: 0 1rem;
 }
