@@ -49,7 +49,7 @@ body
                             .stat-l Purchase interest from photographers before any distribution
 
                     h3(data-title="Thinking") Why
-                    h6 Why are we building this? What problems are we trying to solve?
+                    h6 Why am I building this? What problems am I trying to solve?
                     p As a working photographer I ran into the same friction after every shoot. Clients needed to review images and choose which ones they wanted retouched, but SaaS collaboration and proofing platforms on the market are expensive, have storage caps, and gallery expiration dates. Originally this effort started out as a way for me as a photographer to provide a free alternative to myself that allowed users to export a finalized list of approved purchase options to complete the transaction.
 
                     h6 Initial Assumption
@@ -75,7 +75,9 @@ body
                     h6 Where &amp; When
                     p Hosted on the photographer's own website. Clients receive a link via email after a photoshoot. Clients can review their photos on desktop or mobile.
 
-                    h3(data-title="Solutioning") What Are We Building
+                    h3(data-title="Solutioning") What Am I Building
+                    h5 Feature Prioritization
+                    p Features were prioritized by what would most reduce client hesitation and back-and-forth communication.
 
                     h5(data-title="Stage 1: Rating System") Stage 1 · Initial Validation Build
                     p To get a starting base in front of users I used Claude.ai to flesh out some nonlinear functionality based on some assumptions. I could have used Figma Make but the plan was to eventually implement the code myself and Claude makes it easier to ask questions about those code options.
@@ -227,7 +229,7 @@ body
                         li <strong>Selection + rating sync across all views</strong><br>
                            Rating an image in the compare lightbox needed to update simultaneously in the main grid, the lightbox header, and the active filter view — without a page refresh. Invisible in a Figma prototype. Immediately testable in a live Claude prototype.
                         li <strong>Filter reactivity to live rating changes</strong><br>
-                           The star filter had to react to live rating changes — downrate an image below the threshold and it disappears from the filtered view instantly, even inside the lightbox or compare mode. One iteration to discover and resolve because we tested real state transitions.
+                           The star filter had to react to live rating changes — downrate an image below the threshold and it disappears from the filtered view instantly, even inside the lightbox or compare mode. One iteration to discover and resolve because I tested real state transitions.
                         li <strong>Zoom &amp; pan state per-image in compare mode</strong><br>
                            Each of up to 5 compare panels needed its own independent zoom and pan state — zooming one panel couldn't affect the others. This isolation requirement only became clear once tested live in the browser.
 
