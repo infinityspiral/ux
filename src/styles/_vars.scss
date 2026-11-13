@@ -54,7 +54,7 @@ $padding-xxxs: $gridUnit/2; //4
 
 [data-theme="dark"] {
   --ink: #F0EDE8;
-  --muted: #7A756F;
+  --muted: #8F8A83; // was #7A756F (~4.0:1); now ≥4.9:1 on --paper and --surface
   --rule: rgba(255,255,255,0.08);
   --surface: #1E1C19;
   --paper: #161410;
@@ -62,6 +62,6 @@ $padding-xxxs: $gridUnit/2; //4
   --accent: #DDB96B;
   --accent-light: rgba(196,151,58,0.12);
   --text: #C8C3BC;
-  --text-light: #7A756F;
+  --text-light: #8F8A83;
   --white: #1E1C19;
 }

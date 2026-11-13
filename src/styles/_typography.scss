@@ -4,6 +4,9 @@ $fontHeading: 'Arimo', serif;
 $fontBody: 'Source Sans 3', sans-serif;
 $phi: 1.618;
 
+// One shared text column (~70 characters of body text) so headings and copy line up
+$measure: 56rem;
+
 //$higherNumber: math.pow(10, 2); // 100
 //$lowerNumber: math.sqrt(100); // 10
 //
@@ -18,7 +21,21 @@ h1, h2, h3, h4, h5, h6 {
     font-weight: 700;
     margin: 0;
     text-rendering: optimizelegibility;
-    text-transform: capitalize;
+    text-wrap: balance;
+}
+
+h2, h3, h4, h5, h6 {
+    max-width: $measure;
+}
+
+// Subheads fill the line like body text; balance made them break early
+h4, h5, h6 {
+    text-wrap: pretty;
+}
+
+// Design rules, Typography 6: tighten large display headings
+h1, h2, h3 {
+    letter-spacing: -0.02em;
 }
 p+h1, p+h2, p+h3, p+h4, p+h5, p+h6,
 ul+h1, ul+h2, ul+h3, ul+h4, ul+h5, ul+h6, ul+p, ul+small {
@@ -72,6 +89,24 @@ p {
     margin-top: 0;
 	@include typeScale($typeRatio,0);
     line-height: 1.5;
+    max-width: $measure; // Typography 2: 45-75 characters per line
+    text-wrap: pretty;
+}
+
+// Paragraphs used as image/video wrappers keep full width
+p:has(> img, > video, > picture, > iframe, > a > img) {
+    max-width: none;
+}
+
+// Case-study text runs in one centered column; figures, mockups and tables stay full width.
+// Without this the capped text hugs the left edge and leaves a wide gap on the right.
+.content > :is(h2, h3, h4, h5, h6, p, ul, ol, small, .tags, .page-nav, .info-box) {
+    max-width: $measure;
+    margin-inline: auto;
+}
+// :is(..., .full-img) lifts specificity above the column rule above (whose :is() counts as a class)
+.content > p:is(:has(> img, > video, > picture, > iframe, > a > img), .full-img) {
+    max-width: none;
 }
 
 small {
@@ -82,8 +117,9 @@ small {
 ul ,ol{
 	margin: 0;
 	padding: $padding-xs 0 $padding-xs 0;
-	line-height: 32px;
 	@include typeScale($typeRatio,0);
+	line-height: 1.5;
+	max-width: $measure;
 	margin-block-start: 0em;
 	margin-block-end: 0em;
 	margin-inline-start: 0px;
